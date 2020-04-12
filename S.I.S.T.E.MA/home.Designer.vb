@@ -29,6 +29,13 @@ Partial Class home
         Me.pnFechar = New System.Windows.Forms.Panel()
         Me.pbFechar = New System.Windows.Forms.PictureBox()
         Me.pnMenu = New System.Windows.Forms.Panel()
+        Me.pnSubMenuAdm = New System.Windows.Forms.Panel()
+        Me.pnAdmTopicDel = New System.Windows.Forms.Panel()
+        Me.pnAdmTopicDelBar = New System.Windows.Forms.Panel()
+        Me.lbAdmTopicDel = New System.Windows.Forms.Label()
+        Me.pnAddTopicAdd = New System.Windows.Forms.Panel()
+        Me.pnAdmTopicAddBar = New System.Windows.Forms.Panel()
+        Me.lbAdmTopicAdd = New System.Windows.Forms.Label()
         Me.pnSubMenuVend = New System.Windows.Forms.Panel()
         Me.pnVendTopicOn = New System.Windows.Forms.Panel()
         Me.pnVendTopicOnBar = New System.Windows.Forms.Panel()
@@ -55,13 +62,6 @@ Partial Class home
         Me.pnCartaoTopicAdd = New System.Windows.Forms.Panel()
         Me.pnCartaoTopicAddBar = New System.Windows.Forms.Panel()
         Me.lbCartaoTopicAdd = New System.Windows.Forms.Label()
-        Me.pnSubMenuAdm = New System.Windows.Forms.Panel()
-        Me.pnAdmTopicDel = New System.Windows.Forms.Panel()
-        Me.pnAdmTopicDelBar = New System.Windows.Forms.Panel()
-        Me.lbAdmTopicDel = New System.Windows.Forms.Label()
-        Me.pnAddTopicAdd = New System.Windows.Forms.Panel()
-        Me.pnAdmTopicAddBar = New System.Windows.Forms.Panel()
-        Me.lbAdmTopicAdd = New System.Windows.Forms.Label()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.Panel22 = New System.Windows.Forms.Panel()
         Me.Panel23 = New System.Windows.Forms.Panel()
@@ -273,6 +273,9 @@ Partial Class home
         Me.pnFechar.SuspendLayout()
         CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnMenu.SuspendLayout()
+        Me.pnSubMenuAdm.SuspendLayout()
+        Me.pnAdmTopicDel.SuspendLayout()
+        Me.pnAddTopicAdd.SuspendLayout()
         Me.pnSubMenuVend.SuspendLayout()
         Me.pnVendTopicOn.SuspendLayout()
         Me.pnVendTopicReq.SuspendLayout()
@@ -283,9 +286,6 @@ Partial Class home
         Me.pnCartaoTopicRec.SuspendLayout()
         Me.pnCartaoTopicDel.SuspendLayout()
         Me.pnCartaoTopicAdd.SuspendLayout()
-        Me.pnSubMenuAdm.SuspendLayout()
-        Me.pnAdmTopicDel.SuspendLayout()
-        Me.pnAddTopicAdd.SuspendLayout()
         Me.pnInfo.SuspendLayout()
         CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnInfoAux.SuspendLayout()
@@ -456,6 +456,72 @@ Partial Class home
         Me.pnMenu.Name = "pnMenu"
         Me.pnMenu.Size = New System.Drawing.Size(230, 458)
         Me.pnMenu.TabIndex = 2
+        '
+        'pnSubMenuAdm
+        '
+        Me.pnSubMenuAdm.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnSubMenuAdm.Controls.Add(Me.pnAdmTopicDel)
+        Me.pnSubMenuAdm.Controls.Add(Me.pnAddTopicAdd)
+        Me.pnSubMenuAdm.Location = New System.Drawing.Point(64, 84)
+        Me.pnSubMenuAdm.Name = "pnSubMenuAdm"
+        Me.pnSubMenuAdm.Size = New System.Drawing.Size(166, 0)
+        Me.pnSubMenuAdm.TabIndex = 1
+        '
+        'pnAdmTopicDel
+        '
+        Me.pnAdmTopicDel.Controls.Add(Me.pnAdmTopicDelBar)
+        Me.pnAdmTopicDel.Controls.Add(Me.lbAdmTopicDel)
+        Me.pnAdmTopicDel.Location = New System.Drawing.Point(0, 33)
+        Me.pnAdmTopicDel.Name = "pnAdmTopicDel"
+        Me.pnAdmTopicDel.Size = New System.Drawing.Size(166, 34)
+        Me.pnAdmTopicDel.TabIndex = 2
+        '
+        'pnAdmTopicDelBar
+        '
+        Me.pnAdmTopicDelBar.BackColor = System.Drawing.Color.White
+        Me.pnAdmTopicDelBar.Location = New System.Drawing.Point(160, 0)
+        Me.pnAdmTopicDelBar.Name = "pnAdmTopicDelBar"
+        Me.pnAdmTopicDelBar.Size = New System.Drawing.Size(6, 34)
+        Me.pnAdmTopicDelBar.TabIndex = 4
+        '
+        'lbAdmTopicDel
+        '
+        Me.lbAdmTopicDel.AutoSize = True
+        Me.lbAdmTopicDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbAdmTopicDel.ForeColor = System.Drawing.Color.White
+        Me.lbAdmTopicDel.Location = New System.Drawing.Point(6, 7)
+        Me.lbAdmTopicDel.Name = "lbAdmTopicDel"
+        Me.lbAdmTopicDel.Size = New System.Drawing.Size(55, 20)
+        Me.lbAdmTopicDel.TabIndex = 0
+        Me.lbAdmTopicDel.Text = "Excluir"
+        '
+        'pnAddTopicAdd
+        '
+        Me.pnAddTopicAdd.Controls.Add(Me.pnAdmTopicAddBar)
+        Me.pnAddTopicAdd.Controls.Add(Me.lbAdmTopicAdd)
+        Me.pnAddTopicAdd.Location = New System.Drawing.Point(0, 0)
+        Me.pnAddTopicAdd.Name = "pnAddTopicAdd"
+        Me.pnAddTopicAdd.Size = New System.Drawing.Size(166, 34)
+        Me.pnAddTopicAdd.TabIndex = 1
+        '
+        'pnAdmTopicAddBar
+        '
+        Me.pnAdmTopicAddBar.BackColor = System.Drawing.Color.White
+        Me.pnAdmTopicAddBar.Location = New System.Drawing.Point(160, 0)
+        Me.pnAdmTopicAddBar.Name = "pnAdmTopicAddBar"
+        Me.pnAdmTopicAddBar.Size = New System.Drawing.Size(6, 34)
+        Me.pnAdmTopicAddBar.TabIndex = 3
+        '
+        'lbAdmTopicAdd
+        '
+        Me.lbAdmTopicAdd.AutoSize = True
+        Me.lbAdmTopicAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbAdmTopicAdd.ForeColor = System.Drawing.Color.White
+        Me.lbAdmTopicAdd.Location = New System.Drawing.Point(6, 7)
+        Me.lbAdmTopicAdd.Name = "lbAdmTopicAdd"
+        Me.lbAdmTopicAdd.Size = New System.Drawing.Size(75, 20)
+        Me.lbAdmTopicAdd.TabIndex = 0
+        Me.lbAdmTopicAdd.Text = "Adicionar"
         '
         'pnSubMenuVend
         '
@@ -712,72 +778,6 @@ Partial Class home
         Me.lbCartaoTopicAdd.Size = New System.Drawing.Size(75, 20)
         Me.lbCartaoTopicAdd.TabIndex = 0
         Me.lbCartaoTopicAdd.Text = "Adicionar"
-        '
-        'pnSubMenuAdm
-        '
-        Me.pnSubMenuAdm.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.pnSubMenuAdm.Controls.Add(Me.pnAdmTopicDel)
-        Me.pnSubMenuAdm.Controls.Add(Me.pnAddTopicAdd)
-        Me.pnSubMenuAdm.Location = New System.Drawing.Point(64, 84)
-        Me.pnSubMenuAdm.Name = "pnSubMenuAdm"
-        Me.pnSubMenuAdm.Size = New System.Drawing.Size(166, 0)
-        Me.pnSubMenuAdm.TabIndex = 1
-        '
-        'pnAdmTopicDel
-        '
-        Me.pnAdmTopicDel.Controls.Add(Me.pnAdmTopicDelBar)
-        Me.pnAdmTopicDel.Controls.Add(Me.lbAdmTopicDel)
-        Me.pnAdmTopicDel.Location = New System.Drawing.Point(0, 33)
-        Me.pnAdmTopicDel.Name = "pnAdmTopicDel"
-        Me.pnAdmTopicDel.Size = New System.Drawing.Size(166, 34)
-        Me.pnAdmTopicDel.TabIndex = 2
-        '
-        'pnAdmTopicDelBar
-        '
-        Me.pnAdmTopicDelBar.BackColor = System.Drawing.Color.White
-        Me.pnAdmTopicDelBar.Location = New System.Drawing.Point(160, 0)
-        Me.pnAdmTopicDelBar.Name = "pnAdmTopicDelBar"
-        Me.pnAdmTopicDelBar.Size = New System.Drawing.Size(6, 34)
-        Me.pnAdmTopicDelBar.TabIndex = 4
-        '
-        'lbAdmTopicDel
-        '
-        Me.lbAdmTopicDel.AutoSize = True
-        Me.lbAdmTopicDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbAdmTopicDel.ForeColor = System.Drawing.Color.White
-        Me.lbAdmTopicDel.Location = New System.Drawing.Point(6, 7)
-        Me.lbAdmTopicDel.Name = "lbAdmTopicDel"
-        Me.lbAdmTopicDel.Size = New System.Drawing.Size(55, 20)
-        Me.lbAdmTopicDel.TabIndex = 0
-        Me.lbAdmTopicDel.Text = "Excluir"
-        '
-        'pnAddTopicAdd
-        '
-        Me.pnAddTopicAdd.Controls.Add(Me.pnAdmTopicAddBar)
-        Me.pnAddTopicAdd.Controls.Add(Me.lbAdmTopicAdd)
-        Me.pnAddTopicAdd.Location = New System.Drawing.Point(0, 0)
-        Me.pnAddTopicAdd.Name = "pnAddTopicAdd"
-        Me.pnAddTopicAdd.Size = New System.Drawing.Size(166, 34)
-        Me.pnAddTopicAdd.TabIndex = 1
-        '
-        'pnAdmTopicAddBar
-        '
-        Me.pnAdmTopicAddBar.BackColor = System.Drawing.Color.White
-        Me.pnAdmTopicAddBar.Location = New System.Drawing.Point(160, 0)
-        Me.pnAdmTopicAddBar.Name = "pnAdmTopicAddBar"
-        Me.pnAdmTopicAddBar.Size = New System.Drawing.Size(6, 34)
-        Me.pnAdmTopicAddBar.TabIndex = 3
-        '
-        'lbAdmTopicAdd
-        '
-        Me.lbAdmTopicAdd.AutoSize = True
-        Me.lbAdmTopicAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbAdmTopicAdd.ForeColor = System.Drawing.Color.White
-        Me.lbAdmTopicAdd.Location = New System.Drawing.Point(6, 7)
-        Me.lbAdmTopicAdd.Name = "lbAdmTopicAdd"
-        Me.lbAdmTopicAdd.Size = New System.Drawing.Size(75, 20)
-        Me.lbAdmTopicAdd.TabIndex = 0
-        Me.lbAdmTopicAdd.Text = "Adicionar"
         '
         'Panel24
         '
@@ -3048,10 +3048,10 @@ Partial Class home
         Me.Controls.Add(Me.pnCartaoAddScreen)
         Me.Controls.Add(Me.pnVendReqScreen)
         Me.Controls.Add(Me.pnVendOnScreen)
+        Me.Controls.Add(Me.pnLogo)
         Me.Controls.Add(Me.pnHomeTela)
         Me.Controls.Add(Me.pnCartaoDevScreen)
         Me.Controls.Add(Me.pnCartaoRecScreen)
-        Me.Controls.Add(Me.pnLogo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "home"
         Me.Text = "home"
@@ -3061,6 +3061,11 @@ Partial Class home
         Me.pnFechar.ResumeLayout(False)
         CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnMenu.ResumeLayout(False)
+        Me.pnSubMenuAdm.ResumeLayout(False)
+        Me.pnAdmTopicDel.ResumeLayout(False)
+        Me.pnAdmTopicDel.PerformLayout()
+        Me.pnAddTopicAdd.ResumeLayout(False)
+        Me.pnAddTopicAdd.PerformLayout()
         Me.pnSubMenuVend.ResumeLayout(False)
         Me.pnVendTopicOn.ResumeLayout(False)
         Me.pnVendTopicOn.PerformLayout()
@@ -3079,11 +3084,6 @@ Partial Class home
         Me.pnCartaoTopicDel.PerformLayout()
         Me.pnCartaoTopicAdd.ResumeLayout(False)
         Me.pnCartaoTopicAdd.PerformLayout()
-        Me.pnSubMenuAdm.ResumeLayout(False)
-        Me.pnAdmTopicDel.ResumeLayout(False)
-        Me.pnAdmTopicDel.PerformLayout()
-        Me.pnAddTopicAdd.ResumeLayout(False)
-        Me.pnAddTopicAdd.PerformLayout()
         Me.pnInfo.ResumeLayout(False)
         CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnInfoAux.ResumeLayout(False)

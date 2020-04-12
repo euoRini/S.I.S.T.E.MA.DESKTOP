@@ -150,11 +150,11 @@ Public Class home
             ElseIf pnProximo.Name = "pnCartao" Then
                 pnProximoAux = pnCartaoAux
                 pnSubProximo = pnSubMenuCartao
-                maxSize = 134
+                maxSize = 132
             ElseIf pnProximo.Name = "pnVend" Then
                 pnProximoAux = pnVendAux
                 pnSubProximo = pnSubMenuVend
-                maxSize = 134
+                maxSize = 132
             ElseIf pnProximo.Name = "pnProd" Then
                 pnProximoAux = pnProdAux
             ElseIf pnProximo.Name = "pnRelat" Then
@@ -168,7 +168,7 @@ Public Class home
                 While pnSubAnterior.Height > 0
                     If maxSize = 67 Then
                         pnSubAnterior.Height -= 3
-                    ElseIf maxSize = 134 Then
+                    ElseIf maxSize = 132 Then
                         pnSubAnterior.Height -= 6
                     End If
 
@@ -189,12 +189,10 @@ Public Class home
 
             End While
 
-
-
             While pnSubProximo.Height < maxSize
                 If maxSize = 67 Then
                     pnSubProximo.Height += 3
-                ElseIf maxSize = 134 Then
+                ElseIf maxSize = 132 Then
                     pnSubProximo.Height += 6
                 End If
                 If pnSubProximo.Height = (2 * maxSize - 1) Then
@@ -203,6 +201,10 @@ Public Class home
                 pnSubProximo.Refresh()
                 System.Threading.Thread.Sleep(5)
             End While
+            If pnProximo.Name <> "pnHome" Then
+                pnHomeTela.Visible = False
+                pnLogo.Visible = True
+            End If
 
         End If
         If nivel = 2 Then
@@ -212,7 +214,8 @@ Public Class home
                 pnAdmTopicDelBar.Visible = False
                 pnAdmAddScreen.Visible = False
                 pnAdmDelScreen.Visible = False
-                pnProximo.BackColor = Color.White
+                pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                pnAtivo2.Visible = True
                 pnProximo.Visible = True
                 pnProximo.Visible = True
             ElseIf pnProximo.Name = "pnCartaoAddScreen" Or pnProximo.Name = "pnCartaoDelScreen" Or pnProximo.Name = "pnCartaoRecScreen" Or pnProximo.Name = "pnCartaoDevScreen" Then
@@ -224,7 +227,10 @@ Public Class home
                 pnCartaoDelScreen.Visible = False
                 pnCartaoRecScreen.Visible = False
                 pnCartaoDevScreen.Visible = False
-                pnProximo.BackColor = Color.White
+
+                pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                'pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                pnAtivo2.Visible = True
                 pnProximo.Visible = True
                 pnProximo.Visible = True
             ElseIf pnProximo.Name = "pnVendAddScreen" Or pnProximo.Name = "pnVendDelScreen" Or pnProximo.Name = "pnVendReqScreen" Or pnProximo.Name = "pnVendOnScreen" Then
@@ -236,7 +242,8 @@ Public Class home
                 pnVendDelScreen.Visible = False
                 pnVendReqScreen.Visible = False
                 pnVendOnScreen.Visible = False
-                pnProximo.BackColor = Color.White
+                pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                pnAtivo2.Visible = True
                 pnProximo.Visible = True
                 pnProximo.Visible = True
             End If
@@ -267,43 +274,7 @@ Public Class home
         '        pnVendReqScreen.Visible = False
         '        pnVendOnScreen.Visible = False
         '    End If
-        '    If nivel = 2 Then
-        '        pnLogo.Visible = False
-        '        If pnProximo.Name = "pnAdmAddScreen" Or pnProximo.Name = "pnAdmDelScreen" Then
-        '            pnAdmTopicAddBar.Visible = False
-        '            pnAdmTopicDelBar.Visible = False
-        '            pnAdmAddScreen.Visible = False
-        '            pnAdmDelScreen.Visible = False
-        '            pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-        '            pnProximo.Visible = True
-        '            pnProximo.Visible = True
-        '        ElseIf pnProximo.Name = "pnCartaoAddScreen" Or pnProximo.Name = "pnCartaoDelScreen" Or pnProximo.Name = "pnCartaoRecScreen" Or pnProximo.Name = "pnCartaoDevScreen" Then
-        '            pnCartaoTopicAddBar.Visible = False
-        '            pnCartaoTopicDelBar.Visible = False
-        '            pnCartaoTopicRecBar.Visible = False
-        '            pnCartaoTopicDevBar.Visible = False
-        '            pnCartaoAddScreen.Visible = False
-        '            pnCartaoDelScreen.Visible = False
-        '            pnCartaoRecScreen.Visible = False
-        '            pnCartaoDevScreen.Visible = False
-        '            pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-        '            'pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-        '            pnProximo.Visible = True
-        '            pnProximo.Visible = True
-        '        ElseIf pnProximo.Name = "pnVendAddScreen" Or pnProximo.Name = "pnVendDelScreen" Or pnProximo.Name = "pnVendReqScreen" Or pnProximo.Name = "pnVendOnScreen" Then
-        '            pnVendTopicAddBar.Visible = False
-        '            pnVendTopicDelBar.Visible = False
-        '            pnVendTopicReqBar.Visible = False
-        '            pnVendTopicOnBar.Visible = False
-        '            pnVendAddScreen.Visible = False
-        '            pnVendDelScreen.Visible = False
-        '            pnVendReqScreen.Visible = False
-        '            pnVendOnScreen.Visible = False
-        '            pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-        '            pnProximo.Visible = True
-        '            pnProximo.Visible = True
-        '        End If
-        '    End If
+
         'End If
     End Sub
 

@@ -1,0 +1,24 @@
+----Interface----
+
+- Navegação Animada (12/04)
+
+- Modo branco (Desativada form "home" temporariamente/No load, forçando modo preto) (12/04)
+
+- Telas:
+	Adm
+	Cartao (Falta Recarga/Devolução)
+	Vendedor (Falta Soliticação/Ativados)
+
+
+----Usabilidade API----
+
+-Login (Para acesso sem login, clicar na logo da tela de login) 
+- Adicionar:
+	Adm (10/04)
+	Cartao (10/04)
+	Vendedor (10/04)
+- Excluir:
+	Adm (11/04)
+	Cartao (11/04)
+
+
