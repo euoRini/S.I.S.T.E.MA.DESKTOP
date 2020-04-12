@@ -263,5 +263,17 @@
   <ItemGroup>
     <None Include="Resources\imgProdutoIconCinza.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgMSGBOXErrorIconPreto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgMSGBOXErroIconPretoRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgMSGBOXErroIconPreto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgMSGBOXErroIconPreto3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

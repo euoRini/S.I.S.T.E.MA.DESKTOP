@@ -14,6 +14,7 @@ Public Class home
     Dim relatAtivo As Boolean = False
     Dim prodAtivo As Boolean = False
     Dim infoAtivo As Boolean = False
+
 #End Region
 
 #Region "Load/Fechar/Minimizar/Movimentação/ModoDeCor"
@@ -27,7 +28,7 @@ Public Class home
             brightMode = False
             pbBrightMode.Image = My.Resources.imgSunIcon
         End If
-        alteraDesign()
+        'alteraDesign()
         Me.FormBorderStyle = FormBorderStyle.None
         Me.Height = 459
         Me.Width = 884
@@ -72,6 +73,11 @@ Public Class home
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
+    Public Sub backHome()
+        Me.Enabled = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
 
 
 #End Region
@@ -79,68 +85,21 @@ Public Class home
 #Region "Navegação Menu"
 
 #Region "Modulo de Execucao"
-    Sub navegacaoMenu(nivel As Integer, pnAtivo As Panel, pbAtivo As PictureBox, pnAtivo2 As Panel)
+    Sub navegacaoMenu(nivel As Integer, pnProximo As Panel, pnAtivo2 As Panel)
         'Paineis e Icones Menu Principal
+        Dim pnAnterior As Panel = selectAtual()
+        pnAnterior.BackColor = Color.FromArgb(56, 56, 56)
+        pnProximo.BackColor = Color.FromArgb(56, 56, 56)
         If Not brightMode Then
             If nivel = 1 Then
-                'PainelColor
-                pnHome.BackColor = Color.FromArgb(32, 32, 32)
-                pnAdm.BackColor = Color.FromArgb(32, 32, 32)
-                pnCartao.BackColor = Color.FromArgb(32, 32, 32)
-                pnVend.BackColor = Color.FromArgb(32, 32, 32)
-                pnRelat.BackColor = Color.FromArgb(32, 32, 32)
-                pnProd.BackColor = Color.FromArgb(32, 32, 32)
-                pnInfo.BackColor = Color.FromArgb(32, 32, 32)
-                pnAtivo.BackColor = Color.FromArgb(56, 56, 56)
-                alteraBool(pnAtivo)
-                'Icones/Submenus
-                pbHome.Image = My.Resources.imgHomeIconPreto
-                pbAdm.Image = My.Resources.imgAdmIconPreto
-                pbCartao.Image = My.Resources.imgCartaoIconPreto
-                pbVend.Image = My.Resources.imgVendedorIconPreto
-                pbRelat.Image = My.Resources.imgRelatorioIconPreto
-                pbProd.Image = My.Resources.imgProdutoIconPreto
-                pbInfo.Image = My.Resources.imgInfoIconPreto
-                pnLogo.Visible = False
-                pnHomeTela.Visible = False
-                pnSubMenuAdm.Visible = False
-                pnSubMenuCartao.Visible = False
-                pnSubMenuVend.Visible = False
-                With pbAtivo
-                    If .Name = "pbHome" Then
-                        .Image = My.Resources.imgHomeIconBranco
-                        pnHomeTela.Visible = True
-                    ElseIf .Name = "pbAdm" Then
-                        .Image = My.Resources.imgAdmIconBranco
-                        pnSubMenuAdm.Visible = True
-                    ElseIf .Name = "pbCartao" Then
-                        .Image = My.Resources.imgCartaoIconBranco
-                        pnSubMenuCartao.Visible = True
-                    ElseIf .Name = "pbVend" Then
-                        .Image = My.Resources.imgVendedorIconBranco
-                        pnSubMenuVend.Visible = True
+                While pnProximo.Width < 63
+                    pnProximo.Width = pnProximo.Width + 3
+                    pnAnterior.Width = pnAnterior.Width - 6
+                    pnProximo.Refresh()
+                    pnAnterior.Refresh()
+                    'System.Threading.Thread.Sleep(1)
+                End While
 
-
-                    ElseIf .Name = "pbRelat" Then
-                        .Image = My.Resources.imgRelatorioIconBranco
-
-
-                    ElseIf .Name = "pbProd" Then
-
-                        .Image = My.Resources.imgProdutoIconBranco
-
-                    ElseIf .Name = "pbInfo" Then
-                        .Image = My.Resources.imgInfoIconBranco
-
-
-
-                    End If
-
-                    If .Name <> "pbHome" Then
-                        pnLogo.Visible = True
-
-                    End If
-                End With
                 'Desativa Tópicos de SubMenus
                 pnAdmTopicAddBar.Visible = False
                 pnAdmTopicDelBar.Visible = False
@@ -166,15 +125,15 @@ Public Class home
             End If
             If nivel = 2 Then
                 pnLogo.Visible = False
-                If pnAtivo.Name = "pnAdmAddScreen" Or pnAtivo.Name = "pnAdmDelScreen" Then
+                If pnProximo.Name = "pnAdmAddScreen" Or pnProximo.Name = "pnAdmDelScreen" Then
                     pnAdmTopicAddBar.Visible = False
                     pnAdmTopicDelBar.Visible = False
                     pnAdmAddScreen.Visible = False
                     pnAdmDelScreen.Visible = False
-                    pnAtivo2.BackColor = Color.White
-                    pnAtivo2.Visible = True
-                    pnAtivo.Visible = True
-                ElseIf pnAtivo.Name = "pnCartaoAddScreen" Or pnAtivo.Name = "pnCartaoDelScreen" Or pnAtivo.Name = "pnCartaoRecScreen" Or pnAtivo.Name = "pnCartaoDevScreen" Then
+                    pnProximo.BackColor = Color.White
+                    pnProximo.Visible = True
+                    pnProximo.Visible = True
+                ElseIf pnProximo.Name = "pnCartaoAddScreen" Or pnProximo.Name = "pnCartaoDelScreen" Or pnProximo.Name = "pnCartaoRecScreen" Or pnProximo.Name = "pnCartaoDevScreen" Then
                     pnCartaoTopicAddBar.Visible = False
                     pnCartaoTopicDelBar.Visible = False
                     pnCartaoTopicRecBar.Visible = False
@@ -183,10 +142,10 @@ Public Class home
                     pnCartaoDelScreen.Visible = False
                     pnCartaoRecScreen.Visible = False
                     pnCartaoDevScreen.Visible = False
-                    pnAtivo2.BackColor = Color.White
-                    pnAtivo2.Visible = True
-                    pnAtivo.Visible = True
-                ElseIf pnAtivo.Name = "pnVendAddScreen" Or pnAtivo.Name = "pnVendDelScreen" Or pnAtivo.Name = "pnVendReqScreen" Or pnAtivo.Name = "pnVendOnScreen" Then
+                    pnProximo.BackColor = Color.White
+                    pnProximo.Visible = True
+                    pnProximo.Visible = True
+                ElseIf pnProximo.Name = "pnVendAddScreen" Or pnProximo.Name = "pnVendDelScreen" Or pnProximo.Name = "pnVendReqScreen" Or pnProximo.Name = "pnVendOnScreen" Then
                     pnVendTopicAddBar.Visible = False
                     pnVendTopicDelBar.Visible = False
                     pnVendTopicReqBar.Visible = False
@@ -195,68 +154,14 @@ Public Class home
                     pnVendDelScreen.Visible = False
                     pnVendReqScreen.Visible = False
                     pnVendOnScreen.Visible = False
-                    pnAtivo2.BackColor = Color.White
-                    pnAtivo2.Visible = True
-                    pnAtivo.Visible = True
+                    pnProximo.BackColor = Color.White
+                    pnProximo.Visible = True
+                    pnProximo.Visible = True
                 End If
             End If
         Else
             If nivel = 1 Then
-                'PainelColor
-                pnHome.BackColor = Color.White
-                pnAdm.BackColor = Color.White
-                pnCartao.BackColor = Color.White
-                pnVend.BackColor = Color.White
-                pnRelat.BackColor = Color.White
-                pnProd.BackColor = Color.White
-                pnInfo.BackColor = Color.White
-                pnAtivo.BackColor = Color.FromArgb(120, 120, 120)
-                alteraBool(pnAtivo)
-                'Icones/Submenus
-                pbHome.Image = My.Resources.imgHomeIconCinza
-                pbAdm.Image = My.Resources.imgAdmIconCinza
-                pbCartao.Image = My.Resources.imgCartaoIconCinza
-                pbVend.Image = My.Resources.imgVendedorIconCinza
-                pbRelat.Image = My.Resources.imgRelatorioIconCinza
-                pbProd.Image = My.Resources.imgProdutoIconCinza
-                pbInfo.Image = My.Resources.imgInfoIconCinza
-                pnLogo.Visible = False
-                pnHomeTela.Visible = False
-                pnSubMenuAdm.Visible = False
-                pnSubMenuCartao.Visible = False
-                With pbAtivo
-                    If .Name = "pbHome" Then
-                        .Image = My.Resources.imgHomeIconPreto
-                        pnHomeTela.Visible = True
-                    ElseIf .Name = "pbAdm" Then
-                        .Image = My.Resources.imgAdmIconPreto
-                        pnSubMenuAdm.Visible = True
-                    ElseIf .Name = "pbCartao" Then
-                        .Image = My.Resources.imgCartaoIconPreto
-                        pnSubMenuCartao.Visible = True
-                    ElseIf .Name = "pbVend" Then
-                        .Image = My.Resources.imgVendedorIconPreto
 
-
-                    ElseIf .Name = "pbRelat" Then
-                        .Image = My.Resources.imgRelatorioIconPreto
-
-
-                    ElseIf .Name = "pbProd" Then
-                        .Image = My.Resources.imgProdutoIconPreto
-
-
-
-                    ElseIf .Name = "pbInfo" Then
-                        .Image = My.Resources.imgInfoIconPreto
-
-
-
-                    End If
-                End With
-                If pbAtivo.Name <> "pbHome" Then
-                    pnLogo.Visible = True
-                End If
                 'Desativa Tópicos de SubMenus
                 pnAdmTopicAddBar.Visible = False
                 pnAdmTopicDelBar.Visible = False
@@ -282,15 +187,15 @@ Public Class home
             End If
             If nivel = 2 Then
                 pnLogo.Visible = False
-                If pnAtivo.Name = "pnAdmAddScreen" Or pnAtivo.Name = "pnAdmDelScreen" Then
+                If pnProximo.Name = "pnAdmAddScreen" Or pnProximo.Name = "pnAdmDelScreen" Then
                     pnAdmTopicAddBar.Visible = False
                     pnAdmTopicDelBar.Visible = False
                     pnAdmAddScreen.Visible = False
                     pnAdmDelScreen.Visible = False
-                    pnAtivo2.BackColor = Color.FromArgb(32, 32, 32)
-                    pnAtivo2.Visible = True
-                    pnAtivo.Visible = True
-                ElseIf pnAtivo.Name = "pnCartaoAddScreen" Or pnAtivo.Name = "pnCartaoDelScreen" Or pnAtivo.Name = "pnCartaoRecScreen" Or pnAtivo.Name = "pnCartaoDevScreen" Then
+                    pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                    pnProximo.Visible = True
+                    pnProximo.Visible = True
+                ElseIf pnProximo.Name = "pnCartaoAddScreen" Or pnProximo.Name = "pnCartaoDelScreen" Or pnProximo.Name = "pnCartaoRecScreen" Or pnProximo.Name = "pnCartaoDevScreen" Then
                     pnCartaoTopicAddBar.Visible = False
                     pnCartaoTopicDelBar.Visible = False
                     pnCartaoTopicRecBar.Visible = False
@@ -299,11 +204,11 @@ Public Class home
                     pnCartaoDelScreen.Visible = False
                     pnCartaoRecScreen.Visible = False
                     pnCartaoDevScreen.Visible = False
-                    pnAtivo2.BackColor = Color.FromArgb(32, 32, 32)
-                    'pnAtivo.BackColor = Color.FromArgb(32, 32, 32)
-                    pnAtivo2.Visible = True
-                    pnAtivo.Visible = True
-                ElseIf pnAtivo.Name = "pnVendAddScreen" Or pnAtivo.Name = "pnVendDelScreen" Or pnAtivo.Name = "pnVendReqScreen" Or pnAtivo.Name = "pnVendOnScreen" Then
+                    pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                    'pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                    pnProximo.Visible = True
+                    pnProximo.Visible = True
+                ElseIf pnProximo.Name = "pnVendAddScreen" Or pnProximo.Name = "pnVendDelScreen" Or pnProximo.Name = "pnVendReqScreen" Or pnProximo.Name = "pnVendOnScreen" Then
                     pnVendTopicAddBar.Visible = False
                     pnVendTopicDelBar.Visible = False
                     pnVendTopicReqBar.Visible = False
@@ -312,13 +217,34 @@ Public Class home
                     pnVendDelScreen.Visible = False
                     pnVendReqScreen.Visible = False
                     pnVendOnScreen.Visible = False
-                    pnAtivo2.BackColor = Color.FromArgb(32, 32, 32)
-                    pnAtivo2.Visible = True
-                    pnAtivo.Visible = True
+                    pnProximo.BackColor = Color.FromArgb(32, 32, 32)
+                    pnProximo.Visible = True
+                    pnProximo.Visible = True
                 End If
             End If
         End If
     End Sub
+
+    Public Function selectAtual() As Panel
+        Dim panelResposta As Panel
+        If homeAtivo Then
+            panelResposta = pnHome
+        ElseIf admAtivo Then
+            panelResposta = pnAdm
+        ElseIf cartaoAtivo Then
+            panelResposta = pnCartao
+        ElseIf vendAtivo Then
+            panelResposta = pnVend
+        ElseIf prodAtivo Then
+            panelResposta = pnProd
+        ElseIf relatAtivo Then
+            panelResposta = pnRelat
+        ElseIf infoAtivo Then
+            panelResposta = pnInfo
+        End If
+        MsgBox("SelectAtual Complete")
+        Return panelResposta
+    End Function
 
     Public Sub alteraBool(pnAtivo As Panel)
         With pnAtivo
@@ -349,62 +275,90 @@ Public Class home
 #End Region
 
 #Region "Botoes Nivel1"
-    Private Sub pbHome_Click(sender As Object, e As EventArgs) Handles pbHome.Click
-        navegacaoMenu(1, pnHome, pbHome, Nothing)
+    Private Sub pbHomeAux_Click(sender As Object, e As EventArgs) Handles pbHomeAux.Click
+
+        navegacaoMenu(1, pnHome, Nothing)
+        alteraBool(pnHome)
     End Sub
-    Private Sub pnHome_Paint(sender As Object, e As EventArgs) Handles pnHome.Click
-        pbHome_Click(sender, e)
-    End Sub
-    Private Sub pbAdm_Click(sender As Object, e As EventArgs) Handles pbAdm.Click
-        navegacaoMenu(1, pnAdm, pbAdm, Nothing)
-    End Sub
-    Private Sub pnAdm_Click(sender As Object, e As EventArgs) Handles pnAdm.Click
-        pbAdm_Click(sender, e)
-    End Sub
-    Private Sub pbCartao_Click(sender As Object, e As EventArgs) Handles pbCartao.Click
-        navegacaoMenu(1, pnCartao, pbCartao, Nothing)
-    End Sub
-    Private Sub pnCartao_Paint(sender As Object, e As EventArgs) Handles pnCartao.Click
-        pbCartao_Click(sender, e)
-    End Sub
-    Private Sub pbVend_Click(sender As Object, e As EventArgs) Handles pbVend.Click
-        navegacaoMenu(1, pnVend, pbVend, Nothing)
-    End Sub
-    Private Sub pnVend_Paint(sender As Object, e As EventArgs) Handles pnVend.Click
-        pbVend_Click(sender, e)
-    End Sub
-    Private Sub pbRelat_Click(sender As Object, e As EventArgs) Handles pbRelat.Click
-        navegacaoMenu(1, pnRelat, pbRelat, Nothing)
-    End Sub
-    Private Sub pnRelat_Paint(sender As Object, e As EventArgs) Handles pnRelat.Click
-        pbRelat_Click(sender, e)
-    End Sub
-    Private Sub pbProd_Click(sender As Object, e As EventArgs) Handles pbProd.Click
-        navegacaoMenu(1, pnProd, pbProd, Nothing)
+    Private Sub pbAdmAux_Click(sender As Object, e As EventArgs) Handles pbAdmAux.Click
+
+        navegacaoMenu(1, pnAdm, Nothing)
+        alteraBool(pnAdm)
     End Sub
 
-    Private Sub pnProd_Click(sender As Object, e As EventArgs) Handles pnProd.Click
-        pbProd_Click(sender, e)
+    Private Sub pbCartaoAux_Click(sender As Object, e As EventArgs) Handles pbCartaoAux.Click
+
+        navegacaoMenu(1, pnCartao, Nothing)
+        alteraBool(pnCartao)
+    End Sub
+    Private Sub pbVendAux_Click(sender As Object, e As EventArgs) Handles pbVendAux.Click
+
+        navegacaoMenu(1, pnVend, Nothing)
+        alteraBool(pnVend)
     End Sub
 
-    Private Sub pbInfo_Click(sender As Object, e As EventArgs) Handles pbInfo.Click
-        navegacaoMenu(1, pnInfo, pbInfo, Nothing)
+    Private Sub pbProdAux_Click(sender As Object, e As EventArgs) Handles pbProdAux.Click
+
+        navegacaoMenu(1, pnProd, Nothing)
+        alteraBool(pnProd)
     End Sub
-    Private Sub pnInfo_Paint(sender As Object, e As EventArgs) Handles pnInfo.Click
-        pbInfo_Click(sender, e)
+    Private Sub pbRelatAux_Click(sender As Object, e As EventArgs) Handles pbRelatAux.Click
+
+        navegacaoMenu(1, pnRelat, Nothing)
+        alteraBool(pnRelat)
     End Sub
+
+    Private Sub pbInfoAux_Click(sender As Object, e As EventArgs) Handles pbInfoAux.Click
+
+        navegacaoMenu(1, pnInfo, Nothing)
+        alteraBool(pnInfo)
+    End Sub
+
+
+
+
+    Private Sub pnHome_Click(sender As Object, e As EventArgs) Handles pnHome.Click
+        pbHomeAux_Click(sender, e)
+    End Sub
+
+    Private Sub pnAdmAux_Click(sender As Object, e As EventArgs) Handles pnAdmAux.Click
+        pbAdmAux_Click(sender, e)
+    End Sub
+
+    Private Sub pnCartaoAux_Click(sender As Object, e As EventArgs) Handles pnCartaoAux.Click
+        pbCartaoAux_Click(sender, e)
+    End Sub
+
+
+    Private Sub pnVendAux_Click(sender As Object, e As EventArgs) Handles pnVendAux.Click
+        pbVendAux_Click(sender, e)
+    End Sub
+
+    Private Sub pnProdAux_Click(sender As Object, e As EventArgs) Handles pnProdAux.Click
+        pbProdAux_Click(sender, e)
+    End Sub
+
+    Private Sub pnRelatAux_Click(sender As Object, e As EventArgs) Handles pnRelatAux.Click
+        pbRelatAux_Click(sender, e)
+    End Sub
+
+    Private Sub pnInfoAux_Click(sender As Object, e As EventArgs) Handles pnInfoAux.Click
+        pbInfoAux_Click(sender, e)
+    End Sub
+
 #End Region
 
 #Region "Botoes Nivel2"
+
 #Region "AdmTopics"
     Private Sub lbAdmTopicAdd_Click(sender As Object, e As EventArgs) Handles lbAdmTopicAdd.Click
-        navegacaoMenu(2, pnAdmAddScreen, Nothing, pnAdmTopicAddBar)
+        navegacaoMenu(2, pnAdmAddScreen, pnAdmTopicAddBar)
     End Sub
     Private Sub pnAddTopicAdd_Click(sender As Object, e As EventArgs) Handles pnAddTopicAdd.Click
         lbAdmTopicAdd_Click(sender, e)
     End Sub
     Private Sub lbAdmTopicDel_Click(sender As Object, e As EventArgs) Handles lbAdmTopicDel.Click
-        navegacaoMenu(2, pnAdmDelScreen, Nothing, pnAdmTopicDelBar)
+        navegacaoMenu(2, pnAdmDelScreen, pnAdmTopicDelBar)
     End Sub
     Private Sub pnAdmTopicDel_Click(sender As Object, e As EventArgs) Handles pnAdmTopicDel.Click
         lbAdmTopicDel_Click(sender, e)
@@ -413,7 +367,7 @@ Public Class home
 
 #Region "CartaoTopics"
     Private Sub lbCartaoTopicAdd_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicAdd.Click
-        navegacaoMenu(2, pnCartaoAddScreen, Nothing, pnCartaoTopicAddBar)
+        navegacaoMenu(2, pnCartaoAddScreen, pnCartaoTopicAddBar)
     End Sub
 
     Private Sub pnCartaoTopicAdd_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicAdd.Click
@@ -421,14 +375,14 @@ Public Class home
     End Sub
 
     Private Sub lbCartaoTopicDel_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDel.Click
-        navegacaoMenu(2, pnCartaoDelScreen, Nothing, pnCartaoTopicDelBar)
+        navegacaoMenu(2, pnCartaoDelScreen, pnCartaoTopicDelBar)
     End Sub
     Private Sub pnCartaoTopicDel_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicDel.Click
         lbCartaoTopicDel_Click(sender, e)
     End Sub
 
     Private Sub lbCartaoTopicRec_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicRec.Click
-        navegacaoMenu(2, pnCartaoRecScreen, Nothing, pnCartaoTopicRecBar)
+        navegacaoMenu(2, pnCartaoRecScreen, pnCartaoTopicRecBar)
     End Sub
 
     Private Sub pnCartaoTopicRec_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicRec.Click
@@ -436,7 +390,7 @@ Public Class home
     End Sub
 
     Private Sub lbCartaoTopicDev_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDev.Click
-        navegacaoMenu(2, pnCartaoDevScreen, Nothing, pnCartaoTopicDevBar)
+        navegacaoMenu(2, pnCartaoDevScreen, pnCartaoTopicDevBar)
     End Sub
 
     Private Sub pnCartaoTopicDev_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicDev.Click
@@ -446,7 +400,7 @@ Public Class home
 
 #Region "VendedorTopics"
     Private Sub lbVendTopicAdd_Click(sender As Object, e As EventArgs) Handles lbVendTopicAdd.Click
-        navegacaoMenu(2, pnVendAddScreen, Nothing, pnVendTopicAddBar)
+        navegacaoMenu(2, pnVendAddScreen, pnVendTopicAddBar)
     End Sub
 
     Private Sub Panel32_Paint(sender As Object, e As EventArgs) Handles pnVendTopicAdd.Click
@@ -458,11 +412,11 @@ Public Class home
     End Sub
 
     Private Sub lbVendTopicDel_Click(sender As Object, e As EventArgs) Handles lbVendTopicDel.Click
-        navegacaoMenu(2, pnVendDelScreen, Nothing, pnAdmTopicDelBar)
+        navegacaoMenu(2, pnVendDelScreen, pnAdmTopicDelBar)
     End Sub
 
     Private Sub lbVendTopicReq_Click(sender As Object, e As EventArgs) Handles lbVendTopicReq.Click
-        navegacaoMenu(2, pnVendReqScreen, Nothing, pnVendTopicReqBar)
+        navegacaoMenu(2, pnVendReqScreen, pnVendTopicReqBar)
     End Sub
 
     Private Sub pnVendTopicReq_Click(sender As Object, e As EventArgs) Handles pnVendTopicReq.Click
@@ -470,7 +424,7 @@ Public Class home
     End Sub
 
     Private Sub lbVendTopicOn_Click(sender As Object, e As EventArgs) Handles lbVendTopicOn.Click
-        navegacaoMenu(2, pnVendReqScreen, Nothing, pnVendTopicOnBar)
+        navegacaoMenu(2, pnVendReqScreen, pnVendTopicOnBar)
     End Sub
 
     Private Sub pnVendTopicOn_Click(sender As Object, e As EventArgs) Handles pnVendTopicOn.Click
@@ -494,7 +448,9 @@ Public Class home
         If (nome <> Nothing And login <> Nothing And senha <> Nothing And email <> Nothing) Then
             addAdmin(nome, login, senha, email)
         Else
-            MsgBox("Preencha todos os campos antes de salvar!", vbCritical)
+            formMsgBox.labelWrite("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!")
+            formMsgBox.Show()
+            Me.Enabled = False
         End If
     End Sub
 
@@ -537,7 +493,9 @@ Public Class home
         If matricula <> Nothing And nome <> Nothing And email <> Nothing And saldo <> Nothing Then
             addCartao(matricula, nome, email, saldo)
         Else
-            MsgBox("Preencha todos os campos antes de salvar!", vbCritical)
+            formMsgBox.labelWrite("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!")
+            formMsgBox.Show()
+            Me.Enabled = False
         End If
     End Sub
 
@@ -564,7 +522,17 @@ Public Class home
         Dim nome As String = tbVendAddNome.Text
         Dim email As String = tbVendAddEmail.Text
         Dim senha As String = cripto(tbVendAddSenha.Text, 1, 1)
-        addVend(matricula, nome, email, senha)
+        If matricula <> Nothing And nome <> Nothing And email <> Nothing And senha <> Nothing Then
+            addVend(matricula, nome, email, senha)
+        Else
+            With formMsgBox
+                .labelWrite("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!")
+                .Show()
+                '.formMsgBox_LoadEffect(sender, e)
+            End With
+            Me.Enabled = False
+        End If
+
     End Sub
 
     Private Sub btVendDelBusca_Click(sender As Object, e As EventArgs) Handles btVendDelBusca.Click
@@ -1085,9 +1053,6 @@ Public Class home
         tbCartaoAddNome.Clear()
         tbCartaoAddSaldo.Clear()
     End Sub
-
-
-
 
 
 #End Region

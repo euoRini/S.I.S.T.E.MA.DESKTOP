@@ -127,6 +127,26 @@ S.I.S.T.E.MA
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgMSGBOXErroIconPreto2">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgMSGBOXErroIconPreto3">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgMSGBOXErroIconPretoRed">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgMSGBOXErrorIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconBranco">
 <summary>
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
