@@ -47,3 +47,22 @@ C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug
 C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.formMsgBox.resources
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe.config
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.pdb
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.xml
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbprojAssemblyReference.cache
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.formMsgBox.resources
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.home.resources
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.formLogin.resources
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.Resources.resources
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.GenerateResource.cache
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.CoreCompileInputs.cache
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.CopyComplete
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.exe
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.xml
+C:\Users\gamer\Desktop\SISTEMADESKTOP-master\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.pdb

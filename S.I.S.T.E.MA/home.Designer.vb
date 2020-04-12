@@ -29,8 +29,6 @@ Partial Class home
         Me.pnFechar = New System.Windows.Forms.Panel()
         Me.pbFechar = New System.Windows.Forms.PictureBox()
         Me.pnMenu = New System.Windows.Forms.Panel()
-        Me.pnInfoAux = New System.Windows.Forms.Panel()
-        Me.pbInfoAux = New System.Windows.Forms.PictureBox()
         Me.pnSubMenuVend = New System.Windows.Forms.Panel()
         Me.pnVendTopicOn = New System.Windows.Forms.Panel()
         Me.pnVendTopicOnBar = New System.Windows.Forms.Panel()
@@ -64,31 +62,33 @@ Partial Class home
         Me.pnAddTopicAdd = New System.Windows.Forms.Panel()
         Me.pnAdmTopicAddBar = New System.Windows.Forms.Panel()
         Me.lbAdmTopicAdd = New System.Windows.Forms.Label()
-        Me.pnRelatAux = New System.Windows.Forms.Panel()
-        Me.pbRelatAux = New System.Windows.Forms.PictureBox()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.Panel22 = New System.Windows.Forms.Panel()
         Me.Panel23 = New System.Windows.Forms.Panel()
-        Me.pnProdAux = New System.Windows.Forms.Panel()
-        Me.pbProdAux = New System.Windows.Forms.PictureBox()
         Me.Panel21 = New System.Windows.Forms.Panel()
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.Panel19 = New System.Windows.Forms.Panel()
-        Me.pnVendAux = New System.Windows.Forms.Panel()
-        Me.pbVendAux = New System.Windows.Forms.PictureBox()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.pnInfo = New System.Windows.Forms.Panel()
         Me.pbInfo = New System.Windows.Forms.PictureBox()
-        Me.pnCartaoAux = New System.Windows.Forms.Panel()
-        Me.pbCartaoAux = New System.Windows.Forms.PictureBox()
+        Me.pnInfoAux = New System.Windows.Forms.Panel()
+        Me.pbInfoAux = New System.Windows.Forms.PictureBox()
         Me.pnRelat = New System.Windows.Forms.Panel()
         Me.pbRelat = New System.Windows.Forms.PictureBox()
+        Me.pnRelatAux = New System.Windows.Forms.Panel()
+        Me.pbRelatAux = New System.Windows.Forms.PictureBox()
         Me.pnProd = New System.Windows.Forms.Panel()
         Me.pbProd = New System.Windows.Forms.PictureBox()
+        Me.pnProdAux = New System.Windows.Forms.Panel()
+        Me.pbProdAux = New System.Windows.Forms.PictureBox()
         Me.pnVend = New System.Windows.Forms.Panel()
         Me.pbVend = New System.Windows.Forms.PictureBox()
+        Me.pnVendAux = New System.Windows.Forms.Panel()
+        Me.pbVendAux = New System.Windows.Forms.PictureBox()
         Me.pnCartao = New System.Windows.Forms.Panel()
         Me.pbCartao = New System.Windows.Forms.PictureBox()
+        Me.pnCartaoAux = New System.Windows.Forms.Panel()
+        Me.pbCartaoAux = New System.Windows.Forms.PictureBox()
         Me.pnAdm = New System.Windows.Forms.Panel()
         Me.pbAdm = New System.Windows.Forms.PictureBox()
         Me.pnAdmAux = New System.Windows.Forms.Panel()
@@ -273,8 +273,6 @@ Partial Class home
         Me.pnFechar.SuspendLayout()
         CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnMenu.SuspendLayout()
-        Me.pnInfoAux.SuspendLayout()
-        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnSubMenuVend.SuspendLayout()
         Me.pnVendTopicOn.SuspendLayout()
         Me.pnVendTopicReq.SuspendLayout()
@@ -288,24 +286,26 @@ Partial Class home
         Me.pnSubMenuAdm.SuspendLayout()
         Me.pnAdmTopicDel.SuspendLayout()
         Me.pnAddTopicAdd.SuspendLayout()
-        Me.pnRelatAux.SuspendLayout()
-        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnProdAux.SuspendLayout()
-        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnVendAux.SuspendLayout()
-        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnInfo.SuspendLayout()
         CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnCartaoAux.SuspendLayout()
-        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnInfoAux.SuspendLayout()
+        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnRelat.SuspendLayout()
         CType(Me.pbRelat, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnRelatAux.SuspendLayout()
+        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnProd.SuspendLayout()
         CType(Me.pbProd, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnProdAux.SuspendLayout()
+        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnVend.SuspendLayout()
         CType(Me.pbVend, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnVendAux.SuspendLayout()
+        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnCartao.SuspendLayout()
         CType(Me.pbCartao, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnCartaoAux.SuspendLayout()
+        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnAdm.SuspendLayout()
         CType(Me.pbAdm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnAdmAux.SuspendLayout()
@@ -427,9 +427,9 @@ Partial Class home
         '
         'pnMenu
         '
+        Me.pnMenu.Controls.Add(Me.pnSubMenuAdm)
         Me.pnMenu.Controls.Add(Me.pnSubMenuVend)
         Me.pnMenu.Controls.Add(Me.pnSubMenuCartao)
-        Me.pnMenu.Controls.Add(Me.pnSubMenuAdm)
         Me.pnMenu.Controls.Add(Me.Panel24)
         Me.pnMenu.Controls.Add(Me.Panel22)
         Me.pnMenu.Controls.Add(Me.Panel23)
@@ -454,27 +454,8 @@ Partial Class home
         Me.pnMenu.Controls.Add(Me.pnBrightMode)
         Me.pnMenu.Location = New System.Drawing.Point(0, 0)
         Me.pnMenu.Name = "pnMenu"
-        Me.pnMenu.Size = New System.Drawing.Size(229, 458)
+        Me.pnMenu.Size = New System.Drawing.Size(230, 458)
         Me.pnMenu.TabIndex = 2
-        '
-        'pnInfoAux
-        '
-        Me.pnInfoAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnInfoAux.Controls.Add(Me.pbInfoAux)
-        Me.pnInfoAux.Location = New System.Drawing.Point(0, 356)
-        Me.pnInfoAux.Name = "pnInfoAux"
-        Me.pnInfoAux.Size = New System.Drawing.Size(63, 44)
-        Me.pnInfoAux.TabIndex = 9
-        '
-        'pbInfoAux
-        '
-        Me.pbInfoAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconPreto
-        Me.pbInfoAux.Location = New System.Drawing.Point(7, 4)
-        Me.pbInfoAux.Name = "pbInfoAux"
-        Me.pbInfoAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbInfoAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbInfoAux.TabIndex = 8
-        Me.pbInfoAux.TabStop = False
         '
         'pnSubMenuVend
         '
@@ -483,11 +464,10 @@ Partial Class home
         Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicReq)
         Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicDel)
         Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicAdd)
-        Me.pnSubMenuVend.Location = New System.Drawing.Point(63, 157)
+        Me.pnSubMenuVend.Location = New System.Drawing.Point(64, 157)
         Me.pnSubMenuVend.Name = "pnSubMenuVend"
-        Me.pnSubMenuVend.Size = New System.Drawing.Size(166, 134)
+        Me.pnSubMenuVend.Size = New System.Drawing.Size(166, 0)
         Me.pnSubMenuVend.TabIndex = 7
-        Me.pnSubMenuVend.Visible = False
         '
         'pnVendTopicOn
         '
@@ -614,11 +594,10 @@ Partial Class home
         Me.pnSubMenuCartao.Controls.Add(Me.pnCartaoTopicRec)
         Me.pnSubMenuCartao.Controls.Add(Me.pnCartaoTopicDel)
         Me.pnSubMenuCartao.Controls.Add(Me.pnCartaoTopicAdd)
-        Me.pnSubMenuCartao.Location = New System.Drawing.Point(63, 103)
+        Me.pnSubMenuCartao.Location = New System.Drawing.Point(64, 103)
         Me.pnSubMenuCartao.Name = "pnSubMenuCartao"
-        Me.pnSubMenuCartao.Size = New System.Drawing.Size(166, 135)
+        Me.pnSubMenuCartao.Size = New System.Drawing.Size(166, 0)
         Me.pnSubMenuCartao.TabIndex = 3
-        Me.pnSubMenuCartao.Visible = False
         '
         'pnCartaoTopicDev
         '
@@ -739,17 +718,16 @@ Partial Class home
         Me.pnSubMenuAdm.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.pnSubMenuAdm.Controls.Add(Me.pnAdmTopicDel)
         Me.pnSubMenuAdm.Controls.Add(Me.pnAddTopicAdd)
-        Me.pnSubMenuAdm.Location = New System.Drawing.Point(63, 84)
+        Me.pnSubMenuAdm.Location = New System.Drawing.Point(64, 84)
         Me.pnSubMenuAdm.Name = "pnSubMenuAdm"
         Me.pnSubMenuAdm.Size = New System.Drawing.Size(166, 0)
         Me.pnSubMenuAdm.TabIndex = 1
-        Me.pnSubMenuAdm.Visible = False
         '
         'pnAdmTopicDel
         '
         Me.pnAdmTopicDel.Controls.Add(Me.pnAdmTopicDelBar)
         Me.pnAdmTopicDel.Controls.Add(Me.lbAdmTopicDel)
-        Me.pnAdmTopicDel.Location = New System.Drawing.Point(0, 34)
+        Me.pnAdmTopicDel.Location = New System.Drawing.Point(0, 33)
         Me.pnAdmTopicDel.Name = "pnAdmTopicDel"
         Me.pnAdmTopicDel.Size = New System.Drawing.Size(166, 34)
         Me.pnAdmTopicDel.TabIndex = 2
@@ -801,25 +779,6 @@ Partial Class home
         Me.lbAdmTopicAdd.TabIndex = 0
         Me.lbAdmTopicAdd.Text = "Adicionar"
         '
-        'pnRelatAux
-        '
-        Me.pnRelatAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnRelatAux.Controls.Add(Me.pbRelatAux)
-        Me.pnRelatAux.Location = New System.Drawing.Point(0, 303)
-        Me.pnRelatAux.Name = "pnRelatAux"
-        Me.pnRelatAux.Size = New System.Drawing.Size(63, 44)
-        Me.pnRelatAux.TabIndex = 8
-        '
-        'pbRelatAux
-        '
-        Me.pbRelatAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconPreto
-        Me.pbRelatAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbRelatAux.Name = "pbRelatAux"
-        Me.pbRelatAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbRelatAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbRelatAux.TabIndex = 7
-        Me.pbRelatAux.TabStop = False
-        '
         'Panel24
         '
         Me.Panel24.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
@@ -843,25 +802,6 @@ Partial Class home
         Me.Panel23.Name = "Panel23"
         Me.Panel23.Size = New System.Drawing.Size(36, 1)
         Me.Panel23.TabIndex = 47
-        '
-        'pnProdAux
-        '
-        Me.pnProdAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnProdAux.Controls.Add(Me.pbProdAux)
-        Me.pnProdAux.Location = New System.Drawing.Point(0, 251)
-        Me.pnProdAux.Name = "pnProdAux"
-        Me.pnProdAux.Size = New System.Drawing.Size(63, 44)
-        Me.pnProdAux.TabIndex = 10
-        '
-        'pbProdAux
-        '
-        Me.pbProdAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconPreto
-        Me.pbProdAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbProdAux.Name = "pbProdAux"
-        Me.pbProdAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbProdAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbProdAux.TabIndex = 8
-        Me.pbProdAux.TabStop = False
         '
         'Panel21
         '
@@ -887,6 +827,147 @@ Partial Class home
         Me.Panel19.Size = New System.Drawing.Size(36, 1)
         Me.Panel19.TabIndex = 45
         '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.Panel17.Location = New System.Drawing.Point(63, 21)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(1, 450)
+        Me.Panel17.TabIndex = 3
+        '
+        'pnInfo
+        '
+        Me.pnInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnInfo.Controls.Add(Me.pbInfo)
+        Me.pnInfo.Location = New System.Drawing.Point(0, 356)
+        Me.pnInfo.Name = "pnInfo"
+        Me.pnInfo.Size = New System.Drawing.Size(0, 44)
+        Me.pnInfo.TabIndex = 7
+        '
+        'pbInfo
+        '
+        Me.pbInfo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconBranco
+        Me.pbInfo.Location = New System.Drawing.Point(7, 4)
+        Me.pbInfo.Name = "pbInfo"
+        Me.pbInfo.Size = New System.Drawing.Size(51, 36)
+        Me.pbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbInfo.TabIndex = 8
+        Me.pbInfo.TabStop = False
+        '
+        'pnInfoAux
+        '
+        Me.pnInfoAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnInfoAux.Controls.Add(Me.pbInfoAux)
+        Me.pnInfoAux.Location = New System.Drawing.Point(0, 356)
+        Me.pnInfoAux.Name = "pnInfoAux"
+        Me.pnInfoAux.Size = New System.Drawing.Size(63, 44)
+        Me.pnInfoAux.TabIndex = 9
+        '
+        'pbInfoAux
+        '
+        Me.pbInfoAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconPreto
+        Me.pbInfoAux.Location = New System.Drawing.Point(7, 4)
+        Me.pbInfoAux.Name = "pbInfoAux"
+        Me.pbInfoAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbInfoAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbInfoAux.TabIndex = 8
+        Me.pbInfoAux.TabStop = False
+        '
+        'pnRelat
+        '
+        Me.pnRelat.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnRelat.Controls.Add(Me.pbRelat)
+        Me.pnRelat.Location = New System.Drawing.Point(0, 303)
+        Me.pnRelat.Name = "pnRelat"
+        Me.pnRelat.Size = New System.Drawing.Size(0, 44)
+        Me.pnRelat.TabIndex = 6
+        '
+        'pbRelat
+        '
+        Me.pbRelat.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconBranco
+        Me.pbRelat.Location = New System.Drawing.Point(6, 4)
+        Me.pbRelat.Name = "pbRelat"
+        Me.pbRelat.Size = New System.Drawing.Size(51, 36)
+        Me.pbRelat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbRelat.TabIndex = 7
+        Me.pbRelat.TabStop = False
+        '
+        'pnRelatAux
+        '
+        Me.pnRelatAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnRelatAux.Controls.Add(Me.pbRelatAux)
+        Me.pnRelatAux.Location = New System.Drawing.Point(0, 303)
+        Me.pnRelatAux.Name = "pnRelatAux"
+        Me.pnRelatAux.Size = New System.Drawing.Size(63, 44)
+        Me.pnRelatAux.TabIndex = 8
+        '
+        'pbRelatAux
+        '
+        Me.pbRelatAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconPreto
+        Me.pbRelatAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbRelatAux.Name = "pbRelatAux"
+        Me.pbRelatAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbRelatAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbRelatAux.TabIndex = 7
+        Me.pbRelatAux.TabStop = False
+        '
+        'pnProd
+        '
+        Me.pnProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnProd.Controls.Add(Me.pbProd)
+        Me.pnProd.Location = New System.Drawing.Point(0, 251)
+        Me.pnProd.Name = "pnProd"
+        Me.pnProd.Size = New System.Drawing.Size(0, 44)
+        Me.pnProd.TabIndex = 9
+        '
+        'pbProd
+        '
+        Me.pbProd.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconBranco
+        Me.pbProd.Location = New System.Drawing.Point(6, 4)
+        Me.pbProd.Name = "pbProd"
+        Me.pbProd.Size = New System.Drawing.Size(51, 36)
+        Me.pbProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbProd.TabIndex = 8
+        Me.pbProd.TabStop = False
+        '
+        'pnProdAux
+        '
+        Me.pnProdAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnProdAux.Controls.Add(Me.pbProdAux)
+        Me.pnProdAux.Location = New System.Drawing.Point(0, 251)
+        Me.pnProdAux.Name = "pnProdAux"
+        Me.pnProdAux.Size = New System.Drawing.Size(63, 44)
+        Me.pnProdAux.TabIndex = 10
+        '
+        'pbProdAux
+        '
+        Me.pbProdAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconPreto
+        Me.pbProdAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbProdAux.Name = "pbProdAux"
+        Me.pbProdAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbProdAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbProdAux.TabIndex = 8
+        Me.pbProdAux.TabStop = False
+        '
+        'pnVend
+        '
+        Me.pnVend.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnVend.Controls.Add(Me.pbVend)
+        Me.pnVend.Location = New System.Drawing.Point(0, 199)
+        Me.pnVend.Name = "pnVend"
+        Me.pnVend.Size = New System.Drawing.Size(0, 44)
+        Me.pnVend.TabIndex = 5
+        '
+        'pbVend
+        '
+        Me.pbVend.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconBranco
+        Me.pbVend.Location = New System.Drawing.Point(6, 4)
+        Me.pbVend.Name = "pbVend"
+        Me.pbVend.Size = New System.Drawing.Size(51, 36)
+        Me.pbVend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbVend.TabIndex = 6
+        Me.pbVend.TabStop = False
+        '
         'pnVendAux
         '
         Me.pnVendAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -906,32 +987,24 @@ Partial Class home
         Me.pbVendAux.TabIndex = 6
         Me.pbVendAux.TabStop = False
         '
-        'Panel17
+        'pnCartao
         '
-        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.Panel17.Location = New System.Drawing.Point(62, 21)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(1, 450)
-        Me.Panel17.TabIndex = 3
+        Me.pnCartao.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnCartao.Controls.Add(Me.pbCartao)
+        Me.pnCartao.Location = New System.Drawing.Point(0, 146)
+        Me.pnCartao.Name = "pnCartao"
+        Me.pnCartao.Size = New System.Drawing.Size(0, 44)
+        Me.pnCartao.TabIndex = 5
         '
-        'pnInfo
+        'pbCartao
         '
-        Me.pnInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnInfo.Controls.Add(Me.pbInfo)
-        Me.pnInfo.Location = New System.Drawing.Point(0, 356)
-        Me.pnInfo.Name = "pnInfo"
-        Me.pnInfo.Size = New System.Drawing.Size(0, 44)
-        Me.pnInfo.TabIndex = 7
-        '
-        'pbInfo
-        '
-        Me.pbInfo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconBranco
-        Me.pbInfo.Location = New System.Drawing.Point(7, 4)
-        Me.pbInfo.Name = "pbInfo"
-        Me.pbInfo.Size = New System.Drawing.Size(51, 36)
-        Me.pbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbInfo.TabIndex = 8
-        Me.pbInfo.TabStop = False
+        Me.pbCartao.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconBranco
+        Me.pbCartao.Location = New System.Drawing.Point(6, 4)
+        Me.pbCartao.Name = "pbCartao"
+        Me.pbCartao.Size = New System.Drawing.Size(51, 36)
+        Me.pbCartao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbCartao.TabIndex = 5
+        Me.pbCartao.TabStop = False
         '
         'pnCartaoAux
         '
@@ -951,82 +1024,6 @@ Partial Class home
         Me.pbCartaoAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pbCartaoAux.TabIndex = 5
         Me.pbCartaoAux.TabStop = False
-        '
-        'pnRelat
-        '
-        Me.pnRelat.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnRelat.Controls.Add(Me.pbRelat)
-        Me.pnRelat.Location = New System.Drawing.Point(0, 303)
-        Me.pnRelat.Name = "pnRelat"
-        Me.pnRelat.Size = New System.Drawing.Size(0, 44)
-        Me.pnRelat.TabIndex = 6
-        '
-        'pbRelat
-        '
-        Me.pbRelat.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconBranco
-        Me.pbRelat.Location = New System.Drawing.Point(6, 4)
-        Me.pbRelat.Name = "pbRelat"
-        Me.pbRelat.Size = New System.Drawing.Size(51, 36)
-        Me.pbRelat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbRelat.TabIndex = 7
-        Me.pbRelat.TabStop = False
-        '
-        'pnProd
-        '
-        Me.pnProd.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnProd.Controls.Add(Me.pbProd)
-        Me.pnProd.Location = New System.Drawing.Point(0, 251)
-        Me.pnProd.Name = "pnProd"
-        Me.pnProd.Size = New System.Drawing.Size(0, 44)
-        Me.pnProd.TabIndex = 9
-        '
-        'pbProd
-        '
-        Me.pbProd.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconBranco
-        Me.pbProd.Location = New System.Drawing.Point(6, 4)
-        Me.pbProd.Name = "pbProd"
-        Me.pbProd.Size = New System.Drawing.Size(51, 36)
-        Me.pbProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbProd.TabIndex = 8
-        Me.pbProd.TabStop = False
-        '
-        'pnVend
-        '
-        Me.pnVend.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnVend.Controls.Add(Me.pbVend)
-        Me.pnVend.Location = New System.Drawing.Point(0, 199)
-        Me.pnVend.Name = "pnVend"
-        Me.pnVend.Size = New System.Drawing.Size(0, 44)
-        Me.pnVend.TabIndex = 5
-        '
-        'pbVend
-        '
-        Me.pbVend.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconBranco
-        Me.pbVend.Location = New System.Drawing.Point(6, 4)
-        Me.pbVend.Name = "pbVend"
-        Me.pbVend.Size = New System.Drawing.Size(51, 36)
-        Me.pbVend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbVend.TabIndex = 6
-        Me.pbVend.TabStop = False
-        '
-        'pnCartao
-        '
-        Me.pnCartao.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.pnCartao.Controls.Add(Me.pbCartao)
-        Me.pnCartao.Location = New System.Drawing.Point(0, 146)
-        Me.pnCartao.Name = "pnCartao"
-        Me.pnCartao.Size = New System.Drawing.Size(0, 44)
-        Me.pnCartao.TabIndex = 5
-        '
-        'pbCartao
-        '
-        Me.pbCartao.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconBranco
-        Me.pbCartao.Location = New System.Drawing.Point(6, 4)
-        Me.pbCartao.Name = "pbCartao"
-        Me.pbCartao.Size = New System.Drawing.Size(51, 36)
-        Me.pbCartao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbCartao.TabIndex = 5
-        Me.pbCartao.TabStop = False
         '
         'pnAdm
         '
@@ -3043,12 +3040,12 @@ Partial Class home
         Me.ClientSize = New System.Drawing.Size(884, 459)
         Me.Controls.Add(Me.pnBarraSuperior)
         Me.Controls.Add(Me.pnMenu)
+        Me.Controls.Add(Me.pnAdmAddScreen)
         Me.Controls.Add(Me.pnVendDelScreen)
         Me.Controls.Add(Me.pnVendAddScreen)
         Me.Controls.Add(Me.pnAdmDelScreen)
         Me.Controls.Add(Me.pnCartaoDelScreen)
         Me.Controls.Add(Me.pnCartaoAddScreen)
-        Me.Controls.Add(Me.pnAdmAddScreen)
         Me.Controls.Add(Me.pnVendReqScreen)
         Me.Controls.Add(Me.pnVendOnScreen)
         Me.Controls.Add(Me.pnHomeTela)
@@ -3064,8 +3061,6 @@ Partial Class home
         Me.pnFechar.ResumeLayout(False)
         CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnMenu.ResumeLayout(False)
-        Me.pnInfoAux.ResumeLayout(False)
-        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnSubMenuVend.ResumeLayout(False)
         Me.pnVendTopicOn.ResumeLayout(False)
         Me.pnVendTopicOn.PerformLayout()
@@ -3089,24 +3084,26 @@ Partial Class home
         Me.pnAdmTopicDel.PerformLayout()
         Me.pnAddTopicAdd.ResumeLayout(False)
         Me.pnAddTopicAdd.PerformLayout()
-        Me.pnRelatAux.ResumeLayout(False)
-        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnProdAux.ResumeLayout(False)
-        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnVendAux.ResumeLayout(False)
-        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnInfo.ResumeLayout(False)
         CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnCartaoAux.ResumeLayout(False)
-        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnInfoAux.ResumeLayout(False)
+        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnRelat.ResumeLayout(False)
         CType(Me.pbRelat, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnRelatAux.ResumeLayout(False)
+        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnProd.ResumeLayout(False)
         CType(Me.pbProd, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnProdAux.ResumeLayout(False)
+        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnVend.ResumeLayout(False)
         CType(Me.pbVend, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnVendAux.ResumeLayout(False)
+        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartao.ResumeLayout(False)
         CType(Me.pbCartao, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnCartaoAux.ResumeLayout(False)
+        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnAdm.ResumeLayout(False)
         CType(Me.pbAdm, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnAdmAux.ResumeLayout(False)
