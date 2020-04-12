@@ -1,0 +1,49 @@
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe.config
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.pdb
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.xml
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbprojAssemblyReference.cache
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.Login.resources
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.Resources.resources
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.GenerateResource.cache
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.CoreCompileInputs.cache
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.exe
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.xml
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.pdb
+I:\TCC\S.I.S.T.E.MA\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.home.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbprojAssemblyReference.cache
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.home.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.Login.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.Resources.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.GenerateResource.cache
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.CoreCompileInputs.cache
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.exe
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.xml
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.pdb
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe.config
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.pdb
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.xml
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.CopyComplete
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv1.0_08_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.datagridviews.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe.config
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.exe
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.pdb
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\S.I.S.T.E.MA.xml
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbprojAssemblyReference.cache
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.home.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.formLogin.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.Resources.resources
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.GenerateResource.cache
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.CoreCompileInputs.cache
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.vbproj.CopyComplete
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.exe
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.xml
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.pdb
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\gamer\OneDrive\TCC Backup\S.I.S.T.E.MAv2.0_10_04\S.I.S.T.E.MA\obj\Debug\S.I.S.T.E.MA.formMsgBox.resources

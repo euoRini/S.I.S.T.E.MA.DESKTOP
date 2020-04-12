@@ -1,0 +1,211 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+S.I.S.T.E.MA
+</name>
+</assembly>
+<members>
+<member name="T:S.I.S.T.E.MA.My.Resources.Resources">
+<summary>
+  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.ResourceManager">
+<summary>
+  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.Culture">
+<summary>
+  Substitui a propriedade CurrentUICulture do thread atual para todas as
+  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgAdmIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgAdmIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgAdmIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgFecharCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgFecharIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgHideIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgHideIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgHomeIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgHomeIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgHomeIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgLogoCirculo">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgLogoCirculoPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgMinimizarIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgMinimizarIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgMoonIcon">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgSenhaIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgSenhaIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgSunIcon">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgUserIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgUserIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconCinza">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgVisiblyIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgVisiblyIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>
