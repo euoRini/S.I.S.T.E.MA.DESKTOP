@@ -147,7 +147,7 @@ Module operacoesAPI
 
     End Sub
 
-    Public Sub recebimentoCartaoExc(uri As Uri, contentType As String, method As String)
+    Public Sub recebimentoCartaoExc(uri As Uri, contentType As String, method As String, acao As String)
 
         'Criando as variáveis usadas na criação da requisição HTTP
         Dim request As HttpWebRequest
@@ -184,11 +184,18 @@ Module operacoesAPI
 
             'Caso seja exclusão, adiciona nas tbs os dados encontrados
             With home
-                .tbCartaoDelNome.Text = usuario.nome
-                .tbCartaoDelEmail.Text = usuario.email
-                .tbCartaoDelSaldo.Text = usuario.saldo
-                .btCartaoDelApagar.Enabled = True
-                .btCartaoDelCancelar.Enabled = True
+                If acao = "exclusao" Then
+                    .tbCartaoDelNome.Text = usuario.nome
+                    .tbCartaoDelEmail.Text = usuario.email
+                    .tbCartaoDelSaldo.Text = usuario.saldo
+                    .btCartaoDelApagar.Enabled = True
+                    .btCartaoDelCancelar.Enabled = True
+                ElseIf acao = "recarga" Then
+                    .lbCartaoRecNome.Text = usuario.nome
+                    .lbCartaoRecEmail.Text = usuario.email
+                    .lbCartaoRecSaldoAt.Text = usuario.saldo
+                End If
+
             End With
 
             'Caso seja login, verifica validade do login retornando true/false para sucessoLogin
@@ -358,12 +365,21 @@ Module operacoesAPI
 
     Public Sub excCartao(matricula As String)
 
-        'URL para rota de lista de admins por login informado
+        'URL para rota de lista de users plea matricula informada
         Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & matricula)
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
-        recebimentoCartaoExc(myUri, "application/json", "GET")
+        recebimentoCartaoExc(myUri, "application/json", "GET", "exclusao")
     End Sub
+    Public Sub recCartao(matricula As String)
+
+        'URL para rota de lista de users plea matricula informada
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & matricula)
+
+        'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
+        recebimentoCartaoExc(myUri, "application/json", "GET", "recarga")
+    End Sub
+
 
 #End Region
 
@@ -393,6 +409,7 @@ Module operacoesAPI
     '    recebimentoVendedorExc(myUri, "application/json", "GET")
     'End Sub
 #End Region
+
 
 
 End Module

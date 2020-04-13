@@ -15,6 +15,14 @@ Public Class home
     Dim prodAtivo As Boolean = False
     Dim infoAtivo As Boolean = False
 
+#Region "Declaração de variáveis usadas nas placeholdes"
+    Dim controlePlace1 As Boolean
+    Dim controlePlace2 As Boolean
+    Dim controlePlace3 As Boolean
+    Dim controlePlace4 As Boolean
+    Dim controlePlace5 As Boolean
+#End Region
+
 #End Region
 
 #Region "Load/Fechar/Minimizar/Movimentação/ModoDeCor"
@@ -515,6 +523,7 @@ Public Class home
 
 #Region "Cartao"
 
+    Dim totalRecarga As interger
     'Adicionar Cartao
     Private Sub btCartaoAddSalvar_Click(sender As Object, e As EventArgs) Handles btCartaoAddSalvar.Click
         Dim matricula As String = tbCartaoAddMat.Text
@@ -530,7 +539,7 @@ Public Class home
         End If
     End Sub
 
-    'Busca Cartao para exclusão
+    'Buscar Cartao para exclusão
     Private Sub btCartaoDelBusca_Click(sender As Object, e As EventArgs) Handles btCartaoDelBusca.Click
         excCartao(tbCartaoDelBusca.Text)
     End Sub
@@ -538,7 +547,11 @@ Public Class home
     Private Sub btCartaoDelApagar_Click(sender As Object, e As EventArgs) Handles btCartaoDelApagar.Click
         Dim myUri As String = "https://sistemaifrj.herokuapp.com/users/"
         delete(tbCartaoDelBusca.Text, myUri)
+    End Sub
 
+    'Buscar Cartão para recarga
+    Private Sub btCartaoReqBusca_Click(sender As Object, e As EventArgs) Handles btCartaoReqBusca.Click
+        recCartao(tbCartaoRecMat.Text)
     End Sub
 
 
@@ -593,6 +606,8 @@ Public Class home
         End If
         'alteraDesign()
     End Sub
+
+
 
     Private Sub pnBrightMode_Click(sender As Object, e As EventArgs) Handles pnBrightMode.Click
         pbBrightMode_Click(sender, e)
@@ -1056,6 +1071,63 @@ Public Class home
 #End Region
 
 #Region "Outros"
+#Region "PlaceHolders"
+    Private Sub tbAdmAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddEmail.TextChanged
+        With tbAdmAddEmail
+            If .Text = "" Then
+                .Text = "E-mail"
+                .ForeColor = Color.FromArgb(200, 200, 200)
+            End If
+            If .TextLength > 5 Then
+                If StrReverse(StrReverse(.Text).Remove(5)) = "E-mail" Then
+                    .Text = .Text.Remove(.TextLength - 5)
+                    .ForeColor = Color.DimGray
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddEmail.KeyDown
+        With tbAdmAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseDown
+        controlePlace5 = True
+        With tbAdmAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddEmail_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseMove
+        If controlePlace5 Then
+            With tbAdmAddEmail
+                If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
+                    tbAdmAddEmail.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbAdmAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseUp
+        controlePlace5 = False
+    End Sub
+
+
+
+#End Region
 
     'Impede Entrada de Não Número em Saldos
     Private Sub tbCartaoAddSaldo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbCartaoAddSaldo.KeyPress
