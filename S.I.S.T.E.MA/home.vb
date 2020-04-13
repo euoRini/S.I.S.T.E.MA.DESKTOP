@@ -114,25 +114,39 @@ Public Class home
             pnVendOnScreen.Visible = False
 
 
-            Dim maxSize As Integer
+            'Todo ".Refresh" atualiza o panel para evitar bug visual
+
+
+            'Variaveis Locais
+            'Funções:
+            'SizeOpen = Estabelece tamanhado de submenu que será aberto
+            'SizaClose = Estabelece tamanhado de submenu que será fechado
+            'pnAnterior = Recebe de selectAtual() qual menu está aberto no momento
+            'pnProximo(passado por parametro) = Recebe o panel que será aberto
+            'pnAnteriorAux/pnProximoAux =  Recebe o panel aux do seu respectivo (apenas para .Refresh)
+            'pnSubAnterior = Recebe o SubMenu que está aberto
+            'pnSubProximo = Recebe o SubMenu que será aberto
+
+            Dim SizeOpen, SizeClose As Integer
             Dim pnAnterior As Panel = selectAtual()
             Dim pnAnteriorAux, pnProximoAux, pnSubAnterior, pnSubProximo As Panel
-            ' pnAnterior.BackColor = Color.FromArgb(56, 56, 56)
-            'pnProximo.BackColor = Color.FromArgb(56, 56, 56)
 
-
+            'De acordo com pnAnterior, pnAnteriorAux recebe seu respectivo panel...
+            ' e SizeClose seu devido tamanho
             If pnAnterior.Name = "pnHome" Then
                 pnAnteriorAux = pnHomeAux
-
             ElseIf pnAnterior.Name = "pnAdm" Then
                 pnAnteriorAux = pnAdmAux
                 pnSubAnterior = pnSubMenuAdm
+                SizeClose = 67
             ElseIf pnAnterior.Name = "pnCartao" Then
                 pnAnteriorAux = pnCartaoAux
                 pnSubAnterior = pnSubMenuCartao
+                SizeClose = 132
             ElseIf pnAnterior.Name = "pnVend" Then
                 pnAnteriorAux = pnVendAux
                 pnSubAnterior = pnSubMenuVend
+                SizeClose = 132
             ElseIf pnAnterior.Name = "pnProd" Then
                 pnAnteriorAux = pnProdAux
             ElseIf pnAnterior.Name = "pnRelat" Then
@@ -141,20 +155,22 @@ Public Class home
                 pnAnteriorAux = pnInfoAux
             End If
 
+            'De acordo com pnProximo, pnProxumoAux recebe seu respectivo panel...
+            ' e SizeOpen seu devido tamanho
             If pnProximo.Name = "pnHome" Then
                 pnProximoAux = pnHomeAux
             ElseIf pnProximo.Name = "pnAdm" Then
                 pnProximoAux = pnAdmAux
                 pnSubProximo = pnSubMenuAdm
-                maxSize = 67
+                SizeOpen = 67
             ElseIf pnProximo.Name = "pnCartao" Then
                 pnProximoAux = pnCartaoAux
                 pnSubProximo = pnSubMenuCartao
-                maxSize = 132
+                SizeOpen = 132
             ElseIf pnProximo.Name = "pnVend" Then
                 pnProximoAux = pnVendAux
                 pnSubProximo = pnSubMenuVend
-                maxSize = 132
+                SizeOpen = 132
             ElseIf pnProximo.Name = "pnProd" Then
                 pnProximoAux = pnProdAux
             ElseIf pnProximo.Name = "pnRelat" Then
@@ -163,12 +179,14 @@ Public Class home
                 pnProximoAux = pnInfoAux
             End If
 
+            'Fechar SubMenu aberto. PS: Home não tem Submenu
+            'Caso Home, não executa
             If pnAnterior.Name <> "pnHome" Then
-
+                MsgBox("Primeiro While")
                 While pnSubAnterior.Height > 0
-                    If maxSize = 67 Then
+                    If SizeClose = 67 Then
                         pnSubAnterior.Height -= 3
-                    ElseIf maxSize = 132 Then
+                    ElseIf SizeClose = 132 Then
                         pnSubAnterior.Height -= 6
                     End If
 
@@ -177,8 +195,13 @@ Public Class home
                     End If
                     pnSubAnterior.Refresh()
                     System.Threading.Thread.Sleep(5)
+                    'MsgBox("Primeiro While Loop")
                 End While
             End If
+
+            'Animação Menu Principal
+            '64 = Tamanho Width do panel do Menu Principal
+            'pnProximo.Width cresce no mesmo ritmo que pnAnterior diminui
             While pnProximo.Width < 64
                 pnProximo.Width = pnProximo.Width + 2
                 pnAnterior.Width = pnAnterior.Width - 2
@@ -186,28 +209,39 @@ Public Class home
                 pnProximoAux.Refresh()
                 pnAnterior.Refresh()
                 pnAnteriorAux.Refresh()
-
             End While
 
-            While pnSubProximo.Height < maxSize
-                If maxSize = 67 Then
-                    pnSubProximo.Height += 3
-                ElseIf maxSize = 132 Then
-                    pnSubProximo.Height += 6
-                End If
-                If pnSubProximo.Height = (2 * maxSize - 1) Then
-                    pnSubProximo.Height += 1
-                End If
-                pnSubProximo.Refresh()
-                System.Threading.Thread.Sleep(5)
-            End While
+            'Abrir SubMenu solicitado. PS: Home não tem Submenu
+            'Caso Home, não executa
             If pnProximo.Name <> "pnHome" Then
+                While pnSubProximo.Height < SizeOpen
+                    If SizeOpen = 67 Then
+                        pnSubProximo.Height += 3
+                        If pnSubProximo.Height = (SizeOpen - 1) Then
+                            pnSubProximo.Height += 1
+                        End If
+                    ElseIf SizeOpen = 132 Then
+                        pnSubProximo.Height += 6
+                        If pnSubProximo.Height = (2 * SizeOpen - 1) Then
+                            pnSubProximo.Height += 1
+                        End If
+                    End If
+                    pnSubProximo.Refresh()
+                    System.Threading.Thread.Sleep(5)
+                End While
+            End If
+
+            'Caso pmProximo seja a Home, troca a tela para logo maior
+            If pnProximo.Name = "pnHome" Then
+                pnHomeTela.Visible = True
+                pnLogo.Visible = False
+            Else
                 pnHomeTela.Visible = False
                 pnLogo.Visible = True
             End If
 
-        End If
-        If nivel = 2 Then
+            End If
+            If nivel = 2 Then
             pnLogo.Visible = False
             If pnProximo.Name = "pnAdmAddScreen" Or pnProximo.Name = "pnAdmDelScreen" Then
                 pnAdmTopicAddBar.Visible = False
