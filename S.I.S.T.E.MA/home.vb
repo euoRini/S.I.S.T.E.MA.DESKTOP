@@ -85,54 +85,30 @@ Public Class home
 #Region "Navegação Menu"
 
 #Region "Modulo de Execucao"
-    Sub navegacaoMenu(nivel As Integer, pnProximo As Panel, pnAtivo2 As Panel)
-        'Paineis e Icones Menu Principal
 
-        'If Not brightMode Then
+    'Variaveis de Navegação
+    'Funções:
+    'SizeOpen = Estabelece tamanhado de submenu que será aberto
+    'SizaClose = Estabelece tamanhado de submenu que será fechado
+    'pnAnterior = Recebe de selectAtual() qual menu está aberto no momento
+    'pnProximo(passado por parametro) = Recebe o panel que será aberto
+    'pnAnteriorAux/pnProximoAux =  Recebe o panel aux do seu respectivo (apenas para .Refresh)
+    'pnSubAnterior = Recebe o SubMenu que está aberto
+    'pnSubProximo = Recebe o SubMenu que será aberto
+
+    Public SizeOpen, SizeClose As Integer
+    Public pnAnterior, pnAnteriorAux, pnProximoAux, pnSubAnterior, pnSubProximo As Panel
+    Sub navegacaoMenu(nivel As Integer, pnProximo As Panel, pnToOpenScreen As Panel)
+
+        FecharSubMenuScreenEBar(pnProximo)
+
         If nivel = 1 Then
-            'Desativa Tópicos de SubMenus
-            pnAdmTopicAddBar.Visible = False
-            pnAdmTopicDelBar.Visible = False
-            pnCartaoTopicAddBar.Visible = False
-            pnCartaoTopicDelBar.Visible = False
-            pnCartaoTopicRecBar.Visible = False
-            pnCartaoTopicDevBar.Visible = False
-            pnVendTopicAddBar.Visible = False
-            pnVendTopicDelBar.Visible = False
-            pnVendTopicReqBar.Visible = False
-            pnVendTopicOnBar.Visible = False
-            'Desativa Telas
-            pnAdmAddScreen.Visible = False
-            pnAdmDelScreen.Visible = False
-            pnCartaoAddScreen.Visible = False
-            pnCartaoDelScreen.Visible = False
-            pnCartaoRecScreen.Visible = False
-            pnCartaoDevScreen.Visible = False
-            pnVendAddScreen.Visible = False
-            pnVendDelScreen.Visible = False
-            pnVendReqScreen.Visible = False
-            pnVendOnScreen.Visible = False
-
 
             'Todo ".Refresh" atualiza o panel para evitar bug visual
 
-
-            'Variaveis Locais
-            'Funções:
-            'SizeOpen = Estabelece tamanhado de submenu que será aberto
-            'SizaClose = Estabelece tamanhado de submenu que será fechado
-            'pnAnterior = Recebe de selectAtual() qual menu está aberto no momento
-            'pnProximo(passado por parametro) = Recebe o panel que será aberto
-            'pnAnteriorAux/pnProximoAux =  Recebe o panel aux do seu respectivo (apenas para .Refresh)
-            'pnSubAnterior = Recebe o SubMenu que está aberto
-            'pnSubProximo = Recebe o SubMenu que será aberto
-
-            Dim SizeOpen, SizeClose As Integer
-            Dim pnAnterior As Panel = selectAtual()
-            Dim pnAnteriorAux, pnProximoAux, pnSubAnterior, pnSubProximo As Panel
-
             'De acordo com pnAnterior, pnAnteriorAux recebe seu respectivo panel...
             ' e SizeClose seu devido tamanho
+            pnAnterior = selectAtual()
             If pnAnterior.Name = "pnHome" Then
                 pnAnteriorAux = pnHomeAux
             ElseIf pnAnterior.Name = "pnAdm" Then
@@ -149,10 +125,16 @@ Public Class home
                 SizeClose = 132
             ElseIf pnAnterior.Name = "pnProd" Then
                 pnAnteriorAux = pnProdAux
+
+
             ElseIf pnAnterior.Name = "pnRelat" Then
                 pnAnteriorAux = pnRelatAux
+
+
             ElseIf pnAnterior.Name = "pnInfo" Then
                 pnAnteriorAux = pnInfoAux
+
+
             End If
 
             'De acordo com pnProximo, pnProxumoAux recebe seu respectivo panel...
@@ -173,29 +155,32 @@ Public Class home
                 SizeOpen = 132
             ElseIf pnProximo.Name = "pnProd" Then
                 pnProximoAux = pnProdAux
+
+
             ElseIf pnProximo.Name = "pnRelat" Then
                 pnProximoAux = pnRelatAux
+
+
             ElseIf pnProximo.Name = "pnInfo" Then
                 pnProximoAux = pnInfoAux
+
+
             End If
 
             'Fechar SubMenu aberto. PS: Home não tem Submenu
             'Caso Home, não executa
             If pnAnterior.Name <> "pnHome" Then
-                MsgBox("Primeiro While")
                 While pnSubAnterior.Height > 0
                     If SizeClose = 67 Then
                         pnSubAnterior.Height -= 3
+                        If pnSubAnterior.Height = 1 Then
+                            pnSubAnterior.Height -= 1
+                        End If
                     ElseIf SizeClose = 132 Then
                         pnSubAnterior.Height -= 6
                     End If
-
-                    If pnSubAnterior.Height = 1 Then
-                        pnSubAnterior.Height -= 1
-                    End If
                     pnSubAnterior.Refresh()
                     System.Threading.Thread.Sleep(5)
-                    'MsgBox("Primeiro While Loop")
                 End While
             End If
 
@@ -231,85 +216,17 @@ Public Class home
                 End While
             End If
 
-            'Caso pmProximo seja a Home, troca a tela para logo maior
-            If pnProximo.Name = "pnHome" Then
-                pnHomeTela.Visible = True
-                pnLogo.Visible = False
-            Else
-                pnHomeTela.Visible = False
-                pnLogo.Visible = True
-            End If
+            'Caso pnProximo seja a Home, troca a tela para logo maior
 
-            End If
-            If nivel = 2 Then
-            pnLogo.Visible = False
-            If pnProximo.Name = "pnAdmAddScreen" Or pnProximo.Name = "pnAdmDelScreen" Then
-                pnAdmTopicAddBar.Visible = False
-                pnAdmTopicDelBar.Visible = False
-                pnAdmAddScreen.Visible = False
-                pnAdmDelScreen.Visible = False
-                pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-                pnAtivo2.Visible = True
-                pnProximo.Visible = True
-                pnProximo.Visible = True
-            ElseIf pnProximo.Name = "pnCartaoAddScreen" Or pnProximo.Name = "pnCartaoDelScreen" Or pnProximo.Name = "pnCartaoRecScreen" Or pnProximo.Name = "pnCartaoDevScreen" Then
-                pnCartaoTopicAddBar.Visible = False
-                pnCartaoTopicDelBar.Visible = False
-                pnCartaoTopicRecBar.Visible = False
-                pnCartaoTopicDevBar.Visible = False
-                pnCartaoAddScreen.Visible = False
-                pnCartaoDelScreen.Visible = False
-                pnCartaoRecScreen.Visible = False
-                pnCartaoDevScreen.Visible = False
-
-                pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-                'pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-                pnAtivo2.Visible = True
-                pnProximo.Visible = True
-                pnProximo.Visible = True
-            ElseIf pnProximo.Name = "pnVendAddScreen" Or pnProximo.Name = "pnVendDelScreen" Or pnProximo.Name = "pnVendReqScreen" Or pnProximo.Name = "pnVendOnScreen" Then
-                pnVendTopicAddBar.Visible = False
-                pnVendTopicDelBar.Visible = False
-                pnVendTopicReqBar.Visible = False
-                pnVendTopicOnBar.Visible = False
-                pnVendAddScreen.Visible = False
-                pnVendDelScreen.Visible = False
-                pnVendReqScreen.Visible = False
-                pnVendOnScreen.Visible = False
-                pnProximo.BackColor = Color.FromArgb(32, 32, 32)
-                pnAtivo2.Visible = True
-                pnProximo.Visible = True
-                pnProximo.Visible = True
-            End If
         End If
-        'Else
-        '    If nivel = 1 Then
+        If nivel = 2 Then
 
-        '        'Desativa Tópicos de SubMenus
-        '        pnAdmTopicAddBar.Visible = False
-        '        pnAdmTopicDelBar.Visible = False
-        '        pnCartaoTopicAddBar.Visible = False
-        '        pnCartaoTopicDelBar.Visible = False
-        '        pnCartaoTopicRecBar.Visible = False
-        '        pnCartaoTopicDevBar.Visible = False
-        '        pnVendTopicAddBar.Visible = False
-        '        pnVendTopicDelBar.Visible = False
-        '        pnVendTopicReqBar.Visible = False
-        '        pnVendTopicOnBar.Visible = False
-        '        'Desativa Telas
-        '        pnAdmAddScreen.Visible = False
-        '        pnAdmDelScreen.Visible = False
-        '        pnCartaoAddScreen.Visible = False
-        '        pnCartaoDelScreen.Visible = False
-        '        pnCartaoRecScreen.Visible = False
-        '        pnCartaoDevScreen.Visible = False
-        '        pnVendAddScreen.Visible = False
-        '        pnVendDelScreen.Visible = False
-        '        pnVendReqScreen.Visible = False
-        '        pnVendOnScreen.Visible = False
-        '    End If
+            'No nivel 2, o pnProximo é a Barra dos Topics
+            pnLogo.Visible = False
+            pnProximo.Visible = True
+            pnToOpenScreen.Visible = True
 
-        'End If
+        End If
     End Sub
 
     Public Function selectAtual() As Panel
@@ -332,7 +249,7 @@ Public Class home
         Return panelResposta
     End Function
 
-    Public Sub alteraBool(pnAtivo As Panel)
+    Public Sub alteraBoolMenu(pnAtivo As Panel)
         With pnAtivo
             homeAtivo = False
             admAtivo = False
@@ -358,46 +275,73 @@ Public Class home
             End If
         End With
     End Sub
+
+    Public Sub FecharSubMenuScreenEBar(pnProximo As Panel)
+        'Fecha Screens
+        pnAdmAddScreen.Visible = False
+        pnAdmDelScreen.Visible = False
+        pnCartaoAddScreen.Visible = False
+        pnCartaoDelScreen.Visible = False
+        pnCartaoRecScreen.Visible = False
+        pnCartaoDevScreen.Visible = False
+        pnVendAddScreen.Visible = False
+        pnVendDelScreen.Visible = False
+        pnVendReqScreen.Visible = False
+        pnVendOnScreen.Visible = False
+        If pnProximo.Name = "pnHome" Then
+            pnHomeTela.Visible = True
+            pnLogo.Visible = False
+        Else
+            pnHomeTela.Visible = False
+            pnLogo.Visible = True
+        End If
+        'Fecha Bars Submenu
+        pnAdmTopicAddBar.Visible = False
+        pnAdmTopicDelBar.Visible = False
+        pnCartaoTopicAddBar.Visible = False
+        pnCartaoTopicDelBar.Visible = False
+        pnCartaoTopicRecBar.Visible = False
+        pnCartaoTopicDevBar.Visible = False
+        pnVendTopicAddBar.Visible = False
+        pnVendTopicDelBar.Visible = False
+        pnVendTopicReqBar.Visible = False
+        pnVendTopicOnBar.Visible = False
+    End Sub
+
+
 #End Region
 
 #Region "Botoes Nivel1"
     Private Sub pbHomeAux_Click(sender As Object, e As EventArgs) Handles pbHomeAux.Click
-
-        navegacaoMenu(1, pnHome, Nothing)
-        alteraBool(pnHome)
+        navegacaoMenu(1, pnHome, pnHomeTela)
+        alteraBoolMenu(pnHome)
     End Sub
     Private Sub pbAdmAux_Click(sender As Object, e As EventArgs) Handles pbAdmAux.Click
-
-        navegacaoMenu(1, pnAdm, Nothing)
-        alteraBool(pnAdm)
+        navegacaoMenu(1, pnAdm, pnLogo)
+        alteraBoolMenu(pnAdm)
     End Sub
 
     Private Sub pbCartaoAux_Click(sender As Object, e As EventArgs) Handles pbCartaoAux.Click
-
-        navegacaoMenu(1, pnCartao, Nothing)
-        alteraBool(pnCartao)
+        navegacaoMenu(1, pnCartao, pnLogo)
+        alteraBoolMenu(pnCartao)
     End Sub
     Private Sub pbVendAux_Click(sender As Object, e As EventArgs) Handles pbVendAux.Click
-
-        navegacaoMenu(1, pnVend, Nothing)
-        alteraBool(pnVend)
+        navegacaoMenu(1, pnVend, pnLogo)
+        alteraBoolMenu(pnVend)
     End Sub
 
     Private Sub pbProdAux_Click(sender As Object, e As EventArgs) Handles pbProdAux.Click
-
-        navegacaoMenu(1, pnProd, Nothing)
-        alteraBool(pnProd)
+        navegacaoMenu(1, pnProd, pnLogo)
+        alteraBoolMenu(pnProd)
     End Sub
     Private Sub pbRelatAux_Click(sender As Object, e As EventArgs) Handles pbRelatAux.Click
-
-        navegacaoMenu(1, pnRelat, Nothing)
-        alteraBool(pnRelat)
+        navegacaoMenu(1, pnRelat, pnLogo)
+        alteraBoolMenu(pnRelat)
     End Sub
 
     Private Sub pbInfoAux_Click(sender As Object, e As EventArgs) Handles pbInfoAux.Click
-
-        navegacaoMenu(1, pnInfo, Nothing)
-        alteraBool(pnInfo)
+        navegacaoMenu(1, pnInfo, pnLogo)
+        alteraBoolMenu(pnInfo)
     End Sub
 
 
@@ -438,13 +382,13 @@ Public Class home
 
 #Region "AdmTopics"
     Private Sub lbAdmTopicAdd_Click(sender As Object, e As EventArgs) Handles lbAdmTopicAdd.Click
-        navegacaoMenu(2, pnAdmAddScreen, pnAdmTopicAddBar)
+        navegacaoMenu(2, pnAdmTopicAddBar, pnAdmAddScreen)
     End Sub
     Private Sub pnAddTopicAdd_Click(sender As Object, e As EventArgs) Handles pnAddTopicAdd.Click
         lbAdmTopicAdd_Click(sender, e)
     End Sub
     Private Sub lbAdmTopicDel_Click(sender As Object, e As EventArgs) Handles lbAdmTopicDel.Click
-        navegacaoMenu(2, pnAdmDelScreen, pnAdmTopicDelBar)
+        navegacaoMenu(2, pnAdmTopicDelBar, pnAdmDelScreen)
     End Sub
     Private Sub pnAdmTopicDel_Click(sender As Object, e As EventArgs) Handles pnAdmTopicDel.Click
         lbAdmTopicDel_Click(sender, e)
@@ -453,7 +397,7 @@ Public Class home
 
 #Region "CartaoTopics"
     Private Sub lbCartaoTopicAdd_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicAdd.Click
-        navegacaoMenu(2, pnCartaoAddScreen, pnCartaoTopicAddBar)
+        navegacaoMenu(2, pnCartaoTopicAddBar, pnCartaoAddScreen)
     End Sub
 
     Private Sub pnCartaoTopicAdd_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicAdd.Click
@@ -461,14 +405,14 @@ Public Class home
     End Sub
 
     Private Sub lbCartaoTopicDel_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDel.Click
-        navegacaoMenu(2, pnCartaoDelScreen, pnCartaoTopicDelBar)
+        navegacaoMenu(2, pnCartaoTopicDelBar, pnCartaoDelScreen)
     End Sub
     Private Sub pnCartaoTopicDel_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicDel.Click
         lbCartaoTopicDel_Click(sender, e)
     End Sub
 
     Private Sub lbCartaoTopicRec_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicRec.Click
-        navegacaoMenu(2, pnCartaoRecScreen, pnCartaoTopicRecBar)
+        navegacaoMenu(2, pnCartaoTopicRecBar, pnCartaoRecScreen)
     End Sub
 
     Private Sub pnCartaoTopicRec_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicRec.Click
@@ -476,7 +420,7 @@ Public Class home
     End Sub
 
     Private Sub lbCartaoTopicDev_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDev.Click
-        navegacaoMenu(2, pnCartaoDevScreen, pnCartaoTopicDevBar)
+        navegacaoMenu(2, pnCartaoTopicDevBar, pnCartaoDevScreen)
     End Sub
 
     Private Sub pnCartaoTopicDev_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicDev.Click
@@ -486,7 +430,7 @@ Public Class home
 
 #Region "VendedorTopics"
     Private Sub lbVendTopicAdd_Click(sender As Object, e As EventArgs) Handles lbVendTopicAdd.Click
-        navegacaoMenu(2, pnVendAddScreen, pnVendTopicAddBar)
+        navegacaoMenu(2, pnVendTopicAddBar, pnVendAddScreen)
     End Sub
 
     Private Sub Panel32_Paint(sender As Object, e As EventArgs) Handles pnVendTopicAdd.Click
@@ -498,11 +442,11 @@ Public Class home
     End Sub
 
     Private Sub lbVendTopicDel_Click(sender As Object, e As EventArgs) Handles lbVendTopicDel.Click
-        navegacaoMenu(2, pnVendDelScreen, pnAdmTopicDelBar)
+        navegacaoMenu(2, pnVendTopicDelBar, pnVendDelScreen)
     End Sub
 
     Private Sub lbVendTopicReq_Click(sender As Object, e As EventArgs) Handles lbVendTopicReq.Click
-        navegacaoMenu(2, pnVendReqScreen, pnVendTopicReqBar)
+        navegacaoMenu(2, pnVendTopicReqBar, pnVendReqScreen)
     End Sub
 
     Private Sub pnVendTopicReq_Click(sender As Object, e As EventArgs) Handles pnVendTopicReq.Click
@@ -510,13 +454,14 @@ Public Class home
     End Sub
 
     Private Sub lbVendTopicOn_Click(sender As Object, e As EventArgs) Handles lbVendTopicOn.Click
-        navegacaoMenu(2, pnVendReqScreen, pnVendTopicOnBar)
+        navegacaoMenu(2, pnVendTopicOnBar, pnVendReqScreen)
     End Sub
 
     Private Sub pnVendTopicOn_Click(sender As Object, e As EventArgs) Handles pnVendTopicOn.Click
         lbVendTopicOn_Click(sender, e)
     End Sub
 #End Region
+
 #End Region
 
 #End Region
