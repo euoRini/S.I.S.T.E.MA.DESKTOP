@@ -1,0 +1,224 @@
+ACESSOS:
+1) Criar
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/admins/{id_admin}/{id_vendedor}/acesso
+Corpo: 
+{
+}
+
+2)Index <- Admin
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/admins/{id_admin}/acesso
+Corpo: N/A
+Modo de resposta:
+
+3)Index <- Vendedor
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/vendedor/{$id_vendedor}/acesso
+Corpo: N/A
+Modo de resposta:
+
+4) Index
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/acessos
+Corpo: N/A
+Modo de resposta:
+
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+
+
+ADMINS:
+
+1) Criar
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/admins
+Corpo: 
+{
+	"nome": "{$nome}",
+	"login": "{$login}",
+	"senha": "{$senha}",
+	"email":"{$email}"
+}
+
+2) Indexar
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/admins
+Corpo: N/A
+Modo de resposta:
+
+3) Buscar admin por login
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/admins/{$login}
+Corpo: N/A
+Modo de resposta:
+
+4) Deletar L(login) ou E(Email)
+Método: DELETE
+Rotas:
+	https://sistemaifrj.herokuapp.com/admins/l/{$login}
+	https://sistemaifrj.herokuapp.com/admins/e/{$email}
+Corpo: N/A
+
+
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+
+
+PAGAMENTO:
+1) Criar
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/vendas/{id_venda}/pagamento
+Corpo:
+{
+	"total_pagto": 0
+}
+
+2) Indexar
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/pagamentos
+Corpo: N/A
+Modo de resposta:
+
+
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+
+
+PRODUTOS:
+1) Criar um novo produto
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/produto
+Corpo: 
+{
+	"nome": "{$nome}",
+	"preco": 1,
+	"estoque": 1,
+	"categoria":"{$categoria}"
+}
+
+2) Vincular um produto a uma venda
+Método: POST
+Rota: http://sistemaifrj.herokuapp.com/vendas/{$id_venda}/produto
+Corpo:
+{
+	"nome": "{$nome}"
+}
+
+3)Deletar um produto
+Método: DELETE
+Rota: https://sistemaifrj.herokuapp.com/produtos/{$nome}
+Corpo: N/A
+
+4) Indexar todos produtos
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/produtos
+Corpo: N/A
+Modo de resposta:
+
+5) Indexar produtos de uma venda
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/vendas/{$id_venda}/produto
+Corpo: N/A
+Modo de resposta:
+
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+
+
+RECARGA:
+1) Criar
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/users/{id_user}/recarga
+Corpo:
+{
+	"modo_pagto": "{$modo_pagamento}",
+	"valor_recarga": 0
+}
+
+2) Indexar
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/recargas
+Corpo: N/A
+Modo de resposta:
+
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+
+
+USUARIO/CARTÃO
+1) Criar
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/users
+Corpo:
+{
+	"matricula": "{$matricula}",
+	"nome": "{$nome}",
+	"email":"{$email}",
+	"saldo":0
+}
+
+2) Indexar
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/users
+Corpo: N/A
+Modo de resposta:
+
+3)Delete
+Método: DELETE
+Rota: https://sistemaifrj.herokuapp.com/users/{$matricula}
+Corpo: N/A
+
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+
+
+VENDAS:
+1) Criar
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/vendedores/{$id_vendedor}/venda
+Corpo: 
+{
+	"total_venda": 0
+}
+
+2) Indexar
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/vendas
+Corpo: N/A
+Modo de resposta:
+
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=
+
+
+VENDEDOR:
+1) Criar
+Método: POST
+Rota: https://sistemaifrj.herokuapp.com/vendedores
+Corpo:
+{
+	"matricula": "{$matricula}",
+	"nome": "{$nome}",
+	"email":"{$email}",
+	"senha":"{$senha}"
+}
+
+2) Indexar
+Método: GET
+Rota: https://sistemaifrj.herokuapp.com/vendedores
+Corpo: N/A
+Modo de resposta:
+
+3) Deletar por E(email) ou M(matricula)
+Método: DELETE
+Rotas:
+	https://sistemaifrj.herokuapp.com/vendedor/m/{$matricula}
+	https://sistemaifrj.herokuapp.com/vendedor/e/{$email}

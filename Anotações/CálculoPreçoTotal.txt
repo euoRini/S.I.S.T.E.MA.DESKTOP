@@ -1,0 +1,33 @@
+Entidade Venda 		 -> Produto/Pagto/Vendedor
+Entidade Pagto 		 -> Cartão/Venda
+Entidade Acesso		 -> Vendedor/Ademir
+Entidade Ademir		 -> Acesso
+Entidade Vendedor	 -> Acesso
+Entidade Cartão		 -> Pagto
+Entidade Produto	 -> Venda
+
+Efetuar o pagamento no app (Código vb.net):
+
+
+ Dim MyCOnnection As OdbcConnection
+    Dim MyCommand,MyCommand2 As New OdbcCommand()
+        MyCOnnection = New OdbcConnection("DRIVER={CData ODBC Driver for MySQL};" &
+            "SERVER=localhost;" &
+            "DATABASE=banco_1;" &
+            "UID=root")
+        MyCOnnection.Open()
+	Dim totalVenda as double
+	totalVenda = 0
+        Dim ID,product,precoProduto As String
+            MyCommand.Connection = MyCOnnection
+            MyCommand.CommandText = "Select * from Conter where IDVenda ='X'"
+	    MyCommand2.Connection = MyCOnnection
+            Dim MyDataReader,MyDataReaderProduct As OdbcDataReader
+            MyDataReader = MyCommand.ExecuteReader
+            While MyDataReader.Read
+ 		 MyCommand2.CommandText = "Select ('Preco') from Produto where IDProduto='" & CStr(MyDataReader("IDProduto")) & "';"
+                 MyDataReaderProduct = MyCommand2.ExecuteReader
+		 precoProduto = val(CStr(MyDataReaderProduct("Preco"))
+		 totalVenda += precoProduto
+            End While
+    End Sub

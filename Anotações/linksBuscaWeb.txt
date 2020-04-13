@@ -1,0 +1,5 @@
+Apagar Registro (Method Delete)
+https://stackoverflow.com/questions/2893194/restful-http-delete-method-in-net
+
+Tudo JSON (Class com associação)
+http://www.andrealveslima.com.br/blog/index.php/2016/12/14/serializando-e-desserializando-json-com-c-e-vb-net/

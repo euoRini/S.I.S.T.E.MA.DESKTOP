@@ -1,0 +1,41 @@
+Cronograma:
+
+Concluído:
+- Add Adm (10/04)
+- Add Cartão (10/04)
+- Add Vendedor (10/04)
+- Sistema Login (11/04)
+- Del Adm (11/04)
+- Del Cartao (11/04)
+
+A fazer:
+
+11/04
+
+- Login -> Complete
+- Exclusão Adm -> Complete / Cartão -> Complete / Vendedor
+- Recarga Cartão
+- Produto (All)
+- Bright Mode Uptade
+
+12/04 (Domingo)
+
+13/04
+
+- Devolução Cartão
+- Vendedor/Acessos
+- Estudar Class com associação
+
+- Bright Mode Uptade
+
+14/04
+
+- Estudar Relatório
+    • Quais?
+    • Como?
+- Relatório
+- Bright Mode Uptade
+
+15/04 +
+- Não concluído dias anteriores
+- Novos surgimentos

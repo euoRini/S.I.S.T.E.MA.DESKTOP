@@ -1,0 +1,19 @@
+ Public Function cripto(ByVal senha As String, nivel As Integer, cont As Integer)
+        'Imports Usados
+        'System.Text
+        'System.Security.Cryptography
+        Dim Bytes() As Byte
+        Dim sb As New StringBuilder()
+        If Not String.IsNullOrEmpty(senha) Then
+            Bytes = Encoding.Default.GetBytes(senha)
+            Bytes = MD5.Create().ComputeHash(Bytes)
+            For x As Integer = 0 To Bytes.Length - 1
+                sb.Append(Bytes(x).ToString("x2"))
+            Next
+        End If
+        senha = sb.ToString
+        If cont < nivel Then
+            senha = cripto(sb.ToString, nivel, cont + 1)
+        End If
+        Return senha
+    End Function

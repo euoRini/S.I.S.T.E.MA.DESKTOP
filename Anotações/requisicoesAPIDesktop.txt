@@ -1,0 +1,21 @@
+- Executar login (buscar em admins login e senha enviados e devolver true/false junto com o id_adm).
+- Adicionar adm (criar registro em admins).
+- Excluir adm (localizar por login ou email).
+- Adicionar cartao (criar registro em users).
+- Excluir cartao (localizando por matricula).
+- Recarregar cartao (criar registo em recargas e atualizar user/uptated_at
+	devolver dinheiro (somar todos os recargas/valor_ recarga quando (recargas/id_cartao = parametro_busca AND 			created_at = hoje AND modo_pagto = dinheiro, verificar se soma<= users/saldo. Quando tudo ok, users/saldo -= soma, 	exclui todos os registros de recargas daquele user, no dinheiro, naquele dia).
+- Adicionar vendedor (criar registro em vendedors).
+- Excluir vendedor (localizar por matricula ou email).
+- Localizar acesso vendedor desativado(localizar todos os registros de acesso sem chave estrangeira id_adm) .
+	PS:Trocar na tabela do banco o NULO de acessos/id_vendedor de Sim para Não. Todo acesso de tem um 		vendedor.
+	PS2: Se possível, enviar junto o nome/email do vendedor daquele acesso).
+- Ativar acesso vendedor (atualizar tabela acesso incluindo id_adm enviado por parametro enviado).
+- Localizar acesso vendedor ativado(localizar todos os registros de acesso com chave estrangeira id_adm).
+- Desativar acesso vendedor (atualizar tabela acesso removendo id_adm enviado por parametro enviado).
+- Desativar todos acesso vendedor (Fazer periodicamente e manualmente removendo em toda acesso a chave estrangeira id_adm).
+- Localizar dados para Relatorio (tabela como parametro, campo como parametro) .
+	PS: Ainda a estabelecer.
+- Adicionar produto (criar registro em produtos).
+- Excluir produto (localizando nome).
+	PS: Trocar na tabela do banco o Único de produtos/nome de Não para Sim.

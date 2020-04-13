@@ -1,0 +1,22 @@
+GitHub
+	$ git status
+	$ git add .
+	$ git commit -m "Mensagem explicativa"
+	$ git push '''origin (URL do GIT/SSH) master (pasta principal) 
+
+Heroku
+Subindo Arquivo do Github:
+	Deploy/Github
+	Manual ou Automatico
+
+Remotemysql.com
+	
+requisições http
+
+Sistema
+Interno de
+suporte para
+transações em
+eventos
+muito
+abrangente
