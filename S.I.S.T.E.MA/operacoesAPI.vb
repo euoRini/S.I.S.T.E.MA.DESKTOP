@@ -9,6 +9,8 @@ Imports System.Net.Http
 
 Module operacoesAPI
 
+    Public idload As String
+
     'Function que criptografa dado enviada
     'dado = string para criptografar
     'nivel = numero de camadas de criptografia
@@ -191,11 +193,12 @@ Module operacoesAPI
                     .btCartaoDelApagar.Enabled = True
                     .btCartaoDelCancelar.Enabled = True
                 ElseIf acao = "recarga" Then
+                    idload = usuario.id
                     .lbCartaoRecNome.Text = usuario.nome
                     .lbCartaoRecEmail.Text = usuario.email
-                    .lbCartaoRecSaldoAt.Text = usuario.saldo
+                    .lbCartaoRecSaldoAt.Text = "R$ " & usuario.saldo
+                    .lbCartaoRecSaldoTt.Text = Val(usuario.saldo)
                 End If
-
             End With
 
             'Caso seja login, verifica validade do login retornando true/false para sucessoLogin
@@ -380,6 +383,19 @@ Module operacoesAPI
         recebimentoCartaoExc(myUri, "application/json", "GET", "recarga")
     End Sub
 
+    Public Sub exeRecarga(modo As String, valor As Integer)
+        'URL para rota de lista de users plea matricula informada
+        'valor = 50
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & idload & "/recarga")
+        Dim jsonString As String
+
+        jsonString = "{""modo_pagto"" :  """ &
+        modo &
+           """,""valor_recarga"":" &
+        valor & "}"
+        Dim data = Encoding.UTF8.GetBytes(jsonString)
+        Dim result_post = envioPOST(myUri, data)
+    End Sub
 
 #End Region
 

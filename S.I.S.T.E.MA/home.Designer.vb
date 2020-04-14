@@ -172,10 +172,15 @@ Partial Class home
         Me.Label3 = New System.Windows.Forms.Label()
         Me.pnCartaoRecScreen = New System.Windows.Forms.Panel()
         Me.pnCartaoRecOutroValor = New System.Windows.Forms.Panel()
+        Me.btCartaoRecOutroValoCancelar = New System.Windows.Forms.Button()
+        Me.btCartaoRecOutroValorOK = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.tbCartaoRecOutroValor = New System.Windows.Forms.MaskedTextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.lbCartaoRecSaldoTt = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.pbCartaoRecLimpaTotalRecarga = New System.Windows.Forms.PictureBox()
+        Me.tbCartaoRecTotalRecarga = New System.Windows.Forms.TextBox()
         Me.lbCartaoRecSaldoAt = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.btCartaoRecOutro = New System.Windows.Forms.Button()
@@ -275,6 +280,7 @@ Partial Class home
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.PictureBox40 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.cbCartaoRecModoPG = New System.Windows.Forms.ComboBox()
         Me.pnBarraSuperior.SuspendLayout()
         Me.pnMinimizar.SuspendLayout()
         CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -349,7 +355,8 @@ Partial Class home
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnCartaoRecScreen.SuspendLayout()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnCartaoRecOutroValor.SuspendLayout()
+        CType(Me.pbCartaoRecLimpaTotalRecarga, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnCartaoDelScreen.SuspendLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1931,11 +1938,12 @@ Partial Class home
         '
         'pnCartaoRecScreen
         '
+        Me.pnCartaoRecScreen.Controls.Add(Me.cbCartaoRecModoPG)
         Me.pnCartaoRecScreen.Controls.Add(Me.pnCartaoRecOutroValor)
         Me.pnCartaoRecScreen.Controls.Add(Me.lbCartaoRecSaldoTt)
         Me.pnCartaoRecScreen.Controls.Add(Me.Label18)
-        Me.pnCartaoRecScreen.Controls.Add(Me.PictureBox17)
-        Me.pnCartaoRecScreen.Controls.Add(Me.TextBox1)
+        Me.pnCartaoRecScreen.Controls.Add(Me.pbCartaoRecLimpaTotalRecarga)
+        Me.pnCartaoRecScreen.Controls.Add(Me.tbCartaoRecTotalRecarga)
         Me.pnCartaoRecScreen.Controls.Add(Me.lbCartaoRecSaldoAt)
         Me.pnCartaoRecScreen.Controls.Add(Me.Label16)
         Me.pnCartaoRecScreen.Controls.Add(Me.btCartaoRecOutro)
@@ -1963,11 +1971,77 @@ Partial Class home
         '
         'pnCartaoRecOutroValor
         '
-        Me.pnCartaoRecOutroValor.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.pnCartaoRecOutroValor.Location = New System.Drawing.Point(65, 218)
+        Me.pnCartaoRecOutroValor.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.pnCartaoRecOutroValor.Controls.Add(Me.btCartaoRecOutroValoCancelar)
+        Me.pnCartaoRecOutroValor.Controls.Add(Me.btCartaoRecOutroValorOK)
+        Me.pnCartaoRecOutroValor.Controls.Add(Me.Label13)
+        Me.pnCartaoRecOutroValor.Controls.Add(Me.tbCartaoRecOutroValor)
+        Me.pnCartaoRecOutroValor.Controls.Add(Me.Label11)
+        Me.pnCartaoRecOutroValor.Location = New System.Drawing.Point(72, 218)
         Me.pnCartaoRecOutroValor.Name = "pnCartaoRecOutroValor"
-        Me.pnCartaoRecOutroValor.Size = New System.Drawing.Size(10, 100)
+        Me.pnCartaoRecOutroValor.Size = New System.Drawing.Size(0, 100)
         Me.pnCartaoRecOutroValor.TabIndex = 75
+        '
+        'btCartaoRecOutroValoCancelar
+        '
+        Me.btCartaoRecOutroValoCancelar.BackColor = System.Drawing.Color.White
+        Me.btCartaoRecOutroValoCancelar.FlatAppearance.BorderSize = 0
+        Me.btCartaoRecOutroValoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btCartaoRecOutroValoCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btCartaoRecOutroValoCancelar.ForeColor = System.Drawing.Color.Black
+        Me.btCartaoRecOutroValoCancelar.Location = New System.Drawing.Point(156, 65)
+        Me.btCartaoRecOutroValoCancelar.Name = "btCartaoRecOutroValoCancelar"
+        Me.btCartaoRecOutroValoCancelar.Size = New System.Drawing.Size(115, 28)
+        Me.btCartaoRecOutroValoCancelar.TabIndex = 77
+        Me.btCartaoRecOutroValoCancelar.Text = "Cancelar"
+        Me.btCartaoRecOutroValoCancelar.UseVisualStyleBackColor = False
+        '
+        'btCartaoRecOutroValorOK
+        '
+        Me.btCartaoRecOutroValorOK.BackColor = System.Drawing.Color.White
+        Me.btCartaoRecOutroValorOK.FlatAppearance.BorderSize = 0
+        Me.btCartaoRecOutroValorOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btCartaoRecOutroValorOK.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btCartaoRecOutroValorOK.ForeColor = System.Drawing.Color.Black
+        Me.btCartaoRecOutroValorOK.Location = New System.Drawing.Point(278, 64)
+        Me.btCartaoRecOutroValorOK.Name = "btCartaoRecOutroValorOK"
+        Me.btCartaoRecOutroValorOK.Size = New System.Drawing.Size(68, 28)
+        Me.btCartaoRecOutroValorOK.TabIndex = 76
+        Me.btCartaoRecOutroValorOK.Text = "Ok"
+        Me.btCartaoRecOutroValorOK.UseVisualStyleBackColor = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(7, 35)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(33, 22)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "R$"
+        '
+        'tbCartaoRecOutroValor
+        '
+        Me.tbCartaoRecOutroValor.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.tbCartaoRecOutroValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCartaoRecOutroValor.Location = New System.Drawing.Point(40, 33)
+        Me.tbCartaoRecOutroValor.Name = "tbCartaoRecOutroValor"
+        Me.tbCartaoRecOutroValor.Size = New System.Drawing.Size(306, 27)
+        Me.tbCartaoRecOutroValor.TabIndex = 1
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(9, 7)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(203, 22)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Digite o valor desejado :"
         '
         'lbCartaoRecSaldoTt
         '
@@ -1975,11 +2049,11 @@ Partial Class home
         Me.lbCartaoRecSaldoTt.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.lbCartaoRecSaldoTt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCartaoRecSaldoTt.ForeColor = System.Drawing.Color.White
-        Me.lbCartaoRecSaldoTt.Location = New System.Drawing.Point(410, 323)
+        Me.lbCartaoRecSaldoTt.Location = New System.Drawing.Point(410, 317)
         Me.lbCartaoRecSaldoTt.Name = "lbCartaoRecSaldoTt"
-        Me.lbCartaoRecSaldoTt.Size = New System.Drawing.Size(63, 17)
+        Me.lbCartaoRecSaldoTt.Size = New System.Drawing.Size(96, 17)
         Me.lbCartaoRecSaldoTt.TabIndex = 74
-        Me.lbCartaoRecSaldoTt.Text = "<E-mail>"
+        Me.lbCartaoRecSaldoTt.Text = "<Saldo Total>"
         '
         'Label18
         '
@@ -1987,29 +2061,31 @@ Partial Class home
         Me.Label18.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(303, 319)
+        Me.Label18.Location = New System.Drawing.Point(303, 315)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(107, 22)
         Me.Label18.TabIndex = 73
         Me.Label18.Text = "Saldo Total:"
         '
-        'PictureBox17
+        'pbCartaoRecLimpaTotalRecarga
         '
-        Me.PictureBox17.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCancelIconBranco
-        Me.PictureBox17.Location = New System.Drawing.Point(560, 252)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(27, 27)
-        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox17.TabIndex = 72
-        Me.PictureBox17.TabStop = False
+        Me.pbCartaoRecLimpaTotalRecarga.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCancelIconBranco
+        Me.pbCartaoRecLimpaTotalRecarga.Location = New System.Drawing.Point(542, 233)
+        Me.pbCartaoRecLimpaTotalRecarga.Name = "pbCartaoRecLimpaTotalRecarga"
+        Me.pbCartaoRecLimpaTotalRecarga.Size = New System.Drawing.Size(27, 27)
+        Me.pbCartaoRecLimpaTotalRecarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbCartaoRecLimpaTotalRecarga.TabIndex = 72
+        Me.pbCartaoRecLimpaTotalRecarga.TabStop = False
         '
-        'TextBox1
+        'tbCartaoRecTotalRecarga
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(434, 252)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(123, 27)
-        Me.TextBox1.TabIndex = 71
+        Me.tbCartaoRecTotalRecarga.Enabled = False
+        Me.tbCartaoRecTotalRecarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCartaoRecTotalRecarga.Location = New System.Drawing.Point(416, 233)
+        Me.tbCartaoRecTotalRecarga.Name = "tbCartaoRecTotalRecarga"
+        Me.tbCartaoRecTotalRecarga.Size = New System.Drawing.Size(123, 27)
+        Me.tbCartaoRecTotalRecarga.TabIndex = 71
+        Me.tbCartaoRecTotalRecarga.Text = "R$"
         '
         'lbCartaoRecSaldoAt
         '
@@ -2017,11 +2093,11 @@ Partial Class home
         Me.lbCartaoRecSaldoAt.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.lbCartaoRecSaldoAt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCartaoRecSaldoAt.ForeColor = System.Drawing.Color.White
-        Me.lbCartaoRecSaldoAt.Location = New System.Drawing.Point(181, 322)
+        Me.lbCartaoRecSaldoAt.Location = New System.Drawing.Point(182, 320)
         Me.lbCartaoRecSaldoAt.Name = "lbCartaoRecSaldoAt"
-        Me.lbCartaoRecSaldoAt.Size = New System.Drawing.Size(63, 17)
+        Me.lbCartaoRecSaldoAt.Size = New System.Drawing.Size(96, 17)
         Me.lbCartaoRecSaldoAt.TabIndex = 70
-        Me.lbCartaoRecSaldoAt.Text = "<E-mail>"
+        Me.lbCartaoRecSaldoAt.Text = "<Saldo Atual>"
         '
         'Label16
         '
@@ -2029,7 +2105,7 @@ Partial Class home
         Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(74, 318)
+        Me.Label16.Location = New System.Drawing.Point(74, 317)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(107, 22)
         Me.Label16.TabIndex = 69
@@ -2042,7 +2118,7 @@ Partial Class home
         Me.btCartaoRecOutro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCartaoRecOutro.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCartaoRecOutro.ForeColor = System.Drawing.Color.Black
-        Me.btCartaoRecOutro.Location = New System.Drawing.Point(316, 274)
+        Me.btCartaoRecOutro.Location = New System.Drawing.Point(301, 274)
         Me.btCartaoRecOutro.Name = "btCartaoRecOutro"
         Me.btCartaoRecOutro.Size = New System.Drawing.Size(105, 28)
         Me.btCartaoRecOutro.TabIndex = 67
@@ -2056,7 +2132,7 @@ Partial Class home
         Me.btCartaoRec100.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCartaoRec100.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCartaoRec100.ForeColor = System.Drawing.Color.Black
-        Me.btCartaoRec100.Location = New System.Drawing.Point(201, 274)
+        Me.btCartaoRec100.Location = New System.Drawing.Point(186, 274)
         Me.btCartaoRec100.Name = "btCartaoRec100"
         Me.btCartaoRec100.Size = New System.Drawing.Size(105, 28)
         Me.btCartaoRec100.TabIndex = 66
@@ -2070,7 +2146,7 @@ Partial Class home
         Me.btCartaoRec50.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCartaoRec50.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCartaoRec50.ForeColor = System.Drawing.Color.Black
-        Me.btCartaoRec50.Location = New System.Drawing.Point(85, 274)
+        Me.btCartaoRec50.Location = New System.Drawing.Point(70, 274)
         Me.btCartaoRec50.Name = "btCartaoRec50"
         Me.btCartaoRec50.Size = New System.Drawing.Size(105, 28)
         Me.btCartaoRec50.TabIndex = 65
@@ -2084,7 +2160,7 @@ Partial Class home
         Me.btCartaoRec20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCartaoRec20.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCartaoRec20.ForeColor = System.Drawing.Color.Black
-        Me.btCartaoRec20.Location = New System.Drawing.Point(316, 232)
+        Me.btCartaoRec20.Location = New System.Drawing.Point(301, 232)
         Me.btCartaoRec20.Name = "btCartaoRec20"
         Me.btCartaoRec20.Size = New System.Drawing.Size(105, 28)
         Me.btCartaoRec20.TabIndex = 64
@@ -2098,7 +2174,7 @@ Partial Class home
         Me.btCartaoRec10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCartaoRec10.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCartaoRec10.ForeColor = System.Drawing.Color.Black
-        Me.btCartaoRec10.Location = New System.Drawing.Point(201, 232)
+        Me.btCartaoRec10.Location = New System.Drawing.Point(186, 232)
         Me.btCartaoRec10.Name = "btCartaoRec10"
         Me.btCartaoRec10.Size = New System.Drawing.Size(105, 28)
         Me.btCartaoRec10.TabIndex = 63
@@ -2112,7 +2188,7 @@ Partial Class home
         Me.btCartaoRec5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btCartaoRec5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btCartaoRec5.ForeColor = System.Drawing.Color.Black
-        Me.btCartaoRec5.Location = New System.Drawing.Point(85, 232)
+        Me.btCartaoRec5.Location = New System.Drawing.Point(70, 232)
         Me.btCartaoRec5.Name = "btCartaoRec5"
         Me.btCartaoRec5.Size = New System.Drawing.Size(105, 28)
         Me.btCartaoRec5.TabIndex = 62
@@ -3158,6 +3234,17 @@ Partial Class home
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "On"
         '
+        'cbCartaoRecModoPG
+        '
+        Me.cbCartaoRecModoPG.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbCartaoRecModoPG.FormattingEnabled = True
+        Me.cbCartaoRecModoPG.Items.AddRange(New Object() {"Dinheiro", "Cartão"})
+        Me.cbCartaoRecModoPG.Location = New System.Drawing.Point(418, 273)
+        Me.cbCartaoRecModoPG.Name = "cbCartaoRecModoPG"
+        Me.cbCartaoRecModoPG.Size = New System.Drawing.Size(151, 28)
+        Me.cbCartaoRecModoPG.TabIndex = 76
+        Me.cbCartaoRecModoPG.Text = "Modo de Pagto"
+        '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3270,7 +3357,9 @@ Partial Class home
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartaoRecScreen.ResumeLayout(False)
         Me.pnCartaoRecScreen.PerformLayout()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnCartaoRecOutroValor.ResumeLayout(False)
+        Me.pnCartaoRecOutroValor.PerformLayout()
+        CType(Me.pbCartaoRecLimpaTotalRecarga, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartaoDelScreen.ResumeLayout(False)
         Me.pnCartaoDelScreen.PerformLayout()
@@ -3545,8 +3634,8 @@ Partial Class home
     Friend WithEvents Label14 As Label
     Friend WithEvents lbCartaoRecNome As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents PictureBox17 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents pbCartaoRecLimpaTotalRecarga As PictureBox
+    Friend WithEvents tbCartaoRecTotalRecarga As TextBox
     Friend WithEvents lbCartaoRecSaldoAt As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents btCartaoRecOutro As Button
@@ -3558,4 +3647,10 @@ Partial Class home
     Friend WithEvents lbCartaoRecSaldoTt As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents pnCartaoRecOutroValor As Panel
+    Friend WithEvents tbCartaoRecOutroValor As MaskedTextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents btCartaoRecOutroValoCancelar As Button
+    Friend WithEvents btCartaoRecOutroValorOK As Button
+    Friend WithEvents cbCartaoRecModoPG As ComboBox
 End Class

@@ -523,7 +523,7 @@ Public Class home
 
 #Region "Cartao"
 
-    Dim totalRecarga As interger
+    Dim totalRecarga As Integer
     'Adicionar Cartao
     Private Sub btCartaoAddSalvar_Click(sender As Object, e As EventArgs) Handles btCartaoAddSalvar.Click
         Dim matricula As String = tbCartaoAddMat.Text
@@ -554,6 +554,91 @@ Public Class home
         recCartao(tbCartaoRecMat.Text)
     End Sub
 
+    Private Sub btCartaoRec5_Click(sender As Object, e As EventArgs) Handles btCartaoRec5.Click
+        totalRecarga += 5 * 100
+        tbCartaoRecTotalRecarga.Text = "R$ " & totalRecarga.ToString
+    End Sub
+
+    Private Sub btCartaoRec10_Click(sender As Object, e As EventArgs) Handles btCartaoRec10.Click
+        totalRecarga += 10 * 100
+        tbCartaoRecTotalRecarga.Text = "R$ " & totalRecarga.ToString
+    End Sub
+    Private Sub btCartaoRec20_Click(sender As Object, e As EventArgs) Handles btCartaoRec20.Click
+        totalRecarga += 20 * 100
+        tbCartaoRecTotalRecarga.Text = "R$ " & totalRecarga.ToString
+    End Sub
+
+    Private Sub btCartaoRec50_Click(sender As Object, e As EventArgs) Handles btCartaoRec50.Click
+        totalRecarga += 50 * 100
+        tbCartaoRecTotalRecarga.Text = "R$ " & totalRecarga.ToString
+    End Sub
+
+    Private Sub btCartaoRec100_Click(sender As Object, e As EventArgs) Handles btCartaoRec100.Click
+        totalRecarga += 100 * 100
+        tbCartaoRecTotalRecarga.Text = "R$ " & totalRecarga.ToString
+    End Sub
+
+    Private Sub btCartaoRecOutro_Click(sender As Object, e As EventArgs) Handles btCartaoRecOutro.Click
+        tbCartaoRecTotalRecarga.Text = "R$"
+        While pnCartaoRecOutroValor.Width < 356
+            pnCartaoRecOutroValor.Width += 3
+            If pnCartaoRecOutroValor.Width = 354 Then
+                pnCartaoRecOutroValor.Width += 2
+            End If
+            pnCartaoRecOutroValor.Refresh()
+        End While
+    End Sub
+    Private Sub pbCartaoRecLimpaTotalRecarga_Click(sender As Object, e As EventArgs) Handles pbCartaoRecLimpaTotalRecarga.Click
+        totalRecarga = 0
+        tbCartaoRecTotalRecarga.Text = "R$ " & totalRecarga.ToString
+    End Sub
+
+    Private Sub tbCartaoRecOutroValor_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoRecOutroValor.TextChanged
+        moeda(tbCartaoRecOutroValor)
+    End Sub
+
+    Private Sub btCartaoRecOutroValo_Click(sender As Object, e As EventArgs) Handles btCartaoRecOutroValorOK.Click
+        tbCartaoRecTotalRecarga.Text = "R$ " & tbCartaoRecOutroValor.Text
+        While pnCartaoRecOutroValor.Width > 0
+            pnCartaoRecOutroValor.Width -= 3
+            pnCartaoRecOutroValor.Refresh()
+        End While
+    End Sub
+    Private Sub btCartaoRecOutroValoCancelar_Click(sender As Object, e As EventArgs) Handles btCartaoRecOutroValoCancelar.Click
+        While pnCartaoRecOutroValor.Width > 0
+            pnCartaoRecOutroValor.Width -= 3
+            pnCartaoRecOutroValor.Refresh()
+        End While
+    End Sub
+
+    Private Sub tbCartaoRecTotalRecarga_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoRecTotalRecarga.TextChanged
+        Dim brutalString, brutalString2 As String
+        brutalString = Replace(Replace(Replace(Replace(Replace(tbCartaoRecTotalRecarga.Text, "R", ""), "$", ""), " ", ""), ".", ""), ",", "")
+        brutalString2 = Replace(Replace(Replace(Replace(Replace(lbCartaoRecSaldoTt.Text, "R", ""), "$", ""), " ", ""), ".", ""), ",", "")
+        lbCartaoRecSaldoTt.Text = Val(brutalString) + Val(brutalString2)
+    End Sub
+
+    Private Sub btCartaoRecConfirmar_Click(sender As Object, e As EventArgs) Handles btCartaoRecConfirmar.Click
+        If (cbCartaoRecModoPG.Text <> "Cartão" And cbCartaoRecModoPG.Text <> "Dinheiro") Then
+            MsgBox("Selecione um modo de pagamento válido")
+        Else
+            exeRecarga(cbCartaoRecModoPG.Text, Val(lbCartaoRecSaldoTt.Text))
+        End If
+
+    End Sub
+
+    Public Shared Sub moeda(ByRef txt As MaskedTextBox)
+        Dim n As String = String.Empty
+        Dim v As Double = 0
+        n = txt.Text.Replace(",", "").Replace(".", "")
+        If n.Equals("") Then n = ""
+        If n.Length > 3 And n.Substring(0, 1) = "0" Then n = n.Substring(1, n.Length - 1)
+        v = Convert.ToDouble(n) / 100
+        txt.Text = String.Format("{0:N}", v)
+
+        txt.SelectionStart = txt.Text.Length
+
+    End Sub
 
 
 #End Region
@@ -1121,6 +1206,8 @@ Public Class home
         End If
     End Sub
 
+
+
     Private Sub tbAdmAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseUp
         controlePlace5 = False
     End Sub
@@ -1156,6 +1243,7 @@ Public Class home
         tbCartaoAddNome.Clear()
         tbCartaoAddSaldo.Clear()
     End Sub
+
 
 
 
