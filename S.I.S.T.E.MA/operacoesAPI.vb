@@ -40,7 +40,7 @@ Module operacoesAPI
     'Envia os dados pelo método POST para a API executar ação
     'uri = rota para conexao com a API
     'jsonDataBytes = informação JSON no formato bytes para execução
-    Private Function envioPOST(uri As Uri, jsonDataBytes As Byte()) As String
+    Private Function envioPOST_OR(uri As Uri, jsonDataBytes As Byte(), metodo As String) As String
         Dim response As String
         Dim request As WebRequest
         Dim contentType As String = "application/json"
@@ -51,7 +51,7 @@ Module operacoesAPI
         'Criando o objeto JSON da requisição
         request.ContentLength = jsonDataBytes.Length
         request.ContentType = contentType
-        request.Method = "POST"
+        request.Method = metodo
         Try
 
             'Fazendo a escrita das informações no server via requisição HTTP POST
@@ -315,7 +315,7 @@ Module operacoesAPI
 
 #Region "Admin Operacoes"
     Public Sub addAdmin(nome As String, login As String, senha As String, email As String)
-        MsgBox("Nome:" & nome & vbNewLine & "Login:" & login & vbNewLine & "senha:" & senha & vbNewLine & "Email:" & email)
+        'MsgBox("Nome:" & nome & vbNewLine & "Login:" & login & vbNewLine & "senha:" & senha & vbNewLine & "Email:" & email)
         'String JSON usada para cadastro de usuário
         Dim jsonString As String
         jsonString = "{""nome"":""" &
@@ -330,7 +330,7 @@ Module operacoesAPI
         Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/admins/")
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
-        Dim result_post = envioPOST(myUri, data)
+        Dim result_post = envioPOST_OR(myUri, data, "POST")
     End Sub
 
     'Busca de Admin para exclusão
@@ -363,7 +363,7 @@ Module operacoesAPI
 
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
-        Dim result_post = envioPOST(myUri, data)
+        Dim result_post = envioPOST_OR(myUri, data, "POST")
     End Sub
 
     Public Sub excCartao(matricula As String)
@@ -377,7 +377,7 @@ Module operacoesAPI
     Public Sub recCartao(matricula As String)
 
         'URL para rota de lista de users plea matricula informada
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & matricula)
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & matricula & "/")
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoCartaoExc(myUri, "application/json", "GET", "recarga")
@@ -386,15 +386,21 @@ Module operacoesAPI
     Public Sub exeRecarga(modo As String, valor As Integer)
         'URL para rota de lista de users plea matricula informada
         'valor = 50
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & idload & "/recarga")
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/recarga/" & idload)
         Dim jsonString As String
-
         jsonString = "{""modo_pagto"" :  """ &
         modo &
            """,""valor_recarga"":" &
         valor & "}"
         Dim data = Encoding.UTF8.GetBytes(jsonString)
-        Dim result_post = envioPOST(myUri, data)
+        Dim result_post = envioPOST_OR(myUri, data, "POST")
+        jsonString = "{""saldo"":" &
+                        Val(home.lbCartaoRecSaldoTt.Text) & "}"
+        'URL para a rota de criação de usuários (definida na API pelo Erick)
+        myUri = New Uri("https://sistemaifrj.herokuapp.com/recargas/" & home.tbCartaoRecMat.Text & "/")
+        'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
+        data = Encoding.UTF8.GetBytes(jsonString)
+        result_post = envioPOST_OR(myUri, data, "PUT")
     End Sub
 
 #End Region
@@ -414,7 +420,7 @@ Module operacoesAPI
         Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/vendedores/")
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
-        Dim result_post = envioPOST(myUri, data)
+        Dim result_post = envioPOST_OR(myUri, data, "POST")
     End Sub
 
     'Public Sub excVendedor(parametro As String)
