@@ -2,6 +2,9 @@
     Dim arraste As Boolean
     Dim mouseX As Integer
     Dim mouseY As Integer
+
+    Public fechamento As Boolean
+    Public resposta As Boolean
     Public Sub formMsgBox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim first As Boolean = True
         Me.FormBorderStyle = FormBorderStyle.None
@@ -20,9 +23,6 @@
         Me.Region = New Region(p)
         'pnFun
         Me.BackColor = Color.Red
-        If first Then
-            formMsgBox_Loadeffect()
-        End If
     End Sub
 
     Public Sub formMsgBox_Loadeffect()
@@ -49,12 +49,47 @@
         arraste = False
     End Sub
 
-    Public Sub labelWrite(mensagem As String)
-        lbMsg.Text = mensagem
+
+    Private Sub FechaMSG()
+        home.backHome()
+        Me.Close()
+    End Sub
+
+    Public Sub chamadaMSG(msg As String, typeMSG As Integer)
+        pnButtonOk.Visible = False
+        pnYesNo.Visible = False
+        If typeMSG = 1 Then
+            pbIcone.Image = My.Resources.imgMSGBOXErroIconPreto3
+            pnBarraSuperior.BackColor = Color.Red
+            pnButtonOk.Visible = True
+            lbMsg.Location = New Point(7, 55)
+        ElseIf typeMSG = 2 Then
+            pbIcone.Image = My.Resources.imgDoneMSGBOXIconBranco
+            pnButtonOk.Visible = True
+            pnBarraSuperior.BackColor = Color.Green
+        ElseIf typeMSG = 3 Then
+            pbIcone.Image = My.Resources.imgInfoMSGBOXIconBranco
+            pnYesNo.Visible = True
+            pnBarraSuperior.BackColor = Color.LightBlue
+            lbMsg.Font = New Font(lbMsg.Font.FontFamily, 12)
+            lbMsg.Location = New Point(7, 28)
+        End If
+        lbMsg.Text = msg
+        Me.Show()
+        home.Enabled = False
+    End Sub
+
+    Private Sub btSim_Click(sender As Object, e As EventArgs) Handles btSim.Click
+        resposta = True
+        FechaMSG()
+    End Sub
+
+    Private Sub btNao_Click(sender As Object, e As EventArgs) Handles btNao.Click
+        resposta = False
+        FechaMSG()
     End Sub
 
     Private Sub btMSGBOXOk_Click(sender As Object, e As EventArgs) Handles btMSGBOXOk.Click
-        home.backHome()
-        Me.Close()
+        FechaMSG()
     End Sub
 End Class

@@ -143,6 +143,16 @@ Namespace My.Resources
         '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property imgDoneMSGBOXIconBranco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("imgDoneMSGBOXIconBranco", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property imgFecharCinza() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("imgFecharCinza", resourceCulture)
@@ -236,6 +246,16 @@ Namespace My.Resources
         Friend ReadOnly Property imgInfoIconPreto() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("imgInfoIconPreto", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property imgInfoMSGBOXIconBranco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("imgInfoMSGBOXIconBranco", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

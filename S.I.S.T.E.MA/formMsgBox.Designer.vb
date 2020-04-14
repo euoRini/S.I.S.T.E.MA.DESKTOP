@@ -29,19 +29,23 @@ Partial Class formMsgBox
         Me.pnButtonOk = New System.Windows.Forms.Panel()
         Me.btMSGBOXOk = New System.Windows.Forms.Button()
         Me.pnFundo = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pnYesNo = New System.Windows.Forms.Panel()
+        Me.btSim = New System.Windows.Forms.Button()
+        Me.btNao = New System.Windows.Forms.Button()
+        Me.pbIcone = New System.Windows.Forms.PictureBox()
         Me.pnBarraSuperior.SuspendLayout()
         Me.pnMsg.SuspendLayout()
         Me.pnButtonOk.SuspendLayout()
         Me.pnFundo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnYesNo.SuspendLayout()
+        CType(Me.pbIcone, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnBarraSuperior
         '
         Me.pnBarraSuperior.BackColor = System.Drawing.Color.Red
         Me.pnBarraSuperior.Controls.Add(Me.Panel1)
-        Me.pnBarraSuperior.Location = New System.Drawing.Point(-1, -4)
+        Me.pnBarraSuperior.Location = New System.Drawing.Point(-1, -6)
         Me.pnBarraSuperior.Name = "pnBarraSuperior"
         Me.pnBarraSuperior.Size = New System.Drawing.Size(358, 22)
         Me.pnBarraSuperior.TabIndex = 0
@@ -69,7 +73,7 @@ Partial Class formMsgBox
         Me.lbMsg.AutoSize = True
         Me.lbMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbMsg.ForeColor = System.Drawing.Color.White
-        Me.lbMsg.Location = New System.Drawing.Point(7, 48)
+        Me.lbMsg.Location = New System.Drawing.Point(7, 55)
         Me.lbMsg.Name = "lbMsg"
         Me.lbMsg.Size = New System.Drawing.Size(122, 20)
         Me.lbMsg.TabIndex = 0
@@ -101,31 +105,70 @@ Partial Class formMsgBox
         'pnFundo
         '
         Me.pnFundo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.pnFundo.Controls.Add(Me.PictureBox1)
+        Me.pnFundo.Controls.Add(Me.pbIcone)
         Me.pnFundo.Controls.Add(Me.pnBarraSuperior)
-        Me.pnFundo.Location = New System.Drawing.Point(-2, 2)
+        Me.pnFundo.Location = New System.Drawing.Point(-2, 0)
         Me.pnFundo.Name = "pnFundo"
         Me.pnFundo.Size = New System.Drawing.Size(356, 228)
         Me.pnFundo.TabIndex = 3
         '
-        'PictureBox1
+        'pnYesNo
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.PictureBox1.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgMSGBOXErroIconPreto3
-        Me.PictureBox1.Location = New System.Drawing.Point(23, 69)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(70, 70)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.pnYesNo.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.pnYesNo.Controls.Add(Me.btSim)
+        Me.pnYesNo.Controls.Add(Me.btNao)
+        Me.pnYesNo.Location = New System.Drawing.Point(108, 175)
+        Me.pnYesNo.Name = "pnYesNo"
+        Me.pnYesNo.Size = New System.Drawing.Size(230, 40)
+        Me.pnYesNo.TabIndex = 53
+        '
+        'btSim
+        '
+        Me.btSim.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btSim.FlatAppearance.BorderSize = 0
+        Me.btSim.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btSim.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btSim.ForeColor = System.Drawing.Color.Black
+        Me.btSim.Location = New System.Drawing.Point(120, 5)
+        Me.btSim.Name = "btSim"
+        Me.btSim.Size = New System.Drawing.Size(103, 30)
+        Me.btSim.TabIndex = 53
+        Me.btSim.Text = "Sim"
+        Me.btSim.UseVisualStyleBackColor = False
+        '
+        'btNao
+        '
+        Me.btNao.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btNao.FlatAppearance.BorderSize = 0
+        Me.btNao.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btNao.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btNao.ForeColor = System.Drawing.Color.Black
+        Me.btNao.Location = New System.Drawing.Point(6, 5)
+        Me.btNao.Name = "btNao"
+        Me.btNao.Size = New System.Drawing.Size(103, 30)
+        Me.btNao.TabIndex = 52
+        Me.btNao.Text = "Não"
+        Me.btNao.UseVisualStyleBackColor = False
+        '
+        'pbIcone
+        '
+        Me.pbIcone.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.pbIcone.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgMSGBOXErroIconPreto3
+        Me.pbIcone.Location = New System.Drawing.Point(23, 69)
+        Me.pbIcone.Name = "pbIcone"
+        Me.pbIcone.Size = New System.Drawing.Size(70, 70)
+        Me.pbIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbIcone.TabIndex = 1
+        Me.pbIcone.TabStop = False
         '
         'formMsgBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Red
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(350, 224)
         Me.Controls.Add(Me.pnButtonOk)
+        Me.Controls.Add(Me.pnYesNo)
         Me.Controls.Add(Me.pnMsg)
         Me.Controls.Add(Me.pnFundo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -136,17 +179,21 @@ Partial Class formMsgBox
         Me.pnMsg.PerformLayout()
         Me.pnButtonOk.ResumeLayout(False)
         Me.pnFundo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnYesNo.ResumeLayout(False)
+        CType(Me.pbIcone, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents pnBarraSuperior As Panel
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbIcone As PictureBox
     Friend WithEvents pnMsg As Panel
     Friend WithEvents pnButtonOk As Panel
     Friend WithEvents btMSGBOXOk As Button
     Friend WithEvents pnFundo As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lbMsg As Label
+    Friend WithEvents pnYesNo As Panel
+    Friend WithEvents btSim As Button
+    Friend WithEvents btNao As Button
 End Class

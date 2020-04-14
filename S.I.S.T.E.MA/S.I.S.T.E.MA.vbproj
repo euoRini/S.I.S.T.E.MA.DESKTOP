@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -91,10 +94,10 @@
     <Compile Include="formMsgBox.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="home.Designer.vb">
-      <DependentUpon>home.vb</DependentUpon>
+    <Compile Include="S.I.S.T.E.MA.Designer.vb">
+      <DependentUpon>S.I.S.T.E.MA.vb</DependentUpon>
     </Compile>
-    <Compile Include="home.vb">
+    <Compile Include="S.I.S.T.E.MA.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formLogin.vb">
@@ -126,8 +129,8 @@
     <EmbeddedResource Include="formMsgBox.resx">
       <DependentUpon>formMsgBox.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="home.resx">
-      <DependentUpon>home.vb</DependentUpon>
+    <EmbeddedResource Include="S.I.S.T.E.MA.resx">
+      <DependentUpon>S.I.S.T.E.MA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.vb</DependentUpon>
@@ -280,6 +283,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgCancelIconBranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icone.ico" />
+    <None Include="Resources\imgDoneMSGBOXIconBranco.png" />
+    <None Include="Resources\imgInfoMSGBOXIconBranco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

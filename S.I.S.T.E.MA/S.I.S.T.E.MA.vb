@@ -14,7 +14,8 @@ Public Class home
     Dim relatAtivo As Boolean = False
     Dim prodAtivo As Boolean = False
     Dim infoAtivo As Boolean = False
-
+    Dim msgBoxResposta As Boolean
+    Public apiOperationResposta As Boolean
 #Region "Declaração de variáveis usadas nas placeholdes"
     Dim controlePlace1 As Boolean
     Dim controlePlace2 As Boolean
@@ -180,12 +181,12 @@ Public Class home
             If pnAnterior.Name <> "pnHome" Then
                 While pnSubAnterior.Height > 0
                     If SizeClose = 67 Then
-                        pnSubAnterior.Height -= 3
+                        pnSubAnterior.Height -= 6
                         If pnSubAnterior.Height = 1 Then
                             pnSubAnterior.Height -= 1
                         End If
                     ElseIf SizeClose = 132 Then
-                        pnSubAnterior.Height -= 6
+                        pnSubAnterior.Height -= 12
                     End If
                     pnSubAnterior.Refresh()
                     System.Threading.Thread.Sleep(5)
@@ -196,8 +197,8 @@ Public Class home
             '64 = Tamanho Width do panel do Menu Principal
             'pnProximo.Width cresce no mesmo ritmo que pnAnterior diminui
             While pnProximo.Width < 64
-                pnProximo.Width = pnProximo.Width + 2
-                pnAnterior.Width = pnAnterior.Width - 2
+                pnProximo.Width = pnProximo.Width + 4
+                pnAnterior.Width = pnAnterior.Width - 4
                 pnProximo.Refresh()
                 pnProximoAux.Refresh()
                 pnAnterior.Refresh()
@@ -209,12 +210,12 @@ Public Class home
             If pnProximo.Name <> "pnHome" Then
                 While pnSubProximo.Height < SizeOpen
                     If SizeOpen = 67 Then
-                        pnSubProximo.Height += 3
+                        pnSubProximo.Height += 6
                         If pnSubProximo.Height = (SizeOpen - 1) Then
                             pnSubProximo.Height += 1
                         End If
                     ElseIf SizeOpen = 132 Then
-                        pnSubProximo.Height += 6
+                        pnSubProximo.Height += 12
                         If pnSubProximo.Height = (2 * SizeOpen - 1) Then
                             pnSubProximo.Height += 1
                         End If
@@ -296,13 +297,7 @@ Public Class home
         pnVendDelScreen.Visible = False
         pnVendReqScreen.Visible = False
         pnVendOnScreen.Visible = False
-        If pnProximo.Name = "pnHome" Then
-            pnHomeTela.Visible = True
-            pnLogo.Visible = False
-        Else
-            pnHomeTela.Visible = False
-            pnLogo.Visible = True
-        End If
+        pnHomeTela.Visible = True
         'Fecha Bars Submenu
         pnAdmTopicAddBar.Visible = False
         pnAdmTopicDelBar.Visible = False
@@ -479,17 +474,22 @@ Public Class home
 #Region "Adm"
 
     'Adicionar ADM
-    Private Sub btAdmAddSalvar_Click(sender As Object, e As EventArgs) Handles btAdmAddSalvar.Click
+    Private Async Sub btAdmAddSalvar_Click(sender As Object, e As EventArgs) Handles btAdmAddSalvar.Click
         Dim nome As String = tbAdmAddNome.Text
         Dim login As String = tbAdmAddLogin.Text
         Dim senha As String = cripto(tbAdmAddSenha.Text, 1, 1)
         Dim email As String = tbAdmAddEmail.Text
         If (nome <> Nothing And login <> Nothing And senha <> Nothing And email <> Nothing) Then
+            'formMsgBox.chamadaMSG("Confirme os dados: " & "" & vbNewLine & "" & "Nome: " & nome & "" & vbNewLine & "" & "Login: " & login & "" & vbNewLine & "" & "E-mail: " & email, Color.White, 3)
+            'Await 
+            'MsgBox(formMsgBox.resposta.ToString)
+            'If formMsgBox.resposta Then
             addAdmin(nome, login, senha, email)
+            'Else
+            'btAdmAddLimpar_Click(Nothing, Nothing)
+            'End If
         Else
-            formMsgBox.labelWrite("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!")
-            formMsgBox.Show()
-            Me.Enabled = False
+            formMsgBox.chamadaMSG("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!", 1)
         End If
     End Sub
 
@@ -533,7 +533,7 @@ Public Class home
         If matricula <> Nothing And nome <> Nothing And email <> Nothing And saldo <> Nothing Then
             addCartao(matricula, nome, email, saldo)
         Else
-            formMsgBox.labelWrite("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!")
+            formMsgBox.chamadaMSG("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!", 1)
             formMsgBox.Show()
             Me.Enabled = False
         End If
@@ -591,6 +591,7 @@ Public Class home
     Private Sub pbCartaoRecLimpaTotalRecarga_Click(sender As Object, e As EventArgs) Handles pbCartaoRecLimpaTotalRecarga.Click
         totalRecarga = 0
         tbCartaoRecTotalRecarga.Text = "R$ " & totalRecarga.ToString
+        lbCartaoRecSaldoTt.Text = lbCartaoRecSaldoAt.Text
     End Sub
 
     Private Sub tbCartaoRecOutroValor_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoRecOutroValor.TextChanged
@@ -655,7 +656,7 @@ Public Class home
             addVend(matricula, nome, email, senha)
         Else
             With formMsgBox
-                .labelWrite("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!")
+                .chamadaMSG("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!", 1)
                 .Show()
                 '.formMsgBox_LoadEffect(sender, e)
             End With
@@ -1157,60 +1158,60 @@ Public Class home
 
 #Region "Outros"
 #Region "PlaceHolders"
-    Private Sub tbAdmAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddEmail.TextChanged
-        With tbAdmAddEmail
-            If .Text = "" Then
-                .Text = "E-mail"
-                .ForeColor = Color.FromArgb(200, 200, 200)
-            End If
-            If .TextLength > 5 Then
-                If StrReverse(StrReverse(.Text).Remove(5)) = "E-mail" Then
-                    .Text = .Text.Remove(.TextLength - 5)
-                    .ForeColor = Color.DimGray
-                    .SelectionStart = .TextLength
-                    .ScrollToCaret()
-                End If
-            End If
-        End With
-    End Sub
+    'Private Sub tbAdmAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddEmail.TextChanged
+    '    With tbAdmAddEmail
+    '        If .Text = "" Then
+    '            .Text = "E-mail"
+    '            .ForeColor = Color.FromArgb(200, 200, 200)
+    '        End If
+    '        If .TextLength > 5 Then
+    '            If StrReverse(StrReverse(.Text).Remove(5)) = "E-mail" Then
+    '                .Text = .Text.Remove(.TextLength - 5)
+    '                .ForeColor = Color.DimGray
+    '                .SelectionStart = .TextLength
+    '                .ScrollToCaret()
+    '            End If
+    '        End If
+    '    End With
+    'End Sub
 
-    Private Sub tbAdmAddEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddEmail.KeyDown
-        With tbAdmAddEmail
-            If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
-                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
-                    e.Handled = True
-                End If
-            End If
-        End With
-    End Sub
+    'Private Sub tbAdmAddEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddEmail.KeyDown
+    '    With tbAdmAddEmail
+    '        If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
+    '            If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+    '                e.Handled = True
+    '            End If
+    '        End If
+    '    End With
+    'End Sub
 
-    Private Sub tbAdmAddEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseDown
-        controlePlace5 = True
-        With tbAdmAddEmail
-            If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
-                .SelectionStart = .TextLength
-                .SelectionLength = 0
-                .SelectionStart = 0
-                .ScrollToCaret()
-            End If
-        End With
-    End Sub
+    'Private Sub tbAdmAddEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseDown
+    '    controlePlace5 = True
+    '    With tbAdmAddEmail
+    '        If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
+    '            .SelectionStart = .TextLength
+    '            .SelectionLength = 0
+    '            .SelectionStart = 0
+    '            .ScrollToCaret()
+    '        End If
+    '    End With
+    'End Sub
 
-    Private Sub tbAdmAddEmail_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseMove
-        If controlePlace5 Then
-            With tbAdmAddEmail
-                If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
-                    tbAdmAddEmail.Select(0, 0)
-                End If
-            End With
-        End If
-    End Sub
+    'Private Sub tbAdmAddEmail_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseMove
+    '    If controlePlace5 Then
+    '        With tbAdmAddEmail
+    '            If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
+    '                tbAdmAddEmail.Select(0, 0)
+    '            End If
+    '        End With
+    '    End If
+    'End Sub
 
 
 
-    Private Sub tbAdmAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseUp
-        controlePlace5 = False
-    End Sub
+    'Private Sub tbAdmAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseUp
+    '    controlePlace5 = False
+    'End Sub
 
 
 

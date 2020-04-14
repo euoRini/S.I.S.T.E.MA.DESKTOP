@@ -66,7 +66,6 @@ Module operacoesAPI
                     End Using
                 End Using
             End Using
-
             'Limpa tbs
             home.btAdmAddLimpar_Click(Nothing, Nothing)
         Catch ex As Exception
@@ -94,7 +93,10 @@ Module operacoesAPI
             request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
 
             'Fazendo a requisição e coletando a resposta
+            'If DirectCast(request.GetResponse(), HttpWebResponse).ToString <> "400" Then
             response = DirectCast(request.GetResponse(), HttpWebResponse)
+            'End If
+
 
             'Lendo a resposta à requisição
             reader = New StreamReader(response.GetResponseStream())
@@ -102,7 +104,6 @@ Module operacoesAPI
             'Transformando a resposta em string para facilitar a leitura do JSON
             Dim rawresp As String
             rawresp = reader.ReadToEnd()
-
             'Fazendo o parse da string para JSON Object
             Dim dado As JObject = JObject.Parse(rawresp)
 
@@ -134,12 +135,16 @@ Module operacoesAPI
                     End If
                 End With
             End If
-
         Catch ex As Exception
 
             'Em caso de erro, abrir uma messagebox
             If acao = "exclusao" Then
-                MsgBox(ex.ToString)
+                If ex.Message = "O servidor remoto retornou um erro: (400) Solicitação Incorreta." Then '&
+                    formMsgBox.chamadaMSG("Administrador não encontrado.", 1)
+                Else
+                    MsgBox(ex.Message)
+                End If
+
             End If
         Finally
             If Not response Is Nothing Then
@@ -208,8 +213,11 @@ Module operacoesAPI
 
             'Em caso de erro, abrir uma messagebox
 
-            MsgBox(ex.ToString)
-
+            If ex.Message = "O servidor remoto retornou um erro: (400) Solicitação Incorreta." Then '&
+                formMsgBox.chamadaMSG("Cartão não encontrado.", 1)
+            Else
+                MsgBox(ex.Message)
+            End If
         Finally
             If Not response Is Nothing Then
                 response.Close()
@@ -268,8 +276,11 @@ Module operacoesAPI
 
             'Em caso de erro, abrir uma messagebox
 
-            MsgBox(ex.ToString)
-
+            If ex.Message = "O servidor remoto retornou um erro: (400) Solicitação Incorreta." Then '&
+                formMsgBox.chamadaMSG("Vendedor não encontrado.", 1)
+            Else
+                MsgBox(ex.Message)
+            End If
         Finally
             If Not response Is Nothing Then
                 response.Close()
@@ -287,28 +298,33 @@ Module operacoesAPI
 
     'Execução Exclusão
     Public Async Sub delete(parametro As String, myUri As String)
+        Try
 
-        'Abre um client http
-        Using client = New HttpClient()
 
-            'Indica a rota da API para o client
-            client.BaseAddress = New Uri(myUri)
+            'Abre um client http
+            Using client = New HttpClient()
 
-            'Executa a exclusão com base na rota e paramentro informados e
-            'Guarda resposta em responseMessage
-            Dim responseMessage As HttpResponseMessage = Await client.DeleteAsync([String].Format("{0}{1}/", myUri, parametro))
+                'Indica a rota da API para o client
+                client.BaseAddress = New Uri(myUri)
 
-            'Se true, exclusão efetuada
-            'Se false, algum erro ocorreu
-            If responseMessage.IsSuccessStatusCode Then
-                MessageBox.Show("Excluído com sucesso")
-                sucessDelete = True
-                home.btAdmDelCancelar_Click(Nothing, Nothing)
-            Else
-                MessageBox.Show("Falha ao excluir: " & responseMessage.StatusCode)
-                sucessDelete = False
-            End If
-        End Using
+                'Executa a exclusão com base na rota e paramentro informados e
+                'Guarda resposta em responseMessage
+                Dim responseMessage As HttpResponseMessage = Await client.DeleteAsync([String].Format("{0}{1}/", myUri, parametro))
+
+                'Se true, exclusão efetuada
+                'Se false, algum erro ocorreu
+                If responseMessage.IsSuccessStatusCode Then
+                    formMsgBox.chamadaMSG("Excluído com sucesso", 2)
+                    sucessDelete = True
+                    home.btAdmDelCancelar_Click(Nothing, Nothing)
+                Else
+                    formMsgBox.chamadaMSG("Falha ao excluir", 1)
+                    sucessDelete = False
+                End If
+            End Using
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 #End Region
@@ -331,13 +347,14 @@ Module operacoesAPI
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
         Dim result_post = envioPOST_OR(myUri, data, "POST")
+
     End Sub
 
     'Busca de Admin para exclusão
     'Exclusão oficial feita no formHome
     Public Sub excAdmin(parametro As String)
         'URL para rota de lista de admins por login informado
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/admins/" & parametro)
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/admins/l/" & parametro)
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoADMLoginExc(myUri, "application/json", "GET", "exclusao")
@@ -364,6 +381,9 @@ Module operacoesAPI
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
         Dim result_post = envioPOST_OR(myUri, data, "POST")
+        If result_post = "200" Then
+            formMsgBox.chamadaMSG("Cadastro realizado!", 2)
+        End If
     End Sub
 
     Public Sub excCartao(matricula As String)
@@ -421,6 +441,9 @@ Module operacoesAPI
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
         Dim result_post = envioPOST_OR(myUri, data, "POST")
+        If result_post = "200" Then
+            formMsgBox.chamadaMSG("Cadastro realizado!", 2)
+        End If
     End Sub
 
     'Public Sub excVendedor(parametro As String)
