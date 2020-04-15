@@ -11,6 +11,22 @@ Module operacoesAPI
 
     Public idload As String
 
+#Region "ROTAS API"
+    'Rotas API
+    Public routerAdmAdicionarPOST = "https://sistemaifrj.herokuapp.com/admins"
+    Public routerAdmLocalizarGET = "https://sistemaifrj.herokuapp.com/admins/"
+    Public routerAdmDeletarDELETE = "https://sistemaifrj.herokuapp.com/admins/"
+    Public routerUserAdicionarPOST = "https://sistemaifrj.herokuapp.com/users"
+    Public routerUserLocalizarGET = "https://sistemaifrj.herokuapp.com/users/"
+    Public routerUserDeletarDELETE = "https://sistemaifrj.herokuapp.com/users/"
+    Public routerRecargaAdicionarPOST = "https://sistemaifrj.herokuapp.com/recargas/"
+    Public routerUserAtualizarPUT = "https://sistemaifrj.herokuapp.com/recargas/"
+    Public routerVendAdicionarPOST = "https://sistemaifrj.herokuapp.com/vendedores"
+    Public routerVendLocalizarGET = "https://sistemaifrj.herokuapp.com/vendedores/"
+    'Public routerVendDeletarDELETE = "https://sistemaifrj.herokuapp.com/vendedores/"
+#End Region
+
+#Region "Criptografia"
     'Function que criptografa dado enviada
     'dado = string para criptografar
     'nivel = numero de camadas de criptografia
@@ -34,6 +50,7 @@ Module operacoesAPI
         End If
         Return dado
     End Function
+#End Region
 
 #Region "Envio de Dados POST"
 
@@ -343,7 +360,7 @@ Module operacoesAPI
                         """,""email"":""" &
                         email & """}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/admins/")
+        Dim myUri As New Uri(routerAdmAdicionarPOST)
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
         Dim result_post = envioPOST_OR(myUri, data, "POST")
@@ -356,7 +373,7 @@ Module operacoesAPI
     'Exclusão oficial feita no formHome
     Public Sub excAdmin(parametro As String)
         'URL para rota de lista de admins por login informado
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/admins/l/" & parametro)
+        Dim myUri As New Uri(routerAdmLocalizarGET & parametro)
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoADMLoginExc(myUri, "application/json", "GET", "exclusao")
@@ -378,7 +395,7 @@ Module operacoesAPI
                         saldo & "}"
 
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/")
+        Dim myUri As New Uri(routerUserAdicionarPOST)
 
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
@@ -391,7 +408,7 @@ Module operacoesAPI
     Public Sub excCartao(matricula As String)
 
         'URL para rota de lista de users plea matricula informada
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & matricula)
+        Dim myUri As New Uri(routerUserLocalizarGET & matricula)
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoCartaoExc(myUri, "application/json", "GET", "exclusao")
@@ -399,7 +416,7 @@ Module operacoesAPI
     Public Sub recCartao(matricula As String)
 
         'URL para rota de lista de users plea matricula informada
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/users/" & matricula & "/")
+        Dim myUri As New Uri(routerUserLocalizarGET & matricula & "/")
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoCartaoExc(myUri, "application/json", "GET", "recarga")
@@ -408,7 +425,7 @@ Module operacoesAPI
     Public Sub exeRecarga(modo As String, valor As Integer)
         'URL para rota de lista de users plea matricula informada
         'valor = 50
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/recargas/" & idload)
+        Dim myUri As New Uri(routerRecargaAdicionarPOST & idload)
         Dim jsonString As String
         jsonString = "{""modo_pagto"" :  """ &
         modo &
@@ -419,7 +436,7 @@ Module operacoesAPI
         jsonString = "{""saldo"":" &
                         Val(home.lbCartaoRecSaldoTt.Text) & "}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        myUri = New Uri("https://sistemaifrj.herokuapp.com/recargas/" & home.tbCartaoRecMat.Text & "/")
+        myUri = New Uri(routerUserAtualizarPUT & home.tbCartaoRecMat.Text & "/")
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         data = Encoding.UTF8.GetBytes(jsonString)
         result_post = envioPOST_OR(myUri, data, "PUT")
@@ -439,7 +456,7 @@ Module operacoesAPI
                         """,""senha"":""" &
                         senha & """}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/vendedores/")
+        Dim myUri As New Uri(routerVendAdicionarPOST)
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
         Dim result_post = envioPOST_OR(myUri, data, "POST")
