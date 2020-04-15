@@ -10,6 +10,17 @@ Imports System.Net.Http
 Module operacoesAPI
 
     Public idload As String
+    Dim routerAdmAdicionarPOST = 
+    Dim routerAdmLocalizarGET = 
+    Dim routerAdmDeletarDELETE =
+    Dim routerUserAdicionarPOST =
+    Dim routerUserLocalizarGET =
+    Dim routerUserDeletarDELETE =
+    Dim routerUserAtualizarPUT =
+    Dim routerVendAdicionarPOST =
+    Dim routerVendLocalizarGET =
+    Dim routerVendDeletarDELETE = 
+
 
     'Function que criptografa dado enviada
     'dado = string para criptografar
