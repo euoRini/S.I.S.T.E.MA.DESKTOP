@@ -347,7 +347,9 @@ Module operacoesAPI
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         Dim data = Encoding.UTF8.GetBytes(jsonString)
         Dim result_post = envioPOST_OR(myUri, data, "POST")
-
+        If result_post = "200" Then
+            formMsgBox.chamadaMSG("Cadastro realizado!", 2)
+        End If
     End Sub
 
     'Busca de Admin para exclusão
@@ -406,7 +408,7 @@ Module operacoesAPI
     Public Sub exeRecarga(modo As String, valor As Integer)
         'URL para rota de lista de users plea matricula informada
         'valor = 50
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/recarga/" & idload)
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/recargas/" & idload)
         Dim jsonString As String
         jsonString = "{""modo_pagto"" :  """ &
         modo &
