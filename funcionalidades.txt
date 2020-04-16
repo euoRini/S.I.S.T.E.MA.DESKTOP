@@ -38,3 +38,9 @@
 ----Sugestões de mudança----
 	
 
+----Bug Encontrados----
+
+-Navegação Menu (Ir para Home trava programa)
+	Status: Resolvido
+	
+
