@@ -236,7 +236,7 @@ Partial Class home
         Me.PictureBox28 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnVendDelScreen = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbVendDellBy = New System.Windows.Forms.ComboBox()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
         Me.PictureBox31 = New System.Windows.Forms.PictureBox()
         Me.tbVendDelEmail = New System.Windows.Forms.TextBox()
@@ -1251,7 +1251,7 @@ Partial Class home
         Me.tbAdmAddSenha.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbAdmAddSenha.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmAddSenha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmAddSenha.ForeColor = System.Drawing.Color.Gray
+        Me.tbAdmAddSenha.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmAddSenha.Location = New System.Drawing.Point(142, 220)
         Me.tbAdmAddSenha.Name = "tbAdmAddSenha"
         Me.tbAdmAddSenha.Size = New System.Drawing.Size(410, 19)
@@ -1263,7 +1263,7 @@ Partial Class home
         Me.tbAdmAddLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbAdmAddLogin.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmAddLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmAddLogin.ForeColor = System.Drawing.Color.Gray
+        Me.tbAdmAddLogin.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmAddLogin.Location = New System.Drawing.Point(142, 163)
         Me.tbAdmAddLogin.Name = "tbAdmAddLogin"
         Me.tbAdmAddLogin.Size = New System.Drawing.Size(410, 19)
@@ -1275,7 +1275,7 @@ Partial Class home
         Me.tbAdmAddEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbAdmAddEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmAddEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmAddEmail.ForeColor = System.Drawing.Color.Gray
+        Me.tbAdmAddEmail.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmAddEmail.Location = New System.Drawing.Point(142, 276)
         Me.tbAdmAddEmail.Name = "tbAdmAddEmail"
         Me.tbAdmAddEmail.Size = New System.Drawing.Size(410, 19)
@@ -1322,7 +1322,7 @@ Partial Class home
         Me.tbAdmAddNome.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbAdmAddNome.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmAddNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmAddNome.ForeColor = System.Drawing.Color.Gray
+        Me.tbAdmAddNome.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmAddNome.Location = New System.Drawing.Point(142, 103)
         Me.tbAdmAddNome.Name = "tbAdmAddNome"
         Me.tbAdmAddNome.Size = New System.Drawing.Size(410, 19)
@@ -1419,7 +1419,7 @@ Partial Class home
         Me.tbAdmDelEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmDelEmail.Enabled = False
         Me.tbAdmDelEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmDelEmail.ForeColor = System.Drawing.Color.White
+        Me.tbAdmDelEmail.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmDelEmail.Location = New System.Drawing.Point(142, 282)
         Me.tbAdmDelEmail.Name = "tbAdmDelEmail"
         Me.tbAdmDelEmail.Size = New System.Drawing.Size(415, 19)
@@ -1432,7 +1432,7 @@ Partial Class home
         Me.tbAdmDelLogin.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmDelLogin.Enabled = False
         Me.tbAdmDelLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmDelLogin.ForeColor = System.Drawing.Color.White
+        Me.tbAdmDelLogin.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmDelLogin.Location = New System.Drawing.Point(142, 234)
         Me.tbAdmDelLogin.Name = "tbAdmDelLogin"
         Me.tbAdmDelLogin.Size = New System.Drawing.Size(415, 19)
@@ -1445,7 +1445,7 @@ Partial Class home
         Me.tbAdmDelNome.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmDelNome.Enabled = False
         Me.tbAdmDelNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmDelNome.ForeColor = System.Drawing.Color.White
+        Me.tbAdmDelNome.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmDelNome.Location = New System.Drawing.Point(142, 188)
         Me.tbAdmDelNome.Name = "tbAdmDelNome"
         Me.tbAdmDelNome.Size = New System.Drawing.Size(415, 19)
@@ -1542,7 +1542,7 @@ Partial Class home
         Me.tbAdmDelBusca.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbAdmDelBusca.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbAdmDelBusca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbAdmDelBusca.ForeColor = System.Drawing.Color.White
+        Me.tbAdmDelBusca.ForeColor = System.Drawing.Color.DimGray
         Me.tbAdmDelBusca.Location = New System.Drawing.Point(142, 104)
         Me.tbAdmDelBusca.Name = "tbAdmDelBusca"
         Me.tbAdmDelBusca.Size = New System.Drawing.Size(288, 19)
@@ -1617,7 +1617,7 @@ Partial Class home
         Me.tbCartaoDevValor.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDevValor.Enabled = False
         Me.tbCartaoDevValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDevValor.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDevValor.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDevValor.Location = New System.Drawing.Point(138, 302)
         Me.tbCartaoDevValor.Name = "tbCartaoDevValor"
         Me.tbCartaoDevValor.Size = New System.Drawing.Size(415, 19)
@@ -1630,7 +1630,7 @@ Partial Class home
         Me.tbCartaoDevModo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDevModo.Enabled = False
         Me.tbCartaoDevModo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDevModo.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDevModo.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDevModo.Location = New System.Drawing.Point(138, 254)
         Me.tbCartaoDevModo.Name = "tbCartaoDevModo"
         Me.tbCartaoDevModo.Size = New System.Drawing.Size(415, 19)
@@ -1643,7 +1643,7 @@ Partial Class home
         Me.tbCartaoDevData.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDevData.Enabled = False
         Me.tbCartaoDevData.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDevData.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDevData.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDevData.Location = New System.Drawing.Point(138, 208)
         Me.tbCartaoDevData.Name = "tbCartaoDevData"
         Me.tbCartaoDevData.Size = New System.Drawing.Size(415, 19)
@@ -1741,7 +1741,7 @@ Partial Class home
         Me.tbCartaoDevBusca.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbCartaoDevBusca.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDevBusca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDevBusca.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDevBusca.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDevBusca.Location = New System.Drawing.Point(141, 124)
         Me.tbCartaoDevBusca.Name = "tbCartaoDevBusca"
         Me.tbCartaoDevBusca.Size = New System.Drawing.Size(195, 19)
@@ -1975,7 +1975,7 @@ Partial Class home
         Me.cbCartaoRecModoPG.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbCartaoRecModoPG.FormattingEnabled = True
         Me.cbCartaoRecModoPG.Items.AddRange(New Object() {"Dinheiro", "Cartão"})
-        Me.cbCartaoRecModoPG.Location = New System.Drawing.Point(418, 273)
+        Me.cbCartaoRecModoPG.Location = New System.Drawing.Point(417, 273)
         Me.cbCartaoRecModoPG.Name = "cbCartaoRecModoPG"
         Me.cbCartaoRecModoPG.Size = New System.Drawing.Size(151, 28)
         Me.cbCartaoRecModoPG.TabIndex = 76
@@ -2093,7 +2093,7 @@ Partial Class home
         '
         Me.tbCartaoRecTotalRecarga.Enabled = False
         Me.tbCartaoRecTotalRecarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoRecTotalRecarga.Location = New System.Drawing.Point(416, 233)
+        Me.tbCartaoRecTotalRecarga.Location = New System.Drawing.Point(417, 233)
         Me.tbCartaoRecTotalRecarga.Name = "tbCartaoRecTotalRecarga"
         Me.tbCartaoRecTotalRecarga.Size = New System.Drawing.Size(123, 27)
         Me.tbCartaoRecTotalRecarga.TabIndex = 71
@@ -2319,7 +2319,7 @@ Partial Class home
         Me.tbCartaoRecMat.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbCartaoRecMat.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoRecMat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoRecMat.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoRecMat.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoRecMat.Location = New System.Drawing.Point(141, 107)
         Me.tbCartaoRecMat.Name = "tbCartaoRecMat"
         Me.tbCartaoRecMat.Size = New System.Drawing.Size(195, 19)
@@ -2394,7 +2394,7 @@ Partial Class home
         Me.tbCartaoDelSaldo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDelSaldo.Enabled = False
         Me.tbCartaoDelSaldo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDelSaldo.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDelSaldo.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDelSaldo.Location = New System.Drawing.Point(141, 268)
         Me.tbCartaoDelSaldo.Name = "tbCartaoDelSaldo"
         Me.tbCartaoDelSaldo.Size = New System.Drawing.Size(415, 19)
@@ -2407,7 +2407,7 @@ Partial Class home
         Me.tbCartaoDelEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDelEmail.Enabled = False
         Me.tbCartaoDelEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDelEmail.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDelEmail.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDelEmail.Location = New System.Drawing.Point(141, 220)
         Me.tbCartaoDelEmail.Name = "tbCartaoDelEmail"
         Me.tbCartaoDelEmail.Size = New System.Drawing.Size(415, 19)
@@ -2420,7 +2420,7 @@ Partial Class home
         Me.tbCartaoDelNome.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDelNome.Enabled = False
         Me.tbCartaoDelNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDelNome.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDelNome.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDelNome.Location = New System.Drawing.Point(141, 174)
         Me.tbCartaoDelNome.Name = "tbCartaoDelNome"
         Me.tbCartaoDelNome.Size = New System.Drawing.Size(415, 19)
@@ -2516,7 +2516,7 @@ Partial Class home
         Me.tbCartaoDelBusca.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbCartaoDelBusca.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoDelBusca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoDelBusca.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoDelBusca.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoDelBusca.Location = New System.Drawing.Point(141, 104)
         Me.tbCartaoDelBusca.Name = "tbCartaoDelBusca"
         Me.tbCartaoDelBusca.Size = New System.Drawing.Size(416, 19)
@@ -2614,7 +2614,7 @@ Partial Class home
         Me.tbVendAddEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbVendAddEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbVendAddEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVendAddEmail.ForeColor = System.Drawing.Color.White
+        Me.tbVendAddEmail.ForeColor = System.Drawing.Color.DimGray
         Me.tbVendAddEmail.Location = New System.Drawing.Point(164, 241)
         Me.tbVendAddEmail.Name = "tbVendAddEmail"
         Me.tbVendAddEmail.Size = New System.Drawing.Size(410, 19)
@@ -2626,7 +2626,7 @@ Partial Class home
         Me.tbVendAddNome.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbVendAddNome.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbVendAddNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVendAddNome.ForeColor = System.Drawing.Color.White
+        Me.tbVendAddNome.ForeColor = System.Drawing.Color.DimGray
         Me.tbVendAddNome.Location = New System.Drawing.Point(164, 184)
         Me.tbVendAddNome.Name = "tbVendAddNome"
         Me.tbVendAddNome.Size = New System.Drawing.Size(410, 19)
@@ -2638,7 +2638,7 @@ Partial Class home
         Me.tbVendAddSenha.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbVendAddSenha.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbVendAddSenha.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVendAddSenha.ForeColor = System.Drawing.Color.White
+        Me.tbVendAddSenha.ForeColor = System.Drawing.Color.DimGray
         Me.tbVendAddSenha.Location = New System.Drawing.Point(164, 297)
         Me.tbVendAddSenha.Name = "tbVendAddSenha"
         Me.tbVendAddSenha.Size = New System.Drawing.Size(410, 19)
@@ -2685,7 +2685,7 @@ Partial Class home
         Me.tbVendAddMat.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbVendAddMat.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbVendAddMat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVendAddMat.ForeColor = System.Drawing.Color.White
+        Me.tbVendAddMat.ForeColor = System.Drawing.Color.DimGray
         Me.tbVendAddMat.Location = New System.Drawing.Point(164, 124)
         Me.tbVendAddMat.Name = "tbVendAddMat"
         Me.tbVendAddMat.Size = New System.Drawing.Size(410, 19)
@@ -2714,7 +2714,7 @@ Partial Class home
         '
         'pnVendDelScreen
         '
-        Me.pnVendDelScreen.Controls.Add(Me.ComboBox1)
+        Me.pnVendDelScreen.Controls.Add(Me.cbVendDellBy)
         Me.pnVendDelScreen.Controls.Add(Me.PictureBox29)
         Me.pnVendDelScreen.Controls.Add(Me.PictureBox31)
         Me.pnVendDelScreen.Controls.Add(Me.tbVendDelEmail)
@@ -2734,17 +2734,17 @@ Partial Class home
         Me.pnVendDelScreen.TabIndex = 47
         Me.pnVendDelScreen.Visible = False
         '
-        'ComboBox1
+        'cbVendDellBy
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.White
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Login", "E-mail"})
-        Me.ComboBox1.Location = New System.Drawing.Point(432, 117)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
-        Me.ComboBox1.TabIndex = 59
-        Me.ComboBox1.Text = "Login"
+        Me.cbVendDellBy.BackColor = System.Drawing.Color.White
+        Me.cbVendDellBy.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbVendDellBy.FormattingEnabled = True
+        Me.cbVendDellBy.Items.AddRange(New Object() {"Matrícula", "E-mail"})
+        Me.cbVendDellBy.Location = New System.Drawing.Point(430, 117)
+        Me.cbVendDellBy.Name = "cbVendDellBy"
+        Me.cbVendDellBy.Size = New System.Drawing.Size(123, 28)
+        Me.cbVendDellBy.TabIndex = 59
+        Me.cbVendDellBy.Text = "Matrícula"
         '
         'PictureBox29
         '
@@ -2770,7 +2770,7 @@ Partial Class home
         Me.tbVendDelEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbVendDelEmail.Enabled = False
         Me.tbVendDelEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVendDelEmail.ForeColor = System.Drawing.Color.White
+        Me.tbVendDelEmail.ForeColor = System.Drawing.Color.DimGray
         Me.tbVendDelEmail.Location = New System.Drawing.Point(138, 254)
         Me.tbVendDelEmail.Name = "tbVendDelEmail"
         Me.tbVendDelEmail.Size = New System.Drawing.Size(415, 19)
@@ -2783,7 +2783,7 @@ Partial Class home
         Me.tbVendDelNome.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbVendDelNome.Enabled = False
         Me.tbVendDelNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVendDelNome.ForeColor = System.Drawing.Color.White
+        Me.tbVendDelNome.ForeColor = System.Drawing.Color.DimGray
         Me.tbVendDelNome.Location = New System.Drawing.Point(138, 208)
         Me.tbVendDelNome.Name = "tbVendDelNome"
         Me.tbVendDelNome.Size = New System.Drawing.Size(415, 19)
@@ -2872,7 +2872,7 @@ Partial Class home
         Me.tbVendDelBusca.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbVendDelBusca.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbVendDelBusca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbVendDelBusca.ForeColor = System.Drawing.Color.White
+        Me.tbVendDelBusca.ForeColor = System.Drawing.Color.DimGray
         Me.tbVendDelBusca.Location = New System.Drawing.Point(138, 124)
         Me.tbVendDelBusca.Name = "tbVendDelBusca"
         Me.tbVendDelBusca.Size = New System.Drawing.Size(288, 19)
@@ -3254,17 +3254,17 @@ Partial Class home
         Me.ClientSize = New System.Drawing.Size(884, 459)
         Me.Controls.Add(Me.pnBarraSuperior)
         Me.Controls.Add(Me.pnMenu)
-        Me.Controls.Add(Me.pnAdmAddScreen)
         Me.Controls.Add(Me.pnCartaoRecScreen)
-        Me.Controls.Add(Me.pnAdmDelScreen)
         Me.Controls.Add(Me.pnVendDelScreen)
-        Me.Controls.Add(Me.pnVendAddScreen)
+        Me.Controls.Add(Me.pnCartaoDevScreen)
         Me.Controls.Add(Me.pnCartaoDelScreen)
+        Me.Controls.Add(Me.pnVendAddScreen)
+        Me.Controls.Add(Me.pnAdmDelScreen)
+        Me.Controls.Add(Me.pnAdmAddScreen)
         Me.Controls.Add(Me.pnCartaoAddScreen)
         Me.Controls.Add(Me.pnVendReqScreen)
         Me.Controls.Add(Me.pnVendOnScreen)
         Me.Controls.Add(Me.pnLogo)
-        Me.Controls.Add(Me.pnCartaoDevScreen)
         Me.Controls.Add(Me.pnHomeTela)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -3604,7 +3604,7 @@ Partial Class home
     Friend WithEvents PictureBox40 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents cbAdmDellBy As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbVendDellBy As ComboBox
     Friend WithEvents PictureBox29 As PictureBox
     Friend WithEvents PictureBox31 As PictureBox
     Friend WithEvents tbVendDelEmail As TextBox

@@ -124,6 +124,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="operacoesAPI.vb" />
+    <Compile Include="validaTextBoxNum.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="formMsgBox.resx">

@@ -17,11 +17,24 @@ Public Class home
     Dim msgBoxResposta As Boolean
     Public apiOperationResposta As Boolean
 #Region "Declaração de variáveis usadas nas placeholdes"
+    Dim altSenha As Boolean
     Dim controlePlace1 As Boolean
     Dim controlePlace2 As Boolean
     Dim controlePlace3 As Boolean
     Dim controlePlace4 As Boolean
     Dim controlePlace5 As Boolean
+    Dim controlePlace6 As Boolean
+    Dim controlePlace7 As Boolean
+    Dim controlePlace8 As Boolean
+    Dim controlePlace9 As Boolean
+    Dim controlePlace10 As Boolean
+    Dim controlePlace11 As Boolean
+    Dim controlePlace12 As Boolean
+    Dim controlePlace13 As Boolean
+    Dim controlePlace14 As Boolean
+    Dim controlePlace15 As Boolean
+    Dim controlePlace16 As Boolean
+    Dim controlePlace17 As Boolean
 #End Region
 
 #End Region
@@ -386,12 +399,16 @@ Public Class home
 #Region "AdmTopics"
     Private Sub lbAdmTopicAdd_Click(sender As Object, e As EventArgs) Handles lbAdmTopicAdd.Click
         navegacaoMenu(2, pnAdmTopicAddBar, pnAdmAddScreen)
+        tbAdmAddNome.Focus()
+        tbAdmAddNome.Select(0, 0)
     End Sub
     Private Sub pnAddTopicAdd_Click(sender As Object, e As EventArgs) Handles pnAddTopicAdd.Click
         lbAdmTopicAdd_Click(sender, e)
     End Sub
     Private Sub lbAdmTopicDel_Click(sender As Object, e As EventArgs) Handles lbAdmTopicDel.Click
         navegacaoMenu(2, pnAdmTopicDelBar, pnAdmDelScreen)
+        tbAdmDelBusca.Focus()
+        tbAdmDelBusca.Select(0, 0)
     End Sub
     Private Sub pnAdmTopicDel_Click(sender As Object, e As EventArgs) Handles pnAdmTopicDel.Click
         lbAdmTopicDel_Click(sender, e)
@@ -1157,72 +1174,1091 @@ Public Class home
 #End Region
 
 #Region "Outros"
+    Private Sub cbAdmDellBy_TextChanged(sender As Object, e As EventArgs) Handles cbAdmDellBy.TextChanged
+        If (cbAdmDellBy.Text <> "Login" And cbAdmDellBy.Text <> "E-mail") Then
+            cbAdmDellBy.Text = "Login"
+        End If
+        If tbAdmDelBusca.ForeColor = Color.FromArgb(200, 200, 200) Then
+            tbAdmDelBusca.Text = ""
+            tbAdmDelBusca.Text = cbAdmDellBy.Text
+        Else
+            tbAdmDelBusca.Text = cbAdmDellBy.Text
+        End If
+        tbAdmDelBusca.Focus()
+        tbAdmDelBusca.Select(0, 0)
+    End Sub
+
+    Private Sub cbVendDellBy_TextChanged(sender As Object, e As EventArgs) Handles cbVendDellBy.TextChanged
+        If (cbVendDellBy.Text <> "Matrícula" And cbVendDellBy.Text <> "E-mail") Then
+            cbVendDellBy.Text = "Matrícula"
+        End If
+        If tbVendDelBusca.ForeColor = Color.FromArgb(200, 200, 200) Then
+            tbVendDelBusca.Text = ""
+            tbVendDelBusca.Text = cbVendDellBy.Text
+        Else
+            tbVendDelBusca.Text = cbVendDellBy.Text
+        End If
+        tbVendDelBusca.Focus()
+        tbVendDelBusca.Select(0, 0)
+    End Sub
+#End Region
 #Region "PlaceHolders"
-    'Private Sub tbAdmAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddEmail.TextChanged
-    '    With tbAdmAddEmail
-    '        If .Text = "" Then
-    '            .Text = "E-mail"
-    '            .ForeColor = Color.FromArgb(200, 200, 200)
-    '        End If
-    '        If .TextLength > 5 Then
-    '            If StrReverse(StrReverse(.Text).Remove(5)) = "E-mail" Then
-    '                .Text = .Text.Remove(.TextLength - 5)
-    '                .ForeColor = Color.DimGray
-    '                .SelectionStart = .TextLength
-    '                .ScrollToCaret()
-    '            End If
-    '        End If
-    '    End With
-    'End Sub
-
-    'Private Sub tbAdmAddEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddEmail.KeyDown
-    '    With tbAdmAddEmail
-    '        If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
-    '            If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
-    '                e.Handled = True
-    '            End If
-    '        End If
-    '    End With
-    'End Sub
-
-    'Private Sub tbAdmAddEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseDown
-    '    controlePlace5 = True
-    '    With tbAdmAddEmail
-    '        If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
-    '            .SelectionStart = .TextLength
-    '            .SelectionLength = 0
-    '            .SelectionStart = 0
-    '            .ScrollToCaret()
-    '        End If
-    '    End With
-    'End Sub
-
-    'Private Sub tbAdmAddEmail_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseMove
-    '    If controlePlace5 Then
-    '        With tbAdmAddEmail
-    '            If .Text = "E-mail" And .ForeColor = Color.FromArgb(200, 200, 200) Then
-    '                tbAdmAddEmail.Select(0, 0)
-    '            End If
-    '        End With
-    '    End If
-    'End Sub
 
 
 
-    'Private Sub tbAdmAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseUp
-    '    controlePlace5 = False
-    'End Sub
 
+#Region "PlaceHolders"
+    Private Sub tbAdmAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddEmail.TextChanged
+
+        With tbAdmAddEmail
+            If .Text = "" Then
+                .Text = "E-mail"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 6 Then
+                If StrReverse(StrReverse(.Text).Remove(6)) = "E-mail" Then
+                    .Text = .Text.Remove(.TextLength - 6)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddEmail.KeyDown
+        If tbAdmAddEmail.Text = "E-mail" And tbAdmAddEmail.ForeColor = Color.DimGray Then
+            tbAdmAddEmail.Select(0, 0)
+        End If
+        With tbAdmAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseDown
+
+        controlePlace5 = True
+        With tbAdmAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddEmail_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseMove
+
+        If controlePlace5 Then
+            With tbAdmAddEmail
+                If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                    tbAdmAddEmail.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbAdmAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddEmail.MouseUp
+
+        controlePlace5 = False
+    End Sub
+
+    Private Sub tbAdmAddNome_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddNome.TextChanged
+
+        With tbAdmAddNome
+            If .Text = "" Then
+                .Text = "Nome"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 4 Then
+                If StrReverse(StrReverse(.Text).Remove(4)) = "Nome" Then
+                    .Text = .Text.Remove(.TextLength - 4)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddNome_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddNome.KeyDown
+        If tbAdmAddNome.Text = "Nome" And tbAdmAddNome.ForeColor = Color.DimGray Then
+            tbAdmAddNome.Select(0, 0)
+        End If
+        With tbAdmAddNome
+            If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddNome_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddNome.MouseDown
+        controlePlace4 = True
+        With tbAdmAddNome
+            If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddNome_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddNome.MouseMove
+        If controlePlace4 Then
+            With tbAdmAddNome
+                If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                    tbAdmAddNome.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbAdmAddNome_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddNome.MouseUp
+        controlePlace4 = False
+    End Sub
+
+    Private Sub tbAdmAddLogin_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddLogin.TextChanged
+        With tbAdmAddLogin
+            If .Text = "" Then
+                .Text = "Login"
+                .ForeColor = Color.DimGray
+                altSenha = False
+            End If
+            If .TextLength > 5 Then
+                If StrReverse(StrReverse(.Text).Remove(5)) = "Login" Then
+                    .Text = .Text.Remove(.TextLength - 5)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+                altSenha = True
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddLogin_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddLogin.KeyDown
+        If tbAdmAddLogin.Text = "Login" And tbAdmAddLogin.ForeColor = Color.DimGray Then
+            tbAdmAddLogin.Select(0, 0)
+        End If
+        With tbAdmAddLogin
+            If .Text = "Login" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddLogin_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddLogin.MouseDown
+        controlePlace3 = True
+        With tbAdmAddLogin
+            If .Text = "Login" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddLogin_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddLogin.MouseMove
+        If controlePlace3 Then
+            With tbAdmAddLogin
+                If .Text = "Login" And .ForeColor = Color.DimGray Then
+                    tbAdmAddLogin.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbAdmAddLogin_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddLogin.MouseUp
+        controlePlace3 = False
+
+    End Sub
+
+    Private Sub tbAdmAddSenha_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddSenha.TextChanged
+        With tbAdmAddSenha
+            If .Text = "" Then
+                .Text = "Senha"
+                .PasswordChar = ""
+                .ForeColor = Color.DimGray
+
+            End If
+            If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                .ShortcutsEnabled = False
+            Else
+                .ShortcutsEnabled = True
+            End If
+            If .TextLength > 5 Then
+                If StrReverse(StrReverse(.Text).Remove(5)) = "Senha" Then
+                    .Text = .Text.Remove(.TextLength - 5)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .PasswordChar = "•"
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddSenha_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmAddSenha.KeyDown
+        If tbAdmAddSenha.Text = "Senha" And tbAdmAddSenha.ForeColor = Color.DimGray Then
+            tbAdmAddSenha.Select(0, 0)
+        End If
+        With tbAdmAddSenha
+            If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddSenha_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmAddSenha.MouseDown
+        controlePlace2 = True
+        With tbAdmAddSenha
+            If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmAddSenha_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmAddSenha.MouseMove
+        If controlePlace2 Then
+            With tbAdmAddSenha
+                If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                    tbAdmAddSenha.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbAdmAddSenha_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmAddSenha.MouseUp
+        controlePlace2 = False
+
+    End Sub
+
+    Private Sub tbAdmDelBusca_TextChanged(sender As Object, e As EventArgs) Handles tbAdmDelBusca.TextChanged
+        If cbAdmDellBy.Text = "Login" Then
+            With tbAdmDelBusca
+                If .Text = "" Then
+                    .Text = cbAdmDellBy.Text
+                    .ForeColor = Color.DimGray
+                End If
+                If .TextLength > 5 Then
+                    If StrReverse(StrReverse(.Text).Remove(5)) = cbAdmDellBy.Text Then
+                        .Text = .Text.Remove(.TextLength - 5)
+                        .ForeColor = Color.FromArgb(200, 200, 200)
+                        .SelectionStart = .TextLength
+                        .ScrollToCaret()
+                    End If
+                End If
+            End With
+        Else
+
+            With tbAdmDelBusca
+                If .Text = "" Then
+                    .Text = cbAdmDellBy.Text
+                    .ForeColor = Color.DimGray
+                End If
+                If .TextLength > 6 Then
+                    If StrReverse(StrReverse(.Text).Remove(6)) = cbAdmDellBy.Text Then
+                        .Text = .Text.Remove(.TextLength - 6)
+                        .ForeColor = Color.FromArgb(200, 200, 200)
+                        .SelectionStart = .TextLength
+                        .ScrollToCaret()
+                    End If
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbAdmDelBusca_KeyDown(sender As Object, e As KeyEventArgs) Handles tbAdmDelBusca.KeyDown
+        With tbAdmDelBusca
+            If .Text = cbAdmDellBy.Text And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmDelBusca_MouseDown(sender As Object, e As MouseEventArgs) Handles tbAdmDelBusca.MouseDown
+        controlePlace1 = True
+        With tbAdmDelBusca
+            If .Text = cbAdmDellBy.Text And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbAdmDelBusca_MouseMove(sender As Object, e As MouseEventArgs) Handles tbAdmDelBusca.MouseMove
+        If controlePlace1 Then
+            With tbAdmDelBusca
+                If .Text = cbAdmDellBy.Text And .ForeColor = Color.DimGray Then
+                    tbAdmDelBusca.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+
+    Private Sub tbAdmDelBusca_MouseUp(sender As Object, e As MouseEventArgs) Handles tbAdmDelBusca.MouseUp
+        controlePlace1 = False
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
+    Private Sub tbCartaoAddMat_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoAddMat.TextChanged
+
+        With tbCartaoAddMat
+            If .Text = "" Then
+                .Text = "Matrícula"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 9 Then
+                If StrReverse(StrReverse(.Text).Remove(9)) = "Matrícula" Then
+                    .Text = .Text.Remove(.TextLength - 9)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddMat_KeyDown(sender As Object, e As KeyEventArgs) Handles tbCartaoAddMat.KeyDown
+        If tbCartaoAddMat.Text = "Matrícula" And tbCartaoAddMat.ForeColor = Color.DimGray Then
+            tbCartaoAddMat.Select(0, 0)
+        End If
+        With tbCartaoAddMat
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddMat_MouseDown(sender As Object, e As MouseEventArgs) Handles tbCartaoAddMat.MouseDown
+        controlePlace6 = True
+        With tbCartaoAddMat
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddMat_MouseMove(sender As Object, e As MouseEventArgs) Handles tbCartaoAddMat.MouseMove
+        If controlePlace6 Then
+            With tbCartaoAddMat
+                If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                    tbCartaoAddMat.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbCartaoAddMat_MouseUp(sender As Object, e As MouseEventArgs) Handles tbCartaoAddMat.MouseUp
+        controlePlace6 = False
+
+    End Sub
+
+    Private Sub tbCartaoAddNome_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoAddNome.TextChanged
+
+        With tbCartaoAddNome
+            If .Text = "" Then
+                .Text = "Nome"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 4 Then
+                If StrReverse(StrReverse(.Text).Remove(4)) = "Nome" Then
+                    .Text = .Text.Remove(.TextLength - 4)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddNome_KeyDown(sender As Object, e As KeyEventArgs) Handles tbCartaoAddNome.KeyDown
+        If tbCartaoAddNome.Text = "Nome" And tbCartaoAddNome.ForeColor = Color.DimGray Then
+            tbCartaoAddNome.Select(0, 0)
+        End If
+        With tbCartaoAddNome
+            If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddNome_MouseDown(sender As Object, e As MouseEventArgs) Handles tbCartaoAddNome.MouseDown
+        controlePlace7 = True
+        With tbCartaoAddNome
+            If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddNome_MouseMove(sender As Object, e As MouseEventArgs) Handles tbCartaoAddNome.MouseMove
+        If controlePlace7 Then
+            With tbCartaoAddNome
+                If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                    tbCartaoAddNome.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbCartaoAddNome_MouseUp(sender As Object, e As MouseEventArgs) Handles tbCartaoAddNome.MouseUp
+        controlePlace7 = False
+
+    End Sub
+
+    Private Sub tbCartaoAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoAddEmail.TextChanged
+
+        With tbCartaoAddEmail
+            If .Text = "" Then
+                .Text = "E-mail"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 6 Then
+                If StrReverse(StrReverse(.Text).Remove(6)) = "E-mail" Then
+                    .Text = .Text.Remove(.TextLength - 6)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles tbCartaoAddEmail.KeyDown
+        If tbCartaoAddEmail.Text = "E-mail" And tbCartaoAddEmail.ForeColor = Color.DimGray Then
+            tbCartaoAddEmail.Select(0, 0)
+        End If
+        With tbCartaoAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles tbCartaoAddEmail.MouseDown
+        controlePlace8 = True
+        With tbCartaoAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddEmail_MouseMove(sender As Object, e As MouseEventArgs) Handles tbCartaoAddEmail.MouseMove
+        If controlePlace8 Then
+            With tbCartaoAddEmail
+                If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                    tbCartaoAddEmail.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbCartaoAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbCartaoAddEmail.MouseUp
+        controlePlace8 = False
+    End Sub
+
+    Private Sub tbCartaoAddSaldo_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoAddSaldo.TextChanged
+
+        With tbCartaoAddSaldo
+            If .Text = "" Then
+                .Text = "Saldo Atual"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 11 Then
+                If StrReverse(StrReverse(.Text).Remove(11)) = "Saldo Atual" Then
+                    .Text = .Text.Remove(.TextLength - 11)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddSaldo_KeyDown(sender As Object, e As KeyEventArgs) Handles tbCartaoAddSaldo.KeyDown
+        If tbCartaoAddSaldo.Text = "Saldo Atual" And tbCartaoAddSaldo.ForeColor = Color.DimGray Then
+            tbCartaoAddSaldo.Select(0, 0)
+        End If
+        With tbCartaoAddSaldo
+            If .Text = "Saldo Atual" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddSaldo_MouseDown(sender As Object, e As MouseEventArgs) Handles tbCartaoAddSaldo.MouseDown
+        controlePlace9 = True
+        With tbCartaoAddSaldo
+            If .Text = "Saldo Atual" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoAddSaldo_MouseMove(sender As Object, e As MouseEventArgs) Handles tbCartaoAddSaldo.MouseMove
+        If controlePlace9 Then
+            With tbCartaoAddSaldo
+                If .Text = "Saldo Atual" And .ForeColor = Color.DimGray Then
+                    tbCartaoAddSaldo.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbCartaoAddSaldo_MouseUp(sender As Object, e As MouseEventArgs) Handles tbCartaoAddSaldo.MouseUp
+        controlePlace9 = False
+
+    End Sub
+
+
+
+
+    Private Sub tbCartaoDelBusca_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoDelBusca.TextChanged
+
+        With tbCartaoDelBusca
+            If .Text = "" Then
+                .Text = "Matrícula"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 9 Then
+                If StrReverse(StrReverse(.Text).Remove(9)) = "Matrícula" Then
+                    .Text = .Text.Remove(.TextLength - 9)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+
+    End Sub
+
+    Private Sub tbCartaoDelBusca_KeyDown(sender As Object, e As KeyEventArgs) Handles tbCartaoDelBusca.KeyDown
+        If tbCartaoDelBusca.Text = "Matrícula" And tbCartaoDelBusca.ForeColor = Color.DimGray Then
+            tbCartaoDelBusca.Select(0, 0)
+        End If
+        With tbCartaoDelBusca
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoDelBusca_MouseDown(sender As Object, e As MouseEventArgs) Handles tbCartaoDelBusca.MouseDown
+        controlePlace10 = True
+        With tbCartaoDelBusca
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoDelBusca_MouseMove(sender As Object, e As MouseEventArgs) Handles tbCartaoDelBusca.MouseMove
+        If controlePlace10 Then
+            With tbCartaoDelBusca
+                If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                    tbCartaoDelBusca.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbCartaoDelBusca_MouseUp(sender As Object, e As MouseEventArgs) Handles tbCartaoDelBusca.MouseUp
+        controlePlace10 = False
+    End Sub
+
+
+
+
+
+
+    Private Sub tbCartaoRecMat_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoRecMat.TextChanged
+
+        With tbCartaoRecMat
+            If .Text = "" Then
+                .Text = "Matrícula"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 9 Then
+                If StrReverse(StrReverse(.Text).Remove(9)) = "Matrícula" Then
+                    .Text = .Text.Remove(.TextLength - 9)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoRecMat_KeyDown(sender As Object, e As KeyEventArgs) Handles tbCartaoRecMat.KeyDown
+        If tbCartaoRecMat.Text = "Matrícula" And tbCartaoRecMat.ForeColor = Color.DimGray Then
+            tbCartaoRecMat.Select(0, 0)
+        End If
+        With tbCartaoRecMat
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoRecMat_MouseDown(sender As Object, e As MouseEventArgs) Handles tbCartaoRecMat.MouseDown
+        controlePlace12 = True
+        With tbCartaoRecMat
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+
+        End With
+    End Sub
+
+    Private Sub tbCartaoRecMat_MouseMove(sender As Object, e As MouseEventArgs) Handles tbCartaoRecMat.MouseMove
+        If controlePlace12 Then
+            With tbCartaoRecMat
+                If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                    tbCartaoRecMat.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbCartaoRecMat_MouseUp(sender As Object, e As MouseEventArgs) Handles tbCartaoRecMat.MouseUp
+        controlePlace12 = False
+
+    End Sub
+
+    Private Sub tbCartaoDevBusca_TextChanged(sender As Object, e As EventArgs) Handles tbCartaoDevBusca.TextChanged
+
+        With tbCartaoDevBusca
+            If .Text = "" Then
+                .Text = "Matrícula"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 9 Then
+                If StrReverse(StrReverse(.Text).Remove(9)) = "Matrícula" Then
+                    .Text = .Text.Remove(.TextLength - 9)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoDevBusca_KeyDown(sender As Object, e As KeyEventArgs) Handles tbCartaoDevBusca.KeyDown
+        If tbCartaoDevBusca.Text = "Matrícula" And tbCartaoDevBusca.ForeColor = Color.DimGray Then
+            tbCartaoDevBusca.Select(0, 0)
+        End If
+        With tbCartaoDevBusca
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoDevBusca_MouseDown(sender As Object, e As MouseEventArgs) Handles tbCartaoDevBusca.MouseDown
+        controlePlace11 = True
+        With tbCartaoDevBusca
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbCartaoDevBusca_MouseMove(sender As Object, e As MouseEventArgs) Handles tbCartaoDevBusca.MouseMove
+        If controlePlace11 Then
+            With tbCartaoDevBusca
+                If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                    tbCartaoDevBusca.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbCartaoDevBusca_MouseUp(sender As Object, e As MouseEventArgs) Handles tbCartaoDevBusca.MouseUp
+        controlePlace11 = False
+    End Sub
+
+
+
+    Private Sub tbVendAddMat_TextChanged(sender As Object, e As EventArgs) Handles tbVendAddMat.TextChanged
+
+        With tbVendAddMat
+            If .Text = "" Then
+                .Text = "Matrícula"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 9 Then
+                If StrReverse(StrReverse(.Text).Remove(9)) = "Matrícula" Then
+                    .Text = .Text.Remove(.TextLength - 9)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddMat_KeyDown(sender As Object, e As KeyEventArgs) Handles tbVendAddMat.KeyDown
+        If tbVendAddMat.Text = "Matrícula" And tbVendAddMat.ForeColor = Color.DimGray Then
+            tbVendAddMat.Select(0, 0)
+        End If
+        With tbVendAddMat
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddMat_MouseDown(sender As Object, e As MouseEventArgs) Handles tbVendAddMat.MouseDown
+        controlePlace13 = True
+        With tbVendAddMat
+            If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddMat_MouseMove(sender As Object, e As MouseEventArgs) Handles tbVendAddMat.MouseMove
+        If controlePlace13 Then
+            With tbVendAddMat
+                If .Text = "Matrícula" And .ForeColor = Color.DimGray Then
+                    tbVendAddMat.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbVendAddMat_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendAddMat.MouseUp
+        controlePlace13 = False
+    End Sub
+
+
+    Private Sub tbVendAddNome_TextChanged(sender As Object, e As EventArgs) Handles tbVendAddNome.TextChanged
+
+        With tbVendAddNome
+            If .Text = "" Then
+                .Text = "Nome"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 4 Then
+                If StrReverse(StrReverse(.Text).Remove(4)) = "Nome" Then
+                    .Text = .Text.Remove(.TextLength - 4)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddNome_KeyDown(sender As Object, e As KeyEventArgs) Handles tbVendAddNome.KeyDown
+        If tbVendAddNome.Text = "Nome" And tbVendAddNome.ForeColor = Color.DimGray Then
+            tbVendAddNome.Select(0, 0)
+        End If
+        With tbVendAddNome
+            If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddNome_MouseDown(sender As Object, e As MouseEventArgs) Handles tbVendAddNome.MouseDown
+        controlePlace14 = True
+        With tbVendAddNome
+            If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddNome_MouseMove(sender As Object, e As MouseEventArgs) Handles tbVendAddNome.MouseMove
+        If controlePlace14 Then
+            With tbVendAddNome
+                If .Text = "Nome" And .ForeColor = Color.DimGray Then
+                    tbVendAddNome.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbVendAddNome_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendAddNome.MouseUp
+        controlePlace14 = False
+    End Sub
+
+    Private Sub tbVendAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbVendAddEmail.TextChanged
+
+        With tbVendAddEmail
+            If .Text = "" Then
+                .Text = "E-mail"
+                .ForeColor = Color.DimGray
+            End If
+            If .TextLength > 6 Then
+                If StrReverse(StrReverse(.Text).Remove(6)) = "E-mail" Then
+                    .Text = .Text.Remove(.TextLength - 6)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+            End If
+        End With
+
+    End Sub
+
+    Private Sub tbVendAddEmail_KeyDown(sender As Object, e As KeyEventArgs) Handles tbVendAddEmail.KeyDown
+        If tbVendAddEmail.Text = "E-mail" And tbVendAddEmail.ForeColor = Color.DimGray Then
+            tbVendAddEmail.Select(0, 0)
+        End If
+        With tbVendAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles tbVendAddEmail.MouseDown
+        controlePlace15 = True
+        With tbVendAddEmail
+            If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddEmail_MouseMove(sender As Object, e As MouseEventArgs) Handles tbVendAddEmail.MouseMove
+        If controlePlace15 Then
+            With tbVendAddEmail
+                If .Text = "E-mail" And .ForeColor = Color.DimGray Then
+                    tbVendAddEmail.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbVendAddEmail_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendAddEmail.MouseUp
+        controlePlace15 = False
+    End Sub
+
+    Private Sub tbVendAddSenha_TextChanged(sender As Object, e As EventArgs) Handles tbVendAddSenha.TextChanged
+        With tbVendAddSenha
+            If .Text = "" Then
+                .Text = "Senha"
+                .PasswordChar = ""
+                .ForeColor = Color.DimGray
+
+            End If
+            If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                .ShortcutsEnabled = False
+            Else
+                .ShortcutsEnabled = True
+            End If
+            If .TextLength > 5 Then
+                If StrReverse(StrReverse(.Text).Remove(5)) = "Senha" Then
+                    .Text = .Text.Remove(.TextLength - 5)
+                    .ForeColor = Color.FromArgb(200, 200, 200)
+                    .PasswordChar = "•"
+                    .SelectionStart = .TextLength
+                    .ScrollToCaret()
+                End If
+
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddSenha_KeyDown(sender As Object, e As KeyEventArgs) Handles tbVendAddSenha.KeyDown
+        If tbVendAddSenha.Text = "Senha" And tbVendAddSenha.ForeColor = Color.DimGray Then
+            tbVendAddSenha.Select(0, 0)
+        End If
+        With tbVendAddSenha
+            If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddSenha_MouseDown(sender As Object, e As MouseEventArgs) Handles tbVendAddSenha.MouseDown
+        controlePlace16 = True
+        With tbVendAddSenha
+            If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendAddSenha_MouseMove(sender As Object, e As MouseEventArgs) Handles tbVendAddSenha.MouseMove
+        If controlePlace16 Then
+            With tbVendAddSenha
+                If .Text = "Senha" And .ForeColor = Color.DimGray Then
+                    tbVendAddSenha.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbVendAddSenha_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendAddSenha.MouseUp
+        controlePlace16 = False
+    End Sub
+
+    Private Sub tbVendDelBusca_TextChanged(sender As Object, e As EventArgs) Handles tbVendDelBusca.TextChanged
+        If cbVendDellBy.Text = "Matrícula" Then
+            With tbVendDelBusca
+                If .Text = "" Then
+                    .Text = cbVendDellBy.Text
+                    .ForeColor = Color.DimGray
+                End If
+                If .TextLength > 9 Then
+                    If StrReverse(StrReverse(.Text).Remove(9)) = cbVendDellBy.Text Then
+                        .Text = .Text.Remove(.TextLength - 9)
+                        .ForeColor = Color.FromArgb(200, 200, 200)
+                        .SelectionStart = .TextLength
+                        .ScrollToCaret()
+                    End If
+                End If
+            End With
+        Else
+
+            With tbVendDelBusca
+                If .Text = "" Then
+                    .Text = cbVendDellBy.Text
+                    .ForeColor = Color.DimGray
+                End If
+                If .TextLength > 6 Then
+                    If StrReverse(StrReverse(.Text).Remove(6)) = cbVendDellBy.Text Then
+                        .Text = .Text.Remove(.TextLength - 6)
+                        .ForeColor = Color.FromArgb(200, 200, 200)
+                        .SelectionStart = .TextLength
+                        .ScrollToCaret()
+                    End If
+                End If
+            End With
+        End If
+    End Sub
+
+    Private Sub tbVendDelBusca_KeyDown(sender As Object, e As KeyEventArgs) Handles tbVendDelBusca.KeyDown
+        With tbVendDelBusca
+            If .Text = cbVendDellBy.Text And .ForeColor = Color.DimGray Then
+                If e.KeyCode = Keys.Right Or e.KeyCode = Keys.Left Or e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down Or e.KeyCode = Keys.Home Or e.KeyCode = Keys.End Then
+                    e.Handled = True
+                End If
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendDelBusca_MouseDown(sender As Object, e As MouseEventArgs) Handles tbVendDelBusca.MouseDown
+        controlePlace17 = True
+        With tbVendDelBusca
+            If .Text = cbVendDellBy.Text And .ForeColor = Color.DimGray Then
+                .SelectionStart = .TextLength
+                .SelectionLength = 0
+                .SelectionStart = 0
+                .ScrollToCaret()
+            End If
+        End With
+    End Sub
+
+    Private Sub tbVendDelBusca_MouseMove(sender As Object, e As MouseEventArgs) Handles tbVendDelBusca.MouseMove
+        If controlePlace17 Then
+            With tbVendDelBusca
+                If .Text = cbVendDellBy.Text And .ForeColor = Color.DimGray Then
+                    tbVendDelBusca.Select(0, 0)
+                End If
+            End With
+        End If
+    End Sub
+    Private Sub tbVendDelBusca_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendDelBusca.MouseUp
+        controlePlace17 = False
+    End Sub
 
 
 #End Region
 
-    'Impede Entrada de Não Número em Saldos
-    Private Sub tbCartaoAddSaldo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbCartaoAddSaldo.KeyPress
-        If Not Char.IsNumber(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
 
     'Botões Limpar e Cancelar
     Public Sub btAdmAddLimpar_Click(sender As Object, e As EventArgs) Handles btAdmAddLimpar.Click
@@ -1234,8 +2270,11 @@ Public Class home
     Public Sub btAdmDelCancelar_Click(sender As Object, e As EventArgs) Handles btAdmDelCancelar.Click
         tbAdmDelBusca.Clear()
         tbAdmDelEmail.Clear()
-        tbAdmDelLogin.Clear()
         tbAdmDelNome.Clear()
+        tbAdmDelLogin.Clear()
+        tbAdmDelEmail.Text = "E-mail"
+        tbAdmDelNome.Text = "Nome"
+        tbAdmDelLogin.Text = "Login"
     End Sub
 
     Private Sub btCartaoAddLimpar_Click(sender As Object, e As EventArgs) Handles btCartaoAddLimpar.Click
@@ -1245,8 +2284,20 @@ Public Class home
         tbCartaoAddSaldo.Clear()
     End Sub
 
+    'Impede Entrada de Não Número em Saldos
 
+    Private Sub tbCartaoAddSaldo_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tbCartaoAddSaldo.KeyPress
 
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
 
 
 #End Region

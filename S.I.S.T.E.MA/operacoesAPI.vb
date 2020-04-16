@@ -24,6 +24,7 @@ Module operacoesAPI
     Public routerVendAdicionarPOST = "https://sistemaifrj.herokuapp.com/vendedores"
     Public routerVendLocalizarGET = "https://sistemaifrj.herokuapp.com/vendedores/"
     'Public routerVendDeletarDELETE = "https://sistemaifrj.herokuapp.com/vendedores/"
+
 #End Region
 
 #Region "Criptografia"
