@@ -474,7 +474,7 @@ Public Class home
 #Region "Adm"
 
     'Adicionar ADM
-    Private Async Sub btAdmAddSalvar_Click(sender As Object, e As EventArgs) Handles btAdmAddSalvar.Click
+    Private Sub btAdmAddSalvar_Click(sender As Object, e As EventArgs) Handles btAdmAddSalvar.Click
         Dim nome As String = tbAdmAddNome.Text
         Dim login As String = tbAdmAddLogin.Text
         Dim senha As String = cripto(tbAdmAddSenha.Text, 1, 1)
