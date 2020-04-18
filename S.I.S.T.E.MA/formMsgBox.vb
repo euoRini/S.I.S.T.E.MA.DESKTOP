@@ -3,7 +3,7 @@
     Dim mouseX As Integer
     Dim mouseY As Integer
 
-    Public fechamento As Boolean
+    Public fechamento As Task(Of Boolean)
     Public resposta As Boolean
     Public Sub formMsgBox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim first As Boolean = True
@@ -55,7 +55,7 @@
         Me.Close()
     End Sub
 
-    Public Sub chamadaMSG(msg As String, typeMSG As Integer)
+    Public Async Sub chamadaMSG(msg As String, typeMSG As Integer)
         pnButtonOk.Visible = False
         pnYesNo.Visible = False
         If typeMSG = 1 Then
@@ -81,15 +81,18 @@
 
     Private Sub btSim_Click(sender As Object, e As EventArgs) Handles btSim.Click
         resposta = True
-        FechaMSG()
+        fechamento = Task.CompletedTask
+        'FechaMSG()
     End Sub
 
     Private Sub btNao_Click(sender As Object, e As EventArgs) Handles btNao.Click
         resposta = False
-        FechaMSG()
+        fechamento = Task.CompletedTask
+        ' FechaMSG()
     End Sub
 
     Private Sub btMSGBOXOk_Click(sender As Object, e As EventArgs) Handles btMSGBOXOk.Click
+        'fechamento = Task.CompletedTask
         FechaMSG()
     End Sub
 End Class

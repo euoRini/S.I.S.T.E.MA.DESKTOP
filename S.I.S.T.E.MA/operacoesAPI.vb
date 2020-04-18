@@ -10,6 +10,7 @@ Imports System.Net.Http
 Module operacoesAPI
 
     Public idload As String
+    Public erroBusca As String = Nothing
 
 #Region "ROTAS API"
     'Rotas API
@@ -134,6 +135,8 @@ Module operacoesAPI
 
                 'Caso seja exclusão, adiciona nas tbs os dados encontrados
                 With home
+                    .btAdmDelBusca.BackColor = Color.Green
+                    .btAdmDelBusca.Text = "Localizado!"
                     .tbAdmDelNome.Text = administrator.nome
                     .tbAdmDelLogin.Text = administrator.login
                     .tbAdmDelEmail.Text = administrator.email
@@ -158,11 +161,23 @@ Module operacoesAPI
             'Em caso de erro, abrir uma messagebox
             If acao = "exclusao" Then
                 If ex.Message = "O servidor remoto retornou um erro: (400) Solicitação Incorreta." Then '&
-                    formMsgBox.chamadaMSG("Administrador não encontrado.", 1)
+                    With home.btAdmDelBusca
+                        .Enabled = False
+                        .BackColor = Color.Red
+                        .Text = "Não Encontrado"
+                        .ForeColor = Color.White
+                        .Refresh()
+                        System.Threading.Thread.Sleep(2000)
+                        .Enabled = True
+                        .BackColor = Color.White
+                        .Text = "Localizar"
+                        .ForeColor = Color.FromArgb(32, 32, 32)
+                        home.tbAdmDelBusca.Clear()
+                        .Refresh()
+                    End With
                 Else
                     MsgBox(ex.Message)
                 End If
-
             End If
         Finally
             If Not response Is Nothing Then
@@ -228,13 +243,22 @@ Module operacoesAPI
 
 
         Catch ex As Exception
-
-            'Em caso de erro, abrir uma messagebox
-
-            If ex.Message = "O servidor remoto retornou um erro: (400) Solicitação Incorreta." Then '&
-                formMsgBox.chamadaMSG("Cartão não encontrado.", 1)
-            Else
-                MsgBox(ex.Message)
+            If ex.Message = "O servidor remoto retornou um erro: (400) Solicitação Incorreta." Then
+                'Em caso de erro, abrir uma messagebox
+                With home.btCartaoDelBusca
+                    .Enabled = False
+                    .BackColor = Color.Red
+                    .Text = "Não Encontrado"
+                    .ForeColor = Color.White
+                    .Refresh()
+                    System.Threading.Thread.Sleep(2000)
+                    .Enabled = True
+                    .BackColor = Color.White
+                    .Text = "Localizar"
+                    .ForeColor = Color.FromArgb(32, 32, 32)
+                    home.tbCartaoDelBusca.Clear()
+                    .Refresh()
+                End With
             End If
         Finally
             If Not response Is Nothing Then
@@ -332,11 +356,8 @@ Module operacoesAPI
                 'Se true, exclusão efetuada
                 'Se false, algum erro ocorreu
                 If responseMessage.IsSuccessStatusCode Then
-                    formMsgBox.chamadaMSG("Excluído com sucesso", 2)
                     sucessDelete = True
-                    home.btAdmDelCancelar_Click(Nothing, Nothing)
                 Else
-                    formMsgBox.chamadaMSG("Falha ao excluir", 1)
                     sucessDelete = False
                 End If
             End Using
@@ -362,20 +383,40 @@ Module operacoesAPI
                         email & """}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
         Dim myUri As New Uri(routerAdmAdicionarPOST)
-        'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
-        Dim data = Encoding.UTF8.GetBytes(jsonString)
-        Dim result_post = envioPOST_OR(myUri, data, "POST")
-        If result_post = "200" Then
-            formMsgBox.chamadaMSG("Cadastro realizado!", 2)
-        End If
+        With home.btAdmAddSalvar
+            'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
+            Dim data = Encoding.UTF8.GetBytes(jsonString)
+            Dim result_post = envioPOST_OR(myUri, data, "POST")
+            If result_post = "200" Then
+                .Text = "Salvo!"
+                .BackColor = Color.Green
+                .ForeColor = Color.White
+                .Refresh()
+            Else
+                .Text = "Erro!"
+                .BackColor = Color.Red
+                .ForeColor = Color.White
+                .Refresh()
+            End If
+            System.Threading.Thread.Sleep(1000)
+            .Text = "Salvar"
+            .BackColor = Color.White
+            .ForeColor = Color.FromArgb(32, 32, 32)
+            .Enabled = True
+            .Refresh()
+        End With
     End Sub
 
     'Busca de Admin para exclusão
     'Exclusão oficial feita no formHome
     Public Sub excAdmin(parametro As String)
+        Dim myUri As Uri
         'URL para rota de lista de admins por login informado
-        Dim myUri As New Uri(routerAdmLocalizarGET & parametro)
-
+        If home.cbAdmDellBy.Text = "Login" Then
+            myUri = New Uri(routerAdmLocalizarGET & "l/" & parametro)
+        ElseIf home.cbAdmDellBy.Text = "E-mail" Then
+            myUri = New Uri(routerAdmLocalizarGET & "e/" & parametro)
+        End If
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoADMLoginExc(myUri, "application/json", "GET", "exclusao")
     End Sub
@@ -397,13 +438,33 @@ Module operacoesAPI
 
         'URL para a rota de criação de usuários (definida na API pelo Erick)
         Dim myUri As New Uri(routerUserAdicionarPOST)
-
-        'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
-        Dim data = Encoding.UTF8.GetBytes(jsonString)
-        Dim result_post = envioPOST_OR(myUri, data, "POST")
-        If result_post = "200" Then
-            formMsgBox.chamadaMSG("Cadastro realizado!", 2)
-        End If
+        With home.btCartaoAddSalvar
+            .Text = "Salvando..."
+            .BackColor = Color.Yellow
+            .Enabled = False
+            .ForeColor = Color.White
+            .Refresh()
+            System.Threading.Thread.Sleep(250)
+            'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
+            Dim data = Encoding.UTF8.GetBytes(jsonString)
+            Dim result_post = envioPOST_OR(myUri, data, "POST")
+            If result_post = "200" Then
+                .Text = "Salvo!"
+                .BackColor = Color.Green
+                .ForeColor = Color.White
+                .Refresh()
+            Else
+                .Text = "Erro!"
+                .BackColor = Color.Red
+                .ForeColor = Color.White
+                .Refresh()
+            End If
+            System.Threading.Thread.Sleep(1000)
+            .Text = "Salvar"
+            .BackColor = Color.White
+            .Enabled = True
+            .Refresh()
+        End With
     End Sub
 
     Public Sub excCartao(matricula As String)
@@ -458,21 +519,43 @@ Module operacoesAPI
                         senha & """}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
         Dim myUri As New Uri(routerVendAdicionarPOST)
-        'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
-        Dim data = Encoding.UTF8.GetBytes(jsonString)
-        Dim result_post = envioPOST_OR(myUri, data, "POST")
-        If result_post = "200" Then
-            formMsgBox.chamadaMSG("Cadastro realizado!", 2)
-        End If
+        With home.btVendAddSalvar
+            .Text = "Salvando..."
+            .BackColor = Color.Yellow
+            .Enabled = False
+            .ForeColor = Color.White
+            .Refresh()
+            System.Threading.Thread.Sleep(250)
+            'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
+            Dim data = Encoding.UTF8.GetBytes(jsonString)
+            Dim result_post = envioPOST_OR(myUri, data, "POST")
+            If result_post = "200" Then
+                .Text = "Salvo!"
+                .BackColor = Color.Green
+                .ForeColor = Color.White
+                .Refresh()
+            Else
+                .Text = "Erro!"
+                .BackColor = Color.Red
+                .ForeColor = Color.White
+                .Refresh()
+            End If
+            System.Threading.Thread.Sleep(1000)
+            .Text = "Salvar"
+            .BackColor = Color.White
+            .ForeColor = Color.FromArgb(32, 32, 32)
+            .Enabled = True
+            .Refresh()
+        End With
     End Sub
 
-    'Public Sub excVendedor(parametro As String)
-    '    'URL para rota de lista de admins por login informado
-    '    Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/vendedor/m/" & parametro)
+    Public Sub excVendedor(parametro As String)
+        'URL para rota de lista de admins por login informado
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/vendedor/m/" & parametro)
 
-    '    'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
-    '    recebimentoVendedorExc(myUri, "application/json", "GET")
-    'End Sub
+        'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
+        recebimentoVendedorExc(myUri, "application/json", "GET")
+    End Sub
 #End Region
 
 

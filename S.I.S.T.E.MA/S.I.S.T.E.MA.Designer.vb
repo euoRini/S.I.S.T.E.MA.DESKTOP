@@ -1839,7 +1839,7 @@ Partial Class home
         Me.tbCartaoAddEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbCartaoAddEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoAddEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoAddEmail.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoAddEmail.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoAddEmail.Location = New System.Drawing.Point(164, 241)
         Me.tbCartaoAddEmail.Name = "tbCartaoAddEmail"
         Me.tbCartaoAddEmail.Size = New System.Drawing.Size(410, 19)
@@ -1851,7 +1851,7 @@ Partial Class home
         Me.tbCartaoAddNome.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbCartaoAddNome.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoAddNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoAddNome.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoAddNome.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoAddNome.Location = New System.Drawing.Point(164, 184)
         Me.tbCartaoAddNome.Name = "tbCartaoAddNome"
         Me.tbCartaoAddNome.Size = New System.Drawing.Size(410, 19)
@@ -1863,7 +1863,7 @@ Partial Class home
         Me.tbCartaoAddSaldo.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbCartaoAddSaldo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoAddSaldo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoAddSaldo.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoAddSaldo.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoAddSaldo.Location = New System.Drawing.Point(164, 297)
         Me.tbCartaoAddSaldo.Name = "tbCartaoAddSaldo"
         Me.tbCartaoAddSaldo.Size = New System.Drawing.Size(410, 19)
@@ -1910,7 +1910,7 @@ Partial Class home
         Me.tbCartaoAddMat.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.tbCartaoAddMat.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbCartaoAddMat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbCartaoAddMat.ForeColor = System.Drawing.Color.White
+        Me.tbCartaoAddMat.ForeColor = System.Drawing.Color.DimGray
         Me.tbCartaoAddMat.Location = New System.Drawing.Point(164, 124)
         Me.tbCartaoAddMat.Name = "tbCartaoAddMat"
         Me.tbCartaoAddMat.Size = New System.Drawing.Size(410, 19)
@@ -3254,14 +3254,14 @@ Partial Class home
         Me.ClientSize = New System.Drawing.Size(884, 459)
         Me.Controls.Add(Me.pnBarraSuperior)
         Me.Controls.Add(Me.pnMenu)
+        Me.Controls.Add(Me.pnCartaoAddScreen)
+        Me.Controls.Add(Me.pnAdmDelScreen)
+        Me.Controls.Add(Me.pnAdmAddScreen)
         Me.Controls.Add(Me.pnCartaoRecScreen)
         Me.Controls.Add(Me.pnVendDelScreen)
         Me.Controls.Add(Me.pnCartaoDevScreen)
         Me.Controls.Add(Me.pnCartaoDelScreen)
         Me.Controls.Add(Me.pnVendAddScreen)
-        Me.Controls.Add(Me.pnAdmDelScreen)
-        Me.Controls.Add(Me.pnAdmAddScreen)
-        Me.Controls.Add(Me.pnCartaoAddScreen)
         Me.Controls.Add(Me.pnVendReqScreen)
         Me.Controls.Add(Me.pnVendOnScreen)
         Me.Controls.Add(Me.pnLogo)

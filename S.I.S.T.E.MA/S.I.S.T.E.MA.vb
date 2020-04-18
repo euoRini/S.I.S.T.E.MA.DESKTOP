@@ -497,13 +497,12 @@ Public Class home
         Dim senha As String = cripto(tbAdmAddSenha.Text, 1, 1)
         Dim email As String = tbAdmAddEmail.Text
         If (nome <> Nothing And login <> Nothing And senha <> Nothing And email <> Nothing) Then
-            'formMsgBox.chamadaMSG("Confirme os dados: " & "" & vbNewLine & "" & "Nome: " & nome & "" & vbNewLine & "" & "Login: " & login & "" & vbNewLine & "" & "E-mail: " & email, Color.White, 3)
-            'Await 
+            'formMsgBox.chamadaMSG("Confirme os dados: " & "" & vbNewLine & "" & "Nome: " & nome & "" & vbNewLine & "" & "Login: " & login & "" & vbNewLine & "" & "E-mail: " & email, 3)
             'MsgBox(formMsgBox.resposta.ToString)
             'If formMsgBox.resposta Then
             addAdmin(nome, login, senha, email)
             'Else
-            'btAdmAddLimpar_Click(Nothing, Nothing)
+            btAdmAddLimpar_Click(Nothing, Nothing)
             'End If
         Else
             formMsgBox.chamadaMSG("Preencha todos os campos " & "" & vbNewLine & "" & "antes de salvar!", 1)
@@ -512,6 +511,12 @@ Public Class home
 
     'Busca ADM para exclusão
     Private Sub btAdmDelBusca_Click(sender As Object, e As EventArgs) Handles btAdmDelBusca.Click
+        With btAdmDelBusca
+            .Enabled = False
+            .BackColor = Color.Yellow
+            .Text = "Localizando..."
+            .Refresh()
+        End With
         excAdmin(tbAdmDelBusca.Text)
     End Sub
 
@@ -528,11 +533,19 @@ Public Class home
         Else
             btAdmDelCancelar_Click(sender, e)
         End If
+        MsgBox("ASD")
         If sucessDelete Then
-            tbAdmDelBusca.Clear()
-            tbAdmDelEmail.Clear()
-            tbAdmDelLogin.Clear()
-            tbAdmDelNome.Clear()
+            With btAdmDelApagar
+                .BackColor = Color.Green
+                .Text = "Excluído"
+                .Enabled = False
+                .Refresh()
+                System.Threading.Thread.Sleep(1500)
+                .BackColor = Color.White
+                .Text = "Apagar"
+                btAdmDelCancelar_Click(Nothing, Nothing)
+                .Refresh()
+            End With
         End If
     End Sub
 
@@ -558,6 +571,12 @@ Public Class home
 
     'Buscar Cartao para exclusão
     Private Sub btCartaoDelBusca_Click(sender As Object, e As EventArgs) Handles btCartaoDelBusca.Click
+        With btCartaoDelBusca
+            .BackColor = Color.Yellow
+            .Text = "Localizando..."
+            .Enabled = False
+            .Refresh()
+        End With
         excCartao(tbCartaoDelBusca.Text)
     End Sub
 
@@ -1174,6 +1193,45 @@ Public Class home
 #End Region
 
 #Region "Outros"
+    'Impede a entrada de não número
+    Private Sub tbCartaoAddSaldo_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tbCartaoAddSaldo.KeyPress
+
+        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
+
+        KeyAscii = CShort(SoNumeros(KeyAscii))
+
+        If KeyAscii = 0 Then
+
+            e.Handled = True
+
+        End If
+    End Sub
+
+
+    'Botões Limpar e Cancelar
+    Public Sub btAdmAddLimpar_Click(sender As Object, e As EventArgs) Handles btAdmAddLimpar.Click
+        tbAdmAddEmail.Clear()
+        tbAdmAddLogin.Clear()
+        tbAdmAddNome.Clear()
+        tbAdmAddSenha.Clear()
+    End Sub
+    Public Sub btAdmDelCancelar_Click(sender As Object, e As EventArgs) Handles btAdmDelCancelar.Click
+        tbAdmDelBusca.Clear()
+        tbAdmDelEmail.Clear()
+        tbAdmDelNome.Clear()
+        tbAdmDelLogin.Clear()
+        tbAdmDelEmail.Text = "E-mail"
+        tbAdmDelNome.Text = "Nome"
+        tbAdmDelLogin.Text = "Login"
+    End Sub
+
+    Private Sub btCartaoAddLimpar_Click(sender As Object, e As EventArgs) Handles btCartaoAddLimpar.Click
+        tbCartaoAddEmail.Clear()
+        tbCartaoAddMat.Clear()
+        tbCartaoAddNome.Clear()
+        tbCartaoAddSaldo.Clear()
+    End Sub
+
     Private Sub cbAdmDellBy_TextChanged(sender As Object, e As EventArgs) Handles cbAdmDellBy.TextChanged
         If (cbAdmDellBy.Text <> "Login" And cbAdmDellBy.Text <> "E-mail") Then
             cbAdmDellBy.Text = "Login"
@@ -1202,10 +1260,6 @@ Public Class home
         tbVendDelBusca.Select(0, 0)
     End Sub
 #End Region
-#Region "PlaceHolders"
-
-
-
 
 #Region "PlaceHolders"
     Private Sub tbAdmAddEmail_TextChanged(sender As Object, e As EventArgs) Handles tbAdmAddEmail.TextChanged
@@ -2254,49 +2308,6 @@ Public Class home
     End Sub
     Private Sub tbVendDelBusca_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendDelBusca.MouseUp
         controlePlace17 = False
-    End Sub
-
-
-#End Region
-
-
-    'Botões Limpar e Cancelar
-    Public Sub btAdmAddLimpar_Click(sender As Object, e As EventArgs) Handles btAdmAddLimpar.Click
-        tbAdmAddEmail.Clear()
-        tbAdmAddLogin.Clear()
-        tbAdmAddNome.Clear()
-        tbAdmAddSenha.Clear()
-    End Sub
-    Public Sub btAdmDelCancelar_Click(sender As Object, e As EventArgs) Handles btAdmDelCancelar.Click
-        tbAdmDelBusca.Clear()
-        tbAdmDelEmail.Clear()
-        tbAdmDelNome.Clear()
-        tbAdmDelLogin.Clear()
-        tbAdmDelEmail.Text = "E-mail"
-        tbAdmDelNome.Text = "Nome"
-        tbAdmDelLogin.Text = "Login"
-    End Sub
-
-    Private Sub btCartaoAddLimpar_Click(sender As Object, e As EventArgs) Handles btCartaoAddLimpar.Click
-        tbCartaoAddEmail.Clear()
-        tbCartaoAddMat.Clear()
-        tbCartaoAddNome.Clear()
-        tbCartaoAddSaldo.Clear()
-    End Sub
-
-    'Impede Entrada de Não Número em Saldos
-
-    Private Sub tbCartaoAddSaldo_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tbCartaoAddSaldo.KeyPress
-
-        Dim KeyAscii As Short = CShort(Asc(e.KeyChar))
-
-        KeyAscii = CShort(SoNumeros(KeyAscii))
-
-        If KeyAscii = 0 Then
-
-            e.Handled = True
-
-        End If
     End Sub
 
 
