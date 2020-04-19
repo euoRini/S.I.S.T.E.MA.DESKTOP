@@ -153,6 +153,16 @@ Namespace My.Resources
         '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property imgEmailIconBranco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("imgEmailIconBranco", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property imgFecharCinza() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("imgFecharCinza", resourceCulture)
@@ -353,6 +363,16 @@ Namespace My.Resources
         '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property imgNomeMatIconBranco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("imgNomeMatIconBranco", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property imgProdutoIconBranco() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("imgProdutoIconBranco", resourceCulture)
@@ -506,6 +526,16 @@ Namespace My.Resources
         Friend ReadOnly Property imgVisiblyIconPreto() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("imgVisiblyIconPreto", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property imtSaldoIconBranco() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("imtSaldoIconBranco", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

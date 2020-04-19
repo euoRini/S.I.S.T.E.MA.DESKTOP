@@ -336,12 +336,12 @@ Module operacoesAPI
 #Region "Exclusão de Dados DELETE"
 
     'Variável que indica sucesso ou falha na exclusão
-    Public sucessDelete As Boolean = False
+    Public sucessDelete As Boolean
 
     'Execução Exclusão
     Public Async Sub delete(parametro As String, myUri As String)
         Try
-
+            sucessDelete = False
 
             'Abre um client http
             Using client = New HttpClient()
@@ -356,10 +356,26 @@ Module operacoesAPI
                 'Se true, exclusão efetuada
                 'Se false, algum erro ocorreu
                 If responseMessage.IsSuccessStatusCode Then
-                    sucessDelete = True
+                    With home.btAdmDelApagar
+                        .BackColor = Color.Green
+                        .Text = "Excluído"
+                        .Enabled = False
+                        .Refresh()
+                        System.Threading.Thread.Sleep(1500)
+                        home.btAdmDelBusca.Text = "Localizar"
+                        home.btAdmDelBusca.BackColor = Color.White
+                        home.btAdmDelBusca.Enabled = True
+                        .BackColor = Color.White
+                        .Text = "Apagar"
+                        home.btAdmDelCancelar_Click(Nothing, Nothing)
+                        .Refresh()
+                    End With
+
+
                 Else
-                    sucessDelete = False
+                    'sucessDelete = False
                 End If
+
             End Using
         Catch ex As Exception
 
@@ -440,9 +456,7 @@ Module operacoesAPI
         Dim myUri As New Uri(routerUserAdicionarPOST)
         With home.btCartaoAddSalvar
             .Text = "Salvando..."
-            .BackColor = Color.Yellow
             .Enabled = False
-            .ForeColor = Color.White
             .Refresh()
             System.Threading.Thread.Sleep(250)
             'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST

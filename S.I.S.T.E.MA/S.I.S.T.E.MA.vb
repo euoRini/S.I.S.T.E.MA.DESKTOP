@@ -533,20 +533,7 @@ Public Class home
         Else
             btAdmDelCancelar_Click(sender, e)
         End If
-        MsgBox("ASD")
-        If sucessDelete Then
-            With btAdmDelApagar
-                .BackColor = Color.Green
-                .Text = "Excluído"
-                .Enabled = False
-                .Refresh()
-                System.Threading.Thread.Sleep(1500)
-                .BackColor = Color.White
-                .Text = "Apagar"
-                btAdmDelCancelar_Click(Nothing, Nothing)
-                .Refresh()
-            End With
-        End If
+
     End Sub
 
 #End Region
@@ -572,7 +559,6 @@ Public Class home
     'Buscar Cartao para exclusão
     Private Sub btCartaoDelBusca_Click(sender As Object, e As EventArgs) Handles btCartaoDelBusca.Click
         With btCartaoDelBusca
-            .BackColor = Color.Yellow
             .Text = "Localizando..."
             .Enabled = False
             .Refresh()
@@ -1230,6 +1216,9 @@ Public Class home
         tbCartaoAddMat.Clear()
         tbCartaoAddNome.Clear()
         tbCartaoAddSaldo.Clear()
+    End Sub
+    Private Sub btCartaoDelCancelar_Click(sender As Object, e As EventArgs) Handles btCartaoDelCancelar.Click
+        tbCartaoDelBusca.Clear()
     End Sub
 
     Private Sub cbAdmDellBy_TextChanged(sender As Object, e As EventArgs) Handles cbAdmDellBy.TextChanged
@@ -2239,6 +2228,8 @@ Public Class home
     Private Sub tbVendAddSenha_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendAddSenha.MouseUp
         controlePlace16 = False
     End Sub
+
+
 
     Private Sub tbVendDelBusca_TextChanged(sender As Object, e As EventArgs) Handles tbVendDelBusca.TextChanged
         If cbVendDellBy.Text = "Matrícula" Then
