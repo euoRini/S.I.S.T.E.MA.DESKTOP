@@ -26,9 +26,7 @@ Partial Class home
         Me.pnBarraSuperior = New System.Windows.Forms.Panel()
         Me.Panel18 = New System.Windows.Forms.Panel()
         Me.pnMinimizar = New System.Windows.Forms.Panel()
-        Me.pbMinimizar = New System.Windows.Forms.PictureBox()
         Me.pnFechar = New System.Windows.Forms.Panel()
-        Me.pbFechar = New System.Windows.Forms.PictureBox()
         Me.pnMenu = New System.Windows.Forms.Panel()
         Me.pnSubMenuAdm = New System.Windows.Forms.Panel()
         Me.pnAdmTopicDel = New System.Windows.Forms.Panel()
@@ -71,39 +69,22 @@ Partial Class home
         Me.Panel19 = New System.Windows.Forms.Panel()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.pnInfo = New System.Windows.Forms.Panel()
-        Me.pbInfo = New System.Windows.Forms.PictureBox()
         Me.pnInfoAux = New System.Windows.Forms.Panel()
-        Me.pbInfoAux = New System.Windows.Forms.PictureBox()
         Me.pnRelat = New System.Windows.Forms.Panel()
-        Me.pbRelat = New System.Windows.Forms.PictureBox()
         Me.pnRelatAux = New System.Windows.Forms.Panel()
-        Me.pbRelatAux = New System.Windows.Forms.PictureBox()
         Me.pnProd = New System.Windows.Forms.Panel()
-        Me.pbProd = New System.Windows.Forms.PictureBox()
         Me.pnProdAux = New System.Windows.Forms.Panel()
-        Me.pbProdAux = New System.Windows.Forms.PictureBox()
         Me.pnVend = New System.Windows.Forms.Panel()
-        Me.pbVend = New System.Windows.Forms.PictureBox()
         Me.pnVendAux = New System.Windows.Forms.Panel()
-        Me.pbVendAux = New System.Windows.Forms.PictureBox()
         Me.pnCartao = New System.Windows.Forms.Panel()
-        Me.pbCartao = New System.Windows.Forms.PictureBox()
         Me.pnCartaoAux = New System.Windows.Forms.Panel()
-        Me.pbCartaoAux = New System.Windows.Forms.PictureBox()
         Me.pnAdm = New System.Windows.Forms.Panel()
-        Me.pbAdm = New System.Windows.Forms.PictureBox()
         Me.pnAdmAux = New System.Windows.Forms.Panel()
-        Me.pbAdmAux = New System.Windows.Forms.PictureBox()
         Me.pnHome = New System.Windows.Forms.Panel()
-        Me.pbHome = New System.Windows.Forms.PictureBox()
         Me.pnHomeAux = New System.Windows.Forms.Panel()
-        Me.pbHomeAux = New System.Windows.Forms.PictureBox()
         Me.pnBrightMode = New System.Windows.Forms.Panel()
-        Me.pbBrightMode = New System.Windows.Forms.PictureBox()
         Me.pnHomeTela = New System.Windows.Forms.Panel()
-        Me.pbHomeLogo = New System.Windows.Forms.PictureBox()
         Me.pnLogo = New System.Windows.Forms.Panel()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.pnAdmAddScreen = New System.Windows.Forms.Panel()
         Me.btAdmAddLimpar = New System.Windows.Forms.Button()
         Me.btAdmAddSalvar = New System.Windows.Forms.Button()
@@ -113,18 +94,11 @@ Partial Class home
         Me.tbAdmAddSenha = New System.Windows.Forms.TextBox()
         Me.tbAdmAddLogin = New System.Windows.Forms.TextBox()
         Me.tbAdmAddEmail = New System.Windows.Forms.TextBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.tbAdmAddNome = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pnAdmDelScreen = New System.Windows.Forms.Panel()
         Me.cbAdmDellBy = New System.Windows.Forms.ComboBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.tbAdmDelEmail = New System.Windows.Forms.TextBox()
         Me.tbAdmDelLogin = New System.Windows.Forms.TextBox()
         Me.tbAdmDelNome = New System.Windows.Forms.TextBox()
@@ -133,15 +107,11 @@ Partial Class home
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btAdmDelBusca = New System.Windows.Forms.Button()
         Me.tbAdmDelBusca = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnCartaoDevScreen = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.tbCartaoDevValor = New System.Windows.Forms.TextBox()
         Me.tbCartaoDevModo = New System.Windows.Forms.TextBox()
         Me.tbCartaoDevData = New System.Windows.Forms.TextBox()
@@ -150,7 +120,6 @@ Partial Class home
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel16 = New System.Windows.Forms.Panel()
         Me.btCartaoDevBusca = New System.Windows.Forms.Button()
         Me.tbCartaoDevBusca = New System.Windows.Forms.TextBox()
@@ -164,12 +133,8 @@ Partial Class home
         Me.tbCartaoAddEmail = New System.Windows.Forms.TextBox()
         Me.tbCartaoAddNome = New System.Windows.Forms.TextBox()
         Me.tbCartaoAddSaldo = New System.Windows.Forms.TextBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel12 = New System.Windows.Forms.FlowLayoutPanel()
         Me.tbCartaoAddMat = New System.Windows.Forms.TextBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.pnCartaoRecScreen = New System.Windows.Forms.Panel()
         Me.cbCartaoRecModoPG = New System.Windows.Forms.ComboBox()
@@ -181,7 +146,6 @@ Partial Class home
         Me.Label11 = New System.Windows.Forms.Label()
         Me.lbCartaoRecSaldoTt = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.pbCartaoRecLimpaTotalRecarga = New System.Windows.Forms.PictureBox()
         Me.tbCartaoRecTotalRecarga = New System.Windows.Forms.TextBox()
         Me.lbCartaoRecSaldoAt = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -197,15 +161,11 @@ Partial Class home
         Me.Label12 = New System.Windows.Forms.Label()
         Me.btCartaoRecCancelar = New System.Windows.Forms.Button()
         Me.btCartaoRecConfirmar = New System.Windows.Forms.Button()
-        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.btCartaoReqBusca = New System.Windows.Forms.Button()
         Me.tbCartaoRecMat = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.pnCartaoDelScreen = New System.Windows.Forms.Panel()
-        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.tbCartaoDelSaldo = New System.Windows.Forms.TextBox()
         Me.tbCartaoDelEmail = New System.Windows.Forms.TextBox()
         Me.tbCartaoDelNome = New System.Windows.Forms.TextBox()
@@ -214,7 +174,6 @@ Partial Class home
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.btCartaoDelBusca = New System.Windows.Forms.Button()
         Me.tbCartaoDelBusca = New System.Windows.Forms.TextBox()
@@ -228,24 +187,17 @@ Partial Class home
         Me.tbVendAddEmail = New System.Windows.Forms.TextBox()
         Me.tbVendAddNome = New System.Windows.Forms.TextBox()
         Me.tbVendAddSenha = New System.Windows.Forms.TextBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel8 = New System.Windows.Forms.FlowLayoutPanel()
         Me.tbVendAddMat = New System.Windows.Forms.TextBox()
-        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnVendDelScreen = New System.Windows.Forms.Panel()
         Me.cbVendDellBy = New System.Windows.Forms.ComboBox()
-        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
         Me.tbVendDelEmail = New System.Windows.Forms.TextBox()
         Me.tbVendDelNome = New System.Windows.Forms.TextBox()
         Me.btVendDelCancelar = New System.Windows.Forms.Button()
         Me.btVendDelApagar = New System.Windows.Forms.Button()
         Me.Panel26 = New System.Windows.Forms.Panel()
         Me.Panel27 = New System.Windows.Forms.Panel()
-        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.Panel28 = New System.Windows.Forms.Panel()
         Me.btVendDelBusca = New System.Windows.Forms.Button()
         Me.tbVendDelBusca = New System.Windows.Forms.TextBox()
@@ -259,12 +211,8 @@ Partial Class home
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel20 = New System.Windows.Forms.FlowLayoutPanel()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.pnVendOnScreen = New System.Windows.Forms.Panel()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -275,18 +223,68 @@ Partial Class home
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.FlowLayoutPanel24 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.pbMinimizar = New System.Windows.Forms.PictureBox()
+        Me.pbFechar = New System.Windows.Forms.PictureBox()
+        Me.pbInfo = New System.Windows.Forms.PictureBox()
+        Me.pbInfoAux = New System.Windows.Forms.PictureBox()
+        Me.pbRelat = New System.Windows.Forms.PictureBox()
+        Me.pbRelatAux = New System.Windows.Forms.PictureBox()
+        Me.pbProd = New System.Windows.Forms.PictureBox()
+        Me.pbProdAux = New System.Windows.Forms.PictureBox()
+        Me.pbVend = New System.Windows.Forms.PictureBox()
+        Me.pbVendAux = New System.Windows.Forms.PictureBox()
+        Me.pbCartao = New System.Windows.Forms.PictureBox()
+        Me.pbCartaoAux = New System.Windows.Forms.PictureBox()
+        Me.pbAdm = New System.Windows.Forms.PictureBox()
+        Me.pbAdmAux = New System.Windows.Forms.PictureBox()
+        Me.pbHome = New System.Windows.Forms.PictureBox()
+        Me.pbHomeAux = New System.Windows.Forms.PictureBox()
+        Me.pbBrightMode = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.pbCartaoRecLimpaTotalRecarga = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.PictureBox37 = New System.Windows.Forms.PictureBox()
         Me.PictureBox38 = New System.Windows.Forms.PictureBox()
         Me.PictureBox39 = New System.Windows.Forms.PictureBox()
-        Me.FlowLayoutPanel24 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.PictureBox40 = New System.Windows.Forms.PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.pbLogo = New System.Windows.Forms.PictureBox()
+        Me.pbHomeLogo = New System.Windows.Forms.PictureBox()
         Me.pnBarraSuperior.SuspendLayout()
         Me.pnMinimizar.SuspendLayout()
-        CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnFechar.SuspendLayout()
-        CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnMenu.SuspendLayout()
         Me.pnSubMenuAdm.SuspendLayout()
         Me.pnAdmTopicDel.SuspendLayout()
@@ -302,87 +300,89 @@ Partial Class home
         Me.pnCartaoTopicDel.SuspendLayout()
         Me.pnCartaoTopicAdd.SuspendLayout()
         Me.pnInfo.SuspendLayout()
-        CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnInfoAux.SuspendLayout()
-        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnRelat.SuspendLayout()
-        CType(Me.pbRelat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnRelatAux.SuspendLayout()
-        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnProd.SuspendLayout()
-        CType(Me.pbProd, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnProdAux.SuspendLayout()
-        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnVend.SuspendLayout()
-        CType(Me.pbVend, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnVendAux.SuspendLayout()
-        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnCartao.SuspendLayout()
-        CType(Me.pbCartao, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnCartaoAux.SuspendLayout()
-        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnAdm.SuspendLayout()
-        CType(Me.pbAdm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnAdmAux.SuspendLayout()
-        CType(Me.pbAdmAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnHome.SuspendLayout()
-        CType(Me.pbHome, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnHomeAux.SuspendLayout()
-        CType(Me.pbHomeAux, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnBrightMode.SuspendLayout()
-        CType(Me.pbBrightMode, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnHomeTela.SuspendLayout()
-        CType(Me.pbHomeLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnLogo.SuspendLayout()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnAdmAddScreen.SuspendLayout()
+        Me.pnAdmDelScreen.SuspendLayout()
+        Me.pnCartaoDevScreen.SuspendLayout()
+        Me.pnCartaoAddScreen.SuspendLayout()
+        Me.pnCartaoRecScreen.SuspendLayout()
+        Me.pnCartaoRecOutroValor.SuspendLayout()
+        Me.pnCartaoDelScreen.SuspendLayout()
+        Me.pnVendAddScreen.SuspendLayout()
+        Me.pnVendDelScreen.SuspendLayout()
+        Me.pnVendReqScreen.SuspendLayout()
+        Me.pnVendOnScreen.SuspendLayout()
+        CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRelat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbProd, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVend, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCartao, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAdm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAdmAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbHome, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbHomeAux, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbBrightMode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnAdmDelScreen.SuspendLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnCartaoDevScreen.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnCartaoAddScreen.SuspendLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnCartaoRecScreen.SuspendLayout()
-        Me.pnCartaoRecOutroValor.SuspendLayout()
-        CType(Me.pbCartaoRecLimpaTotalRecarga, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnCartaoDelScreen.SuspendLayout()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnVendAddScreen.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCartaoRecLimpaTotalRecarga, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnVendDelScreen.SuspendLayout()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnVendReqScreen.SuspendLayout()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnVendOnScreen.SuspendLayout()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbHomeLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnBarraSuperior
@@ -411,16 +411,6 @@ Partial Class home
         Me.pnMinimizar.Size = New System.Drawing.Size(19, 19)
         Me.pnMinimizar.TabIndex = 2
         '
-        'pbMinimizar
-        '
-        Me.pbMinimizar.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgMinimizarIconBranco
-        Me.pbMinimizar.Location = New System.Drawing.Point(4, 4)
-        Me.pbMinimizar.Name = "pbMinimizar"
-        Me.pbMinimizar.Size = New System.Drawing.Size(11, 11)
-        Me.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbMinimizar.TabIndex = 1
-        Me.pbMinimizar.TabStop = False
-        '
         'pnFechar
         '
         Me.pnFechar.Controls.Add(Me.pbFechar)
@@ -428,16 +418,6 @@ Partial Class home
         Me.pnFechar.Name = "pnFechar"
         Me.pnFechar.Size = New System.Drawing.Size(19, 19)
         Me.pnFechar.TabIndex = 1
-        '
-        'pbFechar
-        '
-        Me.pbFechar.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgFecharIconBranco
-        Me.pbFechar.Location = New System.Drawing.Point(4, 4)
-        Me.pbFechar.Name = "pbFechar"
-        Me.pbFechar.Size = New System.Drawing.Size(11, 11)
-        Me.pbFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbFechar.TabIndex = 2
-        Me.pbFechar.TabStop = False
         '
         'pnMenu
         '
@@ -857,16 +837,6 @@ Partial Class home
         Me.pnInfo.Size = New System.Drawing.Size(0, 44)
         Me.pnInfo.TabIndex = 7
         '
-        'pbInfo
-        '
-        Me.pbInfo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconBranco
-        Me.pbInfo.Location = New System.Drawing.Point(7, 4)
-        Me.pbInfo.Name = "pbInfo"
-        Me.pbInfo.Size = New System.Drawing.Size(51, 36)
-        Me.pbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbInfo.TabIndex = 8
-        Me.pbInfo.TabStop = False
-        '
         'pnInfoAux
         '
         Me.pnInfoAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -875,16 +845,6 @@ Partial Class home
         Me.pnInfoAux.Name = "pnInfoAux"
         Me.pnInfoAux.Size = New System.Drawing.Size(63, 44)
         Me.pnInfoAux.TabIndex = 9
-        '
-        'pbInfoAux
-        '
-        Me.pbInfoAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconPreto
-        Me.pbInfoAux.Location = New System.Drawing.Point(7, 4)
-        Me.pbInfoAux.Name = "pbInfoAux"
-        Me.pbInfoAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbInfoAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbInfoAux.TabIndex = 8
-        Me.pbInfoAux.TabStop = False
         '
         'pnRelat
         '
@@ -895,16 +855,6 @@ Partial Class home
         Me.pnRelat.Size = New System.Drawing.Size(0, 44)
         Me.pnRelat.TabIndex = 6
         '
-        'pbRelat
-        '
-        Me.pbRelat.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconBranco
-        Me.pbRelat.Location = New System.Drawing.Point(6, 4)
-        Me.pbRelat.Name = "pbRelat"
-        Me.pbRelat.Size = New System.Drawing.Size(51, 36)
-        Me.pbRelat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbRelat.TabIndex = 7
-        Me.pbRelat.TabStop = False
-        '
         'pnRelatAux
         '
         Me.pnRelatAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -913,16 +863,6 @@ Partial Class home
         Me.pnRelatAux.Name = "pnRelatAux"
         Me.pnRelatAux.Size = New System.Drawing.Size(63, 44)
         Me.pnRelatAux.TabIndex = 8
-        '
-        'pbRelatAux
-        '
-        Me.pbRelatAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconPreto
-        Me.pbRelatAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbRelatAux.Name = "pbRelatAux"
-        Me.pbRelatAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbRelatAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbRelatAux.TabIndex = 7
-        Me.pbRelatAux.TabStop = False
         '
         'pnProd
         '
@@ -933,16 +873,6 @@ Partial Class home
         Me.pnProd.Size = New System.Drawing.Size(0, 44)
         Me.pnProd.TabIndex = 9
         '
-        'pbProd
-        '
-        Me.pbProd.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconBranco
-        Me.pbProd.Location = New System.Drawing.Point(6, 4)
-        Me.pbProd.Name = "pbProd"
-        Me.pbProd.Size = New System.Drawing.Size(51, 36)
-        Me.pbProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbProd.TabIndex = 8
-        Me.pbProd.TabStop = False
-        '
         'pnProdAux
         '
         Me.pnProdAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -951,16 +881,6 @@ Partial Class home
         Me.pnProdAux.Name = "pnProdAux"
         Me.pnProdAux.Size = New System.Drawing.Size(63, 44)
         Me.pnProdAux.TabIndex = 10
-        '
-        'pbProdAux
-        '
-        Me.pbProdAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconPreto
-        Me.pbProdAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbProdAux.Name = "pbProdAux"
-        Me.pbProdAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbProdAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbProdAux.TabIndex = 8
-        Me.pbProdAux.TabStop = False
         '
         'pnVend
         '
@@ -971,16 +891,6 @@ Partial Class home
         Me.pnVend.Size = New System.Drawing.Size(0, 44)
         Me.pnVend.TabIndex = 5
         '
-        'pbVend
-        '
-        Me.pbVend.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconBranco
-        Me.pbVend.Location = New System.Drawing.Point(6, 4)
-        Me.pbVend.Name = "pbVend"
-        Me.pbVend.Size = New System.Drawing.Size(51, 36)
-        Me.pbVend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbVend.TabIndex = 6
-        Me.pbVend.TabStop = False
-        '
         'pnVendAux
         '
         Me.pnVendAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -989,16 +899,6 @@ Partial Class home
         Me.pnVendAux.Name = "pnVendAux"
         Me.pnVendAux.Size = New System.Drawing.Size(63, 44)
         Me.pnVendAux.TabIndex = 7
-        '
-        'pbVendAux
-        '
-        Me.pbVendAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconPreto
-        Me.pbVendAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbVendAux.Name = "pbVendAux"
-        Me.pbVendAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbVendAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbVendAux.TabIndex = 6
-        Me.pbVendAux.TabStop = False
         '
         'pnCartao
         '
@@ -1009,16 +909,6 @@ Partial Class home
         Me.pnCartao.Size = New System.Drawing.Size(0, 44)
         Me.pnCartao.TabIndex = 5
         '
-        'pbCartao
-        '
-        Me.pbCartao.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconBranco
-        Me.pbCartao.Location = New System.Drawing.Point(6, 4)
-        Me.pbCartao.Name = "pbCartao"
-        Me.pbCartao.Size = New System.Drawing.Size(51, 36)
-        Me.pbCartao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbCartao.TabIndex = 5
-        Me.pbCartao.TabStop = False
-        '
         'pnCartaoAux
         '
         Me.pnCartaoAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -1027,16 +917,6 @@ Partial Class home
         Me.pnCartaoAux.Name = "pnCartaoAux"
         Me.pnCartaoAux.Size = New System.Drawing.Size(63, 44)
         Me.pnCartaoAux.TabIndex = 6
-        '
-        'pbCartaoAux
-        '
-        Me.pbCartaoAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconPreto
-        Me.pbCartaoAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbCartaoAux.Name = "pbCartaoAux"
-        Me.pbCartaoAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbCartaoAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbCartaoAux.TabIndex = 5
-        Me.pbCartaoAux.TabStop = False
         '
         'pnAdm
         '
@@ -1047,16 +927,6 @@ Partial Class home
         Me.pnAdm.Size = New System.Drawing.Size(0, 44)
         Me.pnAdm.TabIndex = 4
         '
-        'pbAdm
-        '
-        Me.pbAdm.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgAdmIconBranco
-        Me.pbAdm.Location = New System.Drawing.Point(6, 4)
-        Me.pbAdm.Name = "pbAdm"
-        Me.pbAdm.Size = New System.Drawing.Size(51, 36)
-        Me.pbAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbAdm.TabIndex = 4
-        Me.pbAdm.TabStop = False
-        '
         'pnAdmAux
         '
         Me.pnAdmAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -1065,16 +935,6 @@ Partial Class home
         Me.pnAdmAux.Name = "pnAdmAux"
         Me.pnAdmAux.Size = New System.Drawing.Size(63, 44)
         Me.pnAdmAux.TabIndex = 5
-        '
-        'pbAdmAux
-        '
-        Me.pbAdmAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgAdmIconPreto
-        Me.pbAdmAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbAdmAux.Name = "pbAdmAux"
-        Me.pbAdmAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbAdmAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbAdmAux.TabIndex = 4
-        Me.pbAdmAux.TabStop = False
         '
         'pnHome
         '
@@ -1085,16 +945,6 @@ Partial Class home
         Me.pnHome.Size = New System.Drawing.Size(63, 44)
         Me.pnHome.TabIndex = 3
         '
-        'pbHome
-        '
-        Me.pbHome.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgHomeIconBranco
-        Me.pbHome.Location = New System.Drawing.Point(6, 4)
-        Me.pbHome.Name = "pbHome"
-        Me.pbHome.Size = New System.Drawing.Size(51, 36)
-        Me.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbHome.TabIndex = 3
-        Me.pbHome.TabStop = False
-        '
         'pnHomeAux
         '
         Me.pnHomeAux.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
@@ -1103,16 +953,6 @@ Partial Class home
         Me.pnHomeAux.Name = "pnHomeAux"
         Me.pnHomeAux.Size = New System.Drawing.Size(63, 44)
         Me.pnHomeAux.TabIndex = 60
-        '
-        'pbHomeAux
-        '
-        Me.pbHomeAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgHomeIconPreto
-        Me.pbHomeAux.Location = New System.Drawing.Point(6, 4)
-        Me.pbHomeAux.Name = "pbHomeAux"
-        Me.pbHomeAux.Size = New System.Drawing.Size(51, 36)
-        Me.pbHomeAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbHomeAux.TabIndex = 3
-        Me.pbHomeAux.TabStop = False
         '
         'pnBrightMode
         '
@@ -1123,16 +963,6 @@ Partial Class home
         Me.pnBrightMode.Size = New System.Drawing.Size(51, 44)
         Me.pnBrightMode.TabIndex = 9
         '
-        'pbBrightMode
-        '
-        Me.pbBrightMode.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgSunIcon
-        Me.pbBrightMode.Location = New System.Drawing.Point(9, 6)
-        Me.pbBrightMode.Name = "pbBrightMode"
-        Me.pbBrightMode.Size = New System.Drawing.Size(32, 32)
-        Me.pbBrightMode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbBrightMode.TabIndex = 8
-        Me.pbBrightMode.TabStop = False
-        '
         'pnHomeTela
         '
         Me.pnHomeTela.Controls.Add(Me.pbHomeLogo)
@@ -1140,16 +970,6 @@ Partial Class home
         Me.pnHomeTela.Name = "pnHomeTela"
         Me.pnHomeTela.Size = New System.Drawing.Size(821, 437)
         Me.pnHomeTela.TabIndex = 3
-        '
-        'pbHomeLogo
-        '
-        Me.pbHomeLogo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgLogoCirculo
-        Me.pbHomeLogo.Location = New System.Drawing.Point(0, 0)
-        Me.pbHomeLogo.Name = "pbHomeLogo"
-        Me.pbHomeLogo.Size = New System.Drawing.Size(821, 437)
-        Me.pbHomeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbHomeLogo.TabIndex = 0
-        Me.pbHomeLogo.TabStop = False
         '
         'pnLogo
         '
@@ -1159,16 +979,6 @@ Partial Class home
         Me.pnLogo.Size = New System.Drawing.Size(655, 437)
         Me.pnLogo.TabIndex = 1
         Me.pnLogo.Visible = False
-        '
-        'pbLogo
-        '
-        Me.pbLogo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgLogoCirculo
-        Me.pbLogo.Location = New System.Drawing.Point(0, 0)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(655, 437)
-        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbLogo.TabIndex = 0
-        Me.pbLogo.TabStop = False
         '
         'pnAdmAddScreen
         '
@@ -1282,33 +1092,6 @@ Partial Class home
         Me.tbAdmAddEmail.TabIndex = 42
         Me.tbAdmAddEmail.Text = "E-mail"
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.Location = New System.Drawing.Point(100, 151)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 40
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Location = New System.Drawing.Point(100, 266)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 38
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Location = New System.Drawing.Point(100, 208)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 37
-        Me.PictureBox4.TabStop = False
-        '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
@@ -1328,15 +1111,6 @@ Partial Class home
         Me.tbAdmAddNome.Size = New System.Drawing.Size(410, 19)
         Me.tbAdmAddNome.TabIndex = 31
         Me.tbAdmAddNome.Text = "Nome"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(100, 91)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 30
-        Me.PictureBox2.TabStop = False
         '
         'Label5
         '
@@ -1385,33 +1159,6 @@ Partial Class home
         Me.cbAdmDellBy.Size = New System.Drawing.Size(121, 28)
         Me.cbAdmDellBy.TabIndex = 42
         Me.cbAdmDellBy.Text = "Login"
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Location = New System.Drawing.Point(105, 223)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox11.TabIndex = 41
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Location = New System.Drawing.Point(105, 270)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox12.TabIndex = 40
-        Me.PictureBox12.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Location = New System.Drawing.Point(105, 179)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox13.TabIndex = 39
-        Me.PictureBox13.TabStop = False
         '
         'tbAdmDelEmail
         '
@@ -1506,15 +1253,6 @@ Partial Class home
         Me.Panel1.Size = New System.Drawing.Size(415, 1)
         Me.Panel1.TabIndex = 31
         '
-        'PictureBox9
-        '
-        Me.PictureBox9.Location = New System.Drawing.Point(112, 94)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(27, 37)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox9.TabIndex = 30
-        Me.PictureBox9.TabStop = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
@@ -1583,33 +1321,6 @@ Partial Class home
         Me.pnCartaoDevScreen.Size = New System.Drawing.Size(655, 436)
         Me.pnCartaoDevScreen.TabIndex = 2
         Me.pnCartaoDevScreen.Visible = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(101, 243)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 73
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Location = New System.Drawing.Point(101, 290)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 72
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Location = New System.Drawing.Point(101, 199)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 71
-        Me.PictureBox7.TabStop = False
         '
         'tbCartaoDevValor
         '
@@ -1703,15 +1414,6 @@ Partial Class home
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(415, 1)
         Me.Panel15.TabIndex = 63
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Location = New System.Drawing.Point(111, 114)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(27, 37)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox8.TabIndex = 62
-        Me.PictureBox8.TabStop = False
         '
         'Panel16
         '
@@ -1870,33 +1572,6 @@ Partial Class home
         Me.tbCartaoAddSaldo.TabIndex = 42
         Me.tbCartaoAddSaldo.Text = "Saldo Inicial"
         '
-        'PictureBox10
-        '
-        Me.PictureBox10.Location = New System.Drawing.Point(122, 172)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox10.TabIndex = 40
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox14
-        '
-        Me.PictureBox14.Location = New System.Drawing.Point(122, 287)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox14.TabIndex = 38
-        Me.PictureBox14.TabStop = False
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.Location = New System.Drawing.Point(122, 229)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox15.TabIndex = 37
-        Me.PictureBox15.TabStop = False
-        '
         'FlowLayoutPanel12
         '
         Me.FlowLayoutPanel12.BackColor = System.Drawing.Color.White
@@ -1916,15 +1591,6 @@ Partial Class home
         Me.tbCartaoAddMat.Size = New System.Drawing.Size(410, 19)
         Me.tbCartaoAddMat.TabIndex = 31
         Me.tbCartaoAddMat.Text = "Matrícula"
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Location = New System.Drawing.Point(122, 112)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox16.TabIndex = 30
-        Me.PictureBox16.TabStop = False
         '
         'Label3
         '
@@ -2078,16 +1744,6 @@ Partial Class home
         Me.Label18.Size = New System.Drawing.Size(107, 22)
         Me.Label18.TabIndex = 73
         Me.Label18.Text = "Saldo Total:"
-        '
-        'pbCartaoRecLimpaTotalRecarga
-        '
-        Me.pbCartaoRecLimpaTotalRecarga.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCancelIconBranco
-        Me.pbCartaoRecLimpaTotalRecarga.Location = New System.Drawing.Point(542, 233)
-        Me.pbCartaoRecLimpaTotalRecarga.Name = "pbCartaoRecLimpaTotalRecarga"
-        Me.pbCartaoRecLimpaTotalRecarga.Size = New System.Drawing.Size(27, 27)
-        Me.pbCartaoRecLimpaTotalRecarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbCartaoRecLimpaTotalRecarga.TabIndex = 72
-        Me.pbCartaoRecLimpaTotalRecarga.TabStop = False
         '
         'tbCartaoRecTotalRecarga
         '
@@ -2283,15 +1939,6 @@ Partial Class home
         Me.btCartaoRecConfirmar.Text = "Confirmar"
         Me.btCartaoRecConfirmar.UseVisualStyleBackColor = False
         '
-        'PictureBox20
-        '
-        Me.PictureBox20.Location = New System.Drawing.Point(111, 97)
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.Size = New System.Drawing.Size(27, 37)
-        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox20.TabIndex = 46
-        Me.PictureBox20.TabStop = False
-        '
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
@@ -2360,33 +2007,6 @@ Partial Class home
         Me.pnCartaoDelScreen.Size = New System.Drawing.Size(655, 436)
         Me.pnCartaoDelScreen.TabIndex = 46
         Me.pnCartaoDelScreen.Visible = False
-        '
-        'PictureBox21
-        '
-        Me.PictureBox21.Location = New System.Drawing.Point(104, 209)
-        Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox21.TabIndex = 41
-        Me.PictureBox21.TabStop = False
-        '
-        'PictureBox22
-        '
-        Me.PictureBox22.Location = New System.Drawing.Point(104, 256)
-        Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox22.TabIndex = 40
-        Me.PictureBox22.TabStop = False
-        '
-        'PictureBox23
-        '
-        Me.PictureBox23.Location = New System.Drawing.Point(104, 165)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox23.TabIndex = 39
-        Me.PictureBox23.TabStop = False
         '
         'tbCartaoDelSaldo
         '
@@ -2479,15 +2099,6 @@ Partial Class home
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(415, 1)
         Me.Panel8.TabIndex = 31
-        '
-        'PictureBox24
-        '
-        Me.PictureBox24.Location = New System.Drawing.Point(111, 94)
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.Size = New System.Drawing.Size(27, 37)
-        Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox24.TabIndex = 30
-        Me.PictureBox24.TabStop = False
         '
         'Panel9
         '
@@ -2645,33 +2256,6 @@ Partial Class home
         Me.tbVendAddSenha.TabIndex = 42
         Me.tbVendAddSenha.Text = "Senha"
         '
-        'PictureBox25
-        '
-        Me.PictureBox25.Location = New System.Drawing.Point(122, 172)
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox25.TabIndex = 40
-        Me.PictureBox25.TabStop = False
-        '
-        'PictureBox26
-        '
-        Me.PictureBox26.Location = New System.Drawing.Point(122, 287)
-        Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox26.TabIndex = 38
-        Me.PictureBox26.TabStop = False
-        '
-        'PictureBox27
-        '
-        Me.PictureBox27.Location = New System.Drawing.Point(122, 229)
-        Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox27.TabIndex = 37
-        Me.PictureBox27.TabStop = False
-        '
         'FlowLayoutPanel8
         '
         Me.FlowLayoutPanel8.BackColor = System.Drawing.Color.White
@@ -2691,15 +2275,6 @@ Partial Class home
         Me.tbVendAddMat.Size = New System.Drawing.Size(410, 19)
         Me.tbVendAddMat.TabIndex = 31
         Me.tbVendAddMat.Text = "Matrícula"
-        '
-        'PictureBox28
-        '
-        Me.PictureBox28.Location = New System.Drawing.Point(122, 112)
-        Me.PictureBox28.Name = "PictureBox28"
-        Me.PictureBox28.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox28.TabIndex = 30
-        Me.PictureBox28.TabStop = False
         '
         'Label7
         '
@@ -2745,24 +2320,6 @@ Partial Class home
         Me.cbVendDellBy.Size = New System.Drawing.Size(123, 28)
         Me.cbVendDellBy.TabIndex = 59
         Me.cbVendDellBy.Text = "Matrícula"
-        '
-        'PictureBox29
-        '
-        Me.PictureBox29.Location = New System.Drawing.Point(101, 243)
-        Me.PictureBox29.Name = "PictureBox29"
-        Me.PictureBox29.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox29.TabIndex = 58
-        Me.PictureBox29.TabStop = False
-        '
-        'PictureBox31
-        '
-        Me.PictureBox31.Location = New System.Drawing.Point(101, 199)
-        Me.PictureBox31.Name = "PictureBox31"
-        Me.PictureBox31.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox31.TabIndex = 56
-        Me.PictureBox31.TabStop = False
         '
         'tbVendDelEmail
         '
@@ -2835,15 +2392,6 @@ Partial Class home
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(415, 1)
         Me.Panel27.TabIndex = 48
-        '
-        'PictureBox32
-        '
-        Me.PictureBox32.Location = New System.Drawing.Point(108, 114)
-        Me.PictureBox32.Name = "PictureBox32"
-        Me.PictureBox32.Size = New System.Drawing.Size(27, 37)
-        Me.PictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox32.TabIndex = 47
-        Me.PictureBox32.TabStop = False
         '
         'Panel28
         '
@@ -3001,33 +2549,6 @@ Partial Class home
         Me.TextBox15.TabIndex = 42
         Me.TextBox15.Text = "Saldo Inicial"
         '
-        'PictureBox33
-        '
-        Me.PictureBox33.Location = New System.Drawing.Point(122, 172)
-        Me.PictureBox33.Name = "PictureBox33"
-        Me.PictureBox33.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox33.TabIndex = 40
-        Me.PictureBox33.TabStop = False
-        '
-        'PictureBox34
-        '
-        Me.PictureBox34.Location = New System.Drawing.Point(122, 287)
-        Me.PictureBox34.Name = "PictureBox34"
-        Me.PictureBox34.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox34.TabIndex = 38
-        Me.PictureBox34.TabStop = False
-        '
-        'PictureBox35
-        '
-        Me.PictureBox35.Location = New System.Drawing.Point(122, 229)
-        Me.PictureBox35.Name = "PictureBox35"
-        Me.PictureBox35.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox35.TabIndex = 37
-        Me.PictureBox35.TabStop = False
-        '
         'FlowLayoutPanel20
         '
         Me.FlowLayoutPanel20.BackColor = System.Drawing.Color.White
@@ -3047,15 +2568,6 @@ Partial Class home
         Me.TextBox16.Size = New System.Drawing.Size(410, 19)
         Me.TextBox16.TabIndex = 31
         Me.TextBox16.Text = "Matrícula"
-        '
-        'PictureBox36
-        '
-        Me.PictureBox36.Location = New System.Drawing.Point(122, 112)
-        Me.PictureBox36.Name = "PictureBox36"
-        Me.PictureBox36.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox36.TabIndex = 30
-        Me.PictureBox36.TabStop = False
         '
         'Label9
         '
@@ -3179,6 +2691,525 @@ Partial Class home
         Me.TextBox19.TabIndex = 42
         Me.TextBox19.Text = "Saldo Inicial"
         '
+        'FlowLayoutPanel24
+        '
+        Me.FlowLayoutPanel24.BackColor = System.Drawing.Color.White
+        Me.FlowLayoutPanel24.Location = New System.Drawing.Point(164, 150)
+        Me.FlowLayoutPanel24.Name = "FlowLayoutPanel24"
+        Me.FlowLayoutPanel24.Size = New System.Drawing.Size(410, 1)
+        Me.FlowLayoutPanel24.TabIndex = 32
+        '
+        'TextBox20
+        '
+        Me.TextBox20.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox20.ForeColor = System.Drawing.Color.White
+        Me.TextBox20.Location = New System.Drawing.Point(164, 124)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(410, 19)
+        Me.TextBox20.TabIndex = 31
+        Me.TextBox20.Text = "Matrícula"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(213, 29)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(47, 29)
+        Me.Label10.TabIndex = 29
+        Me.Label10.Text = "On"
+        '
+        'pbMinimizar
+        '
+        Me.pbMinimizar.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgMinimizarIconBranco
+        Me.pbMinimizar.Location = New System.Drawing.Point(4, 4)
+        Me.pbMinimizar.Name = "pbMinimizar"
+        Me.pbMinimizar.Size = New System.Drawing.Size(11, 11)
+        Me.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbMinimizar.TabIndex = 1
+        Me.pbMinimizar.TabStop = False
+        '
+        'pbFechar
+        '
+        Me.pbFechar.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgFecharIconBranco
+        Me.pbFechar.Location = New System.Drawing.Point(4, 4)
+        Me.pbFechar.Name = "pbFechar"
+        Me.pbFechar.Size = New System.Drawing.Size(11, 11)
+        Me.pbFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbFechar.TabIndex = 2
+        Me.pbFechar.TabStop = False
+        '
+        'pbInfo
+        '
+        Me.pbInfo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconBranco
+        Me.pbInfo.Location = New System.Drawing.Point(7, 4)
+        Me.pbInfo.Name = "pbInfo"
+        Me.pbInfo.Size = New System.Drawing.Size(51, 36)
+        Me.pbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbInfo.TabIndex = 8
+        Me.pbInfo.TabStop = False
+        '
+        'pbInfoAux
+        '
+        Me.pbInfoAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgInfoIconPreto
+        Me.pbInfoAux.Location = New System.Drawing.Point(7, 4)
+        Me.pbInfoAux.Name = "pbInfoAux"
+        Me.pbInfoAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbInfoAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbInfoAux.TabIndex = 8
+        Me.pbInfoAux.TabStop = False
+        '
+        'pbRelat
+        '
+        Me.pbRelat.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconBranco
+        Me.pbRelat.Location = New System.Drawing.Point(6, 4)
+        Me.pbRelat.Name = "pbRelat"
+        Me.pbRelat.Size = New System.Drawing.Size(51, 36)
+        Me.pbRelat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbRelat.TabIndex = 7
+        Me.pbRelat.TabStop = False
+        '
+        'pbRelatAux
+        '
+        Me.pbRelatAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgRelatorioIconPreto
+        Me.pbRelatAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbRelatAux.Name = "pbRelatAux"
+        Me.pbRelatAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbRelatAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbRelatAux.TabIndex = 7
+        Me.pbRelatAux.TabStop = False
+        '
+        'pbProd
+        '
+        Me.pbProd.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconBranco
+        Me.pbProd.Location = New System.Drawing.Point(6, 4)
+        Me.pbProd.Name = "pbProd"
+        Me.pbProd.Size = New System.Drawing.Size(51, 36)
+        Me.pbProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbProd.TabIndex = 8
+        Me.pbProd.TabStop = False
+        '
+        'pbProdAux
+        '
+        Me.pbProdAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconPreto
+        Me.pbProdAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbProdAux.Name = "pbProdAux"
+        Me.pbProdAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbProdAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbProdAux.TabIndex = 8
+        Me.pbProdAux.TabStop = False
+        '
+        'pbVend
+        '
+        Me.pbVend.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconBranco
+        Me.pbVend.Location = New System.Drawing.Point(6, 4)
+        Me.pbVend.Name = "pbVend"
+        Me.pbVend.Size = New System.Drawing.Size(51, 36)
+        Me.pbVend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbVend.TabIndex = 6
+        Me.pbVend.TabStop = False
+        '
+        'pbVendAux
+        '
+        Me.pbVendAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgVendedorIconPreto
+        Me.pbVendAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbVendAux.Name = "pbVendAux"
+        Me.pbVendAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbVendAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbVendAux.TabIndex = 6
+        Me.pbVendAux.TabStop = False
+        '
+        'pbCartao
+        '
+        Me.pbCartao.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconBranco
+        Me.pbCartao.Location = New System.Drawing.Point(6, 4)
+        Me.pbCartao.Name = "pbCartao"
+        Me.pbCartao.Size = New System.Drawing.Size(51, 36)
+        Me.pbCartao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbCartao.TabIndex = 5
+        Me.pbCartao.TabStop = False
+        '
+        'pbCartaoAux
+        '
+        Me.pbCartaoAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCartaoIconPreto
+        Me.pbCartaoAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbCartaoAux.Name = "pbCartaoAux"
+        Me.pbCartaoAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbCartaoAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbCartaoAux.TabIndex = 5
+        Me.pbCartaoAux.TabStop = False
+        '
+        'pbAdm
+        '
+        Me.pbAdm.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgAdmIconBranco
+        Me.pbAdm.Location = New System.Drawing.Point(6, 4)
+        Me.pbAdm.Name = "pbAdm"
+        Me.pbAdm.Size = New System.Drawing.Size(51, 36)
+        Me.pbAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbAdm.TabIndex = 4
+        Me.pbAdm.TabStop = False
+        '
+        'pbAdmAux
+        '
+        Me.pbAdmAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgAdmIconPreto
+        Me.pbAdmAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbAdmAux.Name = "pbAdmAux"
+        Me.pbAdmAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbAdmAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbAdmAux.TabIndex = 4
+        Me.pbAdmAux.TabStop = False
+        '
+        'pbHome
+        '
+        Me.pbHome.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgHomeIconBranco
+        Me.pbHome.Location = New System.Drawing.Point(6, 4)
+        Me.pbHome.Name = "pbHome"
+        Me.pbHome.Size = New System.Drawing.Size(51, 36)
+        Me.pbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbHome.TabIndex = 3
+        Me.pbHome.TabStop = False
+        '
+        'pbHomeAux
+        '
+        Me.pbHomeAux.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgHomeIconPreto
+        Me.pbHomeAux.Location = New System.Drawing.Point(6, 4)
+        Me.pbHomeAux.Name = "pbHomeAux"
+        Me.pbHomeAux.Size = New System.Drawing.Size(51, 36)
+        Me.pbHomeAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbHomeAux.TabIndex = 3
+        Me.pbHomeAux.TabStop = False
+        '
+        'pbBrightMode
+        '
+        Me.pbBrightMode.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgSunIcon
+        Me.pbBrightMode.Location = New System.Drawing.Point(9, 6)
+        Me.pbBrightMode.Name = "pbBrightMode"
+        Me.pbBrightMode.Size = New System.Drawing.Size(32, 32)
+        Me.pbBrightMode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbBrightMode.TabIndex = 8
+        Me.pbBrightMode.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgUserIconBranco
+        Me.PictureBox6.Location = New System.Drawing.Point(100, 151)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 40
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgEmailIconBranco
+        Me.PictureBox5.Location = New System.Drawing.Point(100, 266)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 38
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgSenhaIconBranco
+        Me.PictureBox4.Location = New System.Drawing.Point(100, 208)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 37
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgNomeMatIconBranco
+        Me.PictureBox2.Location = New System.Drawing.Point(100, 91)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 30
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgEmailIconBranco
+        Me.PictureBox21.Location = New System.Drawing.Point(104, 209)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox21.TabIndex = 41
+        Me.PictureBox21.TabStop = False
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imtSaldoIconBranco
+        Me.PictureBox22.Location = New System.Drawing.Point(104, 256)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox22.TabIndex = 40
+        Me.PictureBox22.TabStop = False
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgUserIconBranco
+        Me.PictureBox23.Location = New System.Drawing.Point(104, 165)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox23.TabIndex = 39
+        Me.PictureBox23.TabStop = False
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgNomeMatIconBranco
+        Me.PictureBox24.Location = New System.Drawing.Point(109, 93)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(30, 42)
+        Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox24.TabIndex = 30
+        Me.PictureBox24.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgUserIconBranco
+        Me.PictureBox10.Location = New System.Drawing.Point(122, 172)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox10.TabIndex = 40
+        Me.PictureBox10.TabStop = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imtSaldoIconBranco
+        Me.PictureBox14.Location = New System.Drawing.Point(122, 287)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox14.TabIndex = 38
+        Me.PictureBox14.TabStop = False
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgEmailIconBranco
+        Me.PictureBox15.Location = New System.Drawing.Point(122, 229)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox15.TabIndex = 37
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgNomeMatIconBranco
+        Me.PictureBox16.Location = New System.Drawing.Point(121, 112)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(34, 43)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox16.TabIndex = 30
+        Me.PictureBox16.TabStop = False
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgUserIconBranco
+        Me.PictureBox11.Location = New System.Drawing.Point(105, 223)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox11.TabIndex = 41
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgEmailIconBranco
+        Me.PictureBox12.Location = New System.Drawing.Point(105, 270)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox12.TabIndex = 40
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgNomeMatIconBranco
+        Me.PictureBox13.Location = New System.Drawing.Point(105, 179)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox13.TabIndex = 39
+        Me.PictureBox13.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgUserIconBranco
+        Me.PictureBox9.Location = New System.Drawing.Point(112, 94)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(27, 37)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox9.TabIndex = 30
+        Me.PictureBox9.TabStop = False
+        '
+        'pbCartaoRecLimpaTotalRecarga
+        '
+        Me.pbCartaoRecLimpaTotalRecarga.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgCancelIconBranco
+        Me.pbCartaoRecLimpaTotalRecarga.Location = New System.Drawing.Point(542, 233)
+        Me.pbCartaoRecLimpaTotalRecarga.Name = "pbCartaoRecLimpaTotalRecarga"
+        Me.pbCartaoRecLimpaTotalRecarga.Size = New System.Drawing.Size(27, 27)
+        Me.pbCartaoRecLimpaTotalRecarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbCartaoRecLimpaTotalRecarga.TabIndex = 72
+        Me.pbCartaoRecLimpaTotalRecarga.TabStop = False
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.Location = New System.Drawing.Point(111, 97)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(27, 37)
+        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox20.TabIndex = 46
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox29
+        '
+        Me.PictureBox29.Location = New System.Drawing.Point(101, 243)
+        Me.PictureBox29.Name = "PictureBox29"
+        Me.PictureBox29.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox29.TabIndex = 58
+        Me.PictureBox29.TabStop = False
+        '
+        'PictureBox31
+        '
+        Me.PictureBox31.Location = New System.Drawing.Point(101, 199)
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox31.TabIndex = 56
+        Me.PictureBox31.TabStop = False
+        '
+        'PictureBox32
+        '
+        Me.PictureBox32.Location = New System.Drawing.Point(108, 114)
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.Size = New System.Drawing.Size(27, 37)
+        Me.PictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox32.TabIndex = 47
+        Me.PictureBox32.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(101, 243)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 73
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Location = New System.Drawing.Point(101, 290)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 72
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Location = New System.Drawing.Point(101, 199)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 71
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Location = New System.Drawing.Point(111, 114)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(27, 37)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 62
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox25
+        '
+        Me.PictureBox25.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgUserIconBranco
+        Me.PictureBox25.Location = New System.Drawing.Point(122, 172)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox25.TabIndex = 40
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox26
+        '
+        Me.PictureBox26.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imtSaldoIconBranco
+        Me.PictureBox26.Location = New System.Drawing.Point(122, 287)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox26.TabIndex = 38
+        Me.PictureBox26.TabStop = False
+        '
+        'PictureBox27
+        '
+        Me.PictureBox27.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgEmailIconBranco
+        Me.PictureBox27.Location = New System.Drawing.Point(122, 229)
+        Me.PictureBox27.Name = "PictureBox27"
+        Me.PictureBox27.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox27.TabIndex = 37
+        Me.PictureBox27.TabStop = False
+        '
+        'PictureBox28
+        '
+        Me.PictureBox28.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgNomeMatIconBranco
+        Me.PictureBox28.Location = New System.Drawing.Point(122, 112)
+        Me.PictureBox28.Name = "PictureBox28"
+        Me.PictureBox28.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox28.TabIndex = 30
+        Me.PictureBox28.TabStop = False
+        '
+        'PictureBox33
+        '
+        Me.PictureBox33.Location = New System.Drawing.Point(122, 172)
+        Me.PictureBox33.Name = "PictureBox33"
+        Me.PictureBox33.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox33.TabIndex = 40
+        Me.PictureBox33.TabStop = False
+        '
+        'PictureBox34
+        '
+        Me.PictureBox34.Location = New System.Drawing.Point(122, 287)
+        Me.PictureBox34.Name = "PictureBox34"
+        Me.PictureBox34.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox34.TabIndex = 38
+        Me.PictureBox34.TabStop = False
+        '
+        'PictureBox35
+        '
+        Me.PictureBox35.Location = New System.Drawing.Point(122, 229)
+        Me.PictureBox35.Name = "PictureBox35"
+        Me.PictureBox35.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox35.TabIndex = 37
+        Me.PictureBox35.TabStop = False
+        '
+        'PictureBox36
+        '
+        Me.PictureBox36.Location = New System.Drawing.Point(122, 112)
+        Me.PictureBox36.Name = "PictureBox36"
+        Me.PictureBox36.Size = New System.Drawing.Size(31, 39)
+        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox36.TabIndex = 30
+        Me.PictureBox36.TabStop = False
+        '
         'PictureBox37
         '
         Me.PictureBox37.Location = New System.Drawing.Point(122, 172)
@@ -3206,26 +3237,6 @@ Partial Class home
         Me.PictureBox39.TabIndex = 37
         Me.PictureBox39.TabStop = False
         '
-        'FlowLayoutPanel24
-        '
-        Me.FlowLayoutPanel24.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel24.Location = New System.Drawing.Point(164, 150)
-        Me.FlowLayoutPanel24.Name = "FlowLayoutPanel24"
-        Me.FlowLayoutPanel24.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel24.TabIndex = 32
-        '
-        'TextBox20
-        '
-        Me.TextBox20.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.ForeColor = System.Drawing.Color.White
-        Me.TextBox20.Location = New System.Drawing.Point(164, 124)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox20.TabIndex = 31
-        Me.TextBox20.Text = "Matrícula"
-        '
         'PictureBox40
         '
         Me.PictureBox40.Location = New System.Drawing.Point(122, 112)
@@ -3235,16 +3246,25 @@ Partial Class home
         Me.PictureBox40.TabIndex = 30
         Me.PictureBox40.TabStop = False
         '
-        'Label10
+        'pbLogo
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(213, 29)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(47, 29)
-        Me.Label10.TabIndex = 29
-        Me.Label10.Text = "On"
+        Me.pbLogo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgLogoCirculo
+        Me.pbLogo.Location = New System.Drawing.Point(0, 0)
+        Me.pbLogo.Name = "pbLogo"
+        Me.pbLogo.Size = New System.Drawing.Size(655, 437)
+        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbLogo.TabIndex = 0
+        Me.pbLogo.TabStop = False
+        '
+        'pbHomeLogo
+        '
+        Me.pbHomeLogo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgLogoCirculo
+        Me.pbHomeLogo.Location = New System.Drawing.Point(0, 0)
+        Me.pbHomeLogo.Name = "pbHomeLogo"
+        Me.pbHomeLogo.Size = New System.Drawing.Size(821, 437)
+        Me.pbHomeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbHomeLogo.TabIndex = 0
+        Me.pbHomeLogo.TabStop = False
         '
         'home
         '
@@ -3254,14 +3274,14 @@ Partial Class home
         Me.ClientSize = New System.Drawing.Size(884, 459)
         Me.Controls.Add(Me.pnBarraSuperior)
         Me.Controls.Add(Me.pnMenu)
-        Me.Controls.Add(Me.pnCartaoDelScreen)
+        Me.Controls.Add(Me.pnVendAddScreen)
         Me.Controls.Add(Me.pnCartaoAddScreen)
+        Me.Controls.Add(Me.pnCartaoDelScreen)
         Me.Controls.Add(Me.pnAdmDelScreen)
         Me.Controls.Add(Me.pnAdmAddScreen)
         Me.Controls.Add(Me.pnCartaoRecScreen)
         Me.Controls.Add(Me.pnVendDelScreen)
         Me.Controls.Add(Me.pnCartaoDevScreen)
-        Me.Controls.Add(Me.pnVendAddScreen)
         Me.Controls.Add(Me.pnVendReqScreen)
         Me.Controls.Add(Me.pnVendOnScreen)
         Me.Controls.Add(Me.pnLogo)
@@ -3272,9 +3292,7 @@ Partial Class home
         Me.Text = "S.I.S.T.E.MA"
         Me.pnBarraSuperior.ResumeLayout(False)
         Me.pnMinimizar.ResumeLayout(False)
-        CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnFechar.ResumeLayout(False)
-        CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnMenu.ResumeLayout(False)
         Me.pnSubMenuAdm.ResumeLayout(False)
         Me.pnAdmTopicDel.ResumeLayout(False)
@@ -3300,98 +3318,100 @@ Partial Class home
         Me.pnCartaoTopicAdd.ResumeLayout(False)
         Me.pnCartaoTopicAdd.PerformLayout()
         Me.pnInfo.ResumeLayout(False)
-        CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnInfoAux.ResumeLayout(False)
-        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnRelat.ResumeLayout(False)
-        CType(Me.pbRelat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnRelatAux.ResumeLayout(False)
-        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnProd.ResumeLayout(False)
-        CType(Me.pbProd, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnProdAux.ResumeLayout(False)
-        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnVend.ResumeLayout(False)
-        CType(Me.pbVend, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnVendAux.ResumeLayout(False)
-        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartao.ResumeLayout(False)
-        CType(Me.pbCartao, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartaoAux.ResumeLayout(False)
-        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnAdm.ResumeLayout(False)
-        CType(Me.pbAdm, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnAdmAux.ResumeLayout(False)
-        CType(Me.pbAdmAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnHome.ResumeLayout(False)
-        CType(Me.pbHome, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnHomeAux.ResumeLayout(False)
-        CType(Me.pbHomeAux, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnBrightMode.ResumeLayout(False)
-        CType(Me.pbBrightMode, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnHomeTela.ResumeLayout(False)
-        CType(Me.pbHomeLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnLogo.ResumeLayout(False)
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnAdmAddScreen.ResumeLayout(False)
         Me.pnAdmAddScreen.PerformLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnAdmDelScreen.ResumeLayout(False)
         Me.pnAdmDelScreen.PerformLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartaoDevScreen.ResumeLayout(False)
         Me.pnCartaoDevScreen.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartaoAddScreen.ResumeLayout(False)
         Me.pnCartaoAddScreen.PerformLayout()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartaoRecScreen.ResumeLayout(False)
         Me.pnCartaoRecScreen.PerformLayout()
         Me.pnCartaoRecOutroValor.ResumeLayout(False)
         Me.pnCartaoRecOutroValor.PerformLayout()
-        CType(Me.pbCartaoRecLimpaTotalRecarga, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnCartaoDelScreen.ResumeLayout(False)
         Me.pnCartaoDelScreen.PerformLayout()
+        Me.pnVendAddScreen.ResumeLayout(False)
+        Me.pnVendAddScreen.PerformLayout()
+        Me.pnVendDelScreen.ResumeLayout(False)
+        Me.pnVendDelScreen.PerformLayout()
+        Me.pnVendReqScreen.ResumeLayout(False)
+        Me.pnVendReqScreen.PerformLayout()
+        Me.pnVendOnScreen.ResumeLayout(False)
+        Me.pnVendOnScreen.PerformLayout()
+        CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbFechar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbInfo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbInfoAux, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRelat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRelatAux, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbProd, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbProdAux, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVend, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVendAux, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCartao, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCartaoAux, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAdm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAdmAux, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbHome, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbHomeAux, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBrightMode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnVendAddScreen.ResumeLayout(False)
-        Me.pnVendAddScreen.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCartaoRecLimpaTotalRecarga, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnVendDelScreen.ResumeLayout(False)
-        Me.pnVendDelScreen.PerformLayout()
-        CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnVendReqScreen.ResumeLayout(False)
-        Me.pnVendReqScreen.PerformLayout()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnVendOnScreen.ResumeLayout(False)
-        Me.pnVendOnScreen.PerformLayout()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbHomeLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

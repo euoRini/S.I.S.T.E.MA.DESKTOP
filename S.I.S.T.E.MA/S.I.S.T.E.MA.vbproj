@@ -287,6 +287,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\imtSaldoIconBranco.png" />
+    <None Include="Resources\imgNomeMatIconBranco.png" />
+    <None Include="Resources\imgEmailIconBranco.png" />
     <None Include="Resources\imgDoneMSGBOXIconBranco.png" />
     <None Include="Resources\imgInfoMSGBOXIconBranco.png" />
   </ItemGroup>
