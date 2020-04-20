@@ -1,4 +1,13 @@
-﻿Public Class formLogin
+﻿Imports System.Text
+Imports System.Security.Cryptography
+Imports System.IO
+Imports System.Net
+Imports System.Linq
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+Imports System.Net.Http
+
+Public Class formLogin
 
 #Region "Declaração Variaveis"
     Dim arraste As Boolean
@@ -118,16 +127,22 @@
 
     'Login
     Private Sub BTEntrar_Click(sender As Object, e As EventArgs) Handles BTEntrar.Click
-        Dim parametro As String = tbLogin.Text & "/"
-
+        Dim login = tbLogin.Text
+        Dim senha = tbSenha.Text
+        Dim jsonString As String
+        jsonString = "{""login"":""" &
+                       login &
+                        """,""senha"":""" &
+                        senha & """}"
+        Dim data = Encoding.UTF8.GetBytes(jsonString)
         'Processo de conexao API para recebimento de dados de login
 
         'URL para rota de lista de admins por login informado
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/admins/" & parametro)
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/login")
 
         'Usando a função recebimentoADMLoginExc para buscar o admin com login informado. 
         'Usando o método GET para a requisição HTTP
-        recebimentoADMLoginExc(myUri, "application/json", "GET", "login")
+        Dim response = exeLogin(myUri, data, "POST")
 
         'recebimentroADMLoginExc altera sucessoLogin:
         'True quando login válido e entra no aplicativo

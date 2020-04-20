@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="classAcessos.vb" />
     <Compile Include="classAdmins.vb" />
+    <Compile Include="classLogin.vb" />
     <Compile Include="classProdutos.vb" />
     <Compile Include="classRecargas.vb" />
     <Compile Include="classUsers.vb" />

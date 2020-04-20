@@ -67,6 +67,11 @@ S.I.S.T.E.MA
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgEmailIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgFecharCinza">
 <summary>
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
@@ -167,6 +172,11 @@ S.I.S.T.E.MA
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgNomeMatIconBranco">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgProdutoIconBranco">
 <summary>
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
@@ -243,6 +253,11 @@ S.I.S.T.E.MA
 </summary>
 </member>
 <member name="P:S.I.S.T.E.MA.My.Resources.Resources.imgVisiblyIconPreto">
+<summary>
+  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:S.I.S.T.E.MA.My.Resources.Resources.imtSaldoIconBranco">
 <summary>
   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
 </summary>

@@ -494,7 +494,7 @@ Public Class home
     Private Sub btAdmAddSalvar_Click(sender As Object, e As EventArgs) Handles btAdmAddSalvar.Click
         Dim nome As String = tbAdmAddNome.Text
         Dim login As String = tbAdmAddLogin.Text
-        Dim senha As String = cripto(tbAdmAddSenha.Text, 1, 1)
+        Dim senha As String = tbAdmAddSenha.Text
         Dim email As String = tbAdmAddEmail.Text
         If (nome <> Nothing And login <> Nothing And senha <> Nothing And email <> Nothing) Then
             'formMsgBox.chamadaMSG("Confirme os dados: " & "" & vbNewLine & "" & "Nome: " & nome & "" & vbNewLine & "" & "Login: " & login & "" & vbNewLine & "" & "E-mail: " & email, 3)
@@ -524,9 +524,9 @@ Public Class home
     Private Sub btAdmDelApagar_Click(sender As Object, e As EventArgs) Handles btAdmDelApagar.Click
         Dim myUri As String
         If cbAdmDellBy.Text = "Login" Then
-            myUri = "https://sistemaifrj.herokuapp.com/admins/l/"
+            myUri = routerAdmLocalizarGET & "l/"
         ElseIf cbAdmDellBy.Text = "E-mail" Then
-            myUri = "https://sistemaifrj.herokuapp.com/admins/e/"
+            myUri = routerAdmLocalizarGET & "e/"
         End If
         If MsgBox("Deseja prosseguir com a exclusão do Administrador " & tbAdmDelNome.Text & "?", vbYesNo) = MsgBoxResult.Yes Then
             delete(tbAdmDelBusca.Text, myUri)
@@ -567,7 +567,7 @@ Public Class home
     End Sub
 
     Private Sub btCartaoDelApagar_Click(sender As Object, e As EventArgs) Handles btCartaoDelApagar.Click
-        Dim myUri As String = "https://sistemaifrj.herokuapp.com/users/"
+        Dim myUri As String = routerUserDeletarDELETE
         delete(tbCartaoDelBusca.Text, myUri)
     End Sub
 
@@ -673,7 +673,7 @@ Public Class home
         Dim matricula As String = tbVendAddMat.Text
         Dim nome As String = tbVendAddNome.Text
         Dim email As String = tbVendAddEmail.Text
-        Dim senha As String = cripto(tbVendAddSenha.Text, 1, 1)
+        Dim senha As String = tbVendAddSenha.Text
         If matricula <> Nothing And nome <> Nothing And email <> Nothing And senha <> Nothing Then
             addVend(matricula, nome, email, senha)
         Else
@@ -688,7 +688,21 @@ Public Class home
     End Sub
 
     Private Sub btVendDelBusca_Click(sender As Object, e As EventArgs) Handles btVendDelBusca.Click
-        'excVendedor(tbVendDelBusca.Text & "/")
+        excVendedor(tbVendDelBusca.Text & "/")
+    End Sub
+
+    Private Sub btVendDelApagar_Click(sender As Object, e As EventArgs) Handles btVendDelApagar.Click
+        Dim myUri As String
+        If cbVendDellBy.Text = "Login" Then
+            myUri = routerVendDeletarDELETE & "l/"
+        ElseIf cbVendDellBy.Text = "E-mail" Then
+            myUri = routerVendDeletarDELETE & "e/"
+        End If
+        If MsgBox("Deseja prosseguir com a exclusão do Vendedor " & tbAdmDelNome.Text & "?", vbYesNo) = MsgBoxResult.Yes Then
+            delete(tbVendDelBusca.Text, myUri)
+        Else
+            btVendDelCancelar_Click(sender, e)
+        End If
     End Sub
 
 #End Region
@@ -1219,6 +1233,20 @@ Public Class home
     End Sub
     Private Sub btCartaoDelCancelar_Click(sender As Object, e As EventArgs) Handles btCartaoDelCancelar.Click
         tbCartaoDelBusca.Clear()
+        tbCartaoDelEmail.Clear()
+        tbCartaoDelNome.Clear()
+        tbCartaoDelSaldo.Clear()
+    End Sub
+
+    Public Sub btVendAddLimpar_Click(sender As Object, e As EventArgs) Handles btVendAddLimpar.Click
+        tbVendAddEmail.Clear()
+        tbVendAddMat.Clear()
+        tbVendAddNome.Clear()
+        tbVendAddSenha.Clear()
+    End Sub
+
+    Private Sub btVendDelCancelar_Click(sender As Object, e As EventArgs) Handles btVendDelCancelar.Click
+        'tbVendDelBusca
     End Sub
 
     Private Sub cbAdmDellBy_TextChanged(sender As Object, e As EventArgs) Handles cbAdmDellBy.TextChanged

@@ -11,20 +11,21 @@ Module operacoesAPI
 
     Public idload As String
     Public erroBusca As String = Nothing
+    Public token As String
 
 #Region "ROTAS API"
     'Rotas API
-    Public routerAdmAdicionarPOST = "https://sistemaifrj.herokuapp.com/admins"
+    Public routerAdmAdicionarPOST = "https://sistemaifrj.herokuapp.com/admins/"
     Public routerAdmLocalizarGET = "https://sistemaifrj.herokuapp.com/admins/"
     Public routerAdmDeletarDELETE = "https://sistemaifrj.herokuapp.com/admins/"
-    Public routerUserAdicionarPOST = "https://sistemaifrj.herokuapp.com/users"
+    Public routerUserAdicionarPOST = "https://sistemaifrj.herokuapp.com/users/"
     Public routerUserLocalizarGET = "https://sistemaifrj.herokuapp.com/users/"
     Public routerUserDeletarDELETE = "https://sistemaifrj.herokuapp.com/users/"
     Public routerRecargaAdicionarPOST = "https://sistemaifrj.herokuapp.com/recargas/"
     Public routerUserAtualizarPUT = "https://sistemaifrj.herokuapp.com/recargas/"
-    Public routerVendAdicionarPOST = "https://sistemaifrj.herokuapp.com/vendedores"
+    Public routerVendAdicionarPOST = "https://sistemaifrj.herokuapp.com/vendedores/"
     Public routerVendLocalizarGET = "https://sistemaifrj.herokuapp.com/vendedores/"
-    'Public routerVendDeletarDELETE = "https://sistemaifrj.herokuapp.com/vendedores/"
+    Public routerVendDeletarDELETE = "https://sistemaifrj.herokuapp.com/vendedores/"
 
 #End Region
 
@@ -59,7 +60,8 @@ Module operacoesAPI
     'Envia os dados pelo método POST para a API executar ação
     'uri = rota para conexao com a API
     'jsonDataBytes = informação JSON no formato bytes para execução
-    Private Function envioPOST_OR(uri As Uri, jsonDataBytes As Byte(), metodo As String) As String
+
+    Public Function exeLogin(uri As Uri, jsonDataBytes As Byte(), metodo As String) As String
         Dim response As String
         Dim request As WebRequest
         Dim contentType As String = "application/json"
@@ -71,6 +73,7 @@ Module operacoesAPI
         request.ContentLength = jsonDataBytes.Length
         request.ContentType = contentType
         request.Method = metodo
+        'request.Headers = System.Net.HttpRequestHeader.Authorization) 
         Try
 
             'Fazendo a escrita das informações no server via requisição HTTP POST
@@ -85,10 +88,55 @@ Module operacoesAPI
                     End Using
                 End Using
             End Using
+            Dim dado As JObject = JObject.Parse(response)
+            Dim loginToken As classLogin
+            loginToken = JsonConvert.DeserializeObject(Of classLogin)(dado.ToString)
+
+            token = loginToken.token
+            formLogin.sucessoLogin = True
             'Limpa tbs
             home.btAdmAddLimpar_Click(Nothing, Nothing)
         Catch ex As Exception
-            MsgBox(ex.ToString)
+            MsgBox(ex.Message)
+
+            'MsgBox(ex.ToString)
+        End Try
+        Return response
+    End Function
+
+
+    Private Function envioPOST_OR(uri As Uri, jsonDataBytes As Byte(), metodo As String) As String
+        Dim response As String
+        Dim request As WebRequest
+        Dim contentType As String = "application/json"
+
+        'Construindo a requisição HTTP com a rota da API
+        request = WebRequest.Create(uri)
+
+        'Criando o objeto JSON da requisição
+        request.ContentLength = jsonDataBytes.Length
+        request.ContentType = contentType
+        request.Method = metodo
+        request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
+        MsgBox(request.Headers.ToString)
+        Try
+
+        'Fazendo a escrita das informações no server via requisição HTTP POST
+        Using requestStream = request.GetRequestStream
+                requestStream.Write(jsonDataBytes, 0, jsonDataBytes.Length)
+                requestStream.Close()
+
+                'Capturando a resposta do server após escrita
+                Using responseStream = request.GetResponse.GetResponseStream
+                    Using reader As New StreamReader(responseStream)
+                        response = reader.ReadToEnd()
+                    End Using
+                End Using
+            End Using
+            'Limpa tbs
+            home.btAdmAddLimpar_Click(Nothing, Nothing)
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
         Return response
     End Function
@@ -96,6 +144,7 @@ Module operacoesAPI
 #End Region
 
 #Region "Recebimento de Dados GET"
+
     Public Sub recebimentoADMLoginExc(uri As Uri, contentType As String, method As String, acao As String)
 
         'Criando as variáveis usadas na criação da requisição HTTP
@@ -110,7 +159,7 @@ Module operacoesAPI
 
             'Construindo a requisição HTTP com a rota da URL passada
             request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
-
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
             'Fazendo a requisição e coletando a resposta
             'If DirectCast(request.GetResponse(), HttpWebResponse).ToString <> "400" Then
             response = DirectCast(request.GetResponse(), HttpWebResponse)
@@ -144,17 +193,7 @@ Module operacoesAPI
                     .btAdmDelCancelar.Enabled = True
                 End With
 
-            ElseIf acao = "login" Then
 
-                'Caso seja login, verifica validade do login retornando true/false para sucessoLogin
-                With formLogin
-                    MsgBox(administrator.login & vbNewLine & administrator.senha)
-                    If .tbLogin.Text = administrator.login And cripto(.tbSenha.Text, 1, 1) = administrator.senha Then
-                        .sucessoLogin = True
-                    Else
-                        .sucessoLogin = False
-                    End If
-                End With
             End If
         Catch ex As Exception
 
@@ -201,7 +240,7 @@ Module operacoesAPI
 
             'Construindo a requisição HTTP com a rota da URL passada
             request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
-
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
             'Fazendo a requisição e coletando a resposta
             response = DirectCast(request.GetResponse(), HttpWebResponse)
 
@@ -282,7 +321,7 @@ Module operacoesAPI
 
             'Construindo a requisição HTTP com a rota da URL passada
             request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
-
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
             'Fazendo a requisição e coletando a resposta
             response = DirectCast(request.GetResponse(), HttpWebResponse)
 
@@ -305,6 +344,7 @@ Module operacoesAPI
 
             'Caso seja exclusão, adiciona nas tbs os dados encontrados
             With home
+                MsgBox(usuario.nome & usuario.email)
                 .tbVendDelNome.Text = usuario.nome
                 .tbVendDelEmail.Text = usuario.email
                 .btVendDelApagar.Enabled = True
@@ -339,23 +379,16 @@ Module operacoesAPI
     Public sucessDelete As Boolean
 
     'Execução Exclusão
-    Public Async Sub delete(parametro As String, myUri As String)
+    Public Sub delete(parametro As String, myUri As String)
         Try
-            sucessDelete = False
-
-            'Abre um client http
-            Using client = New HttpClient()
-
-                'Indica a rota da API para o client
-                client.BaseAddress = New Uri(myUri)
-
-                'Executa a exclusão com base na rota e paramentro informados e
-                'Guarda resposta em responseMessage
-                Dim responseMessage As HttpResponseMessage = Await client.DeleteAsync([String].Format("{0}{1}/", myUri, parametro))
-
-                'Se true, exclusão efetuada
-                'Se false, algum erro ocorreu
-                If responseMessage.IsSuccessStatusCode Then
+            Dim sURL As String = routerAdmDeletarDELETE & "l/" & parametro
+            Dim request As WebRequest = WebRequest.Create(sURL)
+            request.Method = "DELETE"
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
+            Dim response As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse)
+            Dim status = Val(response.StatusCode)
+            If response.StatusCode = 200 Then
+                If myUri.Contains(routerAdmDeletarDELETE) Then
                     With home.btAdmDelApagar
                         .BackColor = Color.Green
                         .Text = "Excluído"
@@ -371,14 +404,41 @@ Module operacoesAPI
                         .Refresh()
                     End With
 
+                ElseIf myUri.Contains(routerUserDeletarDELETE) Then
+                    With home.btCartaoDelApagar
+                        .BackColor = Color.Green
+                        .Text = "Excluído"
+                        .Enabled = False
+                        .Refresh()
+                        System.Threading.Thread.Sleep(1500)
+                        home.btCartaoDelBusca.Text = "Localizar"
+                        home.btCartaoDelBusca.BackColor = Color.White
+                        home.btCartaoDelBusca.Enabled = True
+                        .BackColor = Color.White
+                        .Text = "Apagar"
+                        home.btAdmDelCancelar_Click(Nothing, Nothing)
+                        .Refresh()
+                    End With
+                ElseIf myUri.Contains(routerVendDeletarDELETE) Then
 
-                Else
-                    'sucessDelete = False
+                    With home.btVendDelApagar
+                        .BackColor = Color.Green
+                        .Text = "Excluído"
+                        .Enabled = False
+                        .Refresh()
+                        System.Threading.Thread.Sleep(1500)
+                        home.btVendDelBusca.Text = "Localizar"
+                        home.btVendDelBusca.BackColor = Color.White
+                        home.btVendDelBusca.Enabled = True
+                        .BackColor = Color.White
+                        .Text = "Apagar"
+                        home.btAdmDelCancelar_Click(Nothing, Nothing)
+                        .Refresh()
+                    End With
                 End If
-
-            End Using
+            End If
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -393,7 +453,7 @@ Module operacoesAPI
                        nome &
                         """,""login"":""" &
                         login &
-                        """,""senha"":""" &
+                        """,""crpsenha"":""" &
                         senha &
                         """,""email"":""" &
                         email & """}"
@@ -535,7 +595,6 @@ Module operacoesAPI
         Dim myUri As New Uri(routerVendAdicionarPOST)
         With home.btVendAddSalvar
             .Text = "Salvando..."
-            .BackColor = Color.Yellow
             .Enabled = False
             .ForeColor = Color.White
             .Refresh()
@@ -555,6 +614,7 @@ Module operacoesAPI
                 .Refresh()
             End If
             System.Threading.Thread.Sleep(1000)
+            home.btVendAddLimpar_Click(Nothing, Nothing)
             .Text = "Salvar"
             .BackColor = Color.White
             .ForeColor = Color.FromArgb(32, 32, 32)
@@ -564,9 +624,13 @@ Module operacoesAPI
     End Sub
 
     Public Sub excVendedor(parametro As String)
+        Dim myUri As Uri
         'URL para rota de lista de admins por login informado
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/vendedor/m/" & parametro)
-
+        If home.cbVendDellBy.Text = "Matrícula" Then
+            myUri = New Uri(routerVendLocalizarGET & "m/" & parametro)
+        ElseIf home.cbVendDellBy.Text = "E-mail" Then
+            myUri = New Uri(routerVendLocalizarGET & "e/" & parametro)
+        End If
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoVendedorExc(myUri, "application/json", "GET")
     End Sub
