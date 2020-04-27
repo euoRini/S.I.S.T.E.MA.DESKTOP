@@ -17,6 +17,7 @@ Public Class home
     Dim nivel3AcessoParametro As Boolean = False
     Dim msgBoxResposta As Boolean
     Public apiOperationResposta As Boolean
+
 #Region "Declaração de variáveis usadas nas placeholdes"
     Dim altSenha As Boolean
     Dim controlePlace1 As Boolean
@@ -258,7 +259,6 @@ Public Class home
             FecharSubMenuScreenEBar(pnProximo)
 
             'No nivel 2, o pnProximo é a Barra dos Topics
-            pnLogo.Visible = False
             pnProximo.Visible = True
             pnToOpenScreen.Visible = True
 
@@ -277,8 +277,10 @@ Public Class home
             pnAcessosOff.Refresh()
             pnAcessosByVend.Refresh()
             pnAcessosByData.Refresh()
+            pbAcessoLogo.Visible = False
 
             'FechaScreens
+            pbAcessoLogo.Visible = False
             pnAcessosAllScreen.Visible = False
             pnAcessosOnScreen.Visible = False
             pnAcessosOffScreen.Visible = False
@@ -550,6 +552,8 @@ Public Class home
 
     Private Sub lbAcessosAll_Click(sender As Object, e As EventArgs) Handles lbAcessosAll.Click
         navegacaoMenu(3, pnAcessosAll, pnAcessosAllScreen)
+        Dim myUri As New Uri("http://sistemaifrj.herokuapp.com/acessos/")
+        recebimentoTodosAcessos(myUri, "application/json", "GET")
     End Sub
 
     Private Sub lbAcessosOn_Click(sender As Object, e As EventArgs) Handles lbAcessosOn.Click

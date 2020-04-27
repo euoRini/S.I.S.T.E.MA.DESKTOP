@@ -22,6 +22,7 @@ Partial Class home
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
         Me.pnBarraSuperior = New System.Windows.Forms.Panel()
         Me.Panel18 = New System.Windows.Forms.Panel()
@@ -248,11 +249,6 @@ Partial Class home
         Me.tbVendDelBusca = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.pnVendAcessoScreen = New System.Windows.Forms.Panel()
-        Me.pnAcessosAllScreen = New System.Windows.Forms.Panel()
-        Me.pnAcessosOnScreen = New System.Windows.Forms.Panel()
-        Me.pnAcessosOffScreen = New System.Windows.Forms.Panel()
-        Me.pnAcessosByVendScreen = New System.Windows.Forms.Panel()
-        Me.pnAcessosByDataScreen = New System.Windows.Forms.Panel()
         Me.pnVendAcessoNaveg = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.pnAcessosByData = New System.Windows.Forms.Panel()
@@ -267,10 +263,17 @@ Partial Class home
         Me.pnAcessosOn = New System.Windows.Forms.Panel()
         Me.lbAcessosOn = New System.Windows.Forms.Label()
         Me.pnAcessosParametroBusca = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.tbAcessosByMat = New System.Windows.Forms.TextBox()
         Me.dtpAcessosByData = New System.Windows.Forms.DateTimePicker()
+        Me.tbAcessosByMat = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.pnAcessosByVendScreen = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.pnAcessosAllScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosOnScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosOffScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosByDataScreen = New System.Windows.Forms.Panel()
+        Me.dgwAcessosAll = New System.Windows.Forms.DataGridView()
+        Me.pbAcessoLogo = New System.Windows.Forms.PictureBox()
         Me.pnBarraSuperior.SuspendLayout()
         Me.pnMinimizar.SuspendLayout()
         CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -362,7 +365,6 @@ Partial Class home
         CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnVendAcessoScreen.SuspendLayout()
-        Me.pnAcessosByVendScreen.SuspendLayout()
         Me.pnVendAcessoNaveg.SuspendLayout()
         Me.pnAcessosByData.SuspendLayout()
         Me.pnAcessosByVend.SuspendLayout()
@@ -370,7 +372,11 @@ Partial Class home
         Me.pnAcessosOff.SuspendLayout()
         Me.pnAcessosOn.SuspendLayout()
         Me.pnAcessosParametroBusca.SuspendLayout()
+        Me.pnAcessosByVendScreen.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnAcessosAllScreen.SuspendLayout()
+        CType(Me.dgwAcessosAll, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbAcessoLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnBarraSuperior
@@ -2869,10 +2875,11 @@ Partial Class home
         '
         'pnVendAcessoScreen
         '
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosAllScreen)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pbAcessoLogo)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnVendAcessoNaveg)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosParametroBusca)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByVendScreen)
-        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosAllScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosOnScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosOffScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByDataScreen)
@@ -2881,42 +2888,6 @@ Partial Class home
         Me.pnVendAcessoScreen.Size = New System.Drawing.Size(655, 436)
         Me.pnVendAcessoScreen.TabIndex = 48
         Me.pnVendAcessoScreen.Visible = False
-        '
-        'pnAcessosAllScreen
-        '
-        Me.pnAcessosAllScreen.Location = New System.Drawing.Point(0, 25)
-        Me.pnAcessosAllScreen.Name = "pnAcessosAllScreen"
-        Me.pnAcessosAllScreen.Size = New System.Drawing.Size(655, 412)
-        Me.pnAcessosAllScreen.TabIndex = 2
-        '
-        'pnAcessosOnScreen
-        '
-        Me.pnAcessosOnScreen.Location = New System.Drawing.Point(0, 25)
-        Me.pnAcessosOnScreen.Name = "pnAcessosOnScreen"
-        Me.pnAcessosOnScreen.Size = New System.Drawing.Size(655, 412)
-        Me.pnAcessosOnScreen.TabIndex = 2
-        '
-        'pnAcessosOffScreen
-        '
-        Me.pnAcessosOffScreen.Location = New System.Drawing.Point(0, 25)
-        Me.pnAcessosOffScreen.Name = "pnAcessosOffScreen"
-        Me.pnAcessosOffScreen.Size = New System.Drawing.Size(655, 412)
-        Me.pnAcessosOffScreen.TabIndex = 2
-        '
-        'pnAcessosByVendScreen
-        '
-        Me.pnAcessosByVendScreen.Controls.Add(Me.DataGridView1)
-        Me.pnAcessosByVendScreen.Location = New System.Drawing.Point(0, 25)
-        Me.pnAcessosByVendScreen.Name = "pnAcessosByVendScreen"
-        Me.pnAcessosByVendScreen.Size = New System.Drawing.Size(655, 412)
-        Me.pnAcessosByVendScreen.TabIndex = 2
-        '
-        'pnAcessosByDataScreen
-        '
-        Me.pnAcessosByDataScreen.Location = New System.Drawing.Point(0, 25)
-        Me.pnAcessosByDataScreen.Name = "pnAcessosByDataScreen"
-        Me.pnAcessosByDataScreen.Size = New System.Drawing.Size(655, 412)
-        Me.pnAcessosByDataScreen.TabIndex = 1
         '
         'pnVendAcessoNaveg
         '
@@ -3062,6 +3033,21 @@ Partial Class home
         Me.pnAcessosParametroBusca.Size = New System.Drawing.Size(262, 0)
         Me.pnAcessosParametroBusca.TabIndex = 47
         '
+        'dtpAcessosByData
+        '
+        Me.dtpAcessosByData.Location = New System.Drawing.Point(5, 3)
+        Me.dtpAcessosByData.Name = "dtpAcessosByData"
+        Me.dtpAcessosByData.Size = New System.Drawing.Size(170, 20)
+        Me.dtpAcessosByData.TabIndex = 0
+        '
+        'tbAcessosByMat
+        '
+        Me.tbAcessosByMat.Location = New System.Drawing.Point(5, 3)
+        Me.tbAcessosByMat.Name = "tbAcessosByMat"
+        Me.tbAcessosByMat.Size = New System.Drawing.Size(170, 20)
+        Me.tbAcessosByMat.TabIndex = 0
+        Me.tbAcessosByMat.Text = "Matrícula"
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.White
@@ -3076,20 +3062,13 @@ Partial Class home
         Me.Button1.Text = "Localizar"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'tbAcessosByMat
+        'pnAcessosByVendScreen
         '
-        Me.tbAcessosByMat.Location = New System.Drawing.Point(5, 3)
-        Me.tbAcessosByMat.Name = "tbAcessosByMat"
-        Me.tbAcessosByMat.Size = New System.Drawing.Size(170, 20)
-        Me.tbAcessosByMat.TabIndex = 0
-        Me.tbAcessosByMat.Text = "Matrícula"
-        '
-        'dtpAcessosByData
-        '
-        Me.dtpAcessosByData.Location = New System.Drawing.Point(5, 3)
-        Me.dtpAcessosByData.Name = "dtpAcessosByData"
-        Me.dtpAcessosByData.Size = New System.Drawing.Size(170, 20)
-        Me.dtpAcessosByData.TabIndex = 0
+        Me.pnAcessosByVendScreen.Controls.Add(Me.DataGridView1)
+        Me.pnAcessosByVendScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosByVendScreen.Name = "pnAcessosByVendScreen"
+        Me.pnAcessosByVendScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosByVendScreen.TabIndex = 2
         '
         'DataGridView1
         '
@@ -3098,6 +3077,64 @@ Partial Class home
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(614, 375)
         Me.DataGridView1.TabIndex = 0
+        '
+        'pnAcessosAllScreen
+        '
+        Me.pnAcessosAllScreen.Controls.Add(Me.dgwAcessosAll)
+        Me.pnAcessosAllScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosAllScreen.Name = "pnAcessosAllScreen"
+        Me.pnAcessosAllScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosAllScreen.TabIndex = 2
+        '
+        'pnAcessosOnScreen
+        '
+        Me.pnAcessosOnScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosOnScreen.Name = "pnAcessosOnScreen"
+        Me.pnAcessosOnScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosOnScreen.TabIndex = 2
+        '
+        'pnAcessosOffScreen
+        '
+        Me.pnAcessosOffScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosOffScreen.Name = "pnAcessosOffScreen"
+        Me.pnAcessosOffScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosOffScreen.TabIndex = 2
+        '
+        'pnAcessosByDataScreen
+        '
+        Me.pnAcessosByDataScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosByDataScreen.Name = "pnAcessosByDataScreen"
+        Me.pnAcessosByDataScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosByDataScreen.TabIndex = 1
+        '
+        'dgwAcessosAll
+        '
+        Me.dgwAcessosAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgwAcessosAll.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwAcessosAll.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgwAcessosAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgwAcessosAll.GridColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgwAcessosAll.Location = New System.Drawing.Point(20, 19)
+        Me.dgwAcessosAll.Name = "dgwAcessosAll"
+        Me.dgwAcessosAll.Size = New System.Drawing.Size(614, 375)
+        Me.dgwAcessosAll.TabIndex = 1
+        '
+        'pbAcessoLogo
+        '
+        Me.pbAcessoLogo.Image = Global.S.I.S.T.E.MA.My.Resources.Resources.imgLogoCirculo
+        Me.pbAcessoLogo.Location = New System.Drawing.Point(0, 26)
+        Me.pbAcessoLogo.Name = "pbAcessoLogo"
+        Me.pbAcessoLogo.Size = New System.Drawing.Size(655, 412)
+        Me.pbAcessoLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbAcessoLogo.TabIndex = 48
+        Me.pbAcessoLogo.TabStop = False
         '
         'home
         '
@@ -3231,7 +3268,6 @@ Partial Class home
         CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnVendAcessoScreen.ResumeLayout(False)
-        Me.pnAcessosByVendScreen.ResumeLayout(False)
         Me.pnVendAcessoNaveg.ResumeLayout(False)
         Me.pnAcessosByData.ResumeLayout(False)
         Me.pnAcessosByData.PerformLayout()
@@ -3245,7 +3281,11 @@ Partial Class home
         Me.pnAcessosOn.PerformLayout()
         Me.pnAcessosParametroBusca.ResumeLayout(False)
         Me.pnAcessosParametroBusca.PerformLayout()
+        Me.pnAcessosByVendScreen.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnAcessosAllScreen.ResumeLayout(False)
+        CType(Me.dgwAcessosAll, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbAcessoLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3498,4 +3538,6 @@ Partial Class home
     Friend WithEvents tbAcessosByMat As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgwAcessosAll As DataGridView
+    Friend WithEvents pbAcessoLogo As PictureBox
 End Class
