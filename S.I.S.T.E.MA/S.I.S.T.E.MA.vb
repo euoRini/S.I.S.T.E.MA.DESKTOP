@@ -14,6 +14,7 @@ Public Class home
     Dim relatAtivo As Boolean = False
     Dim prodAtivo As Boolean = False
     Dim infoAtivo As Boolean = False
+    Dim nivel3AcessoParametro As Boolean = False
     Dim msgBoxResposta As Boolean
     Public apiOperationResposta As Boolean
 #Region "Declaração de variáveis usadas nas placeholdes"
@@ -47,6 +48,9 @@ Public Class home
             brightMode = True
             pbBrightMode.Image = My.Resources.imgMoonIcon
         Else
+            corFundo = 32
+            corMedia = 56
+            corTexto = 200
             brightMode = False
             pbBrightMode.Image = My.Resources.imgSunIcon
         End If
@@ -122,9 +126,9 @@ Public Class home
     Public pnAnterior, pnAnteriorAux, pnProximoAux, pnSubAnterior, pnSubProximo As Panel
     Sub navegacaoMenu(nivel As Integer, pnProximo As Panel, pnToOpenScreen As Panel)
 
-        FecharSubMenuScreenEBar(pnProximo)
-
         If nivel = 1 Then
+
+            FecharSubMenuScreenEBar(pnProximo)
 
             'Todo ".Refresh" atualiza o panel para evitar bug visual
 
@@ -144,7 +148,7 @@ Public Class home
             ElseIf pnAnterior.Name = "pnVend" Then
                 pnAnteriorAux = pnVendAux
                 pnSubAnterior = pnSubMenuVend
-                SizeClose = 132
+                SizeClose = 100
             ElseIf pnAnterior.Name = "pnProd" Then
                 pnAnteriorAux = pnProdAux
 
@@ -174,7 +178,7 @@ Public Class home
             ElseIf pnProximo.Name = "pnVend" Then
                 pnProximoAux = pnVendAux
                 pnSubProximo = pnSubMenuVend
-                SizeOpen = 132
+                SizeOpen = 100
             ElseIf pnProximo.Name = "pnProd" Then
                 pnProximoAux = pnProdAux
 
@@ -198,8 +202,15 @@ Public Class home
                         If pnSubAnterior.Height = 1 Then
                             pnSubAnterior.Height -= 1
                         End If
+
                     ElseIf SizeClose = 132 Then
                         pnSubAnterior.Height -= 12
+
+                    ElseIf SizeClose = 100 Then
+                        pnSubAnterior.Height -= 9
+                        If pnSubAnterior.Height = 1 Then
+                            pnSubAnterior.Height -= 1
+                        End If
                     End If
                     pnSubAnterior.Refresh()
                     System.Threading.Thread.Sleep(5)
@@ -208,7 +219,7 @@ Public Class home
 
             'Animação Menu Principal
             '64 = Tamanho Width do panel do Menu Principal
-            'pnProximo.Width cresce no mesmo ritmo que pnAnterior diminui
+            'pnProximo.Width cresce no mesmo ritmo que pnAnterior.Width diminui
             While pnProximo.Width < 64
                 pnProximo.Width = pnProximo.Width + 4
                 pnAnterior.Width = pnAnterior.Width - 4
@@ -224,12 +235,14 @@ Public Class home
                 While pnSubProximo.Height < SizeOpen
                     If SizeOpen = 67 Then
                         pnSubProximo.Height += 6
-                        If pnSubProximo.Height = (SizeOpen - 1) Then
+                        If pnSubProximo.Height = 66 Then
                             pnSubProximo.Height += 1
                         End If
                     ElseIf SizeOpen = 132 Then
                         pnSubProximo.Height += 12
-                        If pnSubProximo.Height = (2 * SizeOpen - 1) Then
+                    ElseIf SizeOpen = 100 Then
+                        pnSubProximo.Height += 9
+                        If pnSubProximo.Height = 99 Then
                             pnSubProximo.Height += 1
                         End If
                     End If
@@ -238,15 +251,71 @@ Public Class home
                 End While
             End If
 
-            'Caso pnProximo seja a Home, troca a tela para logo maior
 
-        End If
-        If nivel = 2 Then
+
+        ElseIf nivel = 2 Then
+
+            FecharSubMenuScreenEBar(pnProximo)
 
             'No nivel 2, o pnProximo é a Barra dos Topics
             pnLogo.Visible = False
             pnProximo.Visible = True
             pnToOpenScreen.Visible = True
+
+
+        ElseIf nivel = 3 Then
+
+            'Retira Cor
+            pnAcessosAll.BackColor = Color.FromArgb(corFundo, corFundo, corFundo)
+            pnAcessosOn.BackColor = Color.FromArgb(corFundo, corFundo, corFundo)
+            pnAcessosOff.BackColor = Color.FromArgb(corFundo, corFundo, corFundo)
+            pnAcessosByVend.BackColor = Color.FromArgb(corFundo, corFundo, corFundo)
+            pnAcessosByData.BackColor = Color.FromArgb(corFundo, corFundo, corFundo)
+            pnProximo.BackColor = Color.FromArgb(corMedia, corMedia, corMedia)
+            pnAcessosAll.Refresh()
+            pnAcessosOn.Refresh()
+            pnAcessosOff.Refresh()
+            pnAcessosByVend.Refresh()
+            pnAcessosByData.Refresh()
+
+            'FechaScreens
+            pnAcessosAllScreen.Visible = False
+            pnAcessosOnScreen.Visible = False
+            pnAcessosOffScreen.Visible = False
+            pnAcessosByVendScreen.Visible = False
+            pnAcessosByDataScreen.Visible = False
+            pnToOpenScreen.Visible = True
+
+            If nivel3AcessoParametro Then
+                While pnAcessosParametroBusca.Height > 0
+                    pnAcessosParametroBusca.Height -= 1
+
+                    pnAcessosParametroBusca.Refresh()
+                    pnAcessosByData.Refresh()
+                    pnAcessosByVend.Refresh()
+                    pnProximo.Refresh()
+                End While
+            End If
+
+            If pnProximo.Name.Contains("By") Then
+                If pnProximo.Name.Contains("Data") Then
+                    tbAcessosByMat.Visible = False
+                    dtpAcessosByData.Visible = True
+                Else
+                    tbAcessosByMat.Visible = True
+                    dtpAcessosByData.Visible = False
+                End If
+                nivel3AcessoParametro = True
+                While pnAcessosParametroBusca.Height < 26
+                    pnAcessosParametroBusca.Height += 1
+                    pnAcessosParametroBusca.Refresh()
+                    pnAcessosByData.Refresh()
+                    pnAcessosByVend.Refresh()
+                    pnProximo.Refresh()
+                End While
+            Else
+                nivel3AcessoParametro = False
+            End If
 
         End If
     End Sub
@@ -308,8 +377,7 @@ Public Class home
         pnCartaoDevScreen.Visible = False
         pnVendAddScreen.Visible = False
         pnVendDelScreen.Visible = False
-        pnVendReqScreen.Visible = False
-        pnVendOnScreen.Visible = False
+        pnVendAcessoScreen.Visible = False
         pnHomeTela.Visible = True
         'Fecha Bars Submenu
         pnAdmTopicAddBar.Visible = False
@@ -321,7 +389,6 @@ Public Class home
         pnVendTopicAddBar.Visible = False
         pnVendTopicDelBar.Visible = False
         pnVendTopicReqBar.Visible = False
-        pnVendTopicOnBar.Visible = False
     End Sub
 
 
@@ -465,23 +532,63 @@ Public Class home
         navegacaoMenu(2, pnVendTopicDelBar, pnVendDelScreen)
     End Sub
 
-    Private Sub lbVendTopicReq_Click(sender As Object, e As EventArgs) Handles lbVendTopicReq.Click
-        navegacaoMenu(2, pnVendTopicReqBar, pnVendReqScreen)
+    Private Sub lbVendTopicReq_Click(sender As Object, e As EventArgs) Handles lbVendTopicAcesso.Click
+        navegacaoMenu(2, pnVendTopicReqBar, pnVendAcessoScreen)
     End Sub
 
-    Private Sub pnVendTopicReq_Click(sender As Object, e As EventArgs) Handles pnVendTopicReq.Click
+    Private Sub pnVendTopicReq_Click(sender As Object, e As EventArgs) Handles pnVendTopicAcesso.Click
         lbVendTopicReq_Click(sender, e)
     End Sub
 
-    Private Sub lbVendTopicOn_Click(sender As Object, e As EventArgs) Handles lbVendTopicOn.Click
-        navegacaoMenu(2, pnVendTopicOnBar, pnVendReqScreen)
-    End Sub
 
-    Private Sub pnVendTopicOn_Click(sender As Object, e As EventArgs) Handles pnVendTopicOn.Click
-        lbVendTopicOn_Click(sender, e)
-    End Sub
+
 #End Region
 
+#End Region
+
+#Region "Botoes Nivel3"
+
+    Private Sub lbAcessosAll_Click(sender As Object, e As EventArgs) Handles lbAcessosAll.Click
+        navegacaoMenu(3, pnAcessosAll, pnAcessosAllScreen)
+    End Sub
+
+    Private Sub lbAcessosOn_Click(sender As Object, e As EventArgs) Handles lbAcessosOn.Click
+        navegacaoMenu(3, pnAcessosOn, pnAcessosOnScreen)
+    End Sub
+
+
+
+    Private Sub lbAcessosOff_Click(sender As Object, e As EventArgs) Handles lbAcessosOff.Click
+        navegacaoMenu(3, pnAcessosOff, pnAcessosOffScreen)
+    End Sub
+
+
+    Private Sub lbAcessosByVend_Click(sender As Object, e As EventArgs) Handles lbAcessosByVend.Click
+        navegacaoMenu(3, pnAcessosByVend, pnAcessosByVendScreen)
+    End Sub
+
+
+    Private Sub lbAcessosByData_Click(sender As Object, e As EventArgs) Handles lbAcessosByData.Click
+        navegacaoMenu(3, pnAcessosByData, pnAcessosByDataScreen)
+    End Sub
+
+    Private Sub pnAcessosAll_click(sender As Object, e As EventArgs) Handles pnAcessosAll.Click
+        lbAcessosAll_Click(sender, e)
+    End Sub
+    Private Sub pnAcessosOn_click(sender As Object, e As EventArgs) Handles pnAcessosOn.Click
+        lbAcessosOn_Click(sender, e)
+    End Sub
+
+    Private Sub pnAcessosOff_click(sender As Object, e As EventArgs) Handles pnAcessosOff.Click
+        lbAcessosOff_Click(sender, e)
+    End Sub
+    Private Sub pnAcessosByVend_click(sender As Object, e As EventArgs) Handles pnAcessosByVend.Click
+        lbAcessosByVend_Click(sender, e)
+    End Sub
+
+    Private Sub pnAcessosByData_click(sender As Object, e As EventArgs) Handles pnAcessosByData.Click
+        lbAcessosByData_Click(sender, e)
+    End Sub
 #End Region
 
 #End Region
@@ -524,9 +631,9 @@ Public Class home
     Private Sub btAdmDelApagar_Click(sender As Object, e As EventArgs) Handles btAdmDelApagar.Click
         Dim myUri As String
         If cbAdmDellBy.Text = "Login" Then
-            myUri = routerAdmLocalizarGET & "l/"
+            myUri = routerAdm & "l/"
         ElseIf cbAdmDellBy.Text = "E-mail" Then
-            myUri = routerAdmLocalizarGET & "e/"
+            myUri = routerAdm & "e/"
         End If
         If MsgBox("Deseja prosseguir com a exclusão do Administrador " & tbAdmDelNome.Text & "?", vbYesNo) = MsgBoxResult.Yes Then
             delete(tbAdmDelBusca.Text, myUri)
@@ -567,7 +674,7 @@ Public Class home
     End Sub
 
     Private Sub btCartaoDelApagar_Click(sender As Object, e As EventArgs) Handles btCartaoDelApagar.Click
-        Dim myUri As String = routerUserDeletarDELETE
+        Dim myUri As String = routerUser
         delete(tbCartaoDelBusca.Text, myUri)
     End Sub
 
@@ -694,9 +801,9 @@ Public Class home
     Private Sub btVendDelApagar_Click(sender As Object, e As EventArgs) Handles btVendDelApagar.Click
         Dim myUri As String
         If cbVendDellBy.Text = "Login" Then
-            myUri = routerVendDeletarDELETE & "l/"
+            myUri = routerVend & "l/"
         ElseIf cbVendDellBy.Text = "E-mail" Then
-            myUri = routerVendDeletarDELETE & "e/"
+            myUri = routerVend & "e/"
         End If
         If MsgBox("Deseja prosseguir com a exclusão do Vendedor " & tbAdmDelNome.Text & "?", vbYesNo) = MsgBoxResult.Yes Then
             delete(tbVendDelBusca.Text, myUri)
@@ -2331,5 +2438,6 @@ Public Class home
 
 
 #End Region
+
 
 End Class

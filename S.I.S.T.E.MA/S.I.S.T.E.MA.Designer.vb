@@ -38,12 +38,9 @@ Partial Class home
         Me.pnAdmTopicAddBar = New System.Windows.Forms.Panel()
         Me.lbAdmTopicAdd = New System.Windows.Forms.Label()
         Me.pnSubMenuVend = New System.Windows.Forms.Panel()
-        Me.pnVendTopicOn = New System.Windows.Forms.Panel()
-        Me.pnVendTopicOnBar = New System.Windows.Forms.Panel()
-        Me.lbVendTopicOn = New System.Windows.Forms.Label()
-        Me.pnVendTopicReq = New System.Windows.Forms.Panel()
+        Me.pnVendTopicAcesso = New System.Windows.Forms.Panel()
         Me.pnVendTopicReqBar = New System.Windows.Forms.Panel()
-        Me.lbVendTopicReq = New System.Windows.Forms.Label()
+        Me.lbVendTopicAcesso = New System.Windows.Forms.Label()
         Me.pnVendTopicDel = New System.Windows.Forms.Panel()
         Me.pnVendTopicDelBar = New System.Windows.Forms.Panel()
         Me.lbVendTopicDel = New System.Windows.Forms.Label()
@@ -250,38 +247,30 @@ Partial Class home
         Me.btVendDelBusca = New System.Windows.Forms.Button()
         Me.tbVendDelBusca = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.pnVendReqScreen = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.FlowLayoutPanel17 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel18 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel19 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
-        Me.FlowLayoutPanel20 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
+        Me.pnVendAcessoScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosAllScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosOnScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosOffScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosByVendScreen = New System.Windows.Forms.Panel()
+        Me.pnAcessosByDataScreen = New System.Windows.Forms.Panel()
+        Me.pnVendAcessoNaveg = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.pnAcessosByData = New System.Windows.Forms.Panel()
+        Me.lbAcessosByData = New System.Windows.Forms.Label()
+        Me.pnAcessosByVend = New System.Windows.Forms.Panel()
+        Me.lbAcessosByVend = New System.Windows.Forms.Label()
+        Me.pnAcessosAll = New System.Windows.Forms.Panel()
+        Me.lbAcessosAll = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.pnVendOnScreen = New System.Windows.Forms.Panel()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.FlowLayoutPanel21 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel22 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel23 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.PictureBox37 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
-        Me.FlowLayoutPanel24 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.pnAcessosOff = New System.Windows.Forms.Panel()
+        Me.lbAcessosOff = New System.Windows.Forms.Label()
+        Me.pnAcessosOn = New System.Windows.Forms.Panel()
+        Me.lbAcessosOn = New System.Windows.Forms.Label()
+        Me.pnAcessosParametroBusca = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tbAcessosByMat = New System.Windows.Forms.TextBox()
+        Me.dtpAcessosByData = New System.Windows.Forms.DateTimePicker()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.pnBarraSuperior.SuspendLayout()
         Me.pnMinimizar.SuspendLayout()
         CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -292,8 +281,7 @@ Partial Class home
         Me.pnAdmTopicDel.SuspendLayout()
         Me.pnAddTopicAdd.SuspendLayout()
         Me.pnSubMenuVend.SuspendLayout()
-        Me.pnVendTopicOn.SuspendLayout()
-        Me.pnVendTopicReq.SuspendLayout()
+        Me.pnVendTopicAcesso.SuspendLayout()
         Me.pnVendTopicDel.SuspendLayout()
         Me.pnVendTopicAdd.SuspendLayout()
         Me.pnSubMenuCartao.SuspendLayout()
@@ -373,16 +361,16 @@ Partial Class home
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnVendReqScreen.SuspendLayout()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnVendOnScreen.SuspendLayout()
-        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnVendAcessoScreen.SuspendLayout()
+        Me.pnAcessosByVendScreen.SuspendLayout()
+        Me.pnVendAcessoNaveg.SuspendLayout()
+        Me.pnAcessosByData.SuspendLayout()
+        Me.pnAcessosByVend.SuspendLayout()
+        Me.pnAcessosAll.SuspendLayout()
+        Me.pnAcessosOff.SuspendLayout()
+        Me.pnAcessosOn.SuspendLayout()
+        Me.pnAcessosParametroBusca.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnBarraSuperior
@@ -400,7 +388,7 @@ Partial Class home
         Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
         Me.Panel18.Location = New System.Drawing.Point(-6, 20)
         Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(884, 1)
+        Me.Panel18.Size = New System.Drawing.Size(890, 1)
         Me.Panel18.TabIndex = 45
         '
         'pnMinimizar
@@ -540,54 +528,23 @@ Partial Class home
         'pnSubMenuVend
         '
         Me.pnSubMenuVend.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
-        Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicOn)
-        Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicReq)
+        Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicAcesso)
         Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicDel)
         Me.pnSubMenuVend.Controls.Add(Me.pnVendTopicAdd)
-        Me.pnSubMenuVend.Location = New System.Drawing.Point(64, 157)
+        Me.pnSubMenuVend.Location = New System.Drawing.Point(64, 171)
         Me.pnSubMenuVend.Name = "pnSubMenuVend"
         Me.pnSubMenuVend.Size = New System.Drawing.Size(166, 0)
         Me.pnSubMenuVend.TabIndex = 7
         '
-        'pnVendTopicOn
+        'pnVendTopicAcesso
         '
-        Me.pnVendTopicOn.Controls.Add(Me.pnVendTopicOnBar)
-        Me.pnVendTopicOn.Controls.Add(Me.lbVendTopicOn)
-        Me.pnVendTopicOn.Location = New System.Drawing.Point(0, 99)
-        Me.pnVendTopicOn.Name = "pnVendTopicOn"
-        Me.pnVendTopicOn.Size = New System.Drawing.Size(166, 34)
-        Me.pnVendTopicOn.TabIndex = 6
-        '
-        'pnVendTopicOnBar
-        '
-        Me.pnVendTopicOnBar.BackColor = System.Drawing.Color.White
-        Me.pnVendTopicOnBar.Location = New System.Drawing.Point(160, 0)
-        Me.pnVendTopicOnBar.Name = "pnVendTopicOnBar"
-        Me.pnVendTopicOnBar.Size = New System.Drawing.Size(6, 34)
-        Me.pnVendTopicOnBar.TabIndex = 4
-        Me.pnVendTopicOnBar.Visible = False
-        '
-        'lbVendTopicOn
-        '
-        Me.lbVendTopicOn.AutoSize = True
-        Me.lbVendTopicOn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbVendTopicOn.ForeColor = System.Drawing.Color.White
-        Me.lbVendTopicOn.Location = New System.Drawing.Point(6, 7)
-        Me.lbVendTopicOn.Name = "lbVendTopicOn"
-        Me.lbVendTopicOn.Size = New System.Drawing.Size(70, 20)
-        Me.lbVendTopicOn.TabIndex = 0
-        Me.lbVendTopicOn.Text = "Ativados"
-        '
-        'pnVendTopicReq
-        '
-        Me.pnVendTopicReq.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pnVendTopicReq.Controls.Add(Me.pnVendTopicReqBar)
-        Me.pnVendTopicReq.Controls.Add(Me.lbVendTopicReq)
-        Me.pnVendTopicReq.Enabled = False
-        Me.pnVendTopicReq.Location = New System.Drawing.Point(0, 66)
-        Me.pnVendTopicReq.Name = "pnVendTopicReq"
-        Me.pnVendTopicReq.Size = New System.Drawing.Size(166, 34)
-        Me.pnVendTopicReq.TabIndex = 5
+        Me.pnVendTopicAcesso.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnVendTopicAcesso.Controls.Add(Me.pnVendTopicReqBar)
+        Me.pnVendTopicAcesso.Controls.Add(Me.lbVendTopicAcesso)
+        Me.pnVendTopicAcesso.Location = New System.Drawing.Point(0, 66)
+        Me.pnVendTopicAcesso.Name = "pnVendTopicAcesso"
+        Me.pnVendTopicAcesso.Size = New System.Drawing.Size(166, 34)
+        Me.pnVendTopicAcesso.TabIndex = 5
         '
         'pnVendTopicReqBar
         '
@@ -598,16 +555,16 @@ Partial Class home
         Me.pnVendTopicReqBar.TabIndex = 4
         Me.pnVendTopicReqBar.Visible = False
         '
-        'lbVendTopicReq
+        'lbVendTopicAcesso
         '
-        Me.lbVendTopicReq.AutoSize = True
-        Me.lbVendTopicReq.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbVendTopicReq.ForeColor = System.Drawing.Color.White
-        Me.lbVendTopicReq.Location = New System.Drawing.Point(6, 7)
-        Me.lbVendTopicReq.Name = "lbVendTopicReq"
-        Me.lbVendTopicReq.Size = New System.Drawing.Size(94, 20)
-        Me.lbVendTopicReq.TabIndex = 0
-        Me.lbVendTopicReq.Text = "Solicitações"
+        Me.lbVendTopicAcesso.AutoSize = True
+        Me.lbVendTopicAcesso.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbVendTopicAcesso.ForeColor = System.Drawing.Color.White
+        Me.lbVendTopicAcesso.Location = New System.Drawing.Point(6, 7)
+        Me.lbVendTopicAcesso.Name = "lbVendTopicAcesso"
+        Me.lbVendTopicAcesso.Size = New System.Drawing.Size(70, 20)
+        Me.lbVendTopicAcesso.TabIndex = 0
+        Me.lbVendTopicAcesso.Text = "Acessos"
         '
         'pnVendTopicDel
         '
@@ -2910,361 +2867,237 @@ Partial Class home
         Me.Label8.TabIndex = 43
         Me.Label8.Text = "Exclusão de Vendedores"
         '
-        'pnVendReqScreen
+        'pnVendAcessoScreen
         '
-        Me.pnVendReqScreen.Controls.Add(Me.Button8)
-        Me.pnVendReqScreen.Controls.Add(Me.Button9)
-        Me.pnVendReqScreen.Controls.Add(Me.FlowLayoutPanel17)
-        Me.pnVendReqScreen.Controls.Add(Me.FlowLayoutPanel18)
-        Me.pnVendReqScreen.Controls.Add(Me.FlowLayoutPanel19)
-        Me.pnVendReqScreen.Controls.Add(Me.TextBox13)
-        Me.pnVendReqScreen.Controls.Add(Me.TextBox14)
-        Me.pnVendReqScreen.Controls.Add(Me.TextBox15)
-        Me.pnVendReqScreen.Controls.Add(Me.PictureBox33)
-        Me.pnVendReqScreen.Controls.Add(Me.PictureBox34)
-        Me.pnVendReqScreen.Controls.Add(Me.PictureBox35)
-        Me.pnVendReqScreen.Controls.Add(Me.FlowLayoutPanel20)
-        Me.pnVendReqScreen.Controls.Add(Me.TextBox16)
-        Me.pnVendReqScreen.Controls.Add(Me.PictureBox36)
-        Me.pnVendReqScreen.Controls.Add(Me.Label9)
-        Me.pnVendReqScreen.Location = New System.Drawing.Point(229, 21)
-        Me.pnVendReqScreen.Name = "pnVendReqScreen"
-        Me.pnVendReqScreen.Size = New System.Drawing.Size(655, 436)
-        Me.pnVendReqScreen.TabIndex = 48
-        Me.pnVendReqScreen.Visible = False
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnVendAcessoNaveg)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosParametroBusca)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByVendScreen)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosAllScreen)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosOnScreen)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosOffScreen)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByDataScreen)
+        Me.pnVendAcessoScreen.Location = New System.Drawing.Point(229, 21)
+        Me.pnVendAcessoScreen.Name = "pnVendAcessoScreen"
+        Me.pnVendAcessoScreen.Size = New System.Drawing.Size(655, 436)
+        Me.pnVendAcessoScreen.TabIndex = 48
+        Me.pnVendAcessoScreen.Visible = False
         '
-        'Button8
+        'pnAcessosAllScreen
         '
-        Me.Button8.BackColor = System.Drawing.Color.Gray
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(266, 349)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(144, 35)
-        Me.Button8.TabIndex = 44
-        Me.Button8.Text = "Limpar"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.pnAcessosAllScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosAllScreen.Name = "pnAcessosAllScreen"
+        Me.pnAcessosAllScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosAllScreen.TabIndex = 2
         '
-        'Button9
+        'pnAcessosOnScreen
         '
-        Me.Button9.BackColor = System.Drawing.Color.White
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.Black
-        Me.Button9.Location = New System.Drawing.Point(430, 349)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(144, 35)
-        Me.Button9.TabIndex = 43
-        Me.Button9.Text = "Salvar"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.pnAcessosOnScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosOnScreen.Name = "pnAcessosOnScreen"
+        Me.pnAcessosOnScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosOnScreen.TabIndex = 2
         '
-        'FlowLayoutPanel17
+        'pnAcessosOffScreen
         '
-        Me.FlowLayoutPanel17.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel17.Location = New System.Drawing.Point(164, 323)
-        Me.FlowLayoutPanel17.Name = "FlowLayoutPanel17"
-        Me.FlowLayoutPanel17.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel17.TabIndex = 35
+        Me.pnAcessosOffScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosOffScreen.Name = "pnAcessosOffScreen"
+        Me.pnAcessosOffScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosOffScreen.TabIndex = 2
         '
-        'FlowLayoutPanel18
+        'pnAcessosByVendScreen
         '
-        Me.FlowLayoutPanel18.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel18.Location = New System.Drawing.Point(164, 267)
-        Me.FlowLayoutPanel18.Name = "FlowLayoutPanel18"
-        Me.FlowLayoutPanel18.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel18.TabIndex = 36
+        Me.pnAcessosByVendScreen.Controls.Add(Me.DataGridView1)
+        Me.pnAcessosByVendScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosByVendScreen.Name = "pnAcessosByVendScreen"
+        Me.pnAcessosByVendScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosByVendScreen.TabIndex = 2
         '
-        'FlowLayoutPanel19
+        'pnAcessosByDataScreen
         '
-        Me.FlowLayoutPanel19.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel19.Location = New System.Drawing.Point(164, 210)
-        Me.FlowLayoutPanel19.Name = "FlowLayoutPanel19"
-        Me.FlowLayoutPanel19.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel19.TabIndex = 34
+        Me.pnAcessosByDataScreen.Location = New System.Drawing.Point(0, 25)
+        Me.pnAcessosByDataScreen.Name = "pnAcessosByDataScreen"
+        Me.pnAcessosByDataScreen.Size = New System.Drawing.Size(655, 412)
+        Me.pnAcessosByDataScreen.TabIndex = 1
         '
-        'TextBox13
+        'pnVendAcessoNaveg
         '
-        Me.TextBox13.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.ForeColor = System.Drawing.Color.White
-        Me.TextBox13.Location = New System.Drawing.Point(164, 241)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox13.TabIndex = 41
-        Me.TextBox13.Text = "E-mail"
+        Me.pnVendAcessoNaveg.Controls.Add(Me.Panel5)
+        Me.pnVendAcessoNaveg.Controls.Add(Me.pnAcessosByData)
+        Me.pnVendAcessoNaveg.Controls.Add(Me.pnAcessosByVend)
+        Me.pnVendAcessoNaveg.Controls.Add(Me.pnAcessosAll)
+        Me.pnVendAcessoNaveg.Controls.Add(Me.pnAcessosOff)
+        Me.pnVendAcessoNaveg.Controls.Add(Me.pnAcessosOn)
+        Me.pnVendAcessoNaveg.Location = New System.Drawing.Point(0, 0)
+        Me.pnVendAcessoNaveg.Name = "pnVendAcessoNaveg"
+        Me.pnVendAcessoNaveg.Size = New System.Drawing.Size(655, 26)
+        Me.pnVendAcessoNaveg.TabIndex = 0
         '
-        'TextBox14
+        'Panel5
         '
-        Me.TextBox14.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.ForeColor = System.Drawing.Color.White
-        Me.TextBox14.Location = New System.Drawing.Point(164, 184)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox14.TabIndex = 39
-        Me.TextBox14.Text = "Nome"
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.Panel5.Location = New System.Drawing.Point(0, 25)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(884, 1)
+        Me.Panel5.TabIndex = 46
         '
-        'TextBox15
+        'pnAcessosByData
         '
-        Me.TextBox15.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox15.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.ForeColor = System.Drawing.Color.White
-        Me.TextBox15.Location = New System.Drawing.Point(164, 297)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox15.TabIndex = 42
-        Me.TextBox15.Text = "Saldo Inicial"
+        Me.pnAcessosByData.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnAcessosByData.Controls.Add(Me.lbAcessosByData)
+        Me.pnAcessosByData.Location = New System.Drawing.Point(524, 0)
+        Me.pnAcessosByData.Name = "pnAcessosByData"
+        Me.pnAcessosByData.Size = New System.Drawing.Size(131, 26)
+        Me.pnAcessosByData.TabIndex = 2
         '
-        'PictureBox33
+        'lbAcessosByData
         '
-        Me.PictureBox33.Location = New System.Drawing.Point(122, 172)
-        Me.PictureBox33.Name = "PictureBox33"
-        Me.PictureBox33.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox33.TabIndex = 40
-        Me.PictureBox33.TabStop = False
+        Me.lbAcessosByData.AutoSize = True
+        Me.lbAcessosByData.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbAcessosByData.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lbAcessosByData.Location = New System.Drawing.Point(22, 5)
+        Me.lbAcessosByData.Name = "lbAcessosByData"
+        Me.lbAcessosByData.Size = New System.Drawing.Size(91, 15)
+        Me.lbAcessosByData.TabIndex = 3
+        Me.lbAcessosByData.Text = "Acessos p/Data"
         '
-        'PictureBox34
+        'pnAcessosByVend
         '
-        Me.PictureBox34.Location = New System.Drawing.Point(122, 287)
-        Me.PictureBox34.Name = "PictureBox34"
-        Me.PictureBox34.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox34.TabIndex = 38
-        Me.PictureBox34.TabStop = False
+        Me.pnAcessosByVend.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnAcessosByVend.Controls.Add(Me.lbAcessosByVend)
+        Me.pnAcessosByVend.Location = New System.Drawing.Point(393, 0)
+        Me.pnAcessosByVend.Name = "pnAcessosByVend"
+        Me.pnAcessosByVend.Size = New System.Drawing.Size(131, 26)
+        Me.pnAcessosByVend.TabIndex = 2
         '
-        'PictureBox35
+        'lbAcessosByVend
         '
-        Me.PictureBox35.Location = New System.Drawing.Point(122, 229)
-        Me.PictureBox35.Name = "PictureBox35"
-        Me.PictureBox35.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox35.TabIndex = 37
-        Me.PictureBox35.TabStop = False
+        Me.lbAcessosByVend.AutoSize = True
+        Me.lbAcessosByVend.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbAcessosByVend.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lbAcessosByVend.Location = New System.Drawing.Point(5, 5)
+        Me.lbAcessosByVend.Name = "lbAcessosByVend"
+        Me.lbAcessosByVend.Size = New System.Drawing.Size(121, 15)
+        Me.lbAcessosByVend.TabIndex = 3
+        Me.lbAcessosByVend.Text = "Acessos p/ Vendedor"
         '
-        'FlowLayoutPanel20
+        'pnAcessosAll
         '
-        Me.FlowLayoutPanel20.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel20.Location = New System.Drawing.Point(164, 150)
-        Me.FlowLayoutPanel20.Name = "FlowLayoutPanel20"
-        Me.FlowLayoutPanel20.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel20.TabIndex = 32
+        Me.pnAcessosAll.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnAcessosAll.Controls.Add(Me.lbAcessosAll)
+        Me.pnAcessosAll.Controls.Add(Me.Label9)
+        Me.pnAcessosAll.Location = New System.Drawing.Point(0, 0)
+        Me.pnAcessosAll.Name = "pnAcessosAll"
+        Me.pnAcessosAll.Size = New System.Drawing.Size(131, 26)
+        Me.pnAcessosAll.TabIndex = 1
         '
-        'TextBox16
+        'lbAcessosAll
         '
-        Me.TextBox16.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox16.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.ForeColor = System.Drawing.Color.White
-        Me.TextBox16.Location = New System.Drawing.Point(164, 124)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox16.TabIndex = 31
-        Me.TextBox16.Text = "Matrícula"
-        '
-        'PictureBox36
-        '
-        Me.PictureBox36.Location = New System.Drawing.Point(122, 112)
-        Me.PictureBox36.Name = "PictureBox36"
-        Me.PictureBox36.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox36.TabIndex = 30
-        Me.PictureBox36.TabStop = False
+        Me.lbAcessosAll.AutoSize = True
+        Me.lbAcessosAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbAcessosAll.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lbAcessosAll.Location = New System.Drawing.Point(21, 5)
+        Me.lbAcessosAll.Name = "lbAcessosAll"
+        Me.lbAcessosAll.Size = New System.Drawing.Size(89, 15)
+        Me.lbAcessosAll.TabIndex = 2
+        Me.lbAcessosAll.Text = "Todos Acessos"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(213, 29)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(19, 5)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(61, 29)
-        Me.Label9.TabIndex = 29
-        Me.Label9.Text = "Req"
+        Me.Label9.Size = New System.Drawing.Size(89, 15)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "Todos Acessos"
         '
-        'pnVendOnScreen
+        'pnAcessosOff
         '
-        Me.pnVendOnScreen.Controls.Add(Me.Button10)
-        Me.pnVendOnScreen.Controls.Add(Me.Button11)
-        Me.pnVendOnScreen.Controls.Add(Me.FlowLayoutPanel21)
-        Me.pnVendOnScreen.Controls.Add(Me.FlowLayoutPanel22)
-        Me.pnVendOnScreen.Controls.Add(Me.FlowLayoutPanel23)
-        Me.pnVendOnScreen.Controls.Add(Me.TextBox17)
-        Me.pnVendOnScreen.Controls.Add(Me.TextBox18)
-        Me.pnVendOnScreen.Controls.Add(Me.TextBox19)
-        Me.pnVendOnScreen.Controls.Add(Me.PictureBox37)
-        Me.pnVendOnScreen.Controls.Add(Me.PictureBox38)
-        Me.pnVendOnScreen.Controls.Add(Me.PictureBox39)
-        Me.pnVendOnScreen.Controls.Add(Me.FlowLayoutPanel24)
-        Me.pnVendOnScreen.Controls.Add(Me.TextBox20)
-        Me.pnVendOnScreen.Controls.Add(Me.PictureBox40)
-        Me.pnVendOnScreen.Controls.Add(Me.Label10)
-        Me.pnVendOnScreen.Location = New System.Drawing.Point(229, 21)
-        Me.pnVendOnScreen.Name = "pnVendOnScreen"
-        Me.pnVendOnScreen.Size = New System.Drawing.Size(655, 436)
-        Me.pnVendOnScreen.TabIndex = 49
-        Me.pnVendOnScreen.Visible = False
+        Me.pnAcessosOff.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnAcessosOff.Controls.Add(Me.lbAcessosOff)
+        Me.pnAcessosOff.Location = New System.Drawing.Point(262, 0)
+        Me.pnAcessosOff.Name = "pnAcessosOff"
+        Me.pnAcessosOff.Size = New System.Drawing.Size(131, 26)
+        Me.pnAcessosOff.TabIndex = 2
         '
-        'Button10
+        'lbAcessosOff
         '
-        Me.Button10.BackColor = System.Drawing.Color.Gray
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(266, 349)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(144, 35)
-        Me.Button10.TabIndex = 44
-        Me.Button10.Text = "Limpar"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.lbAcessosOff.AutoSize = True
+        Me.lbAcessosOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbAcessosOff.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lbAcessosOff.Location = New System.Drawing.Point(20, 5)
+        Me.lbAcessosOff.Name = "lbAcessosOff"
+        Me.lbAcessosOff.Size = New System.Drawing.Size(96, 15)
+        Me.lbAcessosOff.TabIndex = 3
+        Me.lbAcessosOff.Text = "Acessos Inativos"
         '
-        'Button11
+        'pnAcessosOn
         '
-        Me.Button11.BackColor = System.Drawing.Color.White
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.Black
-        Me.Button11.Location = New System.Drawing.Point(430, 349)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(144, 35)
-        Me.Button11.TabIndex = 43
-        Me.Button11.Text = "Salvar"
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.pnAcessosOn.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.pnAcessosOn.Controls.Add(Me.lbAcessosOn)
+        Me.pnAcessosOn.Location = New System.Drawing.Point(131, 0)
+        Me.pnAcessosOn.Name = "pnAcessosOn"
+        Me.pnAcessosOn.Size = New System.Drawing.Size(131, 26)
+        Me.pnAcessosOn.TabIndex = 2
         '
-        'FlowLayoutPanel21
+        'lbAcessosOn
         '
-        Me.FlowLayoutPanel21.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel21.Location = New System.Drawing.Point(164, 323)
-        Me.FlowLayoutPanel21.Name = "FlowLayoutPanel21"
-        Me.FlowLayoutPanel21.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel21.TabIndex = 35
+        Me.lbAcessosOn.AutoSize = True
+        Me.lbAcessosOn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbAcessosOn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lbAcessosOn.Location = New System.Drawing.Point(24, 5)
+        Me.lbAcessosOn.Name = "lbAcessosOn"
+        Me.lbAcessosOn.Size = New System.Drawing.Size(86, 15)
+        Me.lbAcessosOn.TabIndex = 3
+        Me.lbAcessosOn.Text = "Acessos Ativos"
         '
-        'FlowLayoutPanel22
+        'pnAcessosParametroBusca
         '
-        Me.FlowLayoutPanel22.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel22.Location = New System.Drawing.Point(164, 267)
-        Me.FlowLayoutPanel22.Name = "FlowLayoutPanel22"
-        Me.FlowLayoutPanel22.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel22.TabIndex = 36
+        Me.pnAcessosParametroBusca.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        Me.pnAcessosParametroBusca.Controls.Add(Me.dtpAcessosByData)
+        Me.pnAcessosParametroBusca.Controls.Add(Me.tbAcessosByMat)
+        Me.pnAcessosParametroBusca.Controls.Add(Me.Button1)
+        Me.pnAcessosParametroBusca.Location = New System.Drawing.Point(393, 25)
+        Me.pnAcessosParametroBusca.Name = "pnAcessosParametroBusca"
+        Me.pnAcessosParametroBusca.Size = New System.Drawing.Size(262, 0)
+        Me.pnAcessosParametroBusca.TabIndex = 47
         '
-        'FlowLayoutPanel23
+        'Button1
         '
-        Me.FlowLayoutPanel23.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel23.Location = New System.Drawing.Point(164, 210)
-        Me.FlowLayoutPanel23.Name = "FlowLayoutPanel23"
-        Me.FlowLayoutPanel23.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel23.TabIndex = 34
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(183, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(74, 19)
+        Me.Button1.TabIndex = 46
+        Me.Button1.Text = "Localizar"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox17
+        'tbAcessosByMat
         '
-        Me.TextBox17.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox17.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.ForeColor = System.Drawing.Color.White
-        Me.TextBox17.Location = New System.Drawing.Point(164, 241)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox17.TabIndex = 41
-        Me.TextBox17.Text = "E-mail"
+        Me.tbAcessosByMat.Location = New System.Drawing.Point(5, 3)
+        Me.tbAcessosByMat.Name = "tbAcessosByMat"
+        Me.tbAcessosByMat.Size = New System.Drawing.Size(170, 20)
+        Me.tbAcessosByMat.TabIndex = 0
+        Me.tbAcessosByMat.Text = "Matrícula"
         '
-        'TextBox18
+        'dtpAcessosByData
         '
-        Me.TextBox18.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox18.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.ForeColor = System.Drawing.Color.White
-        Me.TextBox18.Location = New System.Drawing.Point(164, 184)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox18.TabIndex = 39
-        Me.TextBox18.Text = "Nome"
+        Me.dtpAcessosByData.Location = New System.Drawing.Point(5, 3)
+        Me.dtpAcessosByData.Name = "dtpAcessosByData"
+        Me.dtpAcessosByData.Size = New System.Drawing.Size(170, 20)
+        Me.dtpAcessosByData.TabIndex = 0
         '
-        'TextBox19
+        'DataGridView1
         '
-        Me.TextBox19.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox19.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.ForeColor = System.Drawing.Color.White
-        Me.TextBox19.Location = New System.Drawing.Point(164, 297)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox19.TabIndex = 42
-        Me.TextBox19.Text = "Saldo Inicial"
-        '
-        'PictureBox37
-        '
-        Me.PictureBox37.Location = New System.Drawing.Point(122, 172)
-        Me.PictureBox37.Name = "PictureBox37"
-        Me.PictureBox37.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox37.TabIndex = 40
-        Me.PictureBox37.TabStop = False
-        '
-        'PictureBox38
-        '
-        Me.PictureBox38.Location = New System.Drawing.Point(122, 287)
-        Me.PictureBox38.Name = "PictureBox38"
-        Me.PictureBox38.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox38.TabIndex = 38
-        Me.PictureBox38.TabStop = False
-        '
-        'PictureBox39
-        '
-        Me.PictureBox39.Location = New System.Drawing.Point(122, 229)
-        Me.PictureBox39.Name = "PictureBox39"
-        Me.PictureBox39.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox39.TabIndex = 37
-        Me.PictureBox39.TabStop = False
-        '
-        'FlowLayoutPanel24
-        '
-        Me.FlowLayoutPanel24.BackColor = System.Drawing.Color.White
-        Me.FlowLayoutPanel24.Location = New System.Drawing.Point(164, 150)
-        Me.FlowLayoutPanel24.Name = "FlowLayoutPanel24"
-        Me.FlowLayoutPanel24.Size = New System.Drawing.Size(410, 1)
-        Me.FlowLayoutPanel24.TabIndex = 32
-        '
-        'TextBox20
-        '
-        Me.TextBox20.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.ForeColor = System.Drawing.Color.White
-        Me.TextBox20.Location = New System.Drawing.Point(164, 124)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(410, 19)
-        Me.TextBox20.TabIndex = 31
-        Me.TextBox20.Text = "Matrícula"
-        '
-        'PictureBox40
-        '
-        Me.PictureBox40.Location = New System.Drawing.Point(122, 112)
-        Me.PictureBox40.Name = "PictureBox40"
-        Me.PictureBox40.Size = New System.Drawing.Size(31, 39)
-        Me.PictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox40.TabIndex = 30
-        Me.PictureBox40.TabStop = False
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(213, 29)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(47, 29)
-        Me.Label10.TabIndex = 29
-        Me.Label10.Text = "On"
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(22, 29)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(614, 375)
+        Me.DataGridView1.TabIndex = 0
         '
         'home
         '
@@ -3274,6 +3107,7 @@ Partial Class home
         Me.ClientSize = New System.Drawing.Size(884, 459)
         Me.Controls.Add(Me.pnBarraSuperior)
         Me.Controls.Add(Me.pnMenu)
+        Me.Controls.Add(Me.pnVendAcessoScreen)
         Me.Controls.Add(Me.pnVendDelScreen)
         Me.Controls.Add(Me.pnVendAddScreen)
         Me.Controls.Add(Me.pnCartaoAddScreen)
@@ -3282,8 +3116,6 @@ Partial Class home
         Me.Controls.Add(Me.pnAdmAddScreen)
         Me.Controls.Add(Me.pnCartaoRecScreen)
         Me.Controls.Add(Me.pnCartaoDevScreen)
-        Me.Controls.Add(Me.pnVendReqScreen)
-        Me.Controls.Add(Me.pnVendOnScreen)
         Me.Controls.Add(Me.pnLogo)
         Me.Controls.Add(Me.pnHomeTela)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -3302,10 +3134,8 @@ Partial Class home
         Me.pnAddTopicAdd.ResumeLayout(False)
         Me.pnAddTopicAdd.PerformLayout()
         Me.pnSubMenuVend.ResumeLayout(False)
-        Me.pnVendTopicOn.ResumeLayout(False)
-        Me.pnVendTopicOn.PerformLayout()
-        Me.pnVendTopicReq.ResumeLayout(False)
-        Me.pnVendTopicReq.PerformLayout()
+        Me.pnVendTopicAcesso.ResumeLayout(False)
+        Me.pnVendTopicAcesso.PerformLayout()
         Me.pnVendTopicDel.ResumeLayout(False)
         Me.pnVendTopicDel.PerformLayout()
         Me.pnVendTopicAdd.ResumeLayout(False)
@@ -3400,18 +3230,22 @@ Partial Class home
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnVendReqScreen.ResumeLayout(False)
-        Me.pnVendReqScreen.PerformLayout()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnVendOnScreen.ResumeLayout(False)
-        Me.pnVendOnScreen.PerformLayout()
-        CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnVendAcessoScreen.ResumeLayout(False)
+        Me.pnAcessosByVendScreen.ResumeLayout(False)
+        Me.pnVendAcessoNaveg.ResumeLayout(False)
+        Me.pnAcessosByData.ResumeLayout(False)
+        Me.pnAcessosByData.PerformLayout()
+        Me.pnAcessosByVend.ResumeLayout(False)
+        Me.pnAcessosByVend.PerformLayout()
+        Me.pnAcessosAll.ResumeLayout(False)
+        Me.pnAcessosAll.PerformLayout()
+        Me.pnAcessosOff.ResumeLayout(False)
+        Me.pnAcessosOff.PerformLayout()
+        Me.pnAcessosOn.ResumeLayout(False)
+        Me.pnAcessosOn.PerformLayout()
+        Me.pnAcessosParametroBusca.ResumeLayout(False)
+        Me.pnAcessosParametroBusca.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3562,12 +3396,9 @@ Partial Class home
     Friend WithEvents Panel20 As Panel
     Friend WithEvents Panel19 As Panel
     Friend WithEvents pnSubMenuVend As Panel
-    Friend WithEvents pnVendTopicOn As Panel
-    Friend WithEvents pnVendTopicOnBar As Panel
-    Friend WithEvents lbVendTopicOn As Label
-    Friend WithEvents pnVendTopicReq As Panel
+    Friend WithEvents pnVendTopicAcesso As Panel
     Friend WithEvents pnVendTopicReqBar As Panel
-    Friend WithEvents lbVendTopicReq As Label
+    Friend WithEvents lbVendTopicAcesso As Label
     Friend WithEvents pnVendTopicDel As Panel
     Friend WithEvents pnVendTopicDelBar As Panel
     Friend WithEvents lbVendTopicDel As Label
@@ -3591,38 +3422,7 @@ Partial Class home
     Friend WithEvents PictureBox28 As PictureBox
     Friend WithEvents Label7 As Label
     Friend WithEvents pnVendDelScreen As Panel
-    Friend WithEvents pnVendReqScreen As Panel
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents FlowLayoutPanel17 As FlowLayoutPanel
-    Friend WithEvents FlowLayoutPanel18 As FlowLayoutPanel
-    Friend WithEvents FlowLayoutPanel19 As FlowLayoutPanel
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents PictureBox33 As PictureBox
-    Friend WithEvents PictureBox34 As PictureBox
-    Friend WithEvents PictureBox35 As PictureBox
-    Friend WithEvents FlowLayoutPanel20 As FlowLayoutPanel
-    Friend WithEvents TextBox16 As TextBox
-    Friend WithEvents PictureBox36 As PictureBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents pnVendOnScreen As Panel
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents FlowLayoutPanel21 As FlowLayoutPanel
-    Friend WithEvents FlowLayoutPanel22 As FlowLayoutPanel
-    Friend WithEvents FlowLayoutPanel23 As FlowLayoutPanel
-    Friend WithEvents TextBox17 As TextBox
-    Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents PictureBox37 As PictureBox
-    Friend WithEvents PictureBox38 As PictureBox
-    Friend WithEvents PictureBox39 As PictureBox
-    Friend WithEvents FlowLayoutPanel24 As FlowLayoutPanel
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents PictureBox40 As PictureBox
-    Friend WithEvents Label10 As Label
+    Friend WithEvents pnVendAcessoScreen As Panel
     Friend WithEvents cbAdmDellBy As ComboBox
     Friend WithEvents cbVendDellBy As ComboBox
     Friend WithEvents PictureBox29 As PictureBox
@@ -3675,4 +3475,27 @@ Partial Class home
     Friend WithEvents btCartaoRecOutroValoCancelar As Button
     Friend WithEvents btCartaoRecOutroValorOK As Button
     Friend WithEvents cbCartaoRecModoPG As ComboBox
+    Friend WithEvents pnVendAcessoNaveg As Panel
+    Friend WithEvents pnAcessosByData As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents pnAcessosByVend As Panel
+    Friend WithEvents pnAcessosAll As Panel
+    Friend WithEvents pnAcessosOff As Panel
+    Friend WithEvents pnAcessosOn As Panel
+    Friend WithEvents lbAcessosByData As Label
+    Friend WithEvents lbAcessosByVend As Label
+    Friend WithEvents lbAcessosAll As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents lbAcessosOff As Label
+    Friend WithEvents lbAcessosOn As Label
+    Friend WithEvents pnAcessosAllScreen As Panel
+    Friend WithEvents pnAcessosOnScreen As Panel
+    Friend WithEvents pnAcessosOffScreen As Panel
+    Friend WithEvents pnAcessosByVendScreen As Panel
+    Friend WithEvents pnAcessosByDataScreen As Panel
+    Friend WithEvents pnAcessosParametroBusca As Panel
+    Friend WithEvents dtpAcessosByData As DateTimePicker
+    Friend WithEvents tbAcessosByMat As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

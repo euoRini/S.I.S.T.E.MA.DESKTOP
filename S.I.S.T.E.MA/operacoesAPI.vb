@@ -9,23 +9,20 @@ Imports System.Net.Http
 
 Module operacoesAPI
 
+    Public corFundo As Integer
+    Public corMedia As Integer
+    Public corTexto As Integer
     Public idload As String
     Public erroBusca As String = Nothing
     Public token As String
 
 #Region "ROTAS API"
     'Rotas API
-    Public routerAdmAdicionarPOST = "https://sistemaifrj.herokuapp.com/admins/"
-    Public routerAdmLocalizarGET = "https://sistemaifrj.herokuapp.com/admins/"
-    Public routerAdmDeletarDELETE = "https://sistemaifrj.herokuapp.com/admins/"
-    Public routerUserAdicionarPOST = "https://sistemaifrj.herokuapp.com/users/"
-    Public routerUserLocalizarGET = "https://sistemaifrj.herokuapp.com/users/"
-    Public routerUserDeletarDELETE = "https://sistemaifrj.herokuapp.com/users/"
-    Public routerRecargaAdicionarPOST = "https://sistemaifrj.herokuapp.com/recargas/"
-    Public routerUserAtualizarPUT = "https://sistemaifrj.herokuapp.com/recargas/"
-    Public routerVendAdicionarPOST = "https://sistemaifrj.herokuapp.com/vendedores/"
-    Public routerVendLocalizarGET = "https://sistemaifrj.herokuapp.com/vendedores/"
-    Public routerVendDeletarDELETE = "https://sistemaifrj.herokuapp.com/vendedores/"
+    Public routerAdm = "https://sistemaifrj.herokuapp.com/admins/"
+    Public routerUser = "https://sistemaifrj.herokuapp.com/users/"
+    Public routerRecarga = "https://sistemaifrj.herokuapp.com/recargas/"
+    Public routerVend = "https://sistemaifrj.herokuapp.com/vendedores/"
+
 
 #End Region
 
@@ -118,7 +115,6 @@ Module operacoesAPI
         request.ContentType = contentType
         request.Method = metodo
         request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
-        MsgBox(request.Headers.ToString)
         Try
 
         'Fazendo a escrita das informações no server via requisição HTTP POST
@@ -371,6 +367,10 @@ Module operacoesAPI
 
     End Sub
 
+#Region "Acessos"
+
+#End Region
+
 #End Region
 
 #Region "Exclusão de Dados DELETE"
@@ -381,14 +381,14 @@ Module operacoesAPI
     'Execução Exclusão
     Public Sub delete(parametro As String, myUri As String)
         Try
-            Dim sURL As String = routerAdmDeletarDELETE & "l/" & parametro
+            Dim sURL As String = routerAdm & "l/" & parametro
             Dim request As WebRequest = WebRequest.Create(sURL)
             request.Method = "DELETE"
             request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
             Dim response As HttpWebResponse = CType(request.GetResponse(), HttpWebResponse)
             Dim status = Val(response.StatusCode)
             If response.StatusCode = 200 Then
-                If myUri.Contains(routerAdmDeletarDELETE) Then
+                If myUri.Contains(routerAdm) Then
                     With home.btAdmDelApagar
                         .BackColor = Color.Green
                         .Text = "Excluído"
@@ -404,7 +404,7 @@ Module operacoesAPI
                         .Refresh()
                     End With
 
-                ElseIf myUri.Contains(routerUserDeletarDELETE) Then
+                ElseIf myUri.Contains(routerUser) Then
                     With home.btCartaoDelApagar
                         .BackColor = Color.Green
                         .Text = "Excluído"
@@ -419,7 +419,7 @@ Module operacoesAPI
                         home.btAdmDelCancelar_Click(Nothing, Nothing)
                         .Refresh()
                     End With
-                ElseIf myUri.Contains(routerVendDeletarDELETE) Then
+                ElseIf myUri.Contains(routerVend) Then
 
                     With home.btVendDelApagar
                         .BackColor = Color.Green
@@ -458,7 +458,7 @@ Module operacoesAPI
                         """,""email"":""" &
                         email & """}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        Dim myUri As New Uri(routerAdmAdicionarPOST)
+        Dim myUri As New Uri(routerAdm)
         With home.btAdmAddSalvar
             'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
             Dim data = Encoding.UTF8.GetBytes(jsonString)
@@ -489,9 +489,9 @@ Module operacoesAPI
         Dim myUri As Uri
         'URL para rota de lista de admins por login informado
         If home.cbAdmDellBy.Text = "Login" Then
-            myUri = New Uri(routerAdmLocalizarGET & "l/" & parametro)
+            myUri = New Uri(routerAdm & "l/" & parametro)
         ElseIf home.cbAdmDellBy.Text = "E-mail" Then
-            myUri = New Uri(routerAdmLocalizarGET & "e/" & parametro)
+            myUri = New Uri(routerAdm & "e/" & parametro)
         End If
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoADMLoginExc(myUri, "application/json", "GET", "exclusao")
@@ -513,7 +513,7 @@ Module operacoesAPI
                         saldo & "}"
 
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        Dim myUri As New Uri(routerUserAdicionarPOST)
+        Dim myUri As New Uri(routerUser)
         With home.btCartaoAddSalvar
             .Text = "Salvando..."
             .Enabled = False
@@ -544,7 +544,7 @@ Module operacoesAPI
     Public Sub excCartao(matricula As String)
 
         'URL para rota de lista de users plea matricula informada
-        Dim myUri As New Uri(routerUserLocalizarGET & matricula)
+        Dim myUri As New Uri(routerUser & matricula)
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoCartaoExc(myUri, "application/json", "GET", "exclusao")
@@ -552,7 +552,7 @@ Module operacoesAPI
     Public Sub recCartao(matricula As String)
 
         'URL para rota de lista de users plea matricula informada
-        Dim myUri As New Uri(routerUserLocalizarGET & matricula & "/")
+        Dim myUri As New Uri(routerUser & matricula & "/")
 
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoCartaoExc(myUri, "application/json", "GET", "recarga")
@@ -561,7 +561,7 @@ Module operacoesAPI
     Public Sub exeRecarga(modo As String, valor As Integer)
         'URL para rota de lista de users plea matricula informada
         'valor = 50
-        Dim myUri As New Uri(routerRecargaAdicionarPOST & idload)
+        Dim myUri As New Uri(routerRecarga & idload)
         Dim jsonString As String
         jsonString = "{""modo_pagto"" :  """ &
         modo &
@@ -572,7 +572,7 @@ Module operacoesAPI
         jsonString = "{""saldo"":" &
                         Val(home.lbCartaoRecSaldoTt.Text) & "}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        myUri = New Uri(routerUserAtualizarPUT & home.tbCartaoRecMat.Text & "/")
+        myUri = New Uri(routerUser & home.tbCartaoRecMat.Text & "/")
         'Codificando a string JSON para ser enviada na requisição HTTP do tipo POST
         data = Encoding.UTF8.GetBytes(jsonString)
         result_post = envioPOST_OR(myUri, data, "PUT")
@@ -592,7 +592,7 @@ Module operacoesAPI
                         """,""senha"":""" &
                         senha & """}"
         'URL para a rota de criação de usuários (definida na API pelo Erick)
-        Dim myUri As New Uri(routerVendAdicionarPOST)
+        Dim myUri As New Uri(routerVend)
         With home.btVendAddSalvar
             .Text = "Salvando..."
             .Enabled = False
@@ -627,9 +627,9 @@ Module operacoesAPI
         Dim myUri As Uri
         'URL para rota de lista de admins por login informado
         If home.cbVendDellBy.Text = "Matrícula" Then
-            myUri = New Uri(routerVendLocalizarGET & "m/" & parametro)
+            myUri = New Uri(routerVend & "m/" & parametro)
         ElseIf home.cbVendDellBy.Text = "E-mail" Then
-            myUri = New Uri(routerVendLocalizarGET & "e/" & parametro)
+            myUri = New Uri(routerVend & "e/" & parametro)
         End If
         'Usando a função recebimentoADMLoginExc para buscar os usuários cadastrados. Usando o método GET para a requisição HTTP
         recebimentoVendedorExc(myUri, "application/json", "GET")

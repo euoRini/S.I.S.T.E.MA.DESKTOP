@@ -143,11 +143,12 @@ Public Class formLogin
         'Usando a função recebimentoADMLoginExc para buscar o admin com login informado. 
         'Usando o método GET para a requisição HTTP
         Dim response = exeLogin(myUri, data, "POST")
-
         'recebimentroADMLoginExc altera sucessoLogin:
         'True quando login válido e entra no aplicativo
         'False quando login inválido e mensagem de erro
         If sucessoLogin Then
+            Console.WriteLine(token)
+            MsgBox(token)
             home.Show()
             Me.Hide()
         Else
