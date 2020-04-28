@@ -152,8 +152,8 @@ Public Class home
                 SizeClose = 100
             ElseIf pnAnterior.Name = "pnProd" Then
                 pnAnteriorAux = pnProdAux
-
-
+                pnSubAnterior = pnSubMenuProd
+                SizeClose = 100
             ElseIf pnAnterior.Name = "pnRelat" Then
                 pnAnteriorAux = pnRelatAux
 
@@ -182,8 +182,8 @@ Public Class home
                 SizeOpen = 100
             ElseIf pnProximo.Name = "pnProd" Then
                 pnProximoAux = pnProdAux
-
-
+                pnSubProximo = pnSubMenuProd
+                SizeOpen = 100
             ElseIf pnProximo.Name = "pnRelat" Then
                 pnProximoAux = pnRelatAux
 
@@ -277,25 +277,27 @@ Public Class home
             pnAcessosOff.Refresh()
             pnAcessosByVend.Refresh()
             pnAcessosByData.Refresh()
-            pbAcessoLogo.Visible = False
+
 
             'FechaScreens
-            pbAcessoLogo.Visible = False
+  
             pnAcessosAllScreen.Visible = False
             pnAcessosOnScreen.Visible = False
             pnAcessosOffScreen.Visible = False
             pnAcessosByVendScreen.Visible = False
             pnAcessosByDataScreen.Visible = False
             pnToOpenScreen.Visible = True
+            pnToOpenScreen.Refresh()
 
-            If nivel3AcessoParametro Then
+
+            If pnAcessosParametroBusca.Height = 26 Then
                 While pnAcessosParametroBusca.Height > 0
-                    pnAcessosParametroBusca.Height -= 1
 
-                    pnAcessosParametroBusca.Refresh()
-                    pnAcessosByData.Refresh()
-                    pnAcessosByVend.Refresh()
-                    pnProximo.Refresh()
+                    pnAcessosParametroBusca.Height -= 2
+                    pnVendAcessoScreen.Refresh()
+                    'pnAcessosByData.Refresh()
+                    'pnAcessosByVend.Refresh()
+                    'pnProximo.Refresh()
                 End While
             End If
 
@@ -307,15 +309,16 @@ Public Class home
                     tbAcessosByMat.Visible = True
                     dtpAcessosByData.Visible = False
                 End If
-                nivel3AcessoParametro = True
+
                 While pnAcessosParametroBusca.Height < 26
-                    pnAcessosParametroBusca.Height += 1
+                    pnAcessosParametroBusca.Height += 2
                     pnAcessosParametroBusca.Refresh()
                     pnAcessosByData.Refresh()
                     pnAcessosByVend.Refresh()
                     pnProximo.Refresh()
                 End While
             Else
+                pbAcessoLogo.Visible = False
                 nivel3AcessoParametro = False
             End If
 
@@ -380,6 +383,9 @@ Public Class home
         pnVendAddScreen.Visible = False
         pnVendDelScreen.Visible = False
         pnVendAcessoScreen.Visible = False
+        pnProdAddScreen.Visible = False
+        pnProdDelScreen.Visible = False
+        pnProdAltScreen.Visible = False
         pnHomeTela.Visible = True
         'Fecha Bars Submenu
         pnAdmTopicAddBar.Visible = False
@@ -391,74 +397,45 @@ Public Class home
         pnVendTopicAddBar.Visible = False
         pnVendTopicDelBar.Visible = False
         pnVendTopicReqBar.Visible = False
+        pnProdTopicAddBar.Visible = False
+        pnProdTopicDelBar.Visible = False
+        pnProdTopicAltBar.Visible = False
     End Sub
 
 
 #End Region
 
 #Region "Botoes Nivel1"
-    Private Sub pbHomeAux_Click(sender As Object, e As EventArgs) Handles pbHomeAux.Click
+    Private Sub pbHomeAux_Click(sender As Object, e As EventArgs) Handles pbHomeAux.Click, pnHomeAux.Click
         navegacaoMenu(1, pnHome, pnHomeTela)
         alteraBoolMenu(pnHome)
     End Sub
-    Private Sub pbAdmAux_Click(sender As Object, e As EventArgs) Handles pbAdmAux.Click
+    Private Sub pbAdmAux_Click(sender As Object, e As EventArgs) Handles pbAdmAux.Click, pnAdmAux.Click
         navegacaoMenu(1, pnAdm, pnLogo)
         alteraBoolMenu(pnAdm)
     End Sub
 
-    Private Sub pbCartaoAux_Click(sender As Object, e As EventArgs) Handles pbCartaoAux.Click
+    Private Sub pbCartaoAux_Click(sender As Object, e As EventArgs) Handles pbCartaoAux.Click, pnCartaoAux.Click
         navegacaoMenu(1, pnCartao, pnLogo)
         alteraBoolMenu(pnCartao)
     End Sub
-    Private Sub pbVendAux_Click(sender As Object, e As EventArgs) Handles pbVendAux.Click
+    Private Sub pbVendAux_Click(sender As Object, e As EventArgs) Handles pbVendAux.Click, pnVendAux.Click
         navegacaoMenu(1, pnVend, pnLogo)
         alteraBoolMenu(pnVend)
     End Sub
 
-    Private Sub pbProdAux_Click(sender As Object, e As EventArgs) Handles pbProdAux.Click
+    Private Sub pbProdAux_Click(sender As Object, e As EventArgs) Handles pbProdAux.Click, pnProdAux.Click
         navegacaoMenu(1, pnProd, pnLogo)
         alteraBoolMenu(pnProd)
     End Sub
-    Private Sub pbRelatAux_Click(sender As Object, e As EventArgs) Handles pbRelatAux.Click
+    Private Sub pbRelatAux_Click(sender As Object, e As EventArgs) Handles pbRelatAux.Click, pnRelatAux.Click
         navegacaoMenu(1, pnRelat, pnLogo)
         alteraBoolMenu(pnRelat)
     End Sub
 
-    Private Sub pbInfoAux_Click(sender As Object, e As EventArgs) Handles pbInfoAux.Click
+    Private Sub pbInfoAux_Click(sender As Object, e As EventArgs) Handles pbInfoAux.Click, pnInfoAux.Click
         navegacaoMenu(1, pnInfo, pnLogo)
         alteraBoolMenu(pnInfo)
-    End Sub
-
-
-
-
-    Private Sub pnHome_Click(sender As Object, e As EventArgs) Handles pnHome.Click
-        pbHomeAux_Click(sender, e)
-    End Sub
-
-    Private Sub pnAdmAux_Click(sender As Object, e As EventArgs) Handles pnAdmAux.Click
-        pbAdmAux_Click(sender, e)
-    End Sub
-
-    Private Sub pnCartaoAux_Click(sender As Object, e As EventArgs) Handles pnCartaoAux.Click
-        pbCartaoAux_Click(sender, e)
-    End Sub
-
-
-    Private Sub pnVendAux_Click(sender As Object, e As EventArgs) Handles pnVendAux.Click
-        pbVendAux_Click(sender, e)
-    End Sub
-
-    Private Sub pnProdAux_Click(sender As Object, e As EventArgs) Handles pnProdAux.Click
-        pbProdAux_Click(sender, e)
-    End Sub
-
-    Private Sub pnRelatAux_Click(sender As Object, e As EventArgs) Handles pnRelatAux.Click
-        pbRelatAux_Click(sender, e)
-    End Sub
-
-    Private Sub pnInfoAux_Click(sender As Object, e As EventArgs) Handles pnInfoAux.Click
-        pbInfoAux_Click(sender, e)
     End Sub
 
 #End Region
@@ -466,82 +443,72 @@ Public Class home
 #Region "Botoes Nivel2"
 
 #Region "AdmTopics"
-    Private Sub lbAdmTopicAdd_Click(sender As Object, e As EventArgs) Handles lbAdmTopicAdd.Click
+    Private Sub lbAdmTopicAdd_Click(sender As Object, e As EventArgs) Handles lbAdmTopicAdd.Click, pnAdmTopicAdd.Click
         navegacaoMenu(2, pnAdmTopicAddBar, pnAdmAddScreen)
         tbAdmAddNome.Focus()
         tbAdmAddNome.Select(0, 0)
     End Sub
-    Private Sub pnAddTopicAdd_Click(sender As Object, e As EventArgs) Handles pnAddTopicAdd.Click
-        lbAdmTopicAdd_Click(sender, e)
-    End Sub
-    Private Sub lbAdmTopicDel_Click(sender As Object, e As EventArgs) Handles lbAdmTopicDel.Click
+    Private Sub lbAdmTopicDel_Click(sender As Object, e As EventArgs) Handles lbAdmTopicDel.Click, pnAdmTopicDel.Click
         navegacaoMenu(2, pnAdmTopicDelBar, pnAdmDelScreen)
         tbAdmDelBusca.Focus()
         tbAdmDelBusca.Select(0, 0)
     End Sub
-    Private Sub pnAdmTopicDel_Click(sender As Object, e As EventArgs) Handles pnAdmTopicDel.Click
-        lbAdmTopicDel_Click(sender, e)
-    End Sub
+
 #End Region
 
 #Region "CartaoTopics"
-    Private Sub lbCartaoTopicAdd_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicAdd.Click
+    Private Sub lbCartaoTopicAdd_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicAdd.Click, pnCartaoTopicAdd.Click
         navegacaoMenu(2, pnCartaoTopicAddBar, pnCartaoAddScreen)
     End Sub
 
-    Private Sub pnCartaoTopicAdd_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicAdd.Click
-        lbCartaoTopicAdd_Click(sender, e)
-    End Sub
 
-    Private Sub lbCartaoTopicDel_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDel.Click
+    Private Sub lbCartaoTopicDel_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDel.Click, pnCartaoTopicDel.Click
         navegacaoMenu(2, pnCartaoTopicDelBar, pnCartaoDelScreen)
     End Sub
-    Private Sub pnCartaoTopicDel_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicDel.Click
-        lbCartaoTopicDel_Click(sender, e)
-    End Sub
 
-    Private Sub lbCartaoTopicRec_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicRec.Click
+
+    Private Sub lbCartaoTopicRec_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicRec.Click, pnCartaoTopicRec.Click
         navegacaoMenu(2, pnCartaoTopicRecBar, pnCartaoRecScreen)
     End Sub
 
-    Private Sub pnCartaoTopicRec_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicRec.Click
-        lbCartaoTopicRec_Click(sender, e)
-    End Sub
 
-    Private Sub lbCartaoTopicDev_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDev.Click
+    Private Sub lbCartaoTopicDev_Click(sender As Object, e As EventArgs) Handles lbCartaoTopicDev.Click, pnCartaoTopicDev.Click
         navegacaoMenu(2, pnCartaoTopicDevBar, pnCartaoDevScreen)
     End Sub
 
-    Private Sub pnCartaoTopicDev_Click(sender As Object, e As EventArgs) Handles pnCartaoTopicDev.Click
-        lbCartaoTopicDev_Click(sender, e)
-    End Sub
 #End Region
 
 #Region "VendedorTopics"
-    Private Sub lbVendTopicAdd_Click(sender As Object, e As EventArgs) Handles lbVendTopicAdd.Click
+    Private Sub lbVendTopicAdd_Click(sender As Object, e As EventArgs) Handles lbVendTopicAdd.Click, pnVendTopicAdd.Click
         navegacaoMenu(2, pnVendTopicAddBar, pnVendAddScreen)
     End Sub
 
-    Private Sub Panel32_Paint(sender As Object, e As EventArgs) Handles pnVendTopicAdd.Click
-        lbVendTopicAdd_Click(sender, e)
-    End Sub
 
-    Private Sub pnVendTopicDel_CLick(sender As Object, e As EventArgs) Handles pnVendTopicDel.Click
-        lbVendTopicDel_Click(sender, e)
-    End Sub
-
-    Private Sub lbVendTopicDel_Click(sender As Object, e As EventArgs) Handles lbVendTopicDel.Click
+    Private Sub lbVendTopicDel_Click(sender As Object, e As EventArgs) Handles lbVendTopicDel.Click, pnVendTopicDel.Click
         navegacaoMenu(2, pnVendTopicDelBar, pnVendDelScreen)
     End Sub
 
-    Private Sub lbVendTopicReq_Click(sender As Object, e As EventArgs) Handles lbVendTopicAcesso.Click
+    Private Sub lbVendTopicReq_Click(sender As Object, e As EventArgs) Handles lbVendTopicAcesso.Click, pnVendTopicAcesso.Click
         navegacaoMenu(2, pnVendTopicReqBar, pnVendAcessoScreen)
     End Sub
 
-    Private Sub pnVendTopicReq_Click(sender As Object, e As EventArgs) Handles pnVendTopicAcesso.Click
-        lbVendTopicReq_Click(sender, e)
+
+
+
+#End Region
+
+#Region "ProdutoTopics"
+    Private Sub lbProdTopicAdd_Click(sender As Object, e As EventArgs) Handles lbProdTopicAdd.Click, pnProdTopicAdd.Click
+        navegacaoMenu(2, pnProdTopicAddBar, pnProdAddScreen)
     End Sub
 
+    Private Sub lbProdTopicDel_Click(sender As Object, e As EventArgs) Handles lbProdTopicDel.Click, pnProdTopicDel.Click
+        navegacaoMenu(2, pnProdTopicDelBar, pnProdDelScreen)
+    End Sub
+
+    Private Sub lbProdTopicAlt_Click(sender As Object, e As EventArgs) Handles lbProdTopicAlt.Click, pnProdTopicAlt.Click
+        navegacaoMenu(2, pnProdTopicAltBar, pnProdAltScreen)
+    End Sub
 
 
 #End Region
@@ -550,49 +517,33 @@ Public Class home
 
 #Region "Botoes Nivel3"
 
-    Private Sub lbAcessosAll_Click(sender As Object, e As EventArgs) Handles lbAcessosAll.Click
+    Private Sub lbAcessosAll_Click(sender As Object, e As EventArgs) Handles lbAcessosAll.Click, pnAcessosAll.Click
         navegacaoMenu(3, pnAcessosAll, pnAcessosAllScreen)
         Dim myUri As New Uri("http://sistemaifrj.herokuapp.com/acessos/")
         recebimentoTodosAcessos(myUri, "application/json", "GET")
     End Sub
 
-    Private Sub lbAcessosOn_Click(sender As Object, e As EventArgs) Handles lbAcessosOn.Click
+    Private Sub lbAcessosOn_Click(sender As Object, e As EventArgs) Handles lbAcessosOn.Click, pnAcessosOn.Click
         navegacaoMenu(3, pnAcessosOn, pnAcessosOnScreen)
     End Sub
 
 
 
-    Private Sub lbAcessosOff_Click(sender As Object, e As EventArgs) Handles lbAcessosOff.Click
+    Private Sub lbAcessosOff_Click(sender As Object, e As EventArgs) Handles lbAcessosOff.Click, pnAcessosOff.Click
         navegacaoMenu(3, pnAcessosOff, pnAcessosOffScreen)
     End Sub
 
 
-    Private Sub lbAcessosByVend_Click(sender As Object, e As EventArgs) Handles lbAcessosByVend.Click
+    Private Sub lbAcessosByVend_Click(sender As Object, e As EventArgs) Handles lbAcessosByVend.Click, pnAcessosByVend.Click
         navegacaoMenu(3, pnAcessosByVend, pnAcessosByVendScreen)
     End Sub
 
 
-    Private Sub lbAcessosByData_Click(sender As Object, e As EventArgs) Handles lbAcessosByData.Click
+    Private Sub lbAcessosByData_Click(sender As Object, e As EventArgs) Handles lbAcessosByData.Click, pnAcessosByData.Click
         navegacaoMenu(3, pnAcessosByData, pnAcessosByDataScreen)
     End Sub
 
-    Private Sub pnAcessosAll_click(sender As Object, e As EventArgs) Handles pnAcessosAll.Click
-        lbAcessosAll_Click(sender, e)
-    End Sub
-    Private Sub pnAcessosOn_click(sender As Object, e As EventArgs) Handles pnAcessosOn.Click
-        lbAcessosOn_Click(sender, e)
-    End Sub
 
-    Private Sub pnAcessosOff_click(sender As Object, e As EventArgs) Handles pnAcessosOff.Click
-        lbAcessosOff_Click(sender, e)
-    End Sub
-    Private Sub pnAcessosByVend_click(sender As Object, e As EventArgs) Handles pnAcessosByVend.Click
-        lbAcessosByVend_Click(sender, e)
-    End Sub
-
-    Private Sub pnAcessosByData_click(sender As Object, e As EventArgs) Handles pnAcessosByData.Click
-        lbAcessosByData_Click(sender, e)
-    End Sub
 #End Region
 
 #End Region
@@ -819,6 +770,16 @@ Public Class home
 #End Region
 
 #Region "Produto"
+
+    Private Sub btProdAddSalvar_Click(sender As Object, e As EventArgs) Handles btProdAddSalvar.Click
+        Dim nome = tbProdAddNome.Text
+        Dim categoria = tbProdAddCategoria.Text
+        Dim preco = Val(tbProduAddPreco.Text)
+        Dim estoque = Val(tbProdAddEstoque.Text)
+        If nome <> Nothing And categoria <> Nothing And preco <> Nothing And estoque <> Nothing Then
+            addProduto(nome, categoria, preco, estoque)
+        End If
+    End Sub
 
 #End Region
 
@@ -2367,7 +2328,6 @@ Public Class home
     Private Sub tbVendAddSenha_MouseUp(sender As Object, e As MouseEventArgs) Handles tbVendAddSenha.MouseUp
         controlePlace16 = False
     End Sub
-
 
 
     Private Sub tbVendDelBusca_TextChanged(sender As Object, e As EventArgs) Handles tbVendDelBusca.TextChanged
