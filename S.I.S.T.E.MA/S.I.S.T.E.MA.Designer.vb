@@ -22,6 +22,7 @@ Partial Class home
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
         Me.pnBarraSuperior = New System.Windows.Forms.Panel()
@@ -301,6 +302,9 @@ Partial Class home
         Me.PictureBox30 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.pnProdDelScreen = New System.Windows.Forms.Panel()
+        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
+        Me.tbProdDelEstoque = New System.Windows.Forms.TextBox()
+        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.PictureBox33 = New System.Windows.Forms.PictureBox()
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.tbProdDelPreco = New System.Windows.Forms.TextBox()
@@ -314,10 +318,10 @@ Partial Class home
         Me.btProdDelBusca = New System.Windows.Forms.Button()
         Me.tbProdDelBusca = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
-        Me.tbProdDelEstoque = New System.Windows.Forms.TextBox()
-        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.pnProdAltScreen = New System.Windows.Forms.Panel()
+        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
+        Me.tbProdAltNome = New System.Windows.Forms.TextBox()
+        Me.Panel30 = New System.Windows.Forms.Panel()
         Me.PictureBox37 = New System.Windows.Forms.PictureBox()
         Me.tbProdAltEstoque = New System.Windows.Forms.TextBox()
         Me.Panel31 = New System.Windows.Forms.Panel()
@@ -334,9 +338,9 @@ Partial Class home
         Me.btProdAltBusca = New System.Windows.Forms.Button()
         Me.tbProdAltBusca = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
-        Me.tbProdAltNome = New System.Windows.Forms.TextBox()
-        Me.Panel30 = New System.Windows.Forms.Panel()
+        Me.CMSAcessos = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.TesteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Teste2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnBarraSuperior.SuspendLayout()
         Me.pnMinimizar.SuspendLayout()
         CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -450,16 +454,17 @@ Partial Class home
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnProdDelScreen.SuspendLayout()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnProdAltScreen.SuspendLayout()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CMSAcessos.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnBarraSuperior
@@ -3059,8 +3064,8 @@ Partial Class home
         'pnVendAcessoScreen
         '
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosParametroBusca)
-        Me.pnVendAcessoScreen.Controls.Add(Me.pbAcessoLogo)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosAllScreen)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pbAcessoLogo)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnVendAcessoNaveg)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByVendScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosOnScreen)
@@ -3133,7 +3138,9 @@ Partial Class home
         '
         'dgwAcessosAll
         '
-        Me.dgwAcessosAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgwAcessosAll.AllowUserToAddRows = False
+        Me.dgwAcessosAll.AllowUserToDeleteRows = False
+        Me.dgwAcessosAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgwAcessosAll.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -3147,6 +3154,9 @@ Partial Class home
         Me.dgwAcessosAll.GridColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.dgwAcessosAll.Location = New System.Drawing.Point(20, 19)
         Me.dgwAcessosAll.Name = "dgwAcessosAll"
+        Me.dgwAcessosAll.ReadOnly = True
+        Me.dgwAcessosAll.RowTemplate.ContextMenuStrip = Me.CMSAcessos
+        Me.dgwAcessosAll.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Red
         Me.dgwAcessosAll.Size = New System.Drawing.Size(614, 375)
         Me.dgwAcessosAll.TabIndex = 1
         '
@@ -3527,6 +3537,36 @@ Partial Class home
         Me.pnProdDelScreen.TabIndex = 60
         Me.pnProdDelScreen.Visible = False
         '
+        'PictureBox36
+        '
+        Me.PictureBox36.Location = New System.Drawing.Point(101, 287)
+        Me.PictureBox36.Name = "PictureBox36"
+        Me.PictureBox36.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox36.TabIndex = 61
+        Me.PictureBox36.TabStop = False
+        '
+        'tbProdDelEstoque
+        '
+        Me.tbProdDelEstoque.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.tbProdDelEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbProdDelEstoque.Enabled = False
+        Me.tbProdDelEstoque.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbProdDelEstoque.ForeColor = System.Drawing.Color.DimGray
+        Me.tbProdDelEstoque.Location = New System.Drawing.Point(138, 298)
+        Me.tbProdDelEstoque.Name = "tbProdDelEstoque"
+        Me.tbProdDelEstoque.Size = New System.Drawing.Size(415, 19)
+        Me.tbProdDelEstoque.TabIndex = 60
+        Me.tbProdDelEstoque.Text = "Estoque"
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.White
+        Me.Panel10.Location = New System.Drawing.Point(138, 324)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(415, 1)
+        Me.Panel10.TabIndex = 59
+        '
         'PictureBox33
         '
         Me.PictureBox33.Location = New System.Drawing.Point(101, 243)
@@ -3671,36 +3711,6 @@ Partial Class home
         Me.Label15.TabIndex = 43
         Me.Label15.Text = "Exclusão de Produtos"
         '
-        'PictureBox36
-        '
-        Me.PictureBox36.Location = New System.Drawing.Point(101, 287)
-        Me.PictureBox36.Name = "PictureBox36"
-        Me.PictureBox36.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox36.TabIndex = 61
-        Me.PictureBox36.TabStop = False
-        '
-        'tbProdDelEstoque
-        '
-        Me.tbProdDelEstoque.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.tbProdDelEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tbProdDelEstoque.Enabled = False
-        Me.tbProdDelEstoque.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbProdDelEstoque.ForeColor = System.Drawing.Color.DimGray
-        Me.tbProdDelEstoque.Location = New System.Drawing.Point(138, 298)
-        Me.tbProdDelEstoque.Name = "tbProdDelEstoque"
-        Me.tbProdDelEstoque.Size = New System.Drawing.Size(415, 19)
-        Me.tbProdDelEstoque.TabIndex = 60
-        Me.tbProdDelEstoque.Text = "Estoque"
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.White
-        Me.Panel10.Location = New System.Drawing.Point(138, 324)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(415, 1)
-        Me.Panel10.TabIndex = 59
-        '
         'pnProdAltScreen
         '
         Me.pnProdAltScreen.Controls.Add(Me.PictureBox41)
@@ -3727,6 +3737,36 @@ Partial Class home
         Me.pnProdAltScreen.Size = New System.Drawing.Size(655, 436)
         Me.pnProdAltScreen.TabIndex = 62
         Me.pnProdAltScreen.Visible = False
+        '
+        'PictureBox41
+        '
+        Me.PictureBox41.Location = New System.Drawing.Point(101, 168)
+        Me.PictureBox41.Name = "PictureBox41"
+        Me.PictureBox41.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox41.TabIndex = 64
+        Me.PictureBox41.TabStop = False
+        '
+        'tbProdAltNome
+        '
+        Me.tbProdAltNome.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.tbProdAltNome.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.tbProdAltNome.Enabled = False
+        Me.tbProdAltNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbProdAltNome.ForeColor = System.Drawing.Color.DimGray
+        Me.tbProdAltNome.Location = New System.Drawing.Point(138, 177)
+        Me.tbProdAltNome.Name = "tbProdAltNome"
+        Me.tbProdAltNome.Size = New System.Drawing.Size(415, 19)
+        Me.tbProdAltNome.TabIndex = 63
+        Me.tbProdAltNome.Text = "Nome"
+        '
+        'Panel30
+        '
+        Me.Panel30.BackColor = System.Drawing.Color.White
+        Me.Panel30.Location = New System.Drawing.Point(138, 204)
+        Me.Panel30.Name = "Panel30"
+        Me.Panel30.Size = New System.Drawing.Size(415, 1)
+        Me.Panel30.TabIndex = 62
         '
         'PictureBox37
         '
@@ -3899,35 +3939,28 @@ Partial Class home
         Me.Label17.TabIndex = 43
         Me.Label17.Text = "Alteração de Produtos"
         '
-        'PictureBox41
+        'CMSAcessos
         '
-        Me.PictureBox41.Location = New System.Drawing.Point(101, 168)
-        Me.PictureBox41.Name = "PictureBox41"
-        Me.PictureBox41.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox41.TabIndex = 64
-        Me.PictureBox41.TabStop = False
+        Me.CMSAcessos.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.CMSAcessos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TesteToolStripMenuItem, Me.Teste2ToolStripMenuItem})
+        Me.CMSAcessos.Name = "CMSAcessos"
+        Me.CMSAcessos.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.CMSAcessos.ShowImageMargin = False
+        Me.CMSAcessos.Size = New System.Drawing.Size(138, 48)
         '
-        'tbProdAltNome
+        'TesteToolStripMenuItem
         '
-        Me.tbProdAltNome.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.tbProdAltNome.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.tbProdAltNome.Enabled = False
-        Me.tbProdAltNome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbProdAltNome.ForeColor = System.Drawing.Color.DimGray
-        Me.tbProdAltNome.Location = New System.Drawing.Point(138, 177)
-        Me.tbProdAltNome.Name = "tbProdAltNome"
-        Me.tbProdAltNome.Size = New System.Drawing.Size(415, 19)
-        Me.tbProdAltNome.TabIndex = 63
-        Me.tbProdAltNome.Text = "Nome"
+        Me.TesteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.TesteToolStripMenuItem.Name = "TesteToolStripMenuItem"
+        Me.TesteToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.TesteToolStripMenuItem.Text = "Ativar Acesso"
         '
-        'Panel30
+        'Teste2ToolStripMenuItem
         '
-        Me.Panel30.BackColor = System.Drawing.Color.White
-        Me.Panel30.Location = New System.Drawing.Point(138, 204)
-        Me.Panel30.Name = "Panel30"
-        Me.Panel30.Size = New System.Drawing.Size(415, 1)
-        Me.Panel30.TabIndex = 62
+        Me.Teste2ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Teste2ToolStripMenuItem.Name = "Teste2ToolStripMenuItem"
+        Me.Teste2ToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.Teste2ToolStripMenuItem.Text = "Desativar Acesso"
         '
         'home
         '
@@ -3935,6 +3968,7 @@ Partial Class home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(884, 459)
+        Me.Controls.Add(Me.pnVendAcessoScreen)
         Me.Controls.Add(Me.pnProdAltScreen)
         Me.Controls.Add(Me.pnProdDelScreen)
         Me.Controls.Add(Me.pnVendDelScreen)
@@ -3942,7 +3976,6 @@ Partial Class home
         Me.Controls.Add(Me.pnBarraSuperior)
         Me.Controls.Add(Me.pnMenu)
         Me.Controls.Add(Me.pnAdmAddScreen)
-        Me.Controls.Add(Me.pnVendAcessoScreen)
         Me.Controls.Add(Me.pnVendAddScreen)
         Me.Controls.Add(Me.pnCartaoAddScreen)
         Me.Controls.Add(Me.pnCartaoDelScreen)
@@ -4097,17 +4130,18 @@ Partial Class home
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnProdDelScreen.ResumeLayout(False)
         Me.pnProdDelScreen.PerformLayout()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnProdAltScreen.ResumeLayout(False)
         Me.pnProdAltScreen.PerformLayout()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CMSAcessos.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -4425,4 +4459,7 @@ Partial Class home
     Friend WithEvents PictureBox41 As PictureBox
     Friend WithEvents tbProdAltNome As TextBox
     Friend WithEvents Panel30 As Panel
+    Friend WithEvents CMSAcessos As ContextMenuStrip
+    Friend WithEvents TesteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Teste2ToolStripMenuItem As ToolStripMenuItem
 End Class

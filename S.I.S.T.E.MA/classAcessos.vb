@@ -6,5 +6,7 @@
     Public Property id_admin As String
     Public Property nome_admin As String
 
+    Public Property createdAt As DateTime
+    Public Property updatedAt As DateTime
 
 End Class

@@ -2329,6 +2329,9 @@ Public Class home
         controlePlace16 = False
     End Sub
 
+    Private Sub TesteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TesteToolStripMenuItem.Click
+        MsgBox(dgwAcessosAll.CurrentRow.Cells(2).Value)
+    End Sub
 
     Private Sub tbVendDelBusca_TextChanged(sender As Object, e As EventArgs) Handles tbVendDelBusca.TextChanged
         If cbVendDellBy.Text = "Matrícula" Then

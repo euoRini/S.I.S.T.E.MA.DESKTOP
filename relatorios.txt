@@ -1,0 +1,3 @@
+Vendas - Período, Todas, TotalVenda
+Produtos - Todos, Pouco/Sem Estoque
+Vendedores - Todos, das GridView, que mais vendem

@@ -452,7 +452,8 @@ Module operacoesAPI
             'Fazendo o parse da string para JSON Object
 
             Dim dado As JArray = JArray.Parse(rawresp)
-
+            MsgBox(dado.ToString)
+            MsgBox("ASD")
             'Pegando os dados do administrador localizado e salvando nas property da classAdmins
 
             With home.dgwAcessosAll
@@ -462,6 +463,9 @@ Module operacoesAPI
                 .Columns("id_vendedor").HeaderText = "ID do Vendedor"
                 .Columns("nome_admin").HeaderText = "Nome do Administrador"
                 .Columns("id_admin").HeaderText = "ID do Administrador"
+                .Columns("createdAt").HeaderText = "Data de Criação"
+                .Columns("updatedAt").HeaderText = "Última Atualização"
+                '.AlternatingRowsDefaultCellStyle.BackColor.ToArgb()
                 .Visible = True
             End With
 
