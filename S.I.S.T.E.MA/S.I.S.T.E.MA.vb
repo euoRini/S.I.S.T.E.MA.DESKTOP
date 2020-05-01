@@ -280,7 +280,7 @@ Public Class home
 
 
             'FechaScreens
-  
+
             pnAcessosAllScreen.Visible = False
             pnAcessosOnScreen.Visible = False
             pnAcessosOffScreen.Visible = False
@@ -525,12 +525,16 @@ Public Class home
 
     Private Sub lbAcessosOn_Click(sender As Object, e As EventArgs) Handles lbAcessosOn.Click, pnAcessosOn.Click
         navegacaoMenu(3, pnAcessosOn, pnAcessosOnScreen)
+        Dim myUri As New Uri("http://sistemaifrj.herokuapp.com/acessos/allow")
+        recebimentoAcessosOn(myUri, "application/json", "GET")
     End Sub
 
 
 
     Private Sub lbAcessosOff_Click(sender As Object, e As EventArgs) Handles lbAcessosOff.Click, pnAcessosOff.Click
         navegacaoMenu(3, pnAcessosOff, pnAcessosOffScreen)
+        Dim myUri As New Uri("http://sistemaifrj.herokuapp.com/acessos/requests")
+        recebimentoAcessosOff(myUri, "application/json", "GET")
     End Sub
 
 
@@ -765,6 +769,22 @@ Public Class home
         Else
             btVendDelCancelar_Click(sender, e)
         End If
+    End Sub
+
+    Private Sub btAcessosBusca_Click(sender As Object, e As EventArgs) Handles btAcessosBusca.Click
+        Dim myUri As Uri
+        If dtpAcessosByData.Visible Then
+            myUri = New Uri(routerAcesso & "date/" & Replace(Replace(dtpAcessosByData.Value.Date, "/", "-"), "-0", "-"))
+            recebimentoAcessosByData(myUri, "application/json", "GET")
+            pbAcessoLogo.Visible = False
+            MsgBox("Eu fiz")
+        Else
+            myUri = New Uri(routerAcesso & "v/" & tbAcessosByMat.Text)
+            recebimentoAcessosByVend(myUri, "application/json", "GET")
+            pbAcessoLogo.Visible = False
+            MsgBox("Eu fiz")
+        End If
+
     End Sub
 
 #End Region
@@ -2332,6 +2352,7 @@ Public Class home
     Private Sub TesteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TesteToolStripMenuItem.Click
         MsgBox(dgwAcessosAll.CurrentRow.Cells(2).Value)
     End Sub
+
 
     Private Sub tbVendDelBusca_TextChanged(sender As Object, e As EventArgs) Handles tbVendDelBusca.TextChanged
         If cbVendDellBy.Text = "Matrícula" Then

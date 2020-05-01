@@ -23,6 +23,7 @@ Module operacoesAPI
     Public routerRecarga = "https://sistemaifrj.herokuapp.com/recargas/"
     Public routerVend = "https://sistemaifrj.herokuapp.com/vendedores/"
     Public routerProd = "https://sistemaifrj.herokuapp.com/produtos/"
+    Public routerAcesso = "https://sistemaifrj.herokuapp.com/acessos/"
 
 #End Region
 
@@ -368,6 +369,168 @@ Module operacoesAPI
 
 #Region "Acessos"
 
+    Public Sub recebimentoTodosAcessos(uri As Uri, contentType As String, method As String)
+        Dim request As HttpWebRequest
+        Dim response As HttpWebResponse = Nothing
+        Dim reader As StreamReader
+        Dim responseString As String
+
+        responseString = ""
+
+        Try
+
+            'Construindo a requisição HTTP com a rota da URL passada
+            request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
+            'Fazendo a requisição e coletando a resposta
+            'If DirectCast(request.GetResponse(), HttpWebResponse).ToString <> "400" Then
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            'End If
+
+
+            'Lendo a resposta à requisição
+            reader = New StreamReader(response.GetResponseStream())
+
+            'Transformando a resposta em string para facilitar a leitura do JSON
+            Dim rawresp As String
+            rawresp = reader.ReadToEnd()
+
+            'Fazendo o parse da string para JSON Object
+
+            Dim dado As JArray = JArray.Parse(rawresp)
+
+            'Pegando os dados do administrador localizado e salvando nas property da classAdmins
+
+            With home.dgwAcessosAll
+                .DataSource = JsonConvert.DeserializeObject(Of classAcessos())(dado.ToString).ToList
+                .Columns("id").HeaderText = "ID do Acesso"
+                .Columns("nome_vendedor").HeaderText = "Nome do Vendedor"
+                .Columns("id_vendedor").HeaderText = "ID do Vendedor"
+                .Columns("nome_admin").HeaderText = "Nome do Administrador"
+                .Columns("id_admin").HeaderText = "ID do Administrador"
+                .Columns("createdAt").HeaderText = "Data de Criação"
+                .Columns("updatedAt").HeaderText = "Última Atualização"
+                '.AlternatingRowsDefaultCellStyle.BackColor.ToArgb()
+                .Visible = True
+            End With
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+            If Not response Is Nothing Then
+                response.Close()
+            End If
+        End Try
+    End Sub
+
+    Public Sub recebimentoAcessosOn(uri As Uri, contentType As String, method As String)
+        Dim request As HttpWebRequest
+        Dim response As HttpWebResponse = Nothing
+        Dim reader As StreamReader
+        Dim responseString As String
+
+        responseString = ""
+
+        Try
+
+            'Construindo a requisição HTTP com a rota da URL passada
+            request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
+            'Fazendo a requisição e coletando a resposta
+            'If DirectCast(request.GetResponse(), HttpWebResponse).ToString <> "400" Then
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            'End If
+
+
+            'Lendo a resposta à requisição
+            reader = New StreamReader(response.GetResponseStream())
+
+            'Transformando a resposta em string para facilitar a leitura do JSON
+            Dim rawresp As String
+            rawresp = reader.ReadToEnd()
+
+            'Fazendo o parse da string para JSON Object
+
+            Dim dado As JArray = JArray.Parse(rawresp)
+
+            'Pegando os dados do administrador localizado e salvando nas property da classAdmins
+
+            With home.dgwAcessosOn
+                .DataSource = JsonConvert.DeserializeObject(Of classAcessos())(dado.ToString).ToList
+                .Columns("id").HeaderText = "ID do Acesso"
+                .Columns("nome_vendedor").HeaderText = "Nome do Vendedor"
+                .Columns("id_vendedor").HeaderText = "ID do Vendedor"
+                .Columns("nome_admin").HeaderText = "Nome do Administrador"
+                .Columns("id_admin").HeaderText = "ID do Administrador"
+                .Columns("createdAt").HeaderText = "Data de Criação"
+                .Columns("updatedAt").HeaderText = "Última Atualização"
+                '.AlternatingRowsDefaultCellStyle.BackColor.ToArgb()
+                .Visible = True
+            End With
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+            If Not response Is Nothing Then
+                response.Close()
+            End If
+        End Try
+    End Sub
+
+    Public Sub recebimentoAcessosOff(uri As Uri, contentType As String, method As String)
+        Dim request As HttpWebRequest
+        Dim response As HttpWebResponse = Nothing
+        Dim reader As StreamReader
+        Dim responseString As String
+
+        responseString = ""
+
+        Try
+
+            'Construindo a requisição HTTP com a rota da URL passada
+            request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
+            'Fazendo a requisição e coletando a resposta
+            'If DirectCast(request.GetResponse(), HttpWebResponse).ToString <> "400" Then
+            response = DirectCast(request.GetResponse(), HttpWebResponse)
+            'End If
+
+
+            'Lendo a resposta à requisição
+            reader = New StreamReader(response.GetResponseStream())
+
+            'Transformando a resposta em string para facilitar a leitura do JSON
+            Dim rawresp As String
+            rawresp = reader.ReadToEnd()
+
+            'Fazendo o parse da string para JSON Object
+
+            Dim dado As JArray = JArray.Parse(rawresp)
+
+            'Pegando os dados do administrador localizado e salvando nas property da classAdmins
+
+            With home.dgwAcessosOff
+                .DataSource = JsonConvert.DeserializeObject(Of classAcessos())(dado.ToString).ToList
+                .Columns("id").HeaderText = "ID do Acesso"
+                .Columns("nome_vendedor").HeaderText = "Nome do Vendedor"
+                .Columns("id_vendedor").HeaderText = "ID do Vendedor"
+                .Columns("nome_admin").HeaderText = "Nome do Administrador"
+                .Columns("id_admin").HeaderText = "ID do Administrador"
+                .Columns("createdAt").HeaderText = "Data de Criação"
+                .Columns("updatedAt").HeaderText = "Última Atualização"
+                '.AlternatingRowsDefaultCellStyle.BackColor.ToArgb()
+                .Visible = True
+            End With
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+            If Not response Is Nothing Then
+                response.Close()
+            End If
+        End Try
+    End Sub
+
     Public Sub recebimentoAcessosByVend(uri As Uri, contentType As String, method As String)
         Dim request As HttpWebRequest
         Dim response As HttpWebResponse = Nothing
@@ -380,7 +543,7 @@ Module operacoesAPI
 
             'Construindo a requisição HTTP com a rota da URL passada
             request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
-            ' request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsImlhdCI6MTU4NzQzNDA1NSwiZXhwIjoxNTg3NTIwNDU1fQ.O1qYsTBSQ0WcxMKmV1MlLZbRvjqod2U6NI0g0vTA5yM"
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
             'Fazendo a requisição e coletando a resposta
             'If DirectCast(request.GetResponse(), HttpWebResponse).ToString <> "400" Then
             response = DirectCast(request.GetResponse(), HttpWebResponse)
@@ -404,7 +567,7 @@ Module operacoesAPI
 
             'Pegando os dados do administrador localizado e salvando nas property da classAdmins
 
-            With home.dgwAcessosAll
+            With home.dgwAcessosByVend
                 .DataSource = JsonConvert.DeserializeObject(Of classAcessos())(acesso.VENDacessos.ToString).ToList
                 .Columns("id").HeaderText = "ID do Acesso"
                 .Columns("nome_vendedor").HeaderText = "Nome do Vendedor"
@@ -423,7 +586,7 @@ Module operacoesAPI
         End Try
     End Sub
 
-    Public Sub recebimentoTodosAcessos(uri As Uri, contentType As String, method As String)
+    Public Sub recebimentoAcessosByData(uri As Uri, contentType As String, method As String)
         Dim request As HttpWebRequest
         Dim response As HttpWebResponse = Nothing
         Dim reader As StreamReader
@@ -435,7 +598,7 @@ Module operacoesAPI
 
             'Construindo a requisição HTTP com a rota da URL passada
             request = DirectCast(WebRequest.Create(uri), HttpWebRequest)
-            ' request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsImlhdCI6MTU4NzQzNDA1NSwiZXhwIjoxNTg3NTIwNDU1fQ.O1qYsTBSQ0WcxMKmV1MlLZbRvjqod2U6NI0g0vTA5yM"
+            request.Headers(System.Net.HttpRequestHeader.Authorization) = "Bearer " & token
             'Fazendo a requisição e coletando a resposta
             'If DirectCast(request.GetResponse(), HttpWebResponse).ToString <> "400" Then
             response = DirectCast(request.GetResponse(), HttpWebResponse)
@@ -452,11 +615,10 @@ Module operacoesAPI
             'Fazendo o parse da string para JSON Object
 
             Dim dado As JArray = JArray.Parse(rawresp)
-            MsgBox(dado.ToString)
-            MsgBox("ASD")
+
             'Pegando os dados do administrador localizado e salvando nas property da classAdmins
 
-            With home.dgwAcessosAll
+            With home.dgwAcessosByData
                 .DataSource = JsonConvert.DeserializeObject(Of classAcessos())(dado.ToString).ToList
                 .Columns("id").HeaderText = "ID do Acesso"
                 .Columns("nome_vendedor").HeaderText = "Nome do Vendedor"

@@ -1,0 +1,12 @@
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\bin\Debug\S.I.S.T.E.MA vAppTest.exe.config
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\bin\Debug\S.I.S.T.E.MA vAppTest.exe
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\bin\Debug\S.I.S.T.E.MA vAppTest.pdb
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\bin\Debug\S.I.S.T.E.MA vAppTest.xml
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA vAppTest.vbprojAssemblyReference.cache
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA_vAppTest.Form1.resources
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA_vAppTest.Resources.resources
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA vAppTest.vbproj.GenerateResource.cache
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA vAppTest.vbproj.CoreCompileInputs.cache
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA vAppTest.exe
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA vAppTest.xml
+C:\Users\gamer\OneDrive\Documentos\GitHub\SISTEMADESKTOP\S.I.S.T.E.MA vAppTest\S.I.S.T.E.MA vAppTest\obj\Debug\S.I.S.T.E.MA vAppTest.pdb

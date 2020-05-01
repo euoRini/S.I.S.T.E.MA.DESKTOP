@@ -23,7 +23,10 @@ Partial Class home
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
         Me.pnBarraSuperior = New System.Windows.Forms.Panel()
         Me.Panel18 = New System.Windows.Forms.Panel()
@@ -267,6 +270,9 @@ Partial Class home
         Me.pbAcessoLogo = New System.Windows.Forms.PictureBox()
         Me.pnAcessosAllScreen = New System.Windows.Forms.Panel()
         Me.dgwAcessosAll = New System.Windows.Forms.DataGridView()
+        Me.CMSAcessos = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.TesteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Teste2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnVendAcessoNaveg = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.pnAcessosByData = New System.Windows.Forms.Panel()
@@ -281,7 +287,7 @@ Partial Class home
         Me.pnAcessosOn = New System.Windows.Forms.Panel()
         Me.lbAcessosOn = New System.Windows.Forms.Label()
         Me.pnAcessosByVendScreen = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgwAcessosByVend = New System.Windows.Forms.DataGridView()
         Me.pnAcessosOnScreen = New System.Windows.Forms.Panel()
         Me.pnAcessosOffScreen = New System.Windows.Forms.Panel()
         Me.pnAcessosByDataScreen = New System.Windows.Forms.Panel()
@@ -338,9 +344,9 @@ Partial Class home
         Me.btProdAltBusca = New System.Windows.Forms.Button()
         Me.tbProdAltBusca = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.CMSAcessos = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.TesteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Teste2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dgwAcessosByData = New System.Windows.Forms.DataGridView()
+        Me.dgwAcessosOn = New System.Windows.Forms.DataGridView()
+        Me.dgwAcessosOff = New System.Windows.Forms.DataGridView()
         Me.pnBarraSuperior.SuspendLayout()
         Me.pnMinimizar.SuspendLayout()
         CType(Me.pbMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -440,6 +446,7 @@ Partial Class home
         CType(Me.pbAcessoLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnAcessosAllScreen.SuspendLayout()
         CType(Me.dgwAcessosAll, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CMSAcessos.SuspendLayout()
         Me.pnVendAcessoNaveg.SuspendLayout()
         Me.pnAcessosByData.SuspendLayout()
         Me.pnAcessosByVend.SuspendLayout()
@@ -447,7 +454,10 @@ Partial Class home
         Me.pnAcessosOff.SuspendLayout()
         Me.pnAcessosOn.SuspendLayout()
         Me.pnAcessosByVendScreen.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgwAcessosByVend, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnAcessosOnScreen.SuspendLayout()
+        Me.pnAcessosOffScreen.SuspendLayout()
+        Me.pnAcessosByDataScreen.SuspendLayout()
         Me.pnProdAddScreen.SuspendLayout()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -464,7 +474,9 @@ Partial Class home
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CMSAcessos.SuspendLayout()
+        CType(Me.dgwAcessosByData, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgwAcessosOn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgwAcessosOff, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnBarraSuperior
@@ -3064,13 +3076,13 @@ Partial Class home
         'pnVendAcessoScreen
         '
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosParametroBusca)
-        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosAllScreen)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByDataScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pbAcessoLogo)
+        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosAllScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnVendAcessoNaveg)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByVendScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosOnScreen)
         Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosOffScreen)
-        Me.pnVendAcessoScreen.Controls.Add(Me.pnAcessosByDataScreen)
         Me.pnVendAcessoScreen.Location = New System.Drawing.Point(229, 21)
         Me.pnVendAcessoScreen.Name = "pnVendAcessoScreen"
         Me.pnVendAcessoScreen.Size = New System.Drawing.Size(655, 436)
@@ -3090,6 +3102,7 @@ Partial Class home
         '
         'dtpAcessosByData
         '
+        Me.dtpAcessosByData.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpAcessosByData.Location = New System.Drawing.Point(5, 3)
         Me.dtpAcessosByData.Name = "dtpAcessosByData"
         Me.dtpAcessosByData.Size = New System.Drawing.Size(170, 20)
@@ -3142,14 +3155,14 @@ Partial Class home
         Me.dgwAcessosAll.AllowUserToDeleteRows = False
         Me.dgwAcessosAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgwAcessosAll.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgwAcessosAll.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwAcessosAll.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgwAcessosAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgwAcessosAll.GridColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.dgwAcessosAll.Location = New System.Drawing.Point(20, 19)
@@ -3159,6 +3172,29 @@ Partial Class home
         Me.dgwAcessosAll.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Red
         Me.dgwAcessosAll.Size = New System.Drawing.Size(614, 375)
         Me.dgwAcessosAll.TabIndex = 1
+        '
+        'CMSAcessos
+        '
+        Me.CMSAcessos.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.CMSAcessos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TesteToolStripMenuItem, Me.Teste2ToolStripMenuItem})
+        Me.CMSAcessos.Name = "CMSAcessos"
+        Me.CMSAcessos.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.CMSAcessos.ShowImageMargin = False
+        Me.CMSAcessos.Size = New System.Drawing.Size(138, 48)
+        '
+        'TesteToolStripMenuItem
+        '
+        Me.TesteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.TesteToolStripMenuItem.Name = "TesteToolStripMenuItem"
+        Me.TesteToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.TesteToolStripMenuItem.Text = "Ativar Acesso"
+        '
+        'Teste2ToolStripMenuItem
+        '
+        Me.Teste2ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.Teste2ToolStripMenuItem.Name = "Teste2ToolStripMenuItem"
+        Me.Teste2ToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.Teste2ToolStripMenuItem.Text = "Desativar Acesso"
         '
         'pnVendAcessoNaveg
         '
@@ -3295,22 +3331,23 @@ Partial Class home
         '
         'pnAcessosByVendScreen
         '
-        Me.pnAcessosByVendScreen.Controls.Add(Me.DataGridView1)
+        Me.pnAcessosByVendScreen.Controls.Add(Me.dgwAcessosByVend)
         Me.pnAcessosByVendScreen.Location = New System.Drawing.Point(0, 25)
         Me.pnAcessosByVendScreen.Name = "pnAcessosByVendScreen"
         Me.pnAcessosByVendScreen.Size = New System.Drawing.Size(655, 412)
         Me.pnAcessosByVendScreen.TabIndex = 2
         '
-        'DataGridView1
+        'dgwAcessosByVend
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 29)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(614, 375)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgwAcessosByVend.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgwAcessosByVend.Location = New System.Drawing.Point(22, 29)
+        Me.dgwAcessosByVend.Name = "dgwAcessosByVend"
+        Me.dgwAcessosByVend.Size = New System.Drawing.Size(614, 375)
+        Me.dgwAcessosByVend.TabIndex = 0
         '
         'pnAcessosOnScreen
         '
+        Me.pnAcessosOnScreen.Controls.Add(Me.dgwAcessosOn)
         Me.pnAcessosOnScreen.Location = New System.Drawing.Point(0, 25)
         Me.pnAcessosOnScreen.Name = "pnAcessosOnScreen"
         Me.pnAcessosOnScreen.Size = New System.Drawing.Size(655, 412)
@@ -3318,6 +3355,7 @@ Partial Class home
         '
         'pnAcessosOffScreen
         '
+        Me.pnAcessosOffScreen.Controls.Add(Me.dgwAcessosOff)
         Me.pnAcessosOffScreen.Location = New System.Drawing.Point(0, 25)
         Me.pnAcessosOffScreen.Name = "pnAcessosOffScreen"
         Me.pnAcessosOffScreen.Size = New System.Drawing.Size(655, 412)
@@ -3325,6 +3363,7 @@ Partial Class home
         '
         'pnAcessosByDataScreen
         '
+        Me.pnAcessosByDataScreen.Controls.Add(Me.dgwAcessosByData)
         Me.pnAcessosByDataScreen.Location = New System.Drawing.Point(0, 25)
         Me.pnAcessosByDataScreen.Name = "pnAcessosByDataScreen"
         Me.pnAcessosByDataScreen.Size = New System.Drawing.Size(655, 412)
@@ -3939,28 +3978,77 @@ Partial Class home
         Me.Label17.TabIndex = 43
         Me.Label17.Text = "Alteração de Produtos"
         '
-        'CMSAcessos
+        'dgwAcessosByData
         '
-        Me.CMSAcessos.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.CMSAcessos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TesteToolStripMenuItem, Me.Teste2ToolStripMenuItem})
-        Me.CMSAcessos.Name = "CMSAcessos"
-        Me.CMSAcessos.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.CMSAcessos.ShowImageMargin = False
-        Me.CMSAcessos.Size = New System.Drawing.Size(138, 48)
+        Me.dgwAcessosByData.AllowUserToAddRows = False
+        Me.dgwAcessosByData.AllowUserToDeleteRows = False
+        Me.dgwAcessosByData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgwAcessosByData.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwAcessosByData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgwAcessosByData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgwAcessosByData.GridColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgwAcessosByData.Location = New System.Drawing.Point(7, 13)
+        Me.dgwAcessosByData.Name = "dgwAcessosByData"
+        Me.dgwAcessosByData.ReadOnly = True
+        Me.dgwAcessosByData.RowTemplate.ContextMenuStrip = Me.CMSAcessos
+        Me.dgwAcessosByData.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Red
+        Me.dgwAcessosByData.Size = New System.Drawing.Size(614, 375)
+        Me.dgwAcessosByData.TabIndex = 2
         '
-        'TesteToolStripMenuItem
+        'dgwAcessosOn
         '
-        Me.TesteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.TesteToolStripMenuItem.Name = "TesteToolStripMenuItem"
-        Me.TesteToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.TesteToolStripMenuItem.Text = "Ativar Acesso"
+        Me.dgwAcessosOn.AllowUserToAddRows = False
+        Me.dgwAcessosOn.AllowUserToDeleteRows = False
+        Me.dgwAcessosOn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgwAcessosOn.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwAcessosOn.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgwAcessosOn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgwAcessosOn.GridColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgwAcessosOn.Location = New System.Drawing.Point(20, 31)
+        Me.dgwAcessosOn.Name = "dgwAcessosOn"
+        Me.dgwAcessosOn.ReadOnly = True
+        Me.dgwAcessosOn.RowTemplate.ContextMenuStrip = Me.CMSAcessos
+        Me.dgwAcessosOn.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Red
+        Me.dgwAcessosOn.Size = New System.Drawing.Size(614, 375)
+        Me.dgwAcessosOn.TabIndex = 49
         '
-        'Teste2ToolStripMenuItem
+        'dgwAcessosOff
         '
-        Me.Teste2ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.Teste2ToolStripMenuItem.Name = "Teste2ToolStripMenuItem"
-        Me.Teste2ToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.Teste2ToolStripMenuItem.Text = "Desativar Acesso"
+        Me.dgwAcessosOff.AllowUserToAddRows = False
+        Me.dgwAcessosOff.AllowUserToDeleteRows = False
+        Me.dgwAcessosOff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgwAcessosOff.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(56, Byte), Integer))
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwAcessosOff.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgwAcessosOff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgwAcessosOff.GridColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.dgwAcessosOff.Location = New System.Drawing.Point(20, 19)
+        Me.dgwAcessosOff.Name = "dgwAcessosOff"
+        Me.dgwAcessosOff.ReadOnly = True
+        Me.dgwAcessosOff.RowTemplate.ContextMenuStrip = Me.CMSAcessos
+        Me.dgwAcessosOff.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Red
+        Me.dgwAcessosOff.Size = New System.Drawing.Size(614, 375)
+        Me.dgwAcessosOff.TabIndex = 3
         '
         'home
         '
@@ -4109,6 +4197,7 @@ Partial Class home
         CType(Me.pbAcessoLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnAcessosAllScreen.ResumeLayout(False)
         CType(Me.dgwAcessosAll, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CMSAcessos.ResumeLayout(False)
         Me.pnVendAcessoNaveg.ResumeLayout(False)
         Me.pnAcessosByData.ResumeLayout(False)
         Me.pnAcessosByData.PerformLayout()
@@ -4121,7 +4210,10 @@ Partial Class home
         Me.pnAcessosOn.ResumeLayout(False)
         Me.pnAcessosOn.PerformLayout()
         Me.pnAcessosByVendScreen.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgwAcessosByVend, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnAcessosOnScreen.ResumeLayout(False)
+        Me.pnAcessosOffScreen.ResumeLayout(False)
+        Me.pnAcessosByDataScreen.ResumeLayout(False)
         Me.pnProdAddScreen.ResumeLayout(False)
         Me.pnProdAddScreen.PerformLayout()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4141,7 +4233,9 @@ Partial Class home
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CMSAcessos.ResumeLayout(False)
+        CType(Me.dgwAcessosByData, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgwAcessosOn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgwAcessosOff, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -4393,7 +4487,7 @@ Partial Class home
     Friend WithEvents dtpAcessosByData As DateTimePicker
     Friend WithEvents tbAcessosByMat As TextBox
     Friend WithEvents btAcessosBusca As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgwAcessosByVend As DataGridView
     Friend WithEvents dgwAcessosAll As DataGridView
     Friend WithEvents pbAcessoLogo As PictureBox
     Friend WithEvents pnSubMenuProd As Panel
@@ -4462,4 +4556,7 @@ Partial Class home
     Friend WithEvents CMSAcessos As ContextMenuStrip
     Friend WithEvents TesteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Teste2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents dgwAcessosByData As DataGridView
+    Friend WithEvents dgwAcessosOn As DataGridView
+    Friend WithEvents dgwAcessosOff As DataGridView
 End Class

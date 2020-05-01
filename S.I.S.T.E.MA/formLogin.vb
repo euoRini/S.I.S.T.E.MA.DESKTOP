@@ -138,7 +138,7 @@ Public Class formLogin
         'Processo de conexao API para recebimento de dados de login
 
         'URL para rota de lista de admins por login informado
-        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/login")
+        Dim myUri As New Uri("https://sistemaifrj.herokuapp.com/systemlogin")
 
         'Usando a função recebimentoADMLoginExc para buscar o admin com login informado. 
         'Usando o método GET para a requisição HTTP
@@ -147,8 +147,6 @@ Public Class formLogin
         'True quando login válido e entra no aplicativo
         'False quando login inválido e mensagem de erro
         If sucessoLogin Then
-            Console.WriteLine(token)
-            MsgBox(token)
             home.Show()
             Me.Hide()
         Else
